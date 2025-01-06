@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="65,5,150,32"/>
+<area shape="rect" id="Node000001" href="$classBistroQ_1_1Presentation_1_1App.html" title=" " alt="" coords="289,64,458,91"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="166,29,310,61,309,66,165,34"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="25,56,190,99"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="206,75,289,75,289,80,206,80"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,123,210,165"/>
+<area shape="poly" id="edge3_Node000003_Node000001" title=" " alt="" coords="199,115,257,100,306,89,307,94,258,105,200,121"/>
+<area shape="rect" id="Node000004" href="$classBistroQ_1_1Presentation_1_1BistroQ__Presentation__XamlTypeInfo_1_1XamlMetaDataProvider.html" title="Main class for providing metadata for the app or library." alt="" coords="258,115,490,173"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="225,141,257,141,257,147,225,147"/>
+</map>

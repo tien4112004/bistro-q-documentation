@@ -1,0 +1,118 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Order\+Item\+Grid\+State Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState}\index{BistroQ.Presentation.ViewModels.States.OrderItemGridState@{BistroQ.Presentation.ViewModels.States.OrderItemGridState}}
+
+
+State management class for order item grid display. Handles query parameters and loading state for order items.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Order\+Item\+Grid\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Order\+Item\+Grid\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState_ad5ba32ef4106e5fc61d830c350391ad3}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the state to default values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState_a8bf398f86b3721a2a9f55da3211b2d78}{Return\+To\+First\+Page}} ()
+\begin{DoxyCompactList}\small\item\em Returns to the first page of results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState_add4634457a7e754e482ce6f0d23e4df0}{Items}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the collection of order items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+State management class for order item grid display. Handles query parameters and loading state for order items. 
+
+Definition at line \mbox{\hyperlink{OrderItemGridState_8cs_source_l00013}{13}} of file \mbox{\hyperlink{OrderItemGridState_8cs_source}{Order\+Item\+Grid\+State.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState_ad5ba32ef4106e5fc61d830c350391ad3}\index{BistroQ.Presentation.ViewModels.States.OrderItemGridState@{BistroQ.Presentation.ViewModels.States.OrderItemGridState}!Reset@{Reset}}
+\index{Reset@{Reset}!BistroQ.Presentation.ViewModels.States.OrderItemGridState@{BistroQ.Presentation.ViewModels.States.OrderItemGridState}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState_ad5ba32ef4106e5fc61d830c350391ad3} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Order\+Item\+Grid\+State.\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the state to default values. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderItemGridState_8cs_source_l00035}{35}} of file \mbox{\hyperlink{OrderItemGridState_8cs_source}{Order\+Item\+Grid\+State.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState_add4634457a7e754e482ce6f0d23e4df0}{Items}}.Clear();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ Query.Status\ =\ nameof(OrderItemStatus.Pending);}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState_a8bf398f86b3721a2a9f55da3211b2d78}\index{BistroQ.Presentation.ViewModels.States.OrderItemGridState@{BistroQ.Presentation.ViewModels.States.OrderItemGridState}!ReturnToFirstPage@{ReturnToFirstPage}}
+\index{ReturnToFirstPage@{ReturnToFirstPage}!BistroQ.Presentation.ViewModels.States.OrderItemGridState@{BistroQ.Presentation.ViewModels.States.OrderItemGridState}}
+\doxysubsubsection{\texorpdfstring{ReturnToFirstPage()}{ReturnToFirstPage()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState_a8bf398f86b3721a2a9f55da3211b2d78} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Order\+Item\+Grid\+State.\+Return\+To\+First\+Page (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns to the first page of results. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderItemGridState_8cs_source_l00045}{45}} of file \mbox{\hyperlink{OrderItemGridState_8cs_source}{Order\+Item\+Grid\+State.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ Query.Page\ =\ 1;}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState_add4634457a7e754e482ce6f0d23e4df0}\index{BistroQ.Presentation.ViewModels.States.OrderItemGridState@{BistroQ.Presentation.ViewModels.States.OrderItemGridState}!Items@{Items}}
+\index{Items@{Items}!BistroQ.Presentation.ViewModels.States.OrderItemGridState@{BistroQ.Presentation.ViewModels.States.OrderItemGridState}}
+\doxysubsubsection{\texorpdfstring{Items}{Items}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1OrderItemGridState_add4634457a7e754e482ce6f0d23e4df0} 
+Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}}$>$ Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Order\+Item\+Grid\+State.\+Items = new()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the collection of order items. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderItemGridState_8cs_source_l00030}{30}} of file \mbox{\hyperlink{OrderItemGridState_8cs_source}{Order\+Item\+Grid\+State.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}();}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+States/Order\+Item\+Grid\+State.\+cs\end{DoxyCompactItemize}

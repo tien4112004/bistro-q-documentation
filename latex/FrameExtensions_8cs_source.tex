@@ -1,0 +1,14 @@
+\doxysection{Frame\+Extensions.\+cs}
+\hypertarget{FrameExtensions_8cs_source}{}\label{FrameExtensions_8cs_source}\index{BistroQ.Presentation/Helpers/FrameExtensions.cs@{BistroQ.Presentation/Helpers/FrameExtensions.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{FrameExtensions_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{FrameExtensions_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{FrameExtensions_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{FrameExtensions_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{FrameExtensions_8cs_source_l00005}00005\ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }FrameExtensions}
+\DoxyCodeLine{\Hypertarget{FrameExtensions_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{FrameExtensions_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{object}?\ GetPageViewModel(\textcolor{keyword}{this}\ Frame\ frame)\ =>\ frame?.Content?.GetType().GetProperty(\textcolor{stringliteral}{"{}ViewModel"{}})?.GetValue(frame.Content,\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{FrameExtensions_8cs_source_l00008}00008\ \}}
+
+\end{DoxyCode}

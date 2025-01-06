@@ -1,0 +1,385 @@
+\doxysection{Bistro\+Q.\+Service.\+Auth.\+Token\+Secure\+Storage\+Service Class Reference}
+\hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService}{}\label{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService}\index{BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}}
+
+
+A secure storage service for authentication tokens, implementing the IToken\+Storage\+Service interface. This service provides methods to securely store, retrieve, and clear access and refresh tokens, using encryption to ensure sensitive data is protected.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Service.\+Auth.\+Token\+Secure\+Storage\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Service.\+Auth.\+Token\+Secure\+Storage\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_ad4d627cb7404b497d18dba99d2ea2cde}{Token\+Secure\+Storage\+Service}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}{IFile\+Service}} file\+Service)
+\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_ad8c39e32e97725ac279b0d90afeec6da}{Save\+Tokens\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1LoginResponseDto}{Login\+Response\+Dto}} response\+Dto)
+\begin{DoxyCompactList}\small\item\em Stores the access and refresh tokens, along with additional information, from a login result. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a94f63b8112965bdde3669181f9a0f8f5}{Clear\+Tokens\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Clears all stored tokens, including access and refresh tokens, to effectively log out the user. \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a4a00212bfa670acda9f50c978e2dc99e}{Get\+Access\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the stored access token. \end{DoxyCompactList}\item 
+async Task$<$(string refresh\+Token, string user\+Id)$>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_aac6527f20e5726f0a7ab1b0996580449}{Get\+Refresh\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the stored refresh token along with the associated user ID. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_abd6142c75a8d381ec3eb38ec91d54be1}{Save\+Access\+Token}} (string access\+Token)
+\begin{DoxyCompactList}\small\item\em Stores the access token. \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a918feb0ddf39fa6cec68997105307690}{Get\+Role\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Get the current user\textquotesingle{}s role. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}}
+
+
+\doxysubsection{Detailed Description}
+A secure storage service for authentication tokens, implementing the IToken\+Storage\+Service interface. This service provides methods to securely store, retrieve, and clear access and refresh tokens, using encryption to ensure sensitive data is protected. 
+
+Definition at line \mbox{\hyperlink{TokenSecureStorageService_8cs_source_l00015}{15}} of file \mbox{\hyperlink{TokenSecureStorageService_8cs_source}{Token\+Secure\+Storage\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_ad4d627cb7404b497d18dba99d2ea2cde}\index{BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}!TokenSecureStorageService@{TokenSecureStorageService}}
+\index{TokenSecureStorageService@{TokenSecureStorageService}!BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}}
+\doxysubsubsection{\texorpdfstring{TokenSecureStorageService()}{TokenSecureStorageService()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_ad4d627cb7404b497d18dba99d2ea2cde} 
+Bistro\+Q.\+Service.\+Auth.\+Token\+Secure\+Storage\+Service.\+Token\+Secure\+Storage\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}{IFile\+Service}}}]{file\+Service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{TokenSecureStorageService_8cs_source_l00023}{23}} of file \mbox{\hyperlink{TokenSecureStorageService_8cs_source}{Token\+Secure\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \_fileService\ =\ fileService;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \_semaphore\ =\ \textcolor{keyword}{new}\ SemaphoreSlim(1,\ 1);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \_entropy\ =\ Encoding.UTF8.GetBytes(\textcolor{stringliteral}{"{}BistroQ"{}});}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ File\ path\ will\ be:\ ./bin/x64/Debug/net7.0-\/windows10.0.19041.0\(\backslash\)AppX\(\backslash\)Data}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \_folderPath\ =\ Path.Combine(AppContext.BaseDirectory,\ \textcolor{stringliteral}{"{}Data"{}});}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \_fileName\ =\ \textcolor{stringliteral}{"{}tokens.dat"{}};}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a94f63b8112965bdde3669181f9a0f8f5}\index{BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}!ClearTokensAsync@{ClearTokensAsync}}
+\index{ClearTokensAsync@{ClearTokensAsync}!BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}}
+\doxysubsubsection{\texorpdfstring{ClearTokensAsync()}{ClearTokensAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a94f63b8112965bdde3669181f9a0f8f5} 
+async Task Bistro\+Q.\+Service.\+Auth.\+Token\+Secure\+Storage\+Service.\+Clear\+Tokens\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears all stored tokens, including access and refresh tokens, to effectively log out the user. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous clear operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a2120592f856362982de1b371553efef8}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{TokenSecureStorageService_8cs_source_l00067}{67}} of file \mbox{\hyperlink{TokenSecureStorageService_8cs_source}{Token\+Secure\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ await\ \_semaphore.WaitAsync();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.Run(()\ =>}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_fileService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a28399ab6ce0afd9dd8158848548757a5}{Delete}}(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \_semaphore.Release();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a4a00212bfa670acda9f50c978e2dc99e}\index{BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}!GetAccessToken@{GetAccessToken}}
+\index{GetAccessToken@{GetAccessToken}!BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}}
+\doxysubsubsection{\texorpdfstring{GetAccessToken()}{GetAccessToken()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a4a00212bfa670acda9f50c978e2dc99e} 
+async Task$<$ string $>$ Bistro\+Q.\+Service.\+Auth.\+Token\+Secure\+Storage\+Service.\+Get\+Access\+Token (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the stored access token. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous retrieval operation. The task result contains the stored access token as a string.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a0f236032749b9b86ab13cf14cdb723da}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{TokenSecureStorageService_8cs_source_l00084}{84}} of file \mbox{\hyperlink{TokenSecureStorageService_8cs_source}{Token\+Secure\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ await\ \_semaphore.WaitAsync();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tokens\ =\ await\ Task.Run(()\ =>}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_fileService.Read<Dictionary<string,\ string>>(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tokens\ ==\ \textcolor{keyword}{null}\ ||\ !tokens.ContainsKey(\textcolor{stringliteral}{"{}AccessToken"{}}))}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Exceptions_1_1TokenStorageException}{TokenStorageException}}(\textcolor{stringliteral}{"{}No\ access\ token\ found"{}});}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ DecryptData(tokens[\textcolor{stringliteral}{"{}AccessToken"{}}]);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \_semaphore.Release();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_aac6527f20e5726f0a7ab1b0996580449}\index{BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}!GetRefreshToken@{GetRefreshToken}}
+\index{GetRefreshToken@{GetRefreshToken}!BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}}
+\doxysubsubsection{\texorpdfstring{GetRefreshToken()}{GetRefreshToken()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_aac6527f20e5726f0a7ab1b0996580449} 
+async Task$<$(string refresh\+Token, string user\+Id)$>$ Bistro\+Q.\+Service.\+Auth.\+Token\+Secure\+Storage\+Service.\+Get\+Refresh\+Token (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the stored refresh token along with the associated user ID. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous retrieval operation. The task result contains a tuple with the refresh token and user ID.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_ac358938628059b1eda1e5afc9c1916bd}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{TokenSecureStorageService_8cs_source_l00108}{108}} of file \mbox{\hyperlink{TokenSecureStorageService_8cs_source}{Token\+Secure\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00109\ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ await\ \_semaphore.WaitAsync();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tokens\ =\ await\ Task.Run(()\ =>}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_fileService.Read<Dictionary<string,\ string>>(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tokens\ ==\ \textcolor{keyword}{null}\ ||\ !tokens.ContainsKey(\textcolor{stringliteral}{"{}AccessToken"{}})\ ||\ !tokens.ContainsKey(\textcolor{stringliteral}{"{}UserId"{}}))}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Exceptions_1_1TokenStorageException}{TokenStorageException}}(\textcolor{stringliteral}{"{}No\ tokens\ found"{}});}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ DecryptData(tokens[\textcolor{stringliteral}{"{}RefreshToken"{}}]),}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ DecryptData(tokens[\textcolor{stringliteral}{"{}UserId"{}}])}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \_semaphore.Release();}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a918feb0ddf39fa6cec68997105307690}\index{BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}!GetRoleAsync@{GetRoleAsync}}
+\index{GetRoleAsync@{GetRoleAsync}!BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}}
+\doxysubsubsection{\texorpdfstring{GetRoleAsync()}{GetRoleAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a918feb0ddf39fa6cec68997105307690} 
+async Task$<$ string $>$ Bistro\+Q.\+Service.\+Auth.\+Token\+Secure\+Storage\+Service.\+Get\+Role\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current user\textquotesingle{}s role. 
+
+\begin{DoxyReturn}{Returns}
+User\textquotesingle{}s role
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a52dbbf2df193952e1f3a77fa153b201c}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{TokenSecureStorageService_8cs_source_l00163}{163}} of file \mbox{\hyperlink{TokenSecureStorageService_8cs_source}{Token\+Secure\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00164\ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ await\ \_semaphore.WaitAsync();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ await\ Task.Run(()\ =>}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_fileService.Read<Dictionary<string,\ string>>(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result\ ==\ \textcolor{keyword}{null}\ ||\ !result.ContainsKey(\textcolor{stringliteral}{"{}Role"{}}))}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}User"{}};}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ DecryptData(result[\textcolor{stringliteral}{"{}Role"{}}]);}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \_semaphore.Release();}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00184\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_abd6142c75a8d381ec3eb38ec91d54be1}\index{BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}!SaveAccessToken@{SaveAccessToken}}
+\index{SaveAccessToken@{SaveAccessToken}!BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}}
+\doxysubsubsection{\texorpdfstring{SaveAccessToken()}{SaveAccessToken()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_abd6142c75a8d381ec3eb38ec91d54be1} 
+async Task Bistro\+Q.\+Service.\+Auth.\+Token\+Secure\+Storage\+Service.\+Save\+Access\+Token (\begin{DoxyParamCaption}\item[{string}]{access\+Token}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stores the access token. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em access\+Token} & The access token to store.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous save operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a6031bec524c9bfadd16684db2aa1df9e}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{TokenSecureStorageService_8cs_source_l00135}{135}} of file \mbox{\hyperlink{TokenSecureStorageService_8cs_source}{Token\+Secure\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00136\ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ await\ \_semaphore.WaitAsync();}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ await\ Task.Run(()\ =>}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_fileService.Read<Dictionary<string,\ string>>(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Exceptions_1_1TokenStorageException}{TokenStorageException}}(\textcolor{stringliteral}{"{}No\ tokens\ found"{}});}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ result[\textcolor{stringliteral}{"{}AccessToken"{}}]\ =\ await\ EncryptData(accessToken);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.Run(()\ =>}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_fileService.Save(\_folderPath,\ \_fileName,\ result);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \_semaphore.Release();}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00161\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_ad8c39e32e97725ac279b0d90afeec6da}\index{BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}!SaveTokensAsync@{SaveTokensAsync}}
+\index{SaveTokensAsync@{SaveTokensAsync}!BistroQ.Service.Auth.TokenSecureStorageService@{BistroQ.Service.Auth.TokenSecureStorageService}}
+\doxysubsubsection{\texorpdfstring{SaveTokensAsync()}{SaveTokensAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_ad8c39e32e97725ac279b0d90afeec6da} 
+async Task Bistro\+Q.\+Service.\+Auth.\+Token\+Secure\+Storage\+Service.\+Save\+Tokens\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1LoginResponseDto}{Login\+Response\+Dto}}}]{response\+Dto}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stores the access and refresh tokens, along with additional information, from a login result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response\+Dto} & The login result containing tokens and other authentication details.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous save operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a914d4a780bf5b08ec6d726e800fc3b70}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{TokenSecureStorageService_8cs_source_l00032}{32}} of file \mbox{\hyperlink{TokenSecureStorageService_8cs_source}{Token\+Secure\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ await\ \_semaphore.WaitAsync();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ var\ res\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ string>() }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}AccessToken"{}},\ \textcolor{keyword}{null}\ \},}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}RefreshToken"{}},\ \textcolor{keyword}{null}\ \},}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}UserId"{}},\ \textcolor{keyword}{null}\ \},}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Role"{}},\ \textcolor{keyword}{null}\ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ var\ tasks\ =\ \textcolor{keyword}{new}\ Task[]}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ Task.Run(async\ ()\ =>\ res[\textcolor{stringliteral}{"{}AccessToken"{}}]\ =\ await\ EncryptData(responseDto.AccessToken)),}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ Task.Run(async\ ()\ =>\ res[\textcolor{stringliteral}{"{}RefreshToken"{}}]\ =\ await\ EncryptData(responseDto.RefreshToken)),}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ Task.Run(async\ ()\ =>\ res[\textcolor{stringliteral}{"{}UserId"{}}]\ =\ await\ EncryptData(responseDto.UserId)),}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ Task.Run(async\ ()\ =>\ res[\textcolor{stringliteral}{"{}Role"{}}]\ =\ await\ EncryptData(responseDto.Role))}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.WhenAll(tasks);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.Run(()\ =>}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_fileService.Save(\_folderPath,\ \_fileName,\ res);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \_semaphore.Release();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Service/\+Auth/Token\+Secure\+Storage\+Service.\+cs\end{DoxyCompactItemize}

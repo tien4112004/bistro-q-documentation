@@ -1,0 +1,11 @@
+<map id="BistroQ.Presentation.Controls.Skeleton.RectangleSkeleton" name="BistroQ.Presentation.Controls.Skeleton.RectangleSkeleton">
+<area shape="rect" id="Node000001" title=" " alt="" coords="248,56,447,99"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="57,5,148,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,31,256,53,255,58,163,36"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,56,200,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="216,93,247,92,247,98,216,98"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="216,75,247,75,247,80,216,80"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="216,57,247,57,247,62,216,62"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="8,123,197,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="212,116,274,97,276,102,213,121"/>
+</map>

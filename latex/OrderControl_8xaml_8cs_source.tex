@@ -1,0 +1,63 @@
+\doxysection{Order\+Control.\+xaml.\+cs}
+\hypertarget{OrderControl_8xaml_8cs_source}{}\label{OrderControl_8xaml_8cs_source}\index{BistroQ.Presentation/Views/UserControls/Client/OrderControl.xaml.cs@{BistroQ.Presentation/Views/UserControls/Client/OrderControl.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages}{BistroQ.Presentation.Messages}};}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Client}{BistroQ.Presentation.ViewModels.Client}};}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Messaging;}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Input;}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }System.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00010}00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client}{BistroQ.Presentation.Views.UserControls.Client}};}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00012}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1OrderControl}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1OrderControl}{OrderControl}}\ :\ UserControl,\ INotifyPropertyChanged}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel}{OrderCartViewModel}}\ ViewModel\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ ProcessingOrdersIsEmpty\ =>\ ViewModel.ProcessingItems\ ==\ \textcolor{keyword}{null}\ ||\ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ae3b33cc937efb9e7832797f6e23e4096}{ProcessingItems}}.Count()\ ==\ 0;}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ CompletedOrdersIsEmpty\ =>\ ViewModel.CompletedItems\ ==\ \textcolor{keyword}{null}\ ||\ ViewModel.CompletedItems.Count()\ ==\ 0;}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1OrderControl}{OrderControl}}(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel}{OrderCartViewModel}}\ orderCartViewModel)}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ this.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1OrderControl_aa661ac7c17ad6a17ab846fffab932548}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ ViewModel\ =\ orderCartViewModel;}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ PropertyChangedEventHandler\ PropertyChanged;}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ TableBillSummaryControl\_CheckoutRequested(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<IMessenger>().Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_ae5aeb6008a8ab4fb8c6e26d3b5c2743f}{CheckoutRequestedMessage}}(ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aa2a3f62781fe74ad2a5b97327dbb9397}{Order}}.TableId));}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ VerticalScrollViewer\_ManipulationDelta(\textcolor{keywordtype}{object}\ sender,\ ManipulationDeltaRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ SCROLL\_SPEED\ =\ 1.25;}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ var\ scrollViewer\ =\ (ScrollViewer)sender;}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ scrollViewer.ChangeView(}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ scrollViewer.VerticalOffset\ -\/\ e.Delta.Translation.Y\ *\ SCROLL\_SPEED,}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00043}00043\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OrderControl\_Loaded(\textcolor{keywordtype}{object}\ sender,\ Microsoft.UI.Xaml.RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00044}00044\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \_\ =\ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a0460211a60d4e7d73f9dd1bbaf734912}{LoadExistingOrderAsync}}();}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00048}00048\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerEntered(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Hand);}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerExited(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Arrow);}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderControl_8xaml_8cs_source_l00057}00057\ \}}
+
+\end{DoxyCode}

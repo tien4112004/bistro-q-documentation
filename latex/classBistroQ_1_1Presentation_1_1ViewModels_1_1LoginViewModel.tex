@@ -1,0 +1,267 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Login\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel}\index{BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}}
+
+
+View\+Model responsible for handling user login functionality. Manages login form state, validation, and authentication process.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Login\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Login\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a66f43e6298c1f8cee01b41ce00eba9c3}{Login\+View\+Model}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuth\+Service}} auth\+Service)
+\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af4602f415b84b52de61c0e5f5daa1ea0}{Can\+Login}} ()
+\begin{DoxyCompactList}\small\item\em Checks if login operation can proceed by validating all form fields. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a86de8146918ab7a10993dd56e937c7b0}{Login}} ()
+\begin{DoxyCompactList}\small\item\em Attempts to authenticate the user with the provided credentials. Sets error message if login fails. \end{DoxyCompactList}\item 
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af8fbaefb2a8a589641aa5536c3ae51e9}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af8fbaefb2a8a589641aa5536c3ae51e9} 
+void {\bfseries Request\+Navigation} ()
+\begin{DoxyCompactList}\small\item\em Raises the Navigation\+Requested event to trigger navigation after successful login. \end{DoxyCompactList}\item 
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af66aa024b2ead70f01bf7e0b6b8a4814}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af66aa024b2ead70f01bf7e0b6b8a4814} 
+void {\bfseries Request\+Close} ()
+\begin{DoxyCompactList}\small\item\em Raises the Close\+Requested event to close the login window. \end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a85bf2bad267683aa0c39dd43cf79eb26}{Is\+Authenticated}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the user is currently authenticated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_ab44027486e32cfd7f7795a9bcc5a2fe3}{Login\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command that executes the login operation. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_aa28a6c203da745dbfc900d5f0a71739f}{Form\+Change\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command that handles form field changes and validates them. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a5f92884ab8f67d58ecab68dce024d4ad}{Navigation\+Requested}}
+\begin{DoxyCompactList}\small\item\em Event triggered when navigation is requested after successful login. \end{DoxyCompactList}\item 
+Event\+Handler \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a3267ae13c32ceacbd1a1e416aa7a47a9}{Close\+Requested}}
+\begin{DoxyCompactList}\small\item\em Event triggered when the login window needs to be closed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model responsible for handling user login functionality. Manages login form state, validation, and authentication process. 
+
+Definition at line \mbox{\hyperlink{LoginViewModel_8cs_source_l00013}{13}} of file \mbox{\hyperlink{LoginViewModel_8cs_source}{Login\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a66f43e6298c1f8cee01b41ce00eba9c3}\index{BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}!LoginViewModel@{LoginViewModel}}
+\index{LoginViewModel@{LoginViewModel}!BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}}
+\doxysubsubsection{\texorpdfstring{LoginViewModel()}{LoginViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a66f43e6298c1f8cee01b41ce00eba9c3} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Login\+View\+Model.\+Login\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuth\+Service}}}]{auth\+Service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{LoginViewModel_8cs_source_l00065}{65}} of file \mbox{\hyperlink{LoginViewModel_8cs_source}{Login\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \_authService\ =\ authService;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_ab44027486e32cfd7f7795a9bcc5a2fe3}{LoginCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(async\ ()\ =>}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a86de8146918ab7a10993dd56e937c7b0}{Login}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_aa28a6c203da745dbfc900d5f0a71739f}{FormChangeCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand<(string\ Field,\ string\ Value)>((param)\ =>}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ Form.ValidateProperty(param.Field,\ param.Value);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af4602f415b84b52de61c0e5f5daa1ea0}\index{BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}!CanLogin@{CanLogin}}
+\index{CanLogin@{CanLogin}!BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}}
+\doxysubsubsection{\texorpdfstring{CanLogin()}{CanLogin()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af4602f415b84b52de61c0e5f5daa1ea0} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+Login\+View\+Model.\+Can\+Login (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if login operation can proceed by validating all form fields. 
+
+\begin{DoxyReturn}{Returns}
+True if the form has no validation errors; otherwise, false.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{LoginViewModel_8cs_source_l00084}{84}} of file \mbox{\hyperlink{LoginViewModel_8cs_source}{Login\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ Form.ValidateAll();}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !Form.HasErrors;}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a85bf2bad267683aa0c39dd43cf79eb26}\index{BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}!IsAuthenticated@{IsAuthenticated}}
+\index{IsAuthenticated@{IsAuthenticated}!BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}}
+\doxysubsubsection{\texorpdfstring{IsAuthenticated()}{IsAuthenticated()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a85bf2bad267683aa0c39dd43cf79eb26} 
+async Task$<$ bool $>$ Bistro\+Q.\+Presentation.\+View\+Models.\+Login\+View\+Model.\+Is\+Authenticated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the user is currently authenticated. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains true if the user is authenticated; otherwise, false. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{LoginViewModel_8cs_source_l00142}{142}} of file \mbox{\hyperlink{LoginViewModel_8cs_source}{Login\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00143\ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ \_authService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a9409a3e2b39c75db68d17a710d5de132}{IsAuthenticatedAsync}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a86de8146918ab7a10993dd56e937c7b0}\index{BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}!Login@{Login}}
+\index{Login@{Login}!BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a86de8146918ab7a10993dd56e937c7b0} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Login\+View\+Model.\+Login (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Attempts to authenticate the user with the provided credentials. Sets error message if login fails. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous login operation.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{LoginViewModel_8cs_source_l00095}{95}} of file \mbox{\hyperlink{LoginViewModel_8cs_source}{Login\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af4602f415b84b52de61c0e5f5daa1ea0}{CanLogin}}())}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ await\ \_authService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_ae7c08cb4791376aa13c337e4c32f7d07}{LoginAsync}}(Form.Username,\ Form.Password);}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result.Success)}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ result.Message;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af8fbaefb2a8a589641aa5536c3ae51e9}{RequestNavigation}}();}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception)}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ \textcolor{stringliteral}{"{}An\ error\ occurred.\ Please\ try\ again."{}};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_aa28a6c203da745dbfc900d5f0a71739f}\index{BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}!FormChangeCommand@{FormChangeCommand}}
+\index{FormChangeCommand@{FormChangeCommand}!BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}}
+\doxysubsubsection{\texorpdfstring{FormChangeCommand}{FormChangeCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_aa28a6c203da745dbfc900d5f0a71739f} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Login\+View\+Model.\+Form\+Change\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command that handles form field changes and validates them. 
+
+
+
+Definition at line \mbox{\hyperlink{LoginViewModel_8cs_source_l00061}{61}} of file \mbox{\hyperlink{LoginViewModel_8cs_source}{Login\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_ab44027486e32cfd7f7795a9bcc5a2fe3}\index{BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}!LoginCommand@{LoginCommand}}
+\index{LoginCommand@{LoginCommand}!BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}}
+\doxysubsubsection{\texorpdfstring{LoginCommand}{LoginCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_ab44027486e32cfd7f7795a9bcc5a2fe3} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Login\+View\+Model.\+Login\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command that executes the login operation. 
+
+
+
+Definition at line \mbox{\hyperlink{LoginViewModel_8cs_source_l00056}{56}} of file \mbox{\hyperlink{LoginViewModel_8cs_source}{Login\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Event Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a3267ae13c32ceacbd1a1e416aa7a47a9}\index{BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}!CloseRequested@{CloseRequested}}
+\index{CloseRequested@{CloseRequested}!BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}}
+\doxysubsubsection{\texorpdfstring{CloseRequested}{CloseRequested}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a3267ae13c32ceacbd1a1e416aa7a47a9} 
+Event\+Handler Bistro\+Q.\+Presentation.\+View\+Models.\+Login\+View\+Model.\+Close\+Requested}
+
+
+
+Event triggered when the login window needs to be closed. 
+
+
+
+Definition at line \mbox{\hyperlink{LoginViewModel_8cs_source_l00024}{24}} of file \mbox{\hyperlink{LoginViewModel_8cs_source}{Login\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a5f92884ab8f67d58ecab68dce024d4ad}\index{BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}!NavigationRequested@{NavigationRequested}}
+\index{NavigationRequested@{NavigationRequested}!BistroQ.Presentation.ViewModels.LoginViewModel@{BistroQ.Presentation.ViewModels.LoginViewModel}}
+\doxysubsubsection{\texorpdfstring{NavigationRequested}{NavigationRequested}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a5f92884ab8f67d58ecab68dce024d4ad} 
+Event\+Handler Bistro\+Q.\+Presentation.\+View\+Models.\+Login\+View\+Model.\+Navigation\+Requested}
+
+
+
+Event triggered when navigation is requested after successful login. 
+
+
+
+Definition at line \mbox{\hyperlink{LoginViewModel_8cs_source_l00019}{19}} of file \mbox{\hyperlink{LoginViewModel_8cs_source}{Login\+View\+Model.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/Login\+View\+Model.\+cs\end{DoxyCompactItemize}

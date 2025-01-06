@@ -1,0 +1,62 @@
+\doxysection{Admin\+Account\+Page.\+xaml.\+cs}
+\hypertarget{AdminAccountPage_8xaml_8cs_source}{}\label{AdminAccountPage_8xaml_8cs_source}\index{BistroQ.Presentation/Views/AdminAccount/AdminAccountPage.xaml.cs@{BistroQ.Presentation/Views/AdminAccount/AdminAccountPage.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels}{BistroQ.Presentation.ViewModels}};}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }CommunityToolkit.WinUI.UI.Controls;}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Input;}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views}{BistroQ.Presentation.Views}};}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00010}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminAccountPage}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminAccountPage}{AdminAccountPage}}\ :\ Page}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccountViewModel}{AdminAccountViewModel}}\ ViewModel}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get};}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminAccountPage}{AdminAccountPage}}()}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ ViewModel\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccountViewModel}{AdminAccountViewModel}}>();}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminAccountPage_a4dcfee2d3c4c486fb02df88af60fe891}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ this.Unloaded\ +=\ (s,\ e)\ =>\ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccountViewModel_a2c6e7f15db31d7a64435facbde668c05}{Dispose}}();}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Control2\_QuerySubmitted(AutoSuggestBox\ sender,\ AutoSuggestBoxQuerySubmittedEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00025}00025\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (args.ChosenSuggestion\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.State.SearchText\ =\ args.ChosenSuggestion.ToString();}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.State.SearchText\ =\ args.QueryText;}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccountViewModel_a3d71ae8a26f787372c32c0dabb60af44}{SearchCommand}}.Execute(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00038}00038\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Control2\_SuggestionChosen(AutoSuggestBox\ sender,\ AutoSuggestBoxSuggestionChosenEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00039}00039\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ sender.Text\ =\ args.SelectedItem.ToString();}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00043}00043\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ViewModel\_AdminAccountDataGrid\_Sorting(\textcolor{keywordtype}{object}?\ sender,\ DataGridColumnEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00044}00044\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccountViewModel_ac1bc4badf431c9c83e120b8caa2be6c5}{AdminAccountDataGrid\_Sorting}}(sender,\ e);}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00047}00047\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerEntered(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00048}00048\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Hand);}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00052}00052\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerExited(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00053}00053\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Arrow);}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminAccountPage_8xaml_8cs_source_l00056}00056\ \}}
+
+\end{DoxyCode}

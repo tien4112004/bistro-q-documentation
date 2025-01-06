@@ -1,0 +1,342 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{}\label{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}\index{BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}}
+
+
+\doxylink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Validator\+Base} is a base class that provides validation infrastructure for Win\+UI forms. It implements both INotify\+Property\+Changed and INotify\+Data\+Error\+Info interfaces to support data binding and validation.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3220acd7add1426396f6c03a6d9707d0}{Get\+Errors}} (string? property\+Name)
+\begin{DoxyCompactList}\small\item\em Retrieves validation errors for a specific property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ab4cd9b5edd381d01f2f877caee969213}{Reset\+Error}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Clears all validation errors for a specific property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad1a34c3d3ea17bb558dd231471fe20fd}{Clear\+Errors}} ()
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{Validate\+Property}} (string property\+Name, object? value)
+\begin{DoxyCompactList}\small\item\em Validates a specific property value using registered validators. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a69a3f0a52a8c3099e85297a3295e5c0a}{Validate\+All}} ()
+\begin{DoxyCompactList}\small\item\em Template method for validating all properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a9a04545b2c20597513cd3190a83c3c9c}{Update\+Errors}} (string property\+Name, List$<$ string $>$ errors)
+\begin{DoxyCompactList}\small\item\em Updates the error collection for a property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{Add\+Validator}} (string property\+Name, Func$<$ object?, List$<$(bool Is\+Value, string Message)$>$ $>$ validators)
+\begin{DoxyCompactList}\small\item\em Registers a list of validator functions for a property. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3dad90961c53443f11ac2a7f258c1e60}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string? property\+Name=null)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ string, List$<$ string $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad671d3afa430919e586c1328e268d711}{Errors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac9110647ffbaec21cb835c2d417054f3}{Has\+Errors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler$<$ Data\+Errors\+Changed\+Event\+Args $>$? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a0f93a47246a401f521a75d14e01a27e1}{Errors\+Changed}}
+\item 
+Property\+Changed\+Event\+Handler? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_acd024f4924ef56609cfff07afda377e8}{Property\+Changed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Validator\+Base} is a base class that provides validation infrastructure for Win\+UI forms. It implements both INotify\+Property\+Changed and INotify\+Data\+Error\+Info interfaces to support data binding and validation. 
+
+Definition at line \mbox{\hyperlink{ValidatorBase_8cs_source_l00011}{11}} of file \mbox{\hyperlink{ValidatorBase_8cs_source}{Validator\+Base.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}\index{BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}!AddValidator@{AddValidator}}
+\index{AddValidator@{AddValidator}!BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}}
+\doxysubsubsection{\texorpdfstring{AddValidator()}{AddValidator()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f} 
+void Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base.\+Add\+Validator (\begin{DoxyParamCaption}\item[{string}]{property\+Name}{, }\item[{Func$<$ object?, List$<$(bool Is\+Value, string Message)$>$ $>$}]{validators}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Registers a list of validator functions for a property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & Name of the property to validate\\
+\hline
+{\em validators} & Function that performs validation and returns results\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ValidatorBase_8cs_source_l00118}{118}} of file \mbox{\hyperlink{ValidatorBase_8cs_source}{Validator\+Base.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \_validators[propertyName]\ =\ validators;}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad1a34c3d3ea17bb558dd231471fe20fd}\index{BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}!ClearErrors@{ClearErrors}}
+\index{ClearErrors@{ClearErrors}!BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}}
+\doxysubsubsection{\texorpdfstring{ClearErrors()}{ClearErrors()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad1a34c3d3ea17bb558dd231471fe20fd} 
+void Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base.\+Clear\+Errors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{ValidatorBase_8cs_source_l00053}{53}} of file \mbox{\hyperlink{ValidatorBase_8cs_source}{Validator\+Base.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \_errors.Clear();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ ErrorsChanged?.Invoke(\textcolor{keyword}{this},\ \textcolor{keyword}{new}\ DataErrorsChangedEventArgs(\textcolor{keywordtype}{string}.Empty));}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ OnPropertyChanged(nameof(Errors));}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3220acd7add1426396f6c03a6d9707d0}\index{BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}!GetErrors@{GetErrors}}
+\index{GetErrors@{GetErrors}!BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}}
+\doxysubsubsection{\texorpdfstring{GetErrors()}{GetErrors()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3220acd7add1426396f6c03a6d9707d0} 
+IEnumerable Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base.\+Get\+Errors (\begin{DoxyParamCaption}\item[{string?}]{property\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves validation errors for a specific property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & Name of the property to get errors for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of error messages or empty enumerable if no errors exist
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ValidatorBase_8cs_source_l00034}{34}} of file \mbox{\hyperlink{ValidatorBase_8cs_source}{Validator\+Base.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ propertyName\ !=\ \textcolor{keyword}{null}\ \&\&\ \_errors.ContainsKey(propertyName)}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ ?\ \_errors[propertyName]}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Enumerable.Empty<\textcolor{keywordtype}{string}>();}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3dad90961c53443f11ac2a7f258c1e60}\index{BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}!OnPropertyChanged@{OnPropertyChanged}}
+\index{OnPropertyChanged@{OnPropertyChanged}!BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}}
+\doxysubsubsection{\texorpdfstring{OnPropertyChanged()}{OnPropertyChanged()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3dad90961c53443f11ac2a7f258c1e60} 
+virtual void Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base.\+On\+Property\+Changed (\begin{DoxyParamCaption}\item[{\mbox{[}\+Caller\+Member\+Name\mbox{]} string?}]{property\+Name}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{ValidatorBase_8cs_source_l00130}{130}} of file \mbox{\hyperlink{ValidatorBase_8cs_source}{Validator\+Base.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00131\ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ PropertyChanged?.Invoke(\textcolor{keyword}{this},\ \textcolor{keyword}{new}\ PropertyChangedEventArgs(propertyName));}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ab4cd9b5edd381d01f2f877caee969213}\index{BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}!ResetError@{ResetError}}
+\index{ResetError@{ResetError}!BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}}
+\doxysubsubsection{\texorpdfstring{ResetError()}{ResetError()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ab4cd9b5edd381d01f2f877caee969213} 
+void Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base.\+Reset\+Error (\begin{DoxyParamCaption}\item[{string}]{property\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears all validation errors for a specific property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & Name of the property to reset errors for\\
+\hline
+\end{DoxyParams}
+summary\texorpdfstring{$>$}{>} Clears all validation errors 
+
+Definition at line \mbox{\hyperlink{ValidatorBase_8cs_source_l00045}{45}} of file \mbox{\hyperlink{ValidatorBase_8cs_source}{Validator\+Base.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a9a04545b2c20597513cd3190a83c3c9c}\index{BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}!UpdateErrors@{UpdateErrors}}
+\index{UpdateErrors@{UpdateErrors}!BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}}
+\doxysubsubsection{\texorpdfstring{UpdateErrors()}{UpdateErrors()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a9a04545b2c20597513cd3190a83c3c9c} 
+void Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base.\+Update\+Errors (\begin{DoxyParamCaption}\item[{string}]{property\+Name}{, }\item[{List$<$ string $>$}]{errors}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Updates the error collection for a property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & Name of the property\\
+\hline
+{\em errors} & List of error messages\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ValidatorBase_8cs_source_l00102}{102}} of file \mbox{\hyperlink{ValidatorBase_8cs_source}{Validator\+Base.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00103\ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (errors.Any())}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \_errors[propertyName]\ =\ errors;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \_errors.Remove(propertyName);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ ErrorsChanged?.Invoke(\textcolor{keyword}{this},\ \textcolor{keyword}{new}\ DataErrorsChangedEventArgs(propertyName));}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ OnPropertyChanged(nameof(Errors));}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a69a3f0a52a8c3099e85297a3295e5c0a}\index{BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}!ValidateAll@{ValidateAll}}
+\index{ValidateAll@{ValidateAll}!BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}}
+\doxysubsubsection{\texorpdfstring{ValidateAll()}{ValidateAll()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a69a3f0a52a8c3099e85297a3295e5c0a} 
+virtual void Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base.\+Validate\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Template method for validating all properties. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Not\+Implemented\+Exception} & if not overridden\\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a069ddfd730cacb0d2b51e613cd724c89}{Bistro\+Q.\+Presentation.\+Models.\+Add\+Account\+Form}}, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddCategoryForm_a6c36b31bcfd892818adac8491c6f5bbc}{Bistro\+Q.\+Presentation.\+Models.\+Add\+Category\+Form}}, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a3f84050575861c41dabd1de221f5bc95}{Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form}}, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm_a9260c6d4f622103b36c78ae7b9f3b19a}{Bistro\+Q.\+Presentation.\+Models.\+Add\+Table\+Form}}, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_a45f521774bad6473e658b675716bba4f}{Bistro\+Q.\+Presentation.\+Models.\+Add\+Zone\+Form}}, and \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a20c4bcb85a094114872200b393bfa0f2}{Bistro\+Q.\+Presentation.\+Models.\+Login\+Form}}.
+
+
+
+Definition at line \mbox{\hyperlink{ValidatorBase_8cs_source_l00088}{88}} of file \mbox{\hyperlink{ValidatorBase_8cs_source}{Validator\+Base.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089\ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ NotImplementedException();}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}\index{BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}!ValidateProperty@{ValidateProperty}}
+\index{ValidateProperty@{ValidateProperty}!BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}}
+\doxysubsubsection{\texorpdfstring{ValidateProperty()}{ValidateProperty()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214} 
+void Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base.\+Validate\+Property (\begin{DoxyParamCaption}\item[{string}]{property\+Name}{, }\item[{object?}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Validates a specific property value using registered validators. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & Name of the property to validate\\
+\hline
+{\em value} & Value to validate\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ValidatorBase_8cs_source_l00065}{65}} of file \mbox{\hyperlink{ValidatorBase_8cs_source}{Validator\+Base.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\_validators.ContainsKey(propertyName))}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ var\ errors\ =\ \textcolor{keyword}{new}\ List<string>();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ var\ messages\ =\ \_validators[propertyName].Invoke(value);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ (isValid,\ message)\ in\ messages)}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isValid)}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ errors.Add(message);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a9a04545b2c20597513cd3190a83c3c9c}{UpdateErrors}}(propertyName,\ errors);}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad671d3afa430919e586c1328e268d711}\index{BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}!Errors@{Errors}}
+\index{Errors@{Errors}!BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}}
+\doxysubsubsection{\texorpdfstring{Errors}{Errors}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad671d3afa430919e586c1328e268d711} 
+Dictionary$<$string, List$<$string$>$ $>$ Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base.\+Errors\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{ValidatorBase_8cs_source_l00022}{22}} of file \mbox{\hyperlink{ValidatorBase_8cs_source}{Validator\+Base.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac9110647ffbaec21cb835c2d417054f3}\index{BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}!HasErrors@{HasErrors}}
+\index{HasErrors@{HasErrors}!BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}}
+\doxysubsubsection{\texorpdfstring{HasErrors}{HasErrors}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac9110647ffbaec21cb835c2d417054f3} 
+bool Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base.\+Has\+Errors\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{ValidatorBase_8cs_source_l00023}{23}} of file \mbox{\hyperlink{ValidatorBase_8cs_source}{Validator\+Base.\+cs}}.
+
+
+
+\doxysubsection{Event Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a0f93a47246a401f521a75d14e01a27e1}\index{BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}!ErrorsChanged@{ErrorsChanged}}
+\index{ErrorsChanged@{ErrorsChanged}!BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}}
+\doxysubsubsection{\texorpdfstring{ErrorsChanged}{ErrorsChanged}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a0f93a47246a401f521a75d14e01a27e1} 
+Event\+Handler$<$Data\+Errors\+Changed\+Event\+Args$>$? Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base.\+Errors\+Changed}
+
+
+
+Definition at line \mbox{\hyperlink{ValidatorBase_8cs_source_l00127}{127}} of file \mbox{\hyperlink{ValidatorBase_8cs_source}{Validator\+Base.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_acd024f4924ef56609cfff07afda377e8}\index{BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}!PropertyChanged@{PropertyChanged}}
+\index{PropertyChanged@{PropertyChanged}!BistroQ.Presentation.Validation.ValidatorBase@{BistroQ.Presentation.Validation.ValidatorBase}}
+\doxysubsubsection{\texorpdfstring{PropertyChanged}{PropertyChanged}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_acd024f4924ef56609cfff07afda377e8} 
+Property\+Changed\+Event\+Handler? Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base.\+Property\+Changed}
+
+
+
+Definition at line \mbox{\hyperlink{ValidatorBase_8cs_source_l00128}{128}} of file \mbox{\hyperlink{ValidatorBase_8cs_source}{Validator\+Base.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Validation/Validator\+Base.\+cs\end{DoxyCompactItemize}

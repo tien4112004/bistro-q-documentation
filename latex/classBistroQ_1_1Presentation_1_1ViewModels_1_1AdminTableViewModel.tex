@@ -1,0 +1,403 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel}\index{BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}}
+
+
+View\+Model for managing tables in the admin interface. Handles listing, adding, editing, and deleting tables with support for pagination and sorting.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a43041b8f93d1c2c4a8e6087e8ba883cc}{Admin\+Table\+View\+Model}} (\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigation\+Service}} navigation\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService}{ITable\+Data\+Service}} table\+Data\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}} dialog\+Service, IMapper mapper, IMessenger messenger)
+\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_ab95f9e4062bfff641a66b22a5f78e2e5}{On\+Navigated\+To}} (object parameter)
+\begin{DoxyCompactList}\small\item\em Handles navigation to this page. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a79cbb698333afc09e1712fd8e3dded7d}{On\+Navigated\+From}} ()
+\begin{DoxyCompactList}\small\item\em Handles navigation from this page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a8ac1f8930fb31fabb886be3613587a0b}{Admin\+Table\+Data\+Grid\+\_\+\+Sorting}} (object sender, Data\+Grid\+Column\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Handles the sorting event of the table data grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_af9639871ed1a7fdad00911a48cf46640}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Performs cleanup of resources used by the View\+Model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a83d5f9a5a35b62cd27d27db59c09d5b5}{Receive}} (Current\+Page\+Changed\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles the current page changed message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_ae4819943b94d12a8f899e52a3884e050}{Receive}} (Page\+Size\+Changed\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles the page size changed message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+IRelay\+Command \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_aa65e0705a3e40026750c1bd788fd7149}{Add\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to navigate to the add table page. \end{DoxyCompactList}\item 
+IRelay\+Command \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a5ff3160e5aea441e51fc3076c4df0df0}{Edit\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to navigate to the edit table page. \end{DoxyCompactList}\item 
+IAsync\+Relay\+Command \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_adb2981255470facf2e2fb62563b9113d}{Delete\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to delete the selected table. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_ac780348a6437a735b37c7df43f9cf0fb}{Sort\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to sort the tables grid. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a0cc15861231aa0130f5847385ba39ffb}{Search\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to search tables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model for managing tables in the admin interface. Handles listing, adding, editing, and deleting tables with support for pagination and sorting. 
+
+Implements multiple interfaces for functionality\+:
+\begin{DoxyItemize}
+\item Observable\+Recipient for MVVM pattern
+\item INavigation\+Aware for page navigation
+\item IDisposable for resource cleanup
+\item IRecipient for handling pagination messages 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{AdminTableViewModel_8cs_source_l00031}{31}} of file \mbox{\hyperlink{AdminTableViewModel_8cs_source}{Admin\+Table\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a43041b8f93d1c2c4a8e6087e8ba883cc}\index{BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}!AdminTableViewModel@{AdminTableViewModel}}
+\index{AdminTableViewModel@{AdminTableViewModel}!BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}}
+\doxysubsubsection{\texorpdfstring{AdminTableViewModel()}{AdminTableViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a43041b8f93d1c2c4a8e6087e8ba883cc} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model.\+Admin\+Table\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigation\+Service}}}]{navigation\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService}{ITable\+Data\+Service}}}]{table\+Data\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}}}]{dialog\+Service}{, }\item[{IMapper}]{mapper}{, }\item[{IMessenger}]{messenger}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{AdminTableViewModel_8cs_source_l00084}{84}} of file \mbox{\hyperlink{AdminTableViewModel_8cs_source}{Admin\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090\ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \_navigationService\ =\ navigationService;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \_tableDataService\ =\ tableDataService;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \_messenger\ =\ messenger;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \_dialogService\ =\ dialogService;}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ State.PropertyChanged\ +=\ StatePropertyChanged;}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_aa65e0705a3e40026750c1bd788fd7149}{AddCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand(NavigateToAddPage);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a5ff3160e5aea441e51fc3076c4df0df0}{EditCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand(NavigateToEditPage,\ ()\ =>\ State.CanEdit);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_adb2981255470facf2e2fb62563b9113d}{DeleteCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(DeleteSelectedTableAsync,\ ()\ =>\ State.CanDelete);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_ac780348a6437a735b37c7df43f9cf0fb}{SortCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand<(string\ column,\ string\ direction)>(ExecuteSortCommand);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a0cc15861231aa0130f5847385ba39ffb}{SearchCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand(ExecuteSearchCommand);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a8ac1f8930fb31fabb886be3613587a0b}\index{BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}!AdminTableDataGrid\_Sorting@{AdminTableDataGrid\_Sorting}}
+\index{AdminTableDataGrid\_Sorting@{AdminTableDataGrid\_Sorting}!BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}}
+\doxysubsubsection{\texorpdfstring{AdminTableDataGrid\_Sorting()}{AdminTableDataGrid\_Sorting()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a8ac1f8930fb31fabb886be3613587a0b} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model.\+Admin\+Table\+Data\+Grid\+\_\+\+Sorting (\begin{DoxyParamCaption}\item[{object}]{sender}{, }\item[{Data\+Grid\+Column\+Event\+Args}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the sorting event of the table data grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & The source of the event.\\
+\hline
+{\em e} & Event arguments containing the column information.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{AdminTableViewModel_8cs_source_l00257}{257}} of file \mbox{\hyperlink{AdminTableViewModel_8cs_source}{Admin\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00258\ \ \ \ \ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ var\ dataGrid\ =\ sender\ as\ DataGrid;}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ var\ column\ =\ e.Column;}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ var\ sortDirection\ =\ column.SortDirection\ ==\ \textcolor{keyword}{null}\ ||\ column.SortDirection\ ==\ DataGridSortDirection.Descending}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ ?\ \textcolor{stringliteral}{"{}asc"{}}}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \textcolor{stringliteral}{"{}des"{}};}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ col\ \textcolor{keywordflow}{in}\ dataGrid.Columns)}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (col\ !=\ column)}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ col.SortDirection\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ column.SortDirection\ =\ sortDirection\ ==\ \textcolor{stringliteral}{"{}asc"{}}}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ ?\ DataGridSortDirection.Ascending}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ :\ DataGridSortDirection.Descending;}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ var\ sortParams\ =\ (column.Tag.ToString(),\ sortDirection);}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_ac780348a6437a735b37c7df43f9cf0fb}{SortCommand}}.Execute(sortParams);}
+\DoxyCodeLine{00279\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_af9639871ed1a7fdad00911a48cf46640}\index{BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_af9639871ed1a7fdad00911a48cf46640} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs cleanup of resources used by the View\+Model. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminTableViewModel_8cs_source_l00284}{284}} of file \mbox{\hyperlink{AdminTableViewModel_8cs_source}{Admin\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00285\ \ \ \ \ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_isDisposed)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \_isDisposed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (State\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ State.PropertyChanged\ -\/=\ StatePropertyChanged;}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00294\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a79cbb698333afc09e1712fd8e3dded7d}\index{BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}!OnNavigatedFrom@{OnNavigatedFrom}}
+\index{OnNavigatedFrom@{OnNavigatedFrom}!BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedFrom()}{OnNavigatedFrom()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a79cbb698333afc09e1712fd8e3dded7d} 
+Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model.\+On\+Navigated\+From (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles navigation from this page. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{AdminTableViewModel_8cs_source_l00140}{140}} of file \mbox{\hyperlink{AdminTableViewModel_8cs_source}{Admin\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141\ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_af9639871ed1a7fdad00911a48cf46640}{Dispose}}();}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.CompletedTask;}
+\DoxyCodeLine{00144\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_ab95f9e4062bfff641a66b22a5f78e2e5}\index{BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}!OnNavigatedTo@{OnNavigatedTo}}
+\index{OnNavigatedTo@{OnNavigatedTo}!BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedTo()}{OnNavigatedTo()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_ab95f9e4062bfff641a66b22a5f78e2e5} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model.\+On\+Navigated\+To (\begin{DoxyParamCaption}\item[{object}]{parameter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles navigation to this page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Navigation parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{AdminTableViewModel_8cs_source_l00131}{131}} of file \mbox{\hyperlink{AdminTableViewModel_8cs_source}{Admin\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132\ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ await\ LoadDataAsync();}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a83d5f9a5a35b62cd27d27db59c09d5b5}\index{BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a83d5f9a5a35b62cd27d27db59c09d5b5} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Current\+Page\+Changed\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the current page changed message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the new current page.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{AdminTableViewModel_8cs_source_l00300}{300}} of file \mbox{\hyperlink{AdminTableViewModel_8cs_source}{Admin\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00301\ \ \ \ \ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ State.Query.Page\ =\ message.NewCurrentPage;}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \_\ =\ LoadDataAsync();}
+\DoxyCodeLine{00304\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_ae4819943b94d12a8f899e52a3884e050}\index{BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_ae4819943b94d12a8f899e52a3884e050} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Page\+Size\+Changed\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the page size changed message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the new page size.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{AdminTableViewModel_8cs_source_l00310}{310}} of file \mbox{\hyperlink{AdminTableViewModel_8cs_source}{Admin\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00311\ \ \ \ \ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ State.Query.Size\ =\ message.NewPageSize;}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ State.ReturnToFirstPage();}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \_\ =\ LoadDataAsync();}
+\DoxyCodeLine{00315\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_aa65e0705a3e40026750c1bd788fd7149}\index{BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}!AddCommand@{AddCommand}}
+\index{AddCommand@{AddCommand}!BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}}
+\doxysubsubsection{\texorpdfstring{AddCommand}{AddCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_aa65e0705a3e40026750c1bd788fd7149} 
+IRelay\+Command Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model.\+Add\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to navigate to the add table page. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminTableViewModel_8cs_source_l00060}{60}} of file \mbox{\hyperlink{AdminTableViewModel_8cs_source}{Admin\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_adb2981255470facf2e2fb62563b9113d}\index{BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}!DeleteCommand@{DeleteCommand}}
+\index{DeleteCommand@{DeleteCommand}!BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}}
+\doxysubsubsection{\texorpdfstring{DeleteCommand}{DeleteCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_adb2981255470facf2e2fb62563b9113d} 
+IAsync\+Relay\+Command Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model.\+Delete\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to delete the selected table. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminTableViewModel_8cs_source_l00070}{70}} of file \mbox{\hyperlink{AdminTableViewModel_8cs_source}{Admin\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a5ff3160e5aea441e51fc3076c4df0df0}\index{BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}!EditCommand@{EditCommand}}
+\index{EditCommand@{EditCommand}!BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}}
+\doxysubsubsection{\texorpdfstring{EditCommand}{EditCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a5ff3160e5aea441e51fc3076c4df0df0} 
+IRelay\+Command Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model.\+Edit\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to navigate to the edit table page. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminTableViewModel_8cs_source_l00065}{65}} of file \mbox{\hyperlink{AdminTableViewModel_8cs_source}{Admin\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a0cc15861231aa0130f5847385ba39ffb}\index{BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}!SearchCommand@{SearchCommand}}
+\index{SearchCommand@{SearchCommand}!BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}}
+\doxysubsubsection{\texorpdfstring{SearchCommand}{SearchCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_a0cc15861231aa0130f5847385ba39ffb} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model.\+Search\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to search tables. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminTableViewModel_8cs_source_l00080}{80}} of file \mbox{\hyperlink{AdminTableViewModel_8cs_source}{Admin\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_ac780348a6437a735b37c7df43f9cf0fb}\index{BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}!SortCommand@{SortCommand}}
+\index{SortCommand@{SortCommand}!BistroQ.Presentation.ViewModels.AdminTableViewModel@{BistroQ.Presentation.ViewModels.AdminTableViewModel}}
+\doxysubsubsection{\texorpdfstring{SortCommand}{SortCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTableViewModel_ac780348a6437a735b37c7df43f9cf0fb} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Table\+View\+Model.\+Sort\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to sort the tables grid. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminTableViewModel_8cs_source_l00075}{75}} of file \mbox{\hyperlink{AdminTableViewModel_8cs_source}{Admin\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Admin\+Table/Admin\+Table\+View\+Model.\+cs\end{DoxyCompactItemize}

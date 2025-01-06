@@ -1,0 +1,104 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Converters.\+Decimal\+To\+Double\+Converter Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1DecimalToDoubleConverter}{}\label{classBistroQ_1_1Presentation_1_1Converters_1_1DecimalToDoubleConverter}\index{BistroQ.Presentation.Converters.DecimalToDoubleConverter@{BistroQ.Presentation.Converters.DecimalToDoubleConverter}}
+
+
+Converter that handles conversion between decimal and double data types while maintaining precision and handling edge cases like null values and out-\/of-\/range numbers.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Converters.\+Decimal\+To\+Double\+Converter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classBistroQ_1_1Presentation_1_1Converters_1_1DecimalToDoubleConverter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Converters.\+Decimal\+To\+Double\+Converter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classBistroQ_1_1Presentation_1_1Converters_1_1DecimalToDoubleConverter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1DecimalToDoubleConverter_aa4c96088309d6bcf99d6aafbc55feabc}{Convert}} (object value, Type target\+Type, object parameter, string language)
+\item 
+object \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1DecimalToDoubleConverter_aa3ddbca660ebe9936c59ee81fcad9fcc}{Convert\+Back}} (object value, Type target\+Type, object parameter, string language)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Converter that handles conversion between decimal and double data types while maintaining precision and handling edge cases like null values and out-\/of-\/range numbers. 
+
+Definition at line \mbox{\hyperlink{DecimalToDoubleConverter_8cs_source_l00009}{9}} of file \mbox{\hyperlink{DecimalToDoubleConverter_8cs_source}{Decimal\+To\+Double\+Converter.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1DecimalToDoubleConverter_aa4c96088309d6bcf99d6aafbc55feabc}\index{BistroQ.Presentation.Converters.DecimalToDoubleConverter@{BistroQ.Presentation.Converters.DecimalToDoubleConverter}!Convert@{Convert}}
+\index{Convert@{Convert}!BistroQ.Presentation.Converters.DecimalToDoubleConverter@{BistroQ.Presentation.Converters.DecimalToDoubleConverter}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Converters_1_1DecimalToDoubleConverter_aa4c96088309d6bcf99d6aafbc55feabc} 
+object Bistro\+Q.\+Presentation.\+Converters.\+Decimal\+To\+Double\+Converter.\+Convert (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{Type}]{target\+Type}{, }\item[{object}]{parameter}{, }\item[{string}]{language}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{DecimalToDoubleConverter_8cs_source_l00011}{11}} of file \mbox{\hyperlink{DecimalToDoubleConverter_8cs_source}{Decimal\+To\+Double\+Converter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ is\ decimal\ d)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ decimal.ToDouble(d);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0;}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1DecimalToDoubleConverter_aa3ddbca660ebe9936c59ee81fcad9fcc}\index{BistroQ.Presentation.Converters.DecimalToDoubleConverter@{BistroQ.Presentation.Converters.DecimalToDoubleConverter}!ConvertBack@{ConvertBack}}
+\index{ConvertBack@{ConvertBack}!BistroQ.Presentation.Converters.DecimalToDoubleConverter@{BistroQ.Presentation.Converters.DecimalToDoubleConverter}}
+\doxysubsubsection{\texorpdfstring{ConvertBack()}{ConvertBack()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Converters_1_1DecimalToDoubleConverter_aa3ddbca660ebe9936c59ee81fcad9fcc} 
+object Bistro\+Q.\+Presentation.\+Converters.\+Decimal\+To\+Double\+Converter.\+Convert\+Back (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{Type}]{target\+Type}{, }\item[{object}]{parameter}{, }\item[{string}]{language}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{DecimalToDoubleConverter_8cs_source_l00021}{21}} of file \mbox{\hyperlink{DecimalToDoubleConverter_8cs_source}{Decimal\+To\+Double\+Converter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ ==\ \textcolor{keyword}{null}\ ||\ \textcolor{keywordtype}{string}.IsNullOrWhiteSpace(value.ToString()))}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0m;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ is\ \textcolor{keywordtype}{double}\ d\ \&\&\ d\ >=\ (\textcolor{keywordtype}{double})decimal.MinValue\ \&\&\ d\ <=\ (\textcolor{keywordtype}{double})decimal.MaxValue)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (decimal)d;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ var\ strValue\ =\ value.ToString();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{double}.TryParse(strValue,\ out\ \textcolor{keywordtype}{double}\ result))}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result\ >=\ (\textcolor{keywordtype}{double})decimal.MinValue\ \&\&\ result\ <=\ (\textcolor{keywordtype}{double})decimal.MaxValue)}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (decimal)result;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0m;}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Converters/Decimal\+To\+Double\+Converter.\+cs\end{DoxyCompactItemize}

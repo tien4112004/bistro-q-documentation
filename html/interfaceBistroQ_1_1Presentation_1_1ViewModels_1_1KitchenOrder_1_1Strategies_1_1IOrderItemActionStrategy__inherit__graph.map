@@ -1,0 +1,9 @@
+<map id="BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.IOrderItemActionStrategy" name="BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.IOrderItemActionStrategy">
+<area shape="rect" id="Node000001" title="Defines the contract for kitchen order item action strategies. Part of the strategy pattern implement..." alt="" coords="5,88,216,147"/>
+<area shape="rect" id="Node000002" href="$classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy.html" title="Strategy implementation for cancelling order items. Handles the cancellation process and updates item..." alt="" coords="264,5,474,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,80,274,62,276,67,219,85"/>
+<area shape="rect" id="Node000003" href="$classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy.html" title="Strategy implementation for completing order items. Handles the completion process and updates item s..." alt="" coords="264,88,474,147"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,115,263,115,263,120,232,120"/>
+<area shape="rect" id="Node000004" href="$classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy.html" title="Strategy implementation for moving order items between states. Handles transitions between Pending an..." alt="" coords="264,171,474,229"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="219,149,276,167,274,173,218,154"/>
+</map>

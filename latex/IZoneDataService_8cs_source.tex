@@ -1,0 +1,28 @@
+\doxysection{IZone\+Data\+Service.\+cs}
+\hypertarget{IZoneDataService_8cs_source}{}\label{IZoneDataService_8cs_source}\index{BistroQ.Domain/Contracts/Services/Data/IZoneDataService.cs@{BistroQ.Domain/Contracts/Services/Data/IZoneDataService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos}{BistroQ.Domain.Dtos}};}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos_1_1Zones}{BistroQ.Domain.Dtos.Zones}};}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Models_1_1Entities}{BistroQ.Domain.Models.Entities}};}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00011}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}{00011}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{interface\ }\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}{IZoneDataService}}}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00019}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a7b09bc9f67d3845e4366b42cbb481f7c}{00019}}\ \ \ \ \ Task<ApiCollectionResponse<IEnumerable<ZoneResponse>>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a7b09bc9f67d3845e4366b42cbb481f7c}{GetGridDataAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams}{ZoneCollectionQueryParams}}\ query);}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00027}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a98cc4caccfd78a1fbd5e5d8a6de5a7aa}{00027}}\ \ \ \ \ Task<Zone>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a98cc4caccfd78a1fbd5e5d8a6de5a7aa}{CreateZoneAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1CreateZoneRequest}{CreateZoneRequest}}\ request);}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00036}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a1051fcac46b10b55dca7002d0048283b}{00036}}\ \ \ \ \ Task<Zone>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a1051fcac46b10b55dca7002d0048283b}{UpdateZoneAsync}}(\textcolor{keywordtype}{int}\ zoneId,\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1UpdateZoneRequest}{UpdateZoneRequest}}\ request);}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00044}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a23393b659ab598b9dc135c4fcc10d518}{00044}}\ \ \ \ \ Task<bool>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a23393b659ab598b9dc135c4fcc10d518}{DeleteZoneAsync}}(\textcolor{keywordtype}{int}\ zoneId);}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00052}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a26c3da9c1970777cef58c373e28763f7}{00052}}\ \ \ \ \ Task<ApiCollectionResponse<IEnumerable<Zone>>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a26c3da9c1970777cef58c373e28763f7}{GetZonesAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams}{ZoneCollectionQueryParams}}\ query);}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00060}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_afd234760b12b574412107aa793d17daf}{00060}}\ \ \ \ \ Task<Zone>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_afd234760b12b574412107aa793d17daf}{GetZoneByIdAsync}}(\textcolor{keywordtype}{int}\ zoneId);}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00068}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a28ae5398e6ca97d96e27406474bb1d36}{00068}}\ \ \ \ \ Task<ApiCollectionResponse<IEnumerable<Zone>>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a28ae5398e6ca97d96e27406474bb1d36}{GetZonesByCashierAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams}{ZoneCollectionQueryParams}}\ query\ =\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{IZoneDataService_8cs_source_l00069}00069\ \}}
+
+\end{DoxyCode}

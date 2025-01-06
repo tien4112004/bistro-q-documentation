@@ -1,0 +1,78 @@
+\doxysection{Add\+Account\+Form.\+cs}
+\hypertarget{AddAccountForm_8cs_source}{}\label{AddAccountForm_8cs_source}\index{BistroQ.Presentation/Models/AddAccountForm.cs@{BistroQ.Presentation/Models/AddAccountForm.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Validation}{BistroQ.Presentation.Validation}};}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00003}\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Models}{00003}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Models}{BistroQ.Presentation.Models}};}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00009}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm}{AddAccountForm}}\ :\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{ValidatorBase}}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00011}00011\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00016}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_af2a7daab5015d5998001971eda5df4b5}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_af2a7daab5015d5998001971eda5df4b5}{Username}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00022}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a4437ded27e74616315b2ac0be0d515cc}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a4437ded27e74616315b2ac0be0d515cc}{Password}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00028}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a3040baf0614daf7513afc4b974b47966}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a3040baf0614daf7513afc4b974b47966}{Role}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00034}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a0b7c380b57d30b93bcc79b7186c325f3}{00034}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}?\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a0b7c380b57d30b93bcc79b7186c325f3}{TableId}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00040}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_adb46469da2345b7a6771f694a9551a92}{00040}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}?\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_adb46469da2345b7a6771f694a9551a92}{ZoneId}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00041}00041\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00043}00043\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00048}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_aa6ac9716fcc8207142356bf9d1365f61}{00048}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_aa6ac9716fcc8207142356bf9d1365f61}{AddAccountForm}}()}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ AddUsernameValidator();}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ AddPasswordValidator();}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ AddRoleValidator();}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00054}00054\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00056}00056\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Methods}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00065}00065\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddUsernameValidator()}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00066}00066\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_af2a7daab5015d5998001971eda5df4b5}{Username}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Username"{}}),}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.MinLength(v,\ 3,\ \textcolor{stringliteral}{"{}Username"{}}),}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.MaxLength(v,\ 50,\ \textcolor{stringliteral}{"{}Username"{}}),}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.NoWhitespace(v,\ \textcolor{stringliteral}{"{}Username"{}})}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00084}00084\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddPasswordValidator()}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00085}00085\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a4437ded27e74616315b2ac0be0d515cc}{Password}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Password"{}}),}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.MinLength(v,\ 6,\ \textcolor{stringliteral}{"{}Password"{}})}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00093}00093\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00100}00100\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddRoleValidator()}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00101}00101\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a3040baf0614daf7513afc4b974b47966}{Role}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Role"{}})}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00109}00109\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00111}00111\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00120}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a069ddfd730cacb0d2b51e613cd724c89}{00120}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a069ddfd730cacb0d2b51e613cd724c89}{ValidateAll}}()}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00121}00121\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_af2a7daab5015d5998001971eda5df4b5}{Username}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_af2a7daab5015d5998001971eda5df4b5}{Username}});}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a4437ded27e74616315b2ac0be0d515cc}{Password}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a4437ded27e74616315b2ac0be0d515cc}{Password}});}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a3040baf0614daf7513afc4b974b47966}{Role}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a3040baf0614daf7513afc4b974b47966}{Role}});}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00125}00125\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00126}00126\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AddAccountForm_8cs_source_l00127}00127\ \}}
+
+\end{DoxyCode}

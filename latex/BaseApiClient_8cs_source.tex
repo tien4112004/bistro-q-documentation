@@ -1,0 +1,143 @@
+\doxysection{Base\+Api\+Client.\+cs}
+\hypertarget{BaseApiClient_8cs_source}{}\label{BaseApiClient_8cs_source}\index{BistroQ.Service/Http/BaseApiClient.cs@{BistroQ.Service/Http/BaseApiClient.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos}{BistroQ.Domain.Dtos}};}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Newtonsoft.Json;}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Web;}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Services_1_1Http}{BistroQ.Domain.Services.Http}};}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00009}\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient}{BaseApiClient}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient}{IBaseApiClient}}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ HttpClient\ \_httpClient;}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient}{BaseApiClient}}(HttpClient\ httpClient)}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \_httpClient\ =\ httpClient\ ??\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(httpClient));}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00016}00016\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00018}\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_a046b5646668d17d19e5273d6ebdaad9e}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiResponse<T>>\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_a046b5646668d17d19e5273d6ebdaad9e}{PostAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ contentValue)}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}\ StringContent(}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ JsonConvert.SerializeObject(contentValue),}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ Encoding.UTF8,}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}application/json"{}}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_httpClient.PostAsync(url,\ request);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ HandleResponse<T>(response);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00031}\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_ada3a58509c3c8cb80bc8743f0cc1f65b}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiResponse<T>>\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_ada3a58509c3c8cb80bc8743f0cc1f65b}{PutAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ contentValue)}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00032}00032\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}\ StringContent(}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ JsonConvert.SerializeObject(contentValue),}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ Encoding.UTF8,}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}application/json"{}}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_httpClient.PutAsync(url,\ request);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ HandleResponse<T>(response);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00043}\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_a87f1cbf7688d72b60bcf8c4ffad2c050}{00043}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiResponse<T>>\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_a87f1cbf7688d72b60bcf8c4ffad2c050}{PatchAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ contentValue)}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00044}00044\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}\ StringContent(}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ JsonConvert.SerializeObject(contentValue),}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ Encoding.UTF8,}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}application/json"{}}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_httpClient.PatchAsync(url,\ request);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ HandleResponse<T>(response);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00055}\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_ac917357a81be1443a1c7355e4511994f}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiResponse<T>>\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_ac917357a81be1443a1c7355e4511994f}{GetAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ queryParams\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00056}00056\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ var\ finalUrl\ =\ BuildUrlWithQueryParams(url,\ queryParams);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_httpClient.GetAsync(finalUrl);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ HandleResponse<T>(response);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00062}\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_af8e759dfe05332eda20539a8d5a4f161}{00062}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiResponse<T>>\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_af8e759dfe05332eda20539a8d5a4f161}{DeleteAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ queryParams\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00063}00063\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ var\ finalUrl\ =\ BuildUrlWithQueryParams(url,\ queryParams);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_httpClient.DeleteAsync(finalUrl);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ HandleResponse<T>(response);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00069}00069\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ BuildUrlWithQueryParams(\textcolor{keywordtype}{string}\ baseUrl,\ \textcolor{keywordtype}{object}\ queryParams)}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00070}00070\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (queryParams\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ baseUrl;}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ var\ queryString\ =\ \textcolor{keywordtype}{string}.Join(\textcolor{stringliteral}{"{}\&"{}},}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ queryParams.GetType()}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .GetProperties()}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(p\ =>\ p.GetValue(queryParams)\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(p\ =>\ \$\textcolor{stringliteral}{"{}\{HttpUtility.UrlEncode(p.Name)\}=\{HttpUtility.UrlEncode(p.GetValue(queryParams)?.ToString())\}"{}}));}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keywordtype}{string}.IsNullOrEmpty(queryString)}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ ?\ baseUrl}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \$\textcolor{stringliteral}{"{}\{baseUrl\}?\{queryString\}"{}};}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00085}00085\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ async\ Task<ApiResponse<T>>\ HandleResponse<T>(HttpResponseMessage\ response)}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00086}00086\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ var\ resultContentString\ =\ await\ response.Content.ReadAsStringAsync();}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ var\ res\ =\ JsonConvert.DeserializeObject<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{ApiResponse<T>}}>(resultContentString);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (res\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{ApiResponse<T>}}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Success\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Message\ =\ \textcolor{stringliteral}{"{}Empty\ response"{}},}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StatusCode\ =\ (int)response.StatusCode}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (JsonException\ ex)}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{ApiResponse<T>}}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Success\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Message\ =\ \textcolor{stringliteral}{"{}Failed\ to\ process\ response"{}},}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Error\ =\ ex.Message,}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StatusCode\ =\ (int)response.StatusCode}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00117}\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_ae01efc9c9e6235b431f88f1252dd8c1b}{00117}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiCollectionResponse<T>>\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_ae01efc9c9e6235b431f88f1252dd8c1b}{GetCollectionAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ queryParams\ =\ \textcolor{keyword}{null})\ where\ T\ :\ class}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00118}00118\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ var\ finalUrl\ =\ BuildUrlWithQueryParams(url,\ queryParams);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_httpClient.GetAsync(finalUrl);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ var\ resultContentString\ =\ await\ response.Content.ReadAsStringAsync();}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ var\ res\ =\ JsonConvert.DeserializeObject<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{ApiCollectionResponse<T>}}>(resultContentString);}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (res\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (JsonException\ ex)}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00135}00135\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{BaseApiClient_8cs_source_l00137}00137\ \}}
+
+\end{DoxyCode}

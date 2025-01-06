@@ -1,0 +1,141 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Services.\+Local\+Settings\+Service Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService}{}\label{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService}\index{BistroQ.Presentation.Services.LocalSettingsService@{BistroQ.Presentation.Services.LocalSettingsService}}
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Services.\+Local\+Settings\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Services.\+Local\+Settings\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService_ab37245e98cf1b8276d34c0ceffe959f8}{Local\+Settings\+Service}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}{IFile\+Service}} file\+Service, IOptions$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LocalSettingsOptions}{Local\+Settings\+Options}} $>$ options)
+\item 
+async Task$<$ T?$>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService_a34bd4ed3d1c469846f7a6c6395a55a76}{Read\+Setting\+Async$<$ T $>$}} (string key)
+\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService_a797b652f59dce8463127afaabb5b8072}{Save\+Setting\+Async$<$ T $>$}} (string key, T value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1ILocalSettingsService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+ILocal\+Settings\+Service}}}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{LocalSettingsService_8cs_source_l00014}{14}} of file \mbox{\hyperlink{LocalSettingsService_8cs_source}{Local\+Settings\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService_ab37245e98cf1b8276d34c0ceffe959f8}\index{BistroQ.Presentation.Services.LocalSettingsService@{BistroQ.Presentation.Services.LocalSettingsService}!LocalSettingsService@{LocalSettingsService}}
+\index{LocalSettingsService@{LocalSettingsService}!BistroQ.Presentation.Services.LocalSettingsService@{BistroQ.Presentation.Services.LocalSettingsService}}
+\doxysubsubsection{\texorpdfstring{LocalSettingsService()}{LocalSettingsService()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService_ab37245e98cf1b8276d34c0ceffe959f8} 
+Bistro\+Q.\+Presentation.\+Services.\+Local\+Settings\+Service.\+Local\+Settings\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}{IFile\+Service}}}]{file\+Service}{, }\item[{IOptions$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LocalSettingsOptions}{Local\+Settings\+Options}} $>$}]{options}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{LocalSettingsService_8cs_source_l00030}{30}} of file \mbox{\hyperlink{LocalSettingsService_8cs_source}{Local\+Settings\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \_fileService\ =\ fileService;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \_options\ =\ options.Value;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \_applicationDataFolder\ =\ Path.Combine(\_localApplicationData,\ \_options.ApplicationDataFolder\ ??\ \_defaultApplicationDataFolder);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \_localsettingsFile\ =\ \_options.LocalSettingsFile\ ??\ \_defaultLocalSettingsFile;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \_settings\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ object>();}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService_a34bd4ed3d1c469846f7a6c6395a55a76}\index{BistroQ.Presentation.Services.LocalSettingsService@{BistroQ.Presentation.Services.LocalSettingsService}!ReadSettingAsync$<$ T $>$@{ReadSettingAsync$<$ T $>$}}
+\index{ReadSettingAsync$<$ T $>$@{ReadSettingAsync$<$ T $>$}!BistroQ.Presentation.Services.LocalSettingsService@{BistroQ.Presentation.Services.LocalSettingsService}}
+\doxysubsubsection{\texorpdfstring{ReadSettingAsync$<$ T $>$()}{ReadSettingAsync< T >()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService_a34bd4ed3d1c469846f7a6c6395a55a76} 
+async Task$<$ T?$>$ Bistro\+Q.\+Presentation.\+Services.\+Local\+Settings\+Service.\+Read\+Setting\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1ILocalSettingsService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+ILocal\+Settings\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{LocalSettingsService_8cs_source_l00051}{51}} of file \mbox{\hyperlink{LocalSettingsService_8cs_source}{Local\+Settings\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Helpers_1_1RuntimeHelper}{RuntimeHelper}}.IsMSIX)}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ApplicationData.Current.LocalSettings.Values.TryGetValue(key,\ out\ var\ obj))}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ Json.ToObjectAsync<T>((string)obj);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ await\ InitializeAsync();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_settings\ !=\ \textcolor{keyword}{null}\ \&\&\ \_settings.TryGetValue(key,\ out\ var\ obj))}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ Json.ToObjectAsync<T>((string)obj);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService_a797b652f59dce8463127afaabb5b8072}\index{BistroQ.Presentation.Services.LocalSettingsService@{BistroQ.Presentation.Services.LocalSettingsService}!SaveSettingAsync$<$ T $>$@{SaveSettingAsync$<$ T $>$}}
+\index{SaveSettingAsync$<$ T $>$@{SaveSettingAsync$<$ T $>$}!BistroQ.Presentation.Services.LocalSettingsService@{BistroQ.Presentation.Services.LocalSettingsService}}
+\doxysubsubsection{\texorpdfstring{SaveSettingAsync$<$ T $>$()}{SaveSettingAsync< T >()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService_a797b652f59dce8463127afaabb5b8072} 
+async Task Bistro\+Q.\+Presentation.\+Services.\+Local\+Settings\+Service.\+Save\+Setting\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key}{, }\item[{T}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1ILocalSettingsService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+ILocal\+Settings\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{LocalSettingsService_8cs_source_l00073}{73}} of file \mbox{\hyperlink{LocalSettingsService_8cs_source}{Local\+Settings\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Helpers_1_1RuntimeHelper}{RuntimeHelper}}.IsMSIX)}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ ApplicationData.Current.LocalSettings.Values[key]\ =\ await\ Json.StringifyAsync(value);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ await\ InitializeAsync();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \_settings[key]\ =\ await\ Json.StringifyAsync(value);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.Run(()\ =>\ \_fileService.Save(\_applicationDataFolder,\ \_localsettingsFile,\ \_settings));}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Services/Local\+Settings\+Service.\+cs\end{DoxyCompactItemize}

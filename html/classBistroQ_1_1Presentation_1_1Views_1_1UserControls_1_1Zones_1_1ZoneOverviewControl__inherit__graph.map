@@ -1,0 +1,11 @@
+<map id="BistroQ.Presentation.Views.UserControls.Zones.ZoneOverviewControl" name="BistroQ.Presentation.Views.UserControls.Zones.ZoneOverviewControl">
+<area shape="rect" id="Node000001" title=" " alt="" coords="248,5,474,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,200,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,50,247,50,247,55,215,55"/>
+<area shape="poly" id="edge3_Node000001_Node000002" title=" " alt="" coords="215,32,247,32,247,37,215,37"/>
+<area shape="poly" id="edge4_Node000001_Node000002" title=" " alt="" coords="215,14,247,14,247,19,215,19"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="8,80,197,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,75,256,62,258,67,213,80"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="57,163,148,189"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="162,161,199,148,268,107,325,62,328,67,271,111,201,153,164,166"/>
+</map>

@@ -1,0 +1,420 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel}\index{BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}}
+
+
+View\+Model for managing zones in the admin interface. Handles listing, adding, editing, and deleting zones with support for pagination and sorting.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_ab77908b58b3a1a457f32e2927af3dcf5}{Admin\+Zone\+View\+Model}} (\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigation\+Service}} navigation\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}{IZone\+Data\+Service}} zone\+Data\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}} dialog\+Service, IMapper mapper, IMessenger messenger)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel}{Admin\+Zone\+View\+Model} class. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a216d148850b90a9d4c733cc132003aae}{On\+Navigated\+To}} (object parameter)
+\begin{DoxyCompactList}\small\item\em Handles navigation to this page. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a9dd0da1f54cf939b67269e1343268c44}{On\+Navigated\+From}} ()
+\begin{DoxyCompactList}\small\item\em Handles navigation from this page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a3aa91ffd669ac05efc0305a8838165f3}{Admin\+Zone\+Data\+Grid\+\_\+\+Sorting}} (object sender, Data\+Grid\+Column\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Handles the sorting event of the zone data grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a1d1fc7f4de344da73ca4315c84227761}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Performs cleanup of resources used by the View\+Model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_aaa9d34cf9d04fbc0955a834c3b2e87b5}{Receive}} (Page\+Size\+Changed\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles the page size changed message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a8b186e3117451e4a5178a0be4b4edc75}{Receive}} (Current\+Page\+Changed\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles the current page changed message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+IRelay\+Command \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a64646f550e37a77f9d02fc3427358168}{Add\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to navigate to the add zone page. \end{DoxyCompactList}\item 
+IRelay\+Command \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a6d5de155baa7153c82f55b9c93ace732}{Edit\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to navigate to the edit zone page. \end{DoxyCompactList}\item 
+IAsync\+Relay\+Command \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a7a18d90648c2238c2ec58ba62b2c75a3}{Delete\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to delete the selected zone. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a4bd3f9e9c659ae71d66bd068a213c36b}{Sort\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to sort the zones grid. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a8b9f9a5e90193cc5d16df2a5aae42a7d}{Search\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to search zones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model for managing zones in the admin interface. Handles listing, adding, editing, and deleting zones with support for pagination and sorting. 
+
+Implements multiple interfaces for functionality\+:
+\begin{DoxyItemize}
+\item Observable\+Recipient for MVVM pattern
+\item INavigation\+Aware for page navigation
+\item IDisposable for resource cleanup
+\item IRecipient for handling pagination messages 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{AdminZoneViewModel_8cs_source_l00031}{31}} of file \mbox{\hyperlink{AdminZoneViewModel_8cs_source}{Admin\+Zone\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_ab77908b58b3a1a457f32e2927af3dcf5}\index{BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}!AdminZoneViewModel@{AdminZoneViewModel}}
+\index{AdminZoneViewModel@{AdminZoneViewModel}!BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}}
+\doxysubsubsection{\texorpdfstring{AdminZoneViewModel()}{AdminZoneViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_ab77908b58b3a1a457f32e2927af3dcf5} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model.\+Admin\+Zone\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigation\+Service}}}]{navigation\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}{IZone\+Data\+Service}}}]{zone\+Data\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}}}]{dialog\+Service}{, }\item[{IMapper}]{mapper}{, }\item[{IMessenger}]{messenger}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel}{Admin\+Zone\+View\+Model} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em navigation\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for navigation operations.\\
+\hline
+{\em zone\+Data\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for zone data operations.\\
+\hline
+{\em dialog\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for displaying dialogs.\\
+\hline
+{\em mapper} & \doxylink{namespaceBistroQ_1_1Service}{Service} for object mapping.\\
+\hline
+{\em messenger} & \doxylink{namespaceBistroQ_1_1Service}{Service} for messaging between components.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{AdminZoneViewModel_8cs_source_l00113}{113}} of file \mbox{\hyperlink{AdminZoneViewModel_8cs_source}{Admin\+Zone\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \_navigationService\ =\ navigationService;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \_zoneDataService\ =\ zoneDataService;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \_dialogService\ =\ dialogService;}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ State.PropertyChanged\ +=\ StatePropertyChanged;}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a64646f550e37a77f9d02fc3427358168}{AddCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand(NavigateToAddPage);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a6d5de155baa7153c82f55b9c93ace732}{EditCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand(NavigateToEditPage,\ ()\ =>\ State.CanEdit);}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a7a18d90648c2238c2ec58ba62b2c75a3}{DeleteCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(DeleteSelectedZoneAsync,\ ()\ =>\ State.CanDelete);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a4bd3f9e9c659ae71d66bd068a213c36b}{SortCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand<(string\ column,\ string\ direction)>(ExecuteSortCommand);}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a8b9f9a5e90193cc5d16df2a5aae42a7d}{SearchCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand(ExecuteSearchCommand);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \_messenger\ =\ messenger;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a3aa91ffd669ac05efc0305a8838165f3}\index{BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}!AdminZoneDataGrid\_Sorting@{AdminZoneDataGrid\_Sorting}}
+\index{AdminZoneDataGrid\_Sorting@{AdminZoneDataGrid\_Sorting}!BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}}
+\doxysubsubsection{\texorpdfstring{AdminZoneDataGrid\_Sorting()}{AdminZoneDataGrid\_Sorting()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a3aa91ffd669ac05efc0305a8838165f3} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model.\+Admin\+Zone\+Data\+Grid\+\_\+\+Sorting (\begin{DoxyParamCaption}\item[{object}]{sender}{, }\item[{Data\+Grid\+Column\+Event\+Args}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the sorting event of the zone data grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & The source of the event.\\
+\hline
+{\em e} & Event arguments containing the column information.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{AdminZoneViewModel_8cs_source_l00180}{180}} of file \mbox{\hyperlink{AdminZoneViewModel_8cs_source}{Admin\+Zone\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181\ \ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ var\ dataGrid\ =\ sender\ as\ DataGrid;}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ var\ column\ =\ e.Column;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ var\ sortDirection\ =\ column.SortDirection\ ==\ \textcolor{keyword}{null}\ ||\ column.SortDirection\ ==\ DataGridSortDirection.Descending}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ ?\ \textcolor{stringliteral}{"{}asc"{}}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \textcolor{stringliteral}{"{}des"{}};}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ col\ \textcolor{keywordflow}{in}\ dataGrid.Columns)}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (col\ !=\ column)}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ col.SortDirection\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ column.SortDirection\ =\ sortDirection\ ==\ \textcolor{stringliteral}{"{}asc"{}}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ ?\ DataGridSortDirection.Ascending}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ :\ DataGridSortDirection.Descending;}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ var\ sortParams\ =\ (column.Tag.ToString(),\ sortDirection);}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a4bd3f9e9c659ae71d66bd068a213c36b}{SortCommand}}.Execute(sortParams);}
+\DoxyCodeLine{00202\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a1d1fc7f4de344da73ca4315c84227761}\index{BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a1d1fc7f4de344da73ca4315c84227761} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs cleanup of resources used by the View\+Model. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminZoneViewModel_8cs_source_l00207}{207}} of file \mbox{\hyperlink{AdminZoneViewModel_8cs_source}{Admin\+Zone\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00208\ \ \ \ \ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_isDisposed)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \_isDisposed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (State\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ State.PropertyChanged\ -\/=\ StatePropertyChanged;}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00217\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a9dd0da1f54cf939b67269e1343268c44}\index{BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}!OnNavigatedFrom@{OnNavigatedFrom}}
+\index{OnNavigatedFrom@{OnNavigatedFrom}!BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedFrom()}{OnNavigatedFrom()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a9dd0da1f54cf939b67269e1343268c44} 
+Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model.\+On\+Navigated\+From (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles navigation from this page. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{AdminZoneViewModel_8cs_source_l00169}{169}} of file \mbox{\hyperlink{AdminZoneViewModel_8cs_source}{Admin\+Zone\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00170\ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a1d1fc7f4de344da73ca4315c84227761}{Dispose}}();}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.CompletedTask;}
+\DoxyCodeLine{00173\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a216d148850b90a9d4c733cc132003aae}\index{BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}!OnNavigatedTo@{OnNavigatedTo}}
+\index{OnNavigatedTo@{OnNavigatedTo}!BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedTo()}{OnNavigatedTo()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a216d148850b90a9d4c733cc132003aae} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model.\+On\+Navigated\+To (\begin{DoxyParamCaption}\item[{object}]{parameter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles navigation to this page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Navigation parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{AdminZoneViewModel_8cs_source_l00160}{160}} of file \mbox{\hyperlink{AdminZoneViewModel_8cs_source}{Admin\+Zone\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161\ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ await\ LoadDataAsync();}
+\DoxyCodeLine{00163\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a8b186e3117451e4a5178a0be4b4edc75}\index{BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a8b186e3117451e4a5178a0be4b4edc75} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Current\+Page\+Changed\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the current page changed message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the new current page.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{AdminZoneViewModel_8cs_source_l00234}{234}} of file \mbox{\hyperlink{AdminZoneViewModel_8cs_source}{Admin\+Zone\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00235\ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ State.Query.Page\ =\ message.NewCurrentPage;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \_\ =\ LoadDataAsync();}
+\DoxyCodeLine{00238\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_aaa9d34cf9d04fbc0955a834c3b2e87b5}\index{BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_aaa9d34cf9d04fbc0955a834c3b2e87b5} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Page\+Size\+Changed\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the page size changed message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the new page size.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{AdminZoneViewModel_8cs_source_l00223}{223}} of file \mbox{\hyperlink{AdminZoneViewModel_8cs_source}{Admin\+Zone\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00224\ \ \ \ \ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ State.Query.Size\ =\ message.NewPageSize;}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ State.ReturnToFirstPage();}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \_\ =\ LoadDataAsync();}
+\DoxyCodeLine{00228\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a64646f550e37a77f9d02fc3427358168}\index{BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}!AddCommand@{AddCommand}}
+\index{AddCommand@{AddCommand}!BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}}
+\doxysubsubsection{\texorpdfstring{AddCommand}{AddCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a64646f550e37a77f9d02fc3427358168} 
+IRelay\+Command Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model.\+Add\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to navigate to the add zone page. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminZoneViewModel_8cs_source_l00081}{81}} of file \mbox{\hyperlink{AdminZoneViewModel_8cs_source}{Admin\+Zone\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a7a18d90648c2238c2ec58ba62b2c75a3}\index{BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}!DeleteCommand@{DeleteCommand}}
+\index{DeleteCommand@{DeleteCommand}!BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}}
+\doxysubsubsection{\texorpdfstring{DeleteCommand}{DeleteCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a7a18d90648c2238c2ec58ba62b2c75a3} 
+IAsync\+Relay\+Command Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model.\+Delete\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to delete the selected zone. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminZoneViewModel_8cs_source_l00091}{91}} of file \mbox{\hyperlink{AdminZoneViewModel_8cs_source}{Admin\+Zone\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a6d5de155baa7153c82f55b9c93ace732}\index{BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}!EditCommand@{EditCommand}}
+\index{EditCommand@{EditCommand}!BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}}
+\doxysubsubsection{\texorpdfstring{EditCommand}{EditCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a6d5de155baa7153c82f55b9c93ace732} 
+IRelay\+Command Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model.\+Edit\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to navigate to the edit zone page. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminZoneViewModel_8cs_source_l00086}{86}} of file \mbox{\hyperlink{AdminZoneViewModel_8cs_source}{Admin\+Zone\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a8b9f9a5e90193cc5d16df2a5aae42a7d}\index{BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}!SearchCommand@{SearchCommand}}
+\index{SearchCommand@{SearchCommand}!BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}}
+\doxysubsubsection{\texorpdfstring{SearchCommand}{SearchCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a8b9f9a5e90193cc5d16df2a5aae42a7d} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model.\+Search\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to search zones. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminZoneViewModel_8cs_source_l00101}{101}} of file \mbox{\hyperlink{AdminZoneViewModel_8cs_source}{Admin\+Zone\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00101\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a4bd3f9e9c659ae71d66bd068a213c36b}\index{BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}!SortCommand@{SortCommand}}
+\index{SortCommand@{SortCommand}!BistroQ.Presentation.ViewModels.AdminZoneViewModel@{BistroQ.Presentation.ViewModels.AdminZoneViewModel}}
+\doxysubsubsection{\texorpdfstring{SortCommand}{SortCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a4bd3f9e9c659ae71d66bd068a213c36b} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone\+View\+Model.\+Sort\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to sort the zones grid. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminZoneViewModel_8cs_source_l00096}{96}} of file \mbox{\hyperlink{AdminZoneViewModel_8cs_source}{Admin\+Zone\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Admin\+Zone/Admin\+Zone\+View\+Model.\+cs\end{DoxyCompactItemize}

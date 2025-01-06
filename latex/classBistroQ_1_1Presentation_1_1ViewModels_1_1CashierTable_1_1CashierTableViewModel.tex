@@ -1,0 +1,309 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Cashier\+Table\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel}\index{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}}
+
+
+View\+Model for managing the cashier\textquotesingle{}s table view interface. Coordinates between zone overview, table grid, and order details components. Handles real-\/time checkout notifications and state management.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Cashier\+Table\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Cashier\+Table\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_a7cfdf71f4210ec65da89d5caef62d870}{Cashier\+Table\+View\+Model}} (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel}{Zone\+Overview\+View\+Model}} zone\+Overview, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel}{Zone\+Table\+Grid\+View\+Model}} zone\+Table\+Grid, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel}{Table\+Order\+Detail\+View\+Model}} table\+Order\+Detail\+VM, IMessenger messenger, \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService}{ICheckout\+Real\+Time\+Service}} checkout\+Service)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel}{Cashier\+Table\+View\+Model} class. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_aaa5b53e10b88c58df862cba4c214304b}{On\+Navigated\+To}} (object parameter)
+\begin{DoxyCompactList}\small\item\em Handles navigation to this page by initializing components and starting checkout service. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_aec1de62c6b37fe3bfc63e125e5774f80}{On\+Navigated\+From}} ()
+\begin{DoxyCompactList}\small\item\em Handles navigation from this page by cleaning up resources and stopping checkout service. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ae5ccedba40cab89d80939eb7eb6cb4f5}{Receive}} (Complete\+Checkout\+Requested\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles the completion of a checkout request for a table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_a3d03fe96da564ddf9822e458e1e0c96c}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Performs cleanup of resources used by the View\+Model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel}{Zone\+Overview\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_aecfe9154f651270f4c7a090fd559ccd9}{Zone\+Overview\+VM}}
+\begin{DoxyCompactList}\small\item\em View model for managing zone overview functionality. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel}{Zone\+Table\+Grid\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ab2e096d78b7ce1364aa06a967a418647}{Zone\+Table\+Grid\+VM}}
+\begin{DoxyCompactList}\small\item\em View model for managing the zone table grid display. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel}{Table\+Order\+Detail\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ab3cc9487b3c925843468b7196ee6792c}{Table\+Order\+Detail\+VM}}
+\begin{DoxyCompactList}\small\item\em View model for managing table order details. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler$<$(int table\+Number, string zone\+Name)$>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ae1324920777f8364230322ca0b559b79}{New\+Checkout\+Notification}}
+\begin{DoxyCompactList}\small\item\em Event raised when a new checkout is requested. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model for managing the cashier\textquotesingle{}s table view interface. Coordinates between zone overview, table grid, and order details components. Handles real-\/time checkout notifications and state management. 
+
+Implements multiple interfaces for functionality\+:
+\begin{DoxyItemize}
+\item Observable\+Object for MVVM pattern
+\item INavigation\+Aware for page navigation
+\item IRecipient for handling checkout messages
+\item IDisposable for resource cleanup 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{CashierTableViewModel_8cs_source_l00022}{22}} of file \mbox{\hyperlink{CashierTableViewModel_8cs_source}{Cashier\+Table\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_a7cfdf71f4210ec65da89d5caef62d870}\index{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}!CashierTableViewModel@{CashierTableViewModel}}
+\index{CashierTableViewModel@{CashierTableViewModel}!BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}}
+\doxysubsubsection{\texorpdfstring{CashierTableViewModel()}{CashierTableViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_a7cfdf71f4210ec65da89d5caef62d870} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Cashier\+Table\+View\+Model.\+Cashier\+Table\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel}{Zone\+Overview\+View\+Model}}}]{zone\+Overview}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel}{Zone\+Table\+Grid\+View\+Model}}}]{zone\+Table\+Grid}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel}{Table\+Order\+Detail\+View\+Model}}}]{table\+Order\+Detail\+VM}{, }\item[{IMessenger}]{messenger}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService}{ICheckout\+Real\+Time\+Service}}}]{checkout\+Service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel}{Cashier\+Table\+View\+Model} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Overview} & View model for zone overview.\\
+\hline
+{\em zone\+Table\+Grid} & View model for zone table grid.\\
+\hline
+{\em table\+Order\+Detail\+VM} & View model for table order details.\\
+\hline
+{\em messenger} & \doxylink{namespaceBistroQ_1_1Service}{Service} for messaging between components.\\
+\hline
+{\em checkout\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for real-\/time checkout operations.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{CashierTableViewModel_8cs_source_l00076}{76}} of file \mbox{\hyperlink{CashierTableViewModel_8cs_source}{Cashier\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00083\ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_aecfe9154f651270f4c7a090fd559ccd9}{ZoneOverviewVM}}\ =\ zoneOverview;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ab2e096d78b7ce1364aa06a967a418647}{ZoneTableGridVM}}\ =\ zoneTableGrid;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ab3cc9487b3c925843468b7196ee6792c}{TableOrderDetailVM}}\ =\ tableOrderDetailVM;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \_messenger\ =\ messenger;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \_checkoutService\ =\ checkoutService;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \_checkoutService.OnNewCheckout\ +=\ (tableId,\ tableNumber,\ zoneName)\ =>}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_aa15dd7a13aa826fcb225bba2e3560b0f}{ZoneStateChangedMessage}}(zoneName,\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a7fd46469b188bcae2fb9dd9b0d106341}{TableStateChangedMessage}}(tableId,\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{CashierTableState}}.CheckoutPending));}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ae1324920777f8364230322ca0b559b79}{NewCheckoutNotification}}?.Invoke(\textcolor{keyword}{this},\ (tableNumber,\ zoneName));}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_a3d03fe96da564ddf9822e458e1e0c96c}\index{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_a3d03fe96da564ddf9822e458e1e0c96c} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Cashier\+Table\+View\+Model.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs cleanup of resources used by the View\+Model. 
+
+
+
+Definition at line \mbox{\hyperlink{CashierTableViewModel_8cs_source_l00136}{136}} of file \mbox{\hyperlink{CashierTableViewModel_8cs_source}{Cashier\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137\ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ab2e096d78b7ce1364aa06a967a418647}{ZoneTableGridVM}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a520e90a959f70c96d7838b9ede02f12a}{Dispose}}();}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ab3cc9487b3c925843468b7196ee6792c}{TableOrderDetailVM}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a0d214ace8e350f9ab812078befec3cf5}{Dispose}}();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \_checkoutService.OnNewCheckout\ -\/=\ (tableId,\ tableNumber,\ zoneName)\ =>}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_aa15dd7a13aa826fcb225bba2e3560b0f}{ZoneStateChangedMessage}}(zoneName,\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a7fd46469b188bcae2fb9dd9b0d106341}{TableStateChangedMessage}}(tableId,\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{CashierTableState}}.CheckoutPending));}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ae1324920777f8364230322ca0b559b79}{NewCheckoutNotification}}?.Invoke(\textcolor{keyword}{this},\ (tableNumber,\ zoneName));}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_aec1de62c6b37fe3bfc63e125e5774f80}\index{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}!OnNavigatedFrom@{OnNavigatedFrom}}
+\index{OnNavigatedFrom@{OnNavigatedFrom}!BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedFrom()}{OnNavigatedFrom()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_aec1de62c6b37fe3bfc63e125e5774f80} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Cashier\+Table\+View\+Model.\+On\+Navigated\+From (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles navigation from this page by cleaning up resources and stopping checkout service. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{CashierTableViewModel_8cs_source_l00116}{116}} of file \mbox{\hyperlink{CashierTableViewModel_8cs_source}{Cashier\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00117\ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_a3d03fe96da564ddf9822e458e1e0c96c}{Dispose}}();}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ await\ \_checkoutService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a0bd95819b5bb30ce208e854a81c0ad08}{StopAsync}}();}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_aaa5b53e10b88c58df862cba4c214304b}\index{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}!OnNavigatedTo@{OnNavigatedTo}}
+\index{OnNavigatedTo@{OnNavigatedTo}!BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedTo()}{OnNavigatedTo()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_aaa5b53e10b88c58df862cba4c214304b} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Cashier\+Table\+View\+Model.\+On\+Navigated\+To (\begin{DoxyParamCaption}\item[{object}]{parameter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles navigation to this page by initializing components and starting checkout service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Navigation parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{CashierTableViewModel_8cs_source_l00106}{106}} of file \mbox{\hyperlink{CashierTableViewModel_8cs_source}{Cashier\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107\ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_aecfe9154f651270f4c7a090fd559ccd9}{ZoneOverviewVM}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_a399a15673a2b72053653ee0d2b638102}{InitializeAsync}}();}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ await\ \_checkoutService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_ac5259b6211d8daabc9c29324e5fccf25}{StartAsync}}();}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ae5ccedba40cab89d80939eb7eb6cb4f5}\index{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ae5ccedba40cab89d80939eb7eb6cb4f5} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Cashier\+Table\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Complete\+Checkout\+Requested\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the completion of a checkout request for a table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the table ID for checkout completion.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{CashierTableViewModel_8cs_source_l00126}{126}} of file \mbox{\hyperlink{CashierTableViewModel_8cs_source}{Cashier\+Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00127\ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ var\ tableId\ =\ message.TableId\ ??\ 0;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \_checkoutService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a46706868600da392c0b486835058f902}{NotifyCheckoutCompletedAsync}}(tableId);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a7fd46469b188bcae2fb9dd9b0d106341}{TableStateChangedMessage}}(tableId,\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{CashierTableState}}.Available));}
+\DoxyCodeLine{00131\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ab3cc9487b3c925843468b7196ee6792c}\index{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}!TableOrderDetailVM@{TableOrderDetailVM}}
+\index{TableOrderDetailVM@{TableOrderDetailVM}!BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}}
+\doxysubsubsection{\texorpdfstring{TableOrderDetailVM}{TableOrderDetailVM}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ab3cc9487b3c925843468b7196ee6792c} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel}{Table\+Order\+Detail\+View\+Model}} Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Cashier\+Table\+View\+Model.\+Table\+Order\+Detail\+VM}
+
+
+
+View model for managing table order details. 
+
+
+
+Definition at line \mbox{\hyperlink{CashierTableViewModel_8cs_source_l00042}{42}} of file \mbox{\hyperlink{CashierTableViewModel_8cs_source}{Cashier\+Table\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_aecfe9154f651270f4c7a090fd559ccd9}\index{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}!ZoneOverviewVM@{ZoneOverviewVM}}
+\index{ZoneOverviewVM@{ZoneOverviewVM}!BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}}
+\doxysubsubsection{\texorpdfstring{ZoneOverviewVM}{ZoneOverviewVM}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_aecfe9154f651270f4c7a090fd559ccd9} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel}{Zone\+Overview\+View\+Model}} Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Cashier\+Table\+View\+Model.\+Zone\+Overview\+VM}
+
+
+
+View model for managing zone overview functionality. 
+
+
+
+Definition at line \mbox{\hyperlink{CashierTableViewModel_8cs_source_l00032}{32}} of file \mbox{\hyperlink{CashierTableViewModel_8cs_source}{Cashier\+Table\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ab2e096d78b7ce1364aa06a967a418647}\index{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}!ZoneTableGridVM@{ZoneTableGridVM}}
+\index{ZoneTableGridVM@{ZoneTableGridVM}!BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}}
+\doxysubsubsection{\texorpdfstring{ZoneTableGridVM}{ZoneTableGridVM}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ab2e096d78b7ce1364aa06a967a418647} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel}{Zone\+Table\+Grid\+View\+Model}} Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Cashier\+Table\+View\+Model.\+Zone\+Table\+Grid\+VM}
+
+
+
+View model for managing the zone table grid display. 
+
+
+
+Definition at line \mbox{\hyperlink{CashierTableViewModel_8cs_source_l00037}{37}} of file \mbox{\hyperlink{CashierTableViewModel_8cs_source}{Cashier\+Table\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Event Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ae1324920777f8364230322ca0b559b79}\index{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}!NewCheckoutNotification@{NewCheckoutNotification}}
+\index{NewCheckoutNotification@{NewCheckoutNotification}!BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel@{BistroQ.Presentation.ViewModels.CashierTable.CashierTableViewModel}}
+\doxysubsubsection{\texorpdfstring{NewCheckoutNotification}{NewCheckoutNotification}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_ae1324920777f8364230322ca0b559b79} 
+Event\+Handler$<$(int table\+Number, string zone\+Name)$>$ Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Cashier\+Table\+View\+Model.\+New\+Checkout\+Notification}
+
+
+
+Event raised when a new checkout is requested. 
+
+Provides the table number and zone name where the checkout was requested. 
+
+Definition at line \mbox{\hyperlink{CashierTableViewModel_8cs_source_l00064}{64}} of file \mbox{\hyperlink{CashierTableViewModel_8cs_source}{Cashier\+Table\+View\+Model.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Cashier\+Table/Cashier\+Table\+View\+Model.\+cs\end{DoxyCompactItemize}

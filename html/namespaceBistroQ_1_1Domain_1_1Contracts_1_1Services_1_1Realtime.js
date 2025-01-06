@@ -1,0 +1,4 @@
+var namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime =
+[
+    [ "ICheckoutRealTimeService", "interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService.html", "interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService" ]
+];

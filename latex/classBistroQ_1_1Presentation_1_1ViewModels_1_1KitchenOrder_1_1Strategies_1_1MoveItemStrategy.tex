@@ -1,0 +1,168 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Move\+Item\+Strategy Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy}}
+
+
+Strategy implementation for moving order items between states. Handles transitions between Pending and In\+Progress states.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Move\+Item\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Move\+Item\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_a42fcedeb1a5975c4dda65e0415edf29b}{Move\+Item\+Strategy}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrder\+Item\+Data\+Service}} order\+Item\+Data\+Service, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{Kitchen\+Order\+State}} state)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy}{Move\+Item\+Strategy} class. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_aea02b70e7734407a9d142e9ab761af2c}{Execute\+Async}} (IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$ order\+Items)
+\begin{DoxyCompactList}\small\item\em Executes the move strategy on the specified order items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+IOrder\+Item\+Action\+Strategy}}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{Kitchen\+Order\+State}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_a228007ca8ad2120ddaff2d4be876b71d}{State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the state container for kitchen orders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+IOrder\+Item\+Action\+Strategy}}}
+
+
+\doxysubsection{Detailed Description}
+Strategy implementation for moving order items between states. Handles transitions between Pending and In\+Progress states. 
+
+Definition at line \mbox{\hyperlink{MoveItemStrategy_8cs_source_l00012}{12}} of file \mbox{\hyperlink{MoveItemStrategy_8cs_source}{Move\+Item\+Strategy.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_a42fcedeb1a5975c4dda65e0415edf29b}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy}!MoveItemStrategy@{MoveItemStrategy}}
+\index{MoveItemStrategy@{MoveItemStrategy}!BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy}}
+\doxysubsubsection{\texorpdfstring{MoveItemStrategy()}{MoveItemStrategy()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_a42fcedeb1a5975c4dda65e0415edf29b} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Move\+Item\+Strategy.\+Move\+Item\+Strategy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrder\+Item\+Data\+Service}}}]{order\+Item\+Data\+Service}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{Kitchen\+Order\+State}}}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy}{Move\+Item\+Strategy} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Item\+Data\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for order item operations\\
+\hline
+{\em state} & The current kitchen order state\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MoveItemStrategy_8cs_source_l00029}{29}} of file \mbox{\hyperlink{MoveItemStrategy_8cs_source}{Move\+Item\+Strategy.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \_orderItemDataService\ =\ orderItemDataService;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_a228007ca8ad2120ddaff2d4be876b71d}{State}}\ =\ state;}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_aea02b70e7734407a9d142e9ab761af2c}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy}!ExecuteAsync@{ExecuteAsync}}
+\index{ExecuteAsync@{ExecuteAsync}!BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy}}
+\doxysubsubsection{\texorpdfstring{ExecuteAsync()}{ExecuteAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_aea02b70e7734407a9d142e9ab761af2c} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Move\+Item\+Strategy.\+Execute\+Async (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$}]{order\+Items}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Executes the move strategy on the specified order items. 
+
+Determines the target status based on the current status of the first item. Moves items between pending and in-\/progress collections based on the target status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Items} & The collection of order items to move\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy_ad264b4d1cc95d3f89e687ac4bd913f82}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+IOrder\+Item\+Action\+Strategy}}.
+
+
+
+Definition at line \mbox{\hyperlink{MoveItemStrategy_8cs_source_l00044}{44}} of file \mbox{\hyperlink{MoveItemStrategy_8cs_source}{Move\+Item\+Strategy.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ var\ orderItemsList\ =\ orderItems.ToList();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ var\ targetStatus\ =\ orderItemsList[0].Status\ ==\ OrderItemStatus.Pending}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ ?\ OrderItemStatus.InProgress}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ :\ OrderItemStatus.Pending;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ await\ \_orderItemDataService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService_ac1b1dea631790a7d0289c7ddc274581f}{BulkUpdateOrderItemsStatusAsync}}(orderItems.Select(x\ =>\ x.OrderItemId),\ targetStatus);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ orderItemsList.Count();\ i++)}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ orderItemsList[i].Status\ =\ targetStatus;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (targetStatus\ ==\ OrderItemStatus.InProgress)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_a228007ca8ad2120ddaff2d4be876b71d}{State}}.PendingItems.Remove(orderItemsList[i]);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_a228007ca8ad2120ddaff2d4be876b71d}{State}}.ProgressItems.Add(orderItemsList[i]);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_a228007ca8ad2120ddaff2d4be876b71d}{State}}.ProgressItems.Remove(orderItemsList[i]);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_a228007ca8ad2120ddaff2d4be876b71d}{State}}.PendingItems.Add(orderItemsList[i]);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_a228007ca8ad2120ddaff2d4be876b71d}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy}!State@{State}}
+\index{State@{State}!BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.MoveItemStrategy}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_a228007ca8ad2120ddaff2d4be876b71d} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{Kitchen\+Order\+State}} Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Move\+Item\+Strategy.\+State\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the state container for kitchen orders. 
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy_ab8c3c88e2855f53c71ccd019be640c85}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+IOrder\+Item\+Action\+Strategy}}.
+
+
+
+Definition at line \mbox{\hyperlink{MoveItemStrategy_8cs_source_l00022}{22}} of file \mbox{\hyperlink{MoveItemStrategy_8cs_source}{Move\+Item\+Strategy.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Kitchen\+Order/\+Strategies/Move\+Item\+Strategy.\+cs\end{DoxyCompactItemize}

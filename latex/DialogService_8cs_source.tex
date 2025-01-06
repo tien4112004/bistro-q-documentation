@@ -1,0 +1,98 @@
+\doxysection{Dialog\+Service.\+cs}
+\hypertarget{DialogService_8cs_source}{}\label{DialogService_8cs_source}\index{BistroQ.Presentation/Services/DialogService.cs@{BistroQ.Presentation/Services/DialogService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1Services}{BistroQ.Presentation.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Services}{BistroQ.Presentation.Services}};}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00011}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService}{00011}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService}{DialogService}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialogService}}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00013}00013\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ readonly\ SemaphoreSlim\ \_semaphore\ =\ \textcolor{keyword}{new}(1);}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource?\ \_currentDialogCts;}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00023}00023\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00025}00025\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00029}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_ad3cc60b86d504d0a71fcfbea9c0f89e1}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_ad3cc60b86d504d0a71fcfbea9c0f89e1}{DialogService}}()}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00032}00032\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00034}00034\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00036}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a76781bcaf453a0957edf0b0bad30f193}{00036}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ContentDialogResult>\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a76781bcaf453a0957edf0b0bad30f193}{ShowConfirmDeleteDialog}}()}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00037}00037\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ var\ dialog\ =\ \textcolor{keyword}{new}\ ContentDialog}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ XamlRoot\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.Content.XamlRoot,}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ Title\ =\ \textcolor{stringliteral}{"{}Confirm\ delete"{}},}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ \textcolor{stringliteral}{"{}Are\ you\ sure\ you\ want\ to\ delete\ this\ entry?"{}},}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ PrimaryButtonText\ =\ \textcolor{stringliteral}{"{}Delete"{}},}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ SecondaryButtonText\ =\ \textcolor{stringliteral}{"{}Cancel"{}},}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ SecondaryButtonStyle\ =\ Application.Current.Resources[\textcolor{stringliteral}{"{}AccentButtonStyle"{}}]\ as\ Style}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ ShowDialogCoreAsync(dialog);}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00051}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a80650c2b2be37c2976d08752f4928aeb}{00051}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a80650c2b2be37c2976d08752f4928aeb}{ShowSuccessDialog}}(\textcolor{keywordtype}{string}\ message,\ \textcolor{keywordtype}{string}\ title\ =\ \textcolor{stringliteral}{"{}Success"{}})}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ var\ dialog\ =\ \textcolor{keyword}{new}\ ContentDialog}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ XamlRoot\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.Content.XamlRoot,}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ Title\ =\ title,}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ message,}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ CloseButtonText\ =\ \textcolor{stringliteral}{"{}OK"{}}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ await\ ShowDialogCoreAsync(dialog);}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00064}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a92f9aaac4b5b32a276e4e5784d746d11}{00064}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a92f9aaac4b5b32a276e4e5784d746d11}{ShowErrorDialog}}(\textcolor{keywordtype}{string}\ message,\ \textcolor{keywordtype}{string}\ title\ =\ \textcolor{stringliteral}{"{}Error"{}})}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00065}00065\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ var\ dialog\ =\ \textcolor{keyword}{new}\ ContentDialog}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ XamlRoot\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.Content.XamlRoot,}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ Title\ =\ title,}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ message,}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ CloseButtonText\ =\ \textcolor{stringliteral}{"{}OK"{}}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ await\ ShowDialogCoreAsync(dialog);}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00077}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a70f9d29442b5294c909b20a4af3dcba8}{00077}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ContentDialogResult>\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a70f9d29442b5294c909b20a4af3dcba8}{ShowDialogAsync}}(ContentDialog\ dialog)}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00078}00078\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ dialog.XamlRoot\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.Content.XamlRoot;}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ ShowDialogCoreAsync(dialog);}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00082}00082\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00084}00084\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Methods}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00096}00096\ \ \ \ \ \textcolor{keyword}{private}\ async\ Task<ContentDialogResult>\ ShowDialogCoreAsync(ContentDialog\ dialog)}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00097}00097\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_currentDialogCts\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \_currentDialogCts.Cancel();}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \_currentDialogCts.Dispose();}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \_currentDialogCts\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ await\ \_semaphore.WaitAsync();}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \_currentDialogCts.Token.ThrowIfCancellationRequested();}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ dialog.ShowAsync();}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (OperationCanceledException)}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ContentDialogResult.None;}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \_semaphore.Release();}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00118}00118\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00119}00119\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{DialogService_8cs_source_l00120}00120\ \}}
+
+\end{DoxyCode}

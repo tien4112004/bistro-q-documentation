@@ -1,0 +1,5 @@
+var namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount =
+[
+    [ "AdminAccountAddPageViewModel", "classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountAddPageViewModel.html", "classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountAddPageViewModel" ],
+    [ "AdminAccountEditPageViewModel", "classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel.html", "classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel" ]
+];

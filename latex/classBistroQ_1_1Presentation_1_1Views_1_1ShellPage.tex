@@ -1,0 +1,329 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Views.\+Shell\+Page Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage}{}\label{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage}\index{BistroQ.Presentation.Views.ShellPage@{BistroQ.Presentation.Views.ShellPage}}
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Views.\+Shell\+Page\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Views.\+Shell\+Page\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_ab95b5333a89c93914f13bf41f942512c}{Connect}} (int connection\+Id, object target)
+\begin{DoxyCompactList}\small\item\em \doxylink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_ab95b5333a89c93914f13bf41f942512c}{Connect()} \end{DoxyCompactList}\item 
+global\+::\+Microsoft.\+UI.\+Xaml.\+Markup.\+IComponent\+Connector \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a8cbba1a507480c8b22d2d1a3257e7283}{Get\+Binding\+Connector}} (int connection\+Id, object target)
+\begin{DoxyCompactList}\small\item\em \doxylink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a8cbba1a507480c8b22d2d1a3257e7283}{Get\+Binding\+Connector(int connection\+Id, object target)} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a0f24964c68f958919fb05753ff8894fb}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a0f24964c68f958919fb05753ff8894fb}{Initialize\+Component()} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a0f24964c68f958919fb05753ff8894fb}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a0f24964c68f958919fb05753ff8894fb}{Initialize\+Component()} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_aa31fb92eba2b57940e9efcc541e1cf40}{Shell\+Page}} (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel}{Shell\+View\+Model}} view\+Model)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel}{Shell\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_ac46b0fedf6836d0c3788ee217751903c}{View\+Model}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{ShellPage_8xaml_8cs_source_l00013}{13}} of file \mbox{\hyperlink{ShellPage_8xaml_8cs_source}{Shell\+Page.\+xaml.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_aa31fb92eba2b57940e9efcc541e1cf40}\index{BistroQ.Presentation.Views.ShellPage@{BistroQ.Presentation.Views.ShellPage}!ShellPage@{ShellPage}}
+\index{ShellPage@{ShellPage}!BistroQ.Presentation.Views.ShellPage@{BistroQ.Presentation.Views.ShellPage}}
+\doxysubsubsection{\texorpdfstring{ShellPage()}{ShellPage()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_aa31fb92eba2b57940e9efcc541e1cf40} 
+Bistro\+Q.\+Presentation.\+Views.\+Shell\+Page.\+Shell\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel}{Shell\+View\+Model}}}]{view\+Model}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{ShellPage_8xaml_8cs_source_l00020}{20}} of file \mbox{\hyperlink{ShellPage_8xaml_8cs_source}{Shell\+Page.\+xaml.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ ViewModel\ =\ viewModel;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a0f24964c68f958919fb05753ff8894fb}{InitializeComponent}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ ViewModel.NavigationService.Frame\ =\ NavigationFrame;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Set\ the\ title\ bar\ icon\ by\ updating\ /Assets/WindowIcon.ico.}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ A\ custom\ title\ bar\ is\ required\ for\ full\ window\ theme\ and\ Mica\ support.}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ https://docs.microsoft.com/windows/apps/develop/title-\/bar?tabs=winui3\#full-\/customization}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ App.MainWindow.ExtendsContentIntoTitleBar\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ App.MainWindow.SetTitleBar(AppTitleBar);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ App.MainWindow.Activated\ +=\ MainWindow\_Activated;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ AppTitleBarText.Text\ =\ \textcolor{stringliteral}{"{}AppDisplayName"{}}.GetLocalized();}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_ab95b5333a89c93914f13bf41f942512c}\index{BistroQ.Presentation.Views.ShellPage@{BistroQ.Presentation.Views.ShellPage}!Connect@{Connect}}
+\index{Connect@{Connect}!BistroQ.Presentation.Views.ShellPage@{BistroQ.Presentation.Views.ShellPage}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_ab95b5333a89c93914f13bf41f942512c} 
+void Bistro\+Q.\+Presentation.\+Views.\+Shell\+Page.\+Connect (\begin{DoxyParamCaption}\item[{int}]{connection\+Id}{, }\item[{object}]{target}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_ab95b5333a89c93914f13bf41f942512c}{Connect()} 
+
+
+
+Definition at line \mbox{\hyperlink{Debug_2net8_80-windows10_80_822621_80_2Views_2ShellPage_8g_8cs_source_l00392}{392}} of file \mbox{\hyperlink{Debug_2net8_80-windows10_80_822621_80_2Views_2ShellPage_8g_8cs_source}{Shell\+Page.\+g.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(connectionId)}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 1}}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.Page\ element1\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.Page>(target);}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.Page)element1).Loaded\ +=\ this.OnLoaded;}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 14}}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.AppTitleBar\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.Grid>(target);}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 34}}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.NavigationViewControl\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.NavigationView>(target);}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationView)this.NavigationViewControl).DisplayModeChanged\ +=\ this.NavigationViewControl\_DisplayModeChanged;}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 50}}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.NavigationViewItem\ element4\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.NavigationViewItem>(target);}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element4).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element4).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 61}}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.NavigationViewItem\ element5\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.NavigationViewItem>(target);}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element5).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element5).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 72}}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.NavigationViewItem\ element6\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.NavigationViewItem>(target);}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element6).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element6).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 83}}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.NavigationViewItem\ element7\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.NavigationViewItem>(target);}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element7).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element7).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 94}}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.NavigationViewItem\ element8\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.NavigationViewItem>(target);}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element8).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element8).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 9:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 106}}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.NavigationViewItem\ element9\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.NavigationViewItem>(target);}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element9).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element9).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 10:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 118}}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.NavigationViewItem\ element10\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.NavigationViewItem>(target);}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element10).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element10).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 11:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 130}}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.NavigationViewItem\ element11\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.NavigationViewItem>(target);}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element11).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element11).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 12:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 141}}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.NavigationViewItem\ element12\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.NavigationViewItem>(target);}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element12).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)element12).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 14:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 166}}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.SettingsItem\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.NavigationViewItem>(target);}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)this.SettingsItem).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)this.SettingsItem).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)this.SettingsItem).Tapped\ +=\ this.SettingsItem\_Tapped;}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 15:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 181}}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.MenuFlyoutItem\ element15\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.MenuFlyoutItem>(target);}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.MenuFlyoutItem)element15).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.MenuFlyoutItem)element15).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.MenuFlyoutItem)element15).Click\ +=\ this.LogOut\_Click;}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 18:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 209}}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.NavigationFrame\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.Frame>(target);}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 19:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 25}}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.AppTitleBarText\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.TextBlock>(target);}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \ \ \ \ this.\_contentLoaded\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a8cbba1a507480c8b22d2d1a3257e7283}\index{BistroQ.Presentation.Views.ShellPage@{BistroQ.Presentation.Views.ShellPage}!GetBindingConnector@{GetBindingConnector}}
+\index{GetBindingConnector@{GetBindingConnector}!BistroQ.Presentation.Views.ShellPage@{BistroQ.Presentation.Views.ShellPage}}
+\doxysubsubsection{\texorpdfstring{GetBindingConnector()}{GetBindingConnector()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a8cbba1a507480c8b22d2d1a3257e7283} 
+global.\+Microsoft.\+UI.\+Xaml.\+Markup.\+IComponent\+Connector Bistro\+Q.\+Presentation.\+Views.\+Shell\+Page.\+Get\+Binding\+Connector (\begin{DoxyParamCaption}\item[{int}]{connection\+Id}{, }\item[{object}]{target}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a8cbba1a507480c8b22d2d1a3257e7283}{Get\+Binding\+Connector(int connection\+Id, object target)} 
+
+
+
+Definition at line \mbox{\hyperlink{Debug_2net8_80-windows10_80_822621_80_2Views_2ShellPage_8g_8cs_source_l00514}{514}} of file \mbox{\hyperlink{Debug_2net8_80-windows10_80_822621_80_2Views_2ShellPage_8g_8cs_source}{Shell\+Page.\+g.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Markup.IComponentConnector\ returnValue\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(connectionId)}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \textcolor{comment}{//\ Views\(\backslash\)ShellPage.xaml\ line\ 1}}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.Page\ element1\ =\ (global::Microsoft.UI.Xaml.Controls.Page)target;}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ShellPage\_obj1\_Bindings\ bindings\ =\ \textcolor{keyword}{new}\ ShellPage\_obj1\_Bindings();}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ returnValue\ =\ bindings;}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bindings.SetDataRoot(\textcolor{keyword}{this});}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Bindings\ =\ bindings;}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ element1.Loading\ +=\ bindings.Loading;}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1,\ bindings);}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ returnValue;}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a0f24964c68f958919fb05753ff8894fb}\index{BistroQ.Presentation.Views.ShellPage@{BistroQ.Presentation.Views.ShellPage}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!BistroQ.Presentation.Views.ShellPage@{BistroQ.Presentation.Views.ShellPage}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a0f24964c68f958919fb05753ff8894fb} 
+void Bistro\+Q.\+Presentation.\+Views.\+Shell\+Page.\+Initialize\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a0f24964c68f958919fb05753ff8894fb}{Initialize\+Component()} 
+
+
+
+Definition at line \mbox{\hyperlink{Debug_2net8_80-windows10_80_822621_80_2Views_2ShellPage_8g_8i_8cs_source_l00039}{39}} of file \mbox{\hyperlink{Debug_2net8_80-windows10_80_822621_80_2Views_2ShellPage_8g_8i_8cs_source}{Shell\+Page.\+g.\+i.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_contentLoaded)}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \_contentLoaded\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ global::System.Uri\ resourceLocator\ =\ \textcolor{keyword}{new}\ global::System.Uri(\textcolor{stringliteral}{"{}ms-\/appx:///Views/ShellPage.xaml"{}});}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Application.LoadComponent(\textcolor{keyword}{this},\ resourceLocator,\ global::Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation.Application);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a0f24964c68f958919fb05753ff8894fb}\index{BistroQ.Presentation.Views.ShellPage@{BistroQ.Presentation.Views.ShellPage}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!BistroQ.Presentation.Views.ShellPage@{BistroQ.Presentation.Views.ShellPage}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a0f24964c68f958919fb05753ff8894fb} 
+void Bistro\+Q.\+Presentation.\+Views.\+Shell\+Page.\+Initialize\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a0f24964c68f958919fb05753ff8894fb}{Initialize\+Component()} 
+
+
+
+Definition at line \mbox{\hyperlink{Release_2net8_80-windows10_80_822621_80_2Views_2ShellPage_8g_8i_8cs_source_l00039}{39}} of file \mbox{\hyperlink{Release_2net8_80-windows10_80_822621_80_2Views_2ShellPage_8g_8i_8cs_source}{Shell\+Page.\+g.\+i.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_contentLoaded)}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \_contentLoaded\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ global::System.Uri\ resourceLocator\ =\ \textcolor{keyword}{new}\ global::System.Uri(\textcolor{stringliteral}{"{}ms-\/appx:///Views/ShellPage.xaml"{}});}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Application.LoadComponent(\textcolor{keyword}{this},\ resourceLocator,\ global::Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation.Application);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_ac46b0fedf6836d0c3788ee217751903c}\index{BistroQ.Presentation.Views.ShellPage@{BistroQ.Presentation.Views.ShellPage}!ViewModel@{ViewModel}}
+\index{ViewModel@{ViewModel}!BistroQ.Presentation.Views.ShellPage@{BistroQ.Presentation.Views.ShellPage}}
+\doxysubsubsection{\texorpdfstring{ViewModel}{ViewModel}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_ac46b0fedf6836d0c3788ee217751903c} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel}{Shell\+View\+Model}} Bistro\+Q.\+Presentation.\+Views.\+Shell\+Page.\+View\+Model\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{ShellPage_8xaml_8cs_source_l00015}{15}} of file \mbox{\hyperlink{ShellPage_8xaml_8cs_source}{Shell\+Page.\+xaml.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get};}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/obj/x64/\+Debug/net8.\+0-\/windows10.\+0.\+22621.\+0/\+Views/Shell\+Page.\+g.\+cs\item 
+Bistro\+Q.\+Presentation/obj/x64/\+Debug/net8.\+0-\/windows10.\+0.\+22621.\+0/\+Views/Shell\+Page.\+g.\+i.\+cs\item 
+Bistro\+Q.\+Presentation/obj/x64/\+Release/net8.\+0-\/windows10.\+0.\+22621.\+0/\+Views/Shell\+Page.\+g.\+i.\+cs\item 
+Bistro\+Q.\+Presentation/\+Views/Shell\+Page.\+xaml.\+cs\end{DoxyCompactItemize}

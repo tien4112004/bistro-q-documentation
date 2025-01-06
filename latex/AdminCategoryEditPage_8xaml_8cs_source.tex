@@ -1,0 +1,50 @@
+\doxysection{Admin\+Category\+Edit\+Page.\+xaml.\+cs}
+\hypertarget{AdminCategoryEditPage_8xaml_8cs_source}{}\label{AdminCategoryEditPage_8xaml_8cs_source}\index{BistroQ.Presentation/Views/AdminCategory/AdminCategoryEditPage.xaml.cs@{BistroQ.Presentation/Views/AdminCategory/AdminCategoryEditPage.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory}{BistroQ.Presentation.ViewModels.AdminCategory}};}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Input;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views_1_1AdminCategory}{BistroQ.Presentation.Views.AdminCategory}};}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00009}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminCategory_1_1AdminCategoryEditPage}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminCategory_1_1AdminCategoryEditPage}{AdminCategoryEditPage}}\ :\ Page}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryEditPageViewModel}{AdminCategoryEditPageViewModel}}\ ViewModel\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminCategory_1_1AdminCategoryEditPage}{AdminCategoryEditPage}}()}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ ViewModel\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryEditPageViewModel}{AdminCategoryEditPageViewModel}}>();}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ this.DataContext\ =\ ViewModel;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ this.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminCategory_1_1AdminCategoryEditPage_afe7fcac43b22c40b508fce565eeea7e5}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnNavigateBack(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00021}00021\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryEditPageViewModel_a43e553e340ea9baf03497ffde1f5da52}{NavigateBack}}();}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AdminCategoryEditPage\_CancelButton\_Click(\textcolor{keywordtype}{object}\ sender,\ Microsoft.UI.Xaml.RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryEditPageViewModel_a43e553e340ea9baf03497ffde1f5da52}{NavigateBack}}();}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Name\_GettingFocus(Microsoft.UI.Xaml.UIElement\ sender,\ Microsoft.UI.Xaml.Input.GettingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00031}00031\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ ViewModel.Form.ResetError(nameof(ViewModel.Form.Name));}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00035}00035\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerEntered(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Hand);}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00040}00040\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerExited(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00041}00041\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Arrow);}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryEditPage_8xaml_8cs_source_l00044}00044\ \}}
+
+\end{DoxyCode}

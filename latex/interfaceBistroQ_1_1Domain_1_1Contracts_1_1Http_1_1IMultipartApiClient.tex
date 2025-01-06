@@ -1,0 +1,197 @@
+\doxysection{Bistro\+Q.\+Domain.\+Contracts.\+Http.\+IMultipart\+Api\+Client Interface Reference}
+\hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient}{}\label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient}\index{BistroQ.Domain.Contracts.Http.IMultipartApiClient@{BistroQ.Domain.Contracts.Http.IMultipartApiClient}}
+
+
+Interface for handling multipart form data API requests. Provides methods for uploading files and JSON content using multipart/form-\/data.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Domain.\+Contracts.\+Http.\+IMultipart\+Api\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_a219c906655d1683735aa18cb0f425dbf}{Post\+Multipart\+Async$<$ T $>$}} (string url, Multipart\+Form\+Data\+Content content)
+\begin{DoxyCompactList}\small\item\em Sends a POST request with multipart form data content. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_a1dd914c2123861114ed8ee497490e1e1}{Post\+Multipart\+Async$<$ T $>$}} (string url, object json\+Content, string json\+Part\+Name, Dictionary$<$ string,(Stream Stream, string File\+Name, string Content\+Type)$>$ files)
+\begin{DoxyCompactList}\small\item\em Sends a POST request with JSON content and files as multipart form data. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_aa8520259b8f590d0392005f7a3ed01d1}{Put\+Multipart\+Async$<$ T $>$}} (string url, object json\+Content, string json\+Part\+Name, Dictionary$<$ string,(Stream Stream, string File\+Name, string Content\+Type)$>$ files)
+\begin{DoxyCompactList}\small\item\em Sends a PUT request with JSON content and files as multipart form data. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_aa313bdf3093ef63462a7d64b7a1463e2}{Put\+Multipart\+Async$<$ T $>$}} (string url, Dictionary$<$ string,(Stream Stream, string File\+Name, string Content\+Type)$>$ files)
+\begin{DoxyCompactList}\small\item\em Sends a PUT request with only file content as multipart form data. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_a163bb7f4f3db7a63a23ad489b7d16cca}{Patch\+Multipart\+Async$<$ T $>$}} (string url, Dictionary$<$ string,(Stream Stream, string File\+Name, string Content\+Type)$>$ files)
+\begin{DoxyCompactList}\small\item\em Sends a PATCH request with only file content as multipart form data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for handling multipart form data API requests. Provides methods for uploading files and JSON content using multipart/form-\/data. 
+
+Definition at line \mbox{\hyperlink{IMultipartApiClient_8cs_source_l00009}{9}} of file \mbox{\hyperlink{IMultipartApiClient_8cs_source}{IMultipart\+Api\+Client.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_a163bb7f4f3db7a63a23ad489b7d16cca}\index{BistroQ.Domain.Contracts.Http.IMultipartApiClient@{BistroQ.Domain.Contracts.Http.IMultipartApiClient}!PatchMultipartAsync$<$ T $>$@{PatchMultipartAsync$<$ T $>$}}
+\index{PatchMultipartAsync$<$ T $>$@{PatchMultipartAsync$<$ T $>$}!BistroQ.Domain.Contracts.Http.IMultipartApiClient@{BistroQ.Domain.Contracts.Http.IMultipartApiClient}}
+\doxysubsubsection{\texorpdfstring{PatchMultipartAsync$<$ T $>$()}{PatchMultipartAsync< T >()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_a163bb7f4f3db7a63a23ad489b7d16cca} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Http.\+IMultipart\+Api\+Client.\+Patch\+Multipart\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{url}{, }\item[{Dictionary$<$ string,(Stream Stream, string File\+Name, string Content\+Type)$>$}]{files}{}\end{DoxyParamCaption})}
+
+
+
+Sends a PATCH request with only file content as multipart form data. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the expected response data.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The URL to send the request to.\\
+\hline
+{\em files} & Dictionary of files to upload, containing stream, filename, and content type for each file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An API response containing data of type {\itshape T} .
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_a3fb2afb6d7282df0fcfac3138c94b8cf}{Bistro\+Q.\+Service.\+Http.\+Multipart\+Api\+Client}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_a219c906655d1683735aa18cb0f425dbf}\index{BistroQ.Domain.Contracts.Http.IMultipartApiClient@{BistroQ.Domain.Contracts.Http.IMultipartApiClient}!PostMultipartAsync$<$ T $>$@{PostMultipartAsync$<$ T $>$}}
+\index{PostMultipartAsync$<$ T $>$@{PostMultipartAsync$<$ T $>$}!BistroQ.Domain.Contracts.Http.IMultipartApiClient@{BistroQ.Domain.Contracts.Http.IMultipartApiClient}}
+\doxysubsubsection{\texorpdfstring{PostMultipartAsync$<$ T $>$()}{PostMultipartAsync< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_a219c906655d1683735aa18cb0f425dbf} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Http.\+IMultipart\+Api\+Client.\+Post\+Multipart\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{url}{, }\item[{Multipart\+Form\+Data\+Content}]{content}{}\end{DoxyParamCaption})}
+
+
+
+Sends a POST request with multipart form data content. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the expected response data.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The URL to send the request to.\\
+\hline
+{\em content} & The multipart form data content to send.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An API response containing data of type {\itshape T} .
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_a4f8f23f3a9eae00063d2d0ad9191d61e}{Bistro\+Q.\+Service.\+Http.\+Multipart\+Api\+Client}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_a1dd914c2123861114ed8ee497490e1e1}\index{BistroQ.Domain.Contracts.Http.IMultipartApiClient@{BistroQ.Domain.Contracts.Http.IMultipartApiClient}!PostMultipartAsync$<$ T $>$@{PostMultipartAsync$<$ T $>$}}
+\index{PostMultipartAsync$<$ T $>$@{PostMultipartAsync$<$ T $>$}!BistroQ.Domain.Contracts.Http.IMultipartApiClient@{BistroQ.Domain.Contracts.Http.IMultipartApiClient}}
+\doxysubsubsection{\texorpdfstring{PostMultipartAsync$<$ T $>$()}{PostMultipartAsync< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_a1dd914c2123861114ed8ee497490e1e1} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Http.\+IMultipart\+Api\+Client.\+Post\+Multipart\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{url}{, }\item[{object}]{json\+Content}{, }\item[{string}]{json\+Part\+Name}{, }\item[{Dictionary$<$ string,(Stream Stream, string File\+Name, string Content\+Type)$>$}]{files}{}\end{DoxyParamCaption})}
+
+
+
+Sends a POST request with JSON content and files as multipart form data. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the expected response data.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The URL to send the request to.\\
+\hline
+{\em json\+Content} & The JSON content to include in the request.\\
+\hline
+{\em json\+Part\+Name} & The name of the JSON part in the multipart form.\\
+\hline
+{\em files} & Dictionary of files to upload, containing stream, filename, and content type for each file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An API response containing data of type {\itshape T} .
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_aae6fa278e4230911574bc4caf51f232b}{Bistro\+Q.\+Service.\+Http.\+Multipart\+Api\+Client}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_aa313bdf3093ef63462a7d64b7a1463e2}\index{BistroQ.Domain.Contracts.Http.IMultipartApiClient@{BistroQ.Domain.Contracts.Http.IMultipartApiClient}!PutMultipartAsync$<$ T $>$@{PutMultipartAsync$<$ T $>$}}
+\index{PutMultipartAsync$<$ T $>$@{PutMultipartAsync$<$ T $>$}!BistroQ.Domain.Contracts.Http.IMultipartApiClient@{BistroQ.Domain.Contracts.Http.IMultipartApiClient}}
+\doxysubsubsection{\texorpdfstring{PutMultipartAsync$<$ T $>$()}{PutMultipartAsync< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_aa313bdf3093ef63462a7d64b7a1463e2} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Http.\+IMultipart\+Api\+Client.\+Put\+Multipart\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{url}{, }\item[{Dictionary$<$ string,(Stream Stream, string File\+Name, string Content\+Type)$>$}]{files}{}\end{DoxyParamCaption})}
+
+
+
+Sends a PUT request with only file content as multipart form data. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the expected response data.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The URL to send the request to.\\
+\hline
+{\em files} & Dictionary of files to upload, containing stream, filename, and content type for each file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An API response containing data of type {\itshape T} .
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_a7090d6d80c09acf7a79dc56f9756e6ac}{Bistro\+Q.\+Service.\+Http.\+Multipart\+Api\+Client}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_aa8520259b8f590d0392005f7a3ed01d1}\index{BistroQ.Domain.Contracts.Http.IMultipartApiClient@{BistroQ.Domain.Contracts.Http.IMultipartApiClient}!PutMultipartAsync$<$ T $>$@{PutMultipartAsync$<$ T $>$}}
+\index{PutMultipartAsync$<$ T $>$@{PutMultipartAsync$<$ T $>$}!BistroQ.Domain.Contracts.Http.IMultipartApiClient@{BistroQ.Domain.Contracts.Http.IMultipartApiClient}}
+\doxysubsubsection{\texorpdfstring{PutMultipartAsync$<$ T $>$()}{PutMultipartAsync< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient_aa8520259b8f590d0392005f7a3ed01d1} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Http.\+IMultipart\+Api\+Client.\+Put\+Multipart\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{url}{, }\item[{object}]{json\+Content}{, }\item[{string}]{json\+Part\+Name}{, }\item[{Dictionary$<$ string,(Stream Stream, string File\+Name, string Content\+Type)$>$}]{files}{}\end{DoxyParamCaption})}
+
+
+
+Sends a PUT request with JSON content and files as multipart form data. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the expected response data.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The URL to send the request to.\\
+\hline
+{\em json\+Content} & The JSON content to include in the request.\\
+\hline
+{\em json\+Part\+Name} & The name of the JSON part in the multipart form.\\
+\hline
+{\em files} & Dictionary of files to upload, containing stream, filename, and content type for each file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An API response containing data of type {\itshape T} .
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_a1b2d3c9fd9ade23876d7a135428fca49}{Bistro\+Q.\+Service.\+Http.\+Multipart\+Api\+Client}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Domain/\+Contracts/\+Http/IMultipart\+Api\+Client.\+cs\end{DoxyCompactItemize}

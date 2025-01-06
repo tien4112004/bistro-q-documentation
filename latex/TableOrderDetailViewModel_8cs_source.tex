@@ -1,0 +1,144 @@
+\doxysection{Table\+Order\+Detail\+View\+Model.\+cs}
+\hypertarget{TableOrderDetailViewModel_8cs_source}{}\label{TableOrderDetailViewModel_8cs_source}\index{BistroQ.Presentation/ViewModels/CashierTable/TableOrderDetailViewModel.cs@{BistroQ.Presentation/ViewModels/CashierTable/TableOrderDetailViewModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }AutoMapper;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Enums}{BistroQ.Domain.Enums}};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums}{BistroQ.Presentation.Enums}};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages}{BistroQ.Presentation.Messages}};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Commons}{BistroQ.Presentation.ViewModels.Commons}};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Models}{BistroQ.Presentation.ViewModels.Models}};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Input;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00011}00011\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Messaging;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00012}00012\ \textcolor{keyword}{using\ }Microsoft.UI.Dispatching;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00013}00013\ \textcolor{keyword}{using\ }System.Diagnostics;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00015}00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable}{BistroQ.Presentation.ViewModels.CashierTable}};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00027}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel}{00027}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel}{TableOrderDetailViewModel}}\ :}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00028}00028\ \ \ \ \ ObservableObject,}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00029}00029\ \ \ \ \ IRecipient<TableSelectedMessage>,}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00030}00030\ \ \ \ \ IRecipient<TableStateChangedMessage>,}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00031}00031\ \ \ \ \ IDisposable}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00032}00032\ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00033}00033\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ DispatcherQueue\ dispatcherQueue;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00042}00042\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService}{IOrderDataService}}\ \_orderDataService;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00047}00047\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IMapper\ \_mapper;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00052}00052\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IMessenger\ \_messenger;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00057}00057\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00058}00058\ \ \ \ \ [NotifyPropertyChangedFor(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a1a8ab1abea97abf69ebd55ad9e220594}{IsCheckoutEnabled}}))]}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00059}00059\ \ \ \ \ [NotifyPropertyChangedFor(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a82bc0c851250fb33fe29a065baf1166b}{DoesNotHaveOrder}}))]}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00060}00060\ \ \ \ \ [NotifyPropertyChangedFor(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_aac58af9fb5816d16bbde12dee90ed9c0}{DoesNotHaveOrderDetail}}))]}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00061}00061\ \ \ \ \ [NotifyPropertyChangedFor(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a6d63e6bd45274b4e7268152f81189da5}{HasOrderDetail}}))]}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00062}00062\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{OrderViewModel}}\ \_order;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00067}00067\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00068}00068\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_isLoading\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00069}00069\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00071}00071\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00075}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{00075}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel}{TimeCounterViewModel}}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00080}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a82bc0c851250fb33fe29a065baf1166b}{00080}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a82bc0c851250fb33fe29a065baf1166b}{DoesNotHaveOrder}}\ =>\ Order\ ==\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00085}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_aac58af9fb5816d16bbde12dee90ed9c0}{00085}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_aac58af9fb5816d16bbde12dee90ed9c0}{DoesNotHaveOrderDetail}}\ =>\ Order\ !=\ \textcolor{keyword}{null}\ \&\&\ Order.OrderItems.Count\ <=\ 0;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00090}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a6d63e6bd45274b4e7268152f81189da5}{00090}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a6d63e6bd45274b4e7268152f81189da5}{HasOrderDetail}}\ =>\ Order\ !=\ \textcolor{keyword}{null}\ \&\&\ Order.OrderItems.Count\ >\ 0;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00095}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a1a8ab1abea97abf69ebd55ad9e220594}{00095}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a1a8ab1abea97abf69ebd55ad9e220594}{IsCheckoutEnabled}}\ =>\ Order\ !=\ \textcolor{keyword}{null}\ \&\&\ Order.Status\ ==\ OrderStatus.Pending;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00096}00096\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00098}00098\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00105}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a3a1ece3105586b3089a4c93a089d8e0f}{00105}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a3a1ece3105586b3089a4c93a089d8e0f}{TableOrderDetailViewModel}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService}{IOrderDataService}}\ orderDataService,\ IMapper\ mapper,\ IMessenger\ messenger)}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00106}00106\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \_orderDataService\ =\ orderDataService;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \_messenger\ =\ messenger;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ dispatcherQueue\ =\ DispatcherQueue.GetForCurrentThread();}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel}{TimeCounterViewModel}}();}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00114}00114\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00116}00116\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00122}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_ae2d83f7aed855141aae0161fae6cdce9}{00122}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<OrderViewModel?>\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_ae2d83f7aed855141aae0161fae6cdce9}{OnTableChangedAsync}}(\textcolor{keywordtype}{int}?\ tableId)}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00123}00123\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ var\ order\ =\ await\ TaskHelper.WithMinimumDelay(}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_orderDataService.GetOrderByCashierAsync(tableId\ ??\ 0),}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 200);}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ Order\ =\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{OrderViewModel}}>(order);}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a7cb90c34a03ab1fd737da4452d1b2069}{SetStartTime}}(Order.StartTime\ ??\ DateTime.Now);}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Order;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ Order\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{OrderViewModel}}();}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a7cb90c34a03ab1fd737da4452d1b2069}{SetStartTime}}(DateTime.Now);}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(ex.Message);}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00147}00147\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00152}00152\ \ \ \ \ [RelayCommand]}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00153}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a5abcaa9ea56b7acb633faad28c8c7f7a}{00153}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a5abcaa9ea56b7acb633faad28c8c7f7a}{CheckoutRequestedCommand}}()}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00154}00154\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a0f7eff89937d3c6e7e2577740253fc91}{CompleteCheckoutRequestedMessage}}(Order.TableId));}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00156}00156\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00162}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a6da06472dc8458f627f3f4045b9c16f5}{00162}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a6da06472dc8458f627f3f4045b9c16f5}{Receive}}(\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_af30b117e2cdd03ca1257d66adb06707b}{TableSelectedMessage}}\ message)}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00163}00163\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_ae2d83f7aed855141aae0161fae6cdce9}{OnTableChangedAsync}}(message.TableId);}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00165}00165\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00170}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a0d214ace8e350f9ab812078befec3cf5}{00170}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a0d214ace8e350f9ab812078befec3cf5}{Dispose}}()}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00171}00171\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00173}00173\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00179}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a2101998c887103bb155299428f3c50d0}{00179}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a2101998c887103bb155299428f3c50d0}{Receive}}(\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a7fd46469b188bcae2fb9dd9b0d106341}{TableStateChangedMessage}}\ message)}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00180}00180\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ dispatcherQueue.TryEnqueue(async\ ()\ =>}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (message.TableId\ ==\ Order.TableId)}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (message.State)}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{CashierTableState}}.Available:}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Order\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_af2fe834137128e739fbf24751723ae15}{Reset}}();}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{CashierTableState}}.Occupied:}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a26148118f7497c2f59c02340e6846795}{Start}}();}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{CashierTableState}}.CheckoutPending:}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_ae2d83f7aed855141aae0161fae6cdce9}{OnTableChangedAsync}}(message.TableId);}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ updatedOrder\ =\ Order.Clone();}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ updatedOrder.Status\ =\ OrderStatus.Pending;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Order\ =\ updatedOrder;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_ab932f26c27db3a1a7d251194400b464f}{Stop}}();}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00204}00204\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00205}00205\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailViewModel_8cs_source_l00206}00206\ \}}
+
+\end{DoxyCode}

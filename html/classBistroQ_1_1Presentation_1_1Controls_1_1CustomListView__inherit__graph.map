@@ -1,0 +1,9 @@
+<map id="BistroQ.Presentation.Controls.CustomListView&lt; T &gt;" name="BistroQ.Presentation.Controls.CustomListView&lt; T &gt;">
+<area shape="rect" id="Node000001" title="A custom ListView implementation that supports multiple selection with observable collection binding ..." alt="" coords="93,112,293,155"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,21,77,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,54,162,109,159,114,72,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="101,5,285,64"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,79,196,112,190,112,190,79"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="309,21,400,48"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="321,59,229,114,226,109,319,54"/>
+</map>

@@ -1,0 +1,45 @@
+\doxysection{File\+Service.\+cs}
+\hypertarget{FileService_8cs_source}{}\label{FileService_8cs_source}\index{BistroQ.Service/Common/FileService.cs@{BistroQ.Service/Common/FileService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Newtonsoft.Json;}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00005}\mbox{\hyperlink{namespaceBistroQ_1_1Service_1_1Common}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Service_1_1Common}{BistroQ.Service.Common}};}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00010}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService}{FileService}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}{IFileService}}}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00019}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService_ad6a9664d214949d72fdcd35a91aeec85}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ T\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService_ad6a9664d214949d72fdcd35a91aeec85}{Read<T>}}(\textcolor{keywordtype}{string}\ folderPath,\ \textcolor{keywordtype}{string}\ fileName)}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ var\ path\ =\ Path.Combine(folderPath,\ fileName);}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (File.Exists(path))}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ var\ json\ =\ File.ReadAllText(path);}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ JsonConvert.DeserializeObject<T>(json);}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00039}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService_a212af61e829953112c541f8cc7f9e023}{00039}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService_a212af61e829953112c541f8cc7f9e023}{Save<T>}}(\textcolor{keywordtype}{string}\ folderPath,\ \textcolor{keywordtype}{string}\ fileName,\ T\ content)}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00040}00040\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Directory.Exists(folderPath))}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ Directory.CreateDirectory(folderPath);}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ var\ fileContent\ =\ JsonConvert.SerializeObject(content);}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ File.WriteAllText(Path.Combine(folderPath,\ fileName),\ fileContent,\ Encoding.UTF8);}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00055}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService_ac41322a8e825d84759ae380507129dae}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService_ac41322a8e825d84759ae380507129dae}{Delete}}(\textcolor{keywordtype}{string}\ folderPath,\ \textcolor{keywordtype}{string}\ fileName)}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00056}00056\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fileName\ !=\ \textcolor{keyword}{null}\ \&\&\ File.Exists(Path.Combine(folderPath,\ fileName)))}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ File.Delete(Path.Combine(folderPath,\ fileName));}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileService_8cs_source_l00062}00062\ \}}
+
+\end{DoxyCode}

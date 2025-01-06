@@ -1,0 +1,72 @@
+\doxysection{Order\+View\+Model.\+cs}
+\hypertarget{OrderViewModel_8cs_source}{}\label{OrderViewModel_8cs_source}\index{BistroQ.Presentation/ViewModels/Models/OrderViewModel.cs@{BistroQ.Presentation/ViewModels/Models/OrderViewModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Enums}{BistroQ.Domain.Enums}};}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.ObjectModel;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Models}{BistroQ.Presentation.ViewModels.Models}};}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00014}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{00014}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{OrderViewModel}}\ :\ ObservableObject}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00019}00019\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}?\ \_orderId;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00025}00025\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{private}\ decimal?\ \_totalAmount;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00031}00031\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{private}\ DateTime?\ \_startTime;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00037}00037\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00038}00038\ \ \ \ \ \textcolor{keyword}{private}\ DateTime?\ \_endTime;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00043}00043\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00044}00044\ \ \ \ \ \textcolor{keyword}{private}\ OrderStatus\ \_status;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00049}00049\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_peopleCount;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00055}00055\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00056}00056\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}?\ \_tableId;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00061}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_a5e6ab43970b8778d7d59ae2d4bf5764b}{00061}}\ \ \ \ \ \textcolor{keyword}{public}\ ObservableCollection<OrderItemViewModel>\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_a5e6ab43970b8778d7d59ae2d4bf5764b}{OrderItems}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00066}00066\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00067}00067\ \ \ \ \ \textcolor{keyword}{private}\ decimal\ \_totalCalories;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00072}00072\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00073}00073\ \ \ \ \ \textcolor{keyword}{private}\ decimal\ \_totalProtein;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00078}00078\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00079}00079\ \ \ \ \ \textcolor{keyword}{private}\ decimal\ \_totalFat;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00084}00084\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00085}00085\ \ \ \ \ \textcolor{keyword}{private}\ decimal\ \_totalFiber;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00090}00090\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00091}00091\ \ \ \ \ \textcolor{keyword}{private}\ decimal\ \_totalCarbohydrates;}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00097}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_ad1875260885210688e090b849b0b03de}{00097}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{OrderViewModel}}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_ad1875260885210688e090b849b0b03de}{Clone}}()}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00098}00098\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{OrderViewModel}}}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ OrderId\ =\ OrderId,}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ TotalAmount\ =\ TotalAmount,}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ StartTime\ =\ StartTime,}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ EndTime\ =\ EndTime,}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ Status\ =\ Status,}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ PeopleCount\ =\ PeopleCount,}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ TableId\ =\ TableId,}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ TotalCalories\ =\ TotalCalories,}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ TotalProtein\ =\ TotalProtein,}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ TotalFat\ =\ TotalFat,}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ TotalFiber\ =\ TotalFiber,}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ TotalCarbohydrates\ =\ TotalCarbohydrates,}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_a5e6ab43970b8778d7d59ae2d4bf5764b}{OrderItems}}\ =\ \textcolor{keyword}{new}\ ObservableCollection<OrderItemViewModel>(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_a5e6ab43970b8778d7d59ae2d4bf5764b}{OrderItems}})}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderViewModel_8cs_source_l00116}00116\ \}}
+
+\end{DoxyCode}

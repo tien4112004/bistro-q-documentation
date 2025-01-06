@@ -1,0 +1,28 @@
+var classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel =
+[
+    [ "Dispose", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#a8e4c2a1936f49d46f0e27e40bb8d2b4c", null ],
+    [ "LoadExistingOrderAsync", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#a0460211a60d4e7d73f9dd1bbaf734912", null ],
+    [ "Receive", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#afbe3e15e520b734834c4b9488e01fc11", null ],
+    [ "Receive", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#a695406b19558fe82ccbdd01270f38076", null ],
+    [ "CaloriesLimit", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#ac664bc3e6dcff7acef317fdc20bbd45a", null ],
+    [ "CaloriesPercentage", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#adbdd6b3850a80ec1362264b2f3c6c924", null ],
+    [ "CancelOrderCommand", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#ae93c9a7377fd02bed7980e7023ae36c2", null ],
+    [ "CarbohydratesLimit", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#a28087a42eeca7ba17b1e1ce4d81b2a4b", null ],
+    [ "CarbohydratesPercentage", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#aa7ae84b954b19adb458112d5e62acf13", null ],
+    [ "CartItems", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#a42f272cbfe372f0d05e94f289903ea65", null ],
+    [ "CompletedItems", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#aa1ea7b3baaad5300f5c5b0d12fd7a933", null ],
+    [ "EditPeopleCountCommand", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#aecc8468430ce69ce6e2db7ef4a513aeb", null ],
+    [ "FatLimit", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#a5321691e903d41796369199b87b9e4aa", null ],
+    [ "FatPercentage", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#ada55e108fd44ca3ef97edd223e732e74", null ],
+    [ "FiberLimit", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#a2d7b2b49c0c3079729dad57819a44dbb", null ],
+    [ "FiberPercentage", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#a9830bbba9d4c59ae2162cc925e8f265a", null ],
+    [ "IsCompletedItemsEmpty", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#ad6ea8538ee9d305383735b88da2b12cb", null ],
+    [ "IsProcessingItemsEmpty", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#af28894d9400f13036eb07b5a25bc0c62", null ],
+    [ "Order", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#aa2a3f62781fe74ad2a5b97327dbb9397", null ],
+    [ "OrderStartedCommand", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#a65cd265e80d745c99d70abdd2bbb6028", null ],
+    [ "ProcessingItems", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#ae3b33cc937efb9e7832797f6e23e4096", null ],
+    [ "ProteinLimit", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#a62b1d25775aa615ad4169f5f49dd9e57", null ],
+    [ "ProteinPercentage", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#a9bec0a9833c301d4ae6999605baea3e5", null ],
+    [ "StartOrderCommand", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#a1fafff48db8733b5023c85ba0ef64dac", null ],
+    [ "TotalCart", "classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel.html#af0a5258967383d1146515388c9544a3d", null ]
+];

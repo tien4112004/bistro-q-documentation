@@ -1,0 +1,118 @@
+\doxysection{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IFile\+Service Interface Reference}
+\hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}{}\label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}\index{BistroQ.Domain.Contracts.Services.IFileService@{BistroQ.Domain.Contracts.Services.IFileService}}
+
+
+Interface for handling file operations with JSON serialization. Provides methods for reading, saving, and deleting files.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IFile\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a256efb094b5eb7f5ed5e3c8b8c0cb8f7}{Read$<$ T $>$}} (string folder\+Path, string file\+Name)
+\begin{DoxyCompactList}\small\item\em Reads and deserializes a JSON file into the specified type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a646bcda50bb0043cffd2e179ebac8d0e}{Save$<$ T $>$}} (string folder\+Path, string file\+Name, T content)
+\begin{DoxyCompactList}\small\item\em Serializes and saves an object to a JSON file. Creates the directory if it doesn\textquotesingle{}t exist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a28399ab6ce0afd9dd8158848548757a5}{Delete}} (string folder\+Path, string file\+Name)
+\begin{DoxyCompactList}\small\item\em Deletes a file from the specified folder if it exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for handling file operations with JSON serialization. Provides methods for reading, saving, and deleting files. 
+
+Definition at line \mbox{\hyperlink{IFileService_8cs_source_l00007}{7}} of file \mbox{\hyperlink{IFileService_8cs_source}{IFile\+Service.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a28399ab6ce0afd9dd8158848548757a5}\index{BistroQ.Domain.Contracts.Services.IFileService@{BistroQ.Domain.Contracts.Services.IFileService}!Delete@{Delete}}
+\index{Delete@{Delete}!BistroQ.Domain.Contracts.Services.IFileService@{BistroQ.Domain.Contracts.Services.IFileService}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a28399ab6ce0afd9dd8158848548757a5} 
+void Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IFile\+Service.\+Delete (\begin{DoxyParamCaption}\item[{string}]{folder\+Path}{, }\item[{string}]{file\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Deletes a file from the specified folder if it exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+Path} & The path to the folder containing the file\\
+\hline
+{\em file\+Name} & The name of the file to delete\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService_ac41322a8e825d84759ae380507129dae}{Bistro\+Q.\+Service.\+Common.\+File\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a256efb094b5eb7f5ed5e3c8b8c0cb8f7}\index{BistroQ.Domain.Contracts.Services.IFileService@{BistroQ.Domain.Contracts.Services.IFileService}!Read$<$ T $>$@{Read$<$ T $>$}}
+\index{Read$<$ T $>$@{Read$<$ T $>$}!BistroQ.Domain.Contracts.Services.IFileService@{BistroQ.Domain.Contracts.Services.IFileService}}
+\doxysubsubsection{\texorpdfstring{Read$<$ T $>$()}{Read< T >()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a256efb094b5eb7f5ed5e3c8b8c0cb8f7} 
+T Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IFile\+Service.\+Read$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{folder\+Path}{, }\item[{string}]{file\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Reads and deserializes a JSON file into the specified type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type to deserialize the JSON content into\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+Path} & The path to the folder containing the file\\
+\hline
+{\em file\+Name} & The name of the file to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized object of type T, or default value if file doesn\textquotesingle{}t exist
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService_ad6a9664d214949d72fdcd35a91aeec85}{Bistro\+Q.\+Service.\+Common.\+File\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a646bcda50bb0043cffd2e179ebac8d0e}\index{BistroQ.Domain.Contracts.Services.IFileService@{BistroQ.Domain.Contracts.Services.IFileService}!Save$<$ T $>$@{Save$<$ T $>$}}
+\index{Save$<$ T $>$@{Save$<$ T $>$}!BistroQ.Domain.Contracts.Services.IFileService@{BistroQ.Domain.Contracts.Services.IFileService}}
+\doxysubsubsection{\texorpdfstring{Save$<$ T $>$()}{Save< T >()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a646bcda50bb0043cffd2e179ebac8d0e} 
+void Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IFile\+Service.\+Save$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{folder\+Path}{, }\item[{string}]{file\+Name}{, }\item[{T}]{content}{}\end{DoxyParamCaption})}
+
+
+
+Serializes and saves an object to a JSON file. Creates the directory if it doesn\textquotesingle{}t exist. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of object to serialize\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+Path} & The path to the folder where the file will be saved\\
+\hline
+{\em file\+Name} & The name of the file to save\\
+\hline
+{\em content} & The object to serialize and save\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService_a212af61e829953112c541f8cc7f9e023}{Bistro\+Q.\+Service.\+Common.\+File\+Service}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Domain/\+Contracts/\+Common/IFile\+Service.\+cs\end{DoxyCompactItemize}

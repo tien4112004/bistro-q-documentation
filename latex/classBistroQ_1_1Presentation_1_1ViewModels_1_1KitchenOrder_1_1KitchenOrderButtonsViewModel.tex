@@ -1,0 +1,184 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+Buttons\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel}}
+
+
+View\+Model responsible for managing kitchen order action buttons and their states. Handles completion, movement, and cancellation of orders with appropriate state management.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+Buttons\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+Buttons\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a94c4a6b268905cd0ef2caa2464f0f4a5}{Kitchen\+Order\+Buttons\+View\+Model}} (IMessenger messenger)
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a168311c87ea6b287fc096858a8475157}{Update\+States}} (IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$ items)
+\begin{DoxyCompactList}\small\item\em Updates the button states based on the provided order items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a1e0fbd52221315ebd11b159445343b48}{Reset\+Loading\+State}} ()
+\begin{DoxyCompactList}\small\item\em Resets all loading state flags to false. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a137786a0d2cfd8d2d8744f977072ad54}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Performs cleanup of resources used by the View\+Model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_af998484a689c72813bb807ecd6b2666c}{Items}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Collection of order items being managed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model responsible for managing kitchen order action buttons and their states. Handles completion, movement, and cancellation of orders with appropriate state management. 
+
+Implements\+:
+\begin{DoxyItemize}
+\item Observable\+Object for MVVM pattern
+\item IDisposable for resource cleanup 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{KitchenOrderButtonsViewModel_8cs_source_l00021}{21}} of file \mbox{\hyperlink{KitchenOrderButtonsViewModel_8cs_source}{Kitchen\+Order\+Buttons\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a94c4a6b268905cd0ef2caa2464f0f4a5}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel}!KitchenOrderButtonsViewModel@{KitchenOrderButtonsViewModel}}
+\index{KitchenOrderButtonsViewModel@{KitchenOrderButtonsViewModel}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel}}
+\doxysubsubsection{\texorpdfstring{KitchenOrderButtonsViewModel()}{KitchenOrderButtonsViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a94c4a6b268905cd0ef2caa2464f0f4a5} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+Buttons\+View\+Model.\+Kitchen\+Order\+Buttons\+View\+Model (\begin{DoxyParamCaption}\item[{IMessenger}]{messenger}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderButtonsViewModel_8cs_source_l00074}{74}} of file \mbox{\hyperlink{KitchenOrderButtonsViewModel_8cs_source}{Kitchen\+Order\+Buttons\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \_messenger\ =\ messenger;}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a137786a0d2cfd8d2d8744f977072ad54}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a137786a0d2cfd8d2d8744f977072ad54} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+Buttons\+View\+Model.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs cleanup of resources used by the View\+Model. 
+
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderButtonsViewModel_8cs_source_l00111}{111}} of file \mbox{\hyperlink{KitchenOrderButtonsViewModel_8cs_source}{Kitchen\+Order\+Buttons\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112\ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a1e0fbd52221315ebd11b159445343b48}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel}!ResetLoadingState@{ResetLoadingState}}
+\index{ResetLoadingState@{ResetLoadingState}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel}}
+\doxysubsubsection{\texorpdfstring{ResetLoadingState()}{ResetLoadingState()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a1e0fbd52221315ebd11b159445343b48} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+Buttons\+View\+Model.\+Reset\+Loading\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets all loading state flags to false. 
+
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderButtonsViewModel_8cs_source_l00101}{101}} of file \mbox{\hyperlink{KitchenOrderButtonsViewModel_8cs_source}{Kitchen\+Order\+Buttons\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102\ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ IsCompleteLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ IsMoveLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ IsCancelLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a168311c87ea6b287fc096858a8475157}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel}!UpdateStates@{UpdateStates}}
+\index{UpdateStates@{UpdateStates}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel}}
+\doxysubsubsection{\texorpdfstring{UpdateStates()}{UpdateStates()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a168311c87ea6b287fc096858a8475157} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+Buttons\+View\+Model.\+Update\+States (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$}]{items}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the button states based on the provided order items. 
+
+
+\begin{DoxyItemize}
+\item Complete action is available for items in progress
+\item Move action is available when there are any items
+\item Cancel action is available for pending items 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em items} & Collection of order items to evaluate\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderButtonsViewModel_8cs_source_l00090}{90}} of file \mbox{\hyperlink{KitchenOrderButtonsViewModel_8cs_source}{Kitchen\+Order\+Buttons\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_af998484a689c72813bb807ecd6b2666c}{Items}}\ =\ \textcolor{keyword}{new}\ ObservableCollection<OrderItemViewModel>(items);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ CanComplete\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_af998484a689c72813bb807ecd6b2666c}{Items}}.Any(item\ =>\ item.Status\ ==\ OrderItemStatus.InProgress);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ CanMove\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_af998484a689c72813bb807ecd6b2666c}{Items}}.Any();}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ CanCancel\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_af998484a689c72813bb807ecd6b2666c}{Items}}.Any(item\ =>\ item.Status\ ==\ OrderItemStatus.Pending);}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_af998484a689c72813bb807ecd6b2666c}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel}!Items@{Items}}
+\index{Items@{Items}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel}}
+\doxysubsubsection{\texorpdfstring{Items}{Items}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_af998484a689c72813bb807ecd6b2666c} 
+Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}}$>$ Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+Buttons\+View\+Model.\+Items = new()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Collection of order items being managed. 
+
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderButtonsViewModel_8cs_source_l00034}{34}} of file \mbox{\hyperlink{KitchenOrderButtonsViewModel_8cs_source}{Kitchen\+Order\+Buttons\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}();}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Kitchen\+Order/Kitchen\+Order\+Buttons\+View\+Model.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,615 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+
+
+View\+Model responsible for managing the order cart functionality in the client interface. Handles order creation, modification, and status tracking with support for nutrition facts.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ae91cf47bf19141acb14f63d4045b5aca}{Order\+Cart\+View\+Model}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService}{IOrder\+Data\+Service}} order\+Data\+Service, IMapper mapper, IMessenger messenger)
+\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a0460211a60d4e7d73f9dd1bbaf734912}{Load\+Existing\+Order\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Loads an existing order from the data service. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_afbe3e15e520b734834c4b9488e01fc11}{Receive}} (Add\+Product\+To\+Cart\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles receiving a message to add a product to the cart. \end{DoxyCompactList}\item 
+async void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a695406b19558fe82ccbdd01270f38076}{Receive}} (Order\+Requested\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles receiving a message to process the order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a8e4c2a1936f49d46f0e27e40bb8d2b4c}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Performs cleanup of resources used by the View\+Model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{Order\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aa2a3f62781fe74ad2a5b97327dbb9397}{Order}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the current order being managed. \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ac664bc3e6dcff7acef317fdc20bbd45a}{Calories\+Limit}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the calculated calories limit based on daily recommended value and people count. \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a62b1d25775aa615ad4169f5f49dd9e57}{Protein\+Limit}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the calculated protein limit based on daily recommended value and people count. \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a5321691e903d41796369199b87b9e4aa}{Fat\+Limit}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the calculated fat limit based on daily recommended value and people count. \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a2d7b2b49c0c3079729dad57819a44dbb}{Fiber\+Limit}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the calculated fiber limit based on daily recommended value and people count. \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a28087a42eeca7ba17b1e1ce4d81b2a4b}{Carbohydrates\+Limit}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the calculated carbohydrates limit based on daily recommended value and people count. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_adbdd6b3850a80ec1362264b2f3c6c924}{Calories\+Percentage}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the percentage of calories relative to the daily limit. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a9bec0a9833c301d4ae6999605baea3e5}{Protein\+Percentage}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the percentage of protein relative to the daily limit. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ada55e108fd44ca3ef97edd223e732e74}{Fat\+Percentage}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the percentage of fat relative to the daily limit. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a9830bbba9d4c59ae2162cc925e8f265a}{Fiber\+Percentage}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the percentage of fiber relative to the daily limit. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aa7ae84b954b19adb458112d5e62acf13}{Carbohydrates\+Percentage}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the percentage of carbohydrates relative to the daily limit. \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_af0a5258967383d1146515388c9544a3d}{Total\+Cart}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the total cost of items in the cart. \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a42f272cbfe372f0d05e94f289903ea65}{Cart\+Items}} = new Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Collection of items currently in the cart. \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ae3b33cc937efb9e7832797f6e23e4096}{Processing\+Items}} = new Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Collection of items currently being processed. \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aa1ea7b3baaad5300f5c5b0d12fd7a933}{Completed\+Items}} = new Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Collection of completed order items. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a1fafff48db8733b5023c85ba0ef64dac}{Start\+Order\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to initiate a new order. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ae93c9a7377fd02bed7980e7023ae36c2}{Cancel\+Order\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to cancel the current order. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a65cd265e80d745c99d70abdd2bbb6028}{Order\+Started\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command executed when an order is started. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aecc8468430ce69ce6e2db7ef4a513aeb}{Edit\+People\+Count\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to modify the number of people in the order. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_af28894d9400f13036eb07b5a25bc0c62}{Is\+Processing\+Items\+Empty}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets whether there are any items in processing state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ad6ea8538ee9d305383735b88da2b12cb}{Is\+Completed\+Items\+Empty}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets whether there are any completed items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model responsible for managing the order cart functionality in the client interface. Handles order creation, modification, and status tracking with support for nutrition facts. 
+
+Implements\+:
+\begin{DoxyItemize}
+\item Observable\+Recipient for MVVM pattern
+\item IRecipient for handling cart and order messages
+\item IDisposable for resource cleanup 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00029}{29}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ae91cf47bf19141acb14f63d4045b5aca}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!OrderCartViewModel@{OrderCartViewModel}}
+\index{OrderCartViewModel@{OrderCartViewModel}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{OrderCartViewModel()}{OrderCartViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ae91cf47bf19141acb14f63d4045b5aca} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Order\+Cart\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService}{IOrder\+Data\+Service}}}]{order\+Data\+Service}{, }\item[{IMapper}]{mapper}{, }\item[{IMessenger}]{messenger}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00177}{177}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00178\ \ \ \ \ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \_orderDataService\ =\ orderDataService;}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \_messenger\ =\ messenger;}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a1fafff48db8733b5023c85ba0ef64dac}{StartOrderCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(StartOrder);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ae93c9a7377fd02bed7980e7023ae36c2}{CancelOrderCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand(CancelOrder);}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ dispatcherQueue\ =\ DispatcherQueue.GetForCurrentThread();}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aecc8468430ce69ce6e2db7ef4a513aeb}{EditPeopleCountCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(EditPeopleCount);}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ CartItems.CollectionChanged\ +=\ CartItems\_CollectionChanged;}
+\DoxyCodeLine{00189\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a8e4c2a1936f49d46f0e27e40bb8d2b4c}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a8e4c2a1936f49d46f0e27e40bb8d2b4c} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs cleanup of resources used by the View\+Model. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00279}{279}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00280\ \ \ \ \ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ CartItems.CollectionChanged\ -\/=\ CartItems\_CollectionChanged;}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00283\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a0460211a60d4e7d73f9dd1bbaf734912}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!LoadExistingOrderAsync@{LoadExistingOrderAsync}}
+\index{LoadExistingOrderAsync@{LoadExistingOrderAsync}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{LoadExistingOrderAsync()}{LoadExistingOrderAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a0460211a60d4e7d73f9dd1bbaf734912} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Load\+Existing\+Order\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads an existing order from the data service. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00197}{197}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00198\ \ \ \ \ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ var\ existingOrder\ =\ await\ Task.Run(async\ ()\ =>}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ var\ order\ =\ await\ \_orderDataService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService_ab914c07c82ec38c2bc1815742489b36d}{GetOrderAsync}}();}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{OrderViewModel}}>(order);}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (existingOrder\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}}\ =\ existingOrder;}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ IsOrdering\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ SeparateOrdersByStatus();}
+\DoxyCodeLine{00216\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_afbe3e15e520b734834c4b9488e01fc11}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_afbe3e15e520b734834c4b9488e01fc11} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Add\+Product\+To\+Cart\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles receiving a message to add a product to the cart. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the product to add\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00232}{232}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00233\ \ \ \ \ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ var\ product\ =\ message.Product;}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ var\ existingOrderItem\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a42f272cbfe372f0d05e94f289903ea65}{CartItems}}.FirstOrDefault(od\ =>\ od.ProductId\ ==\ product.ProductId);}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (existingOrderItem\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ existingOrderItem.Quantity++;}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a42f272cbfe372f0d05e94f289903ea65}{CartItems}}.Add(\textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{OrderItemViewModel}}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OrderId\ =\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}}.OrderId,}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ProductId\ =\ product.ProductId,}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}}\ =\ product,}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Quantity\ =\ 1,}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PriceAtPurchase\ =\ (product.DiscountPrice\ !=\ 0\ ?\ product.DiscountPrice\ :\ product.Price)}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a695406b19558fe82ccbdd01270f38076}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a695406b19558fe82ccbdd01270f38076} 
+async void Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Order\+Requested\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles receiving a message to process the order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Order request message\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00257}{257}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00258\ \ \ \ \ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ var\ cart\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a42f272cbfe372f0d05e94f289903ea65}{CartItems}}.Select(item\ =>\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1OrderItem}{OrderItem}}>(item)).ToList();}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_orderDataService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService_a192d2a0d971aa71463410f377936837c}{CreateOrderItems}}(cart);}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ dispatcherQueue.TryEnqueue(()\ =>}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a42f272cbfe372f0d05e94f289903ea65}{CartItems}}.Clear();}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_af2a6939cb1e9944e4255355bf2bfcc65}{OrderSucceededMessage}}());}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ e)}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(e.Message);}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00274\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ac664bc3e6dcff7acef317fdc20bbd45a}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!CaloriesLimit@{CaloriesLimit}}
+\index{CaloriesLimit@{CaloriesLimit}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{CaloriesLimit}{CaloriesLimit}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ac664bc3e6dcff7acef317fdc20bbd45a} 
+decimal Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Calories\+Limit\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the calculated calories limit based on daily recommended value and people count. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00086}{86}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_adbdd6b3850a80ec1362264b2f3c6c924}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!CaloriesPercentage@{CaloriesPercentage}}
+\index{CaloriesPercentage@{CaloriesPercentage}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{CaloriesPercentage}{CaloriesPercentage}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_adbdd6b3850a80ec1362264b2f3c6c924} 
+double Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Calories\+Percentage\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the percentage of calories relative to the daily limit. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00111}{111}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ae93c9a7377fd02bed7980e7023ae36c2}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!CancelOrderCommand@{CancelOrderCommand}}
+\index{CancelOrderCommand@{CancelOrderCommand}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{CancelOrderCommand}{CancelOrderCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ae93c9a7377fd02bed7980e7023ae36c2} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Cancel\+Order\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to cancel the current order. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00163}{163}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00163\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a28087a42eeca7ba17b1e1ce4d81b2a4b}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!CarbohydratesLimit@{CarbohydratesLimit}}
+\index{CarbohydratesLimit@{CarbohydratesLimit}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{CarbohydratesLimit}{CarbohydratesLimit}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a28087a42eeca7ba17b1e1ce4d81b2a4b} 
+decimal Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Carbohydrates\+Limit\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the calculated carbohydrates limit based on daily recommended value and people count. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00106}{106}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aa7ae84b954b19adb458112d5e62acf13}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!CarbohydratesPercentage@{CarbohydratesPercentage}}
+\index{CarbohydratesPercentage@{CarbohydratesPercentage}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{CarbohydratesPercentage}{CarbohydratesPercentage}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aa7ae84b954b19adb458112d5e62acf13} 
+double Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Carbohydrates\+Percentage\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the percentage of carbohydrates relative to the daily limit. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00131}{131}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a42f272cbfe372f0d05e94f289903ea65}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!CartItems@{CartItems}}
+\index{CartItems@{CartItems}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{CartItems}{CartItems}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a42f272cbfe372f0d05e94f289903ea65} 
+Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}}$>$ Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Cart\+Items = new Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Collection of items currently in the cart. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00143}{143}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00143\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}\ ObservableCollection<OrderItemViewModel>();}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aa1ea7b3baaad5300f5c5b0d12fd7a933}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!CompletedItems@{CompletedItems}}
+\index{CompletedItems@{CompletedItems}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{CompletedItems}{CompletedItems}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aa1ea7b3baaad5300f5c5b0d12fd7a933} 
+Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}}$>$ Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Completed\+Items = new Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Collection of completed order items. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00153}{153}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00153\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}\ ObservableCollection<OrderItemViewModel>();}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aecc8468430ce69ce6e2db7ef4a513aeb}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!EditPeopleCountCommand@{EditPeopleCountCommand}}
+\index{EditPeopleCountCommand@{EditPeopleCountCommand}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{EditPeopleCountCommand}{EditPeopleCountCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aecc8468430ce69ce6e2db7ef4a513aeb} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Edit\+People\+Count\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to modify the number of people in the order. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00173}{173}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00173\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a5321691e903d41796369199b87b9e4aa}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!FatLimit@{FatLimit}}
+\index{FatLimit@{FatLimit}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{FatLimit}{FatLimit}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a5321691e903d41796369199b87b9e4aa} 
+decimal Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Fat\+Limit\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the calculated fat limit based on daily recommended value and people count. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00096}{96}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ada55e108fd44ca3ef97edd223e732e74}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!FatPercentage@{FatPercentage}}
+\index{FatPercentage@{FatPercentage}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{FatPercentage}{FatPercentage}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ada55e108fd44ca3ef97edd223e732e74} 
+double Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Fat\+Percentage\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the percentage of fat relative to the daily limit. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00121}{121}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a2d7b2b49c0c3079729dad57819a44dbb}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!FiberLimit@{FiberLimit}}
+\index{FiberLimit@{FiberLimit}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{FiberLimit}{FiberLimit}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a2d7b2b49c0c3079729dad57819a44dbb} 
+decimal Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Fiber\+Limit\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the calculated fiber limit based on daily recommended value and people count. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00101}{101}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a9830bbba9d4c59ae2162cc925e8f265a}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!FiberPercentage@{FiberPercentage}}
+\index{FiberPercentage@{FiberPercentage}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{FiberPercentage}{FiberPercentage}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a9830bbba9d4c59ae2162cc925e8f265a} 
+double Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Fiber\+Percentage\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the percentage of fiber relative to the daily limit. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00126}{126}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ad6ea8538ee9d305383735b88da2b12cb}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!IsCompletedItemsEmpty@{IsCompletedItemsEmpty}}
+\index{IsCompletedItemsEmpty@{IsCompletedItemsEmpty}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{IsCompletedItemsEmpty}{IsCompletedItemsEmpty}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ad6ea8538ee9d305383735b88da2b12cb} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Is\+Completed\+Items\+Empty\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets whether there are any completed items. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00226}{226}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_af28894d9400f13036eb07b5a25bc0c62}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!IsProcessingItemsEmpty@{IsProcessingItemsEmpty}}
+\index{IsProcessingItemsEmpty@{IsProcessingItemsEmpty}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{IsProcessingItemsEmpty}{IsProcessingItemsEmpty}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_af28894d9400f13036eb07b5a25bc0c62} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Is\+Processing\+Items\+Empty\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets whether there are any items in processing state. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00221}{221}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aa2a3f62781fe74ad2a5b97327dbb9397}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!Order@{Order}}
+\index{Order@{Order}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{Order}{Order}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_aa2a3f62781fe74ad2a5b97327dbb9397} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{Order\+View\+Model}} Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Order\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the current order being managed. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00061}{61}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a65cd265e80d745c99d70abdd2bbb6028}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!OrderStartedCommand@{OrderStartedCommand}}
+\index{OrderStartedCommand@{OrderStartedCommand}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{OrderStartedCommand}{OrderStartedCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a65cd265e80d745c99d70abdd2bbb6028} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Order\+Started\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Command executed when an order is started. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00168}{168}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00168\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ae3b33cc937efb9e7832797f6e23e4096}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!ProcessingItems@{ProcessingItems}}
+\index{ProcessingItems@{ProcessingItems}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{ProcessingItems}{ProcessingItems}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_ae3b33cc937efb9e7832797f6e23e4096} 
+Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}}$>$ Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Processing\+Items = new Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Collection of items currently being processed. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00148}{148}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00148\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}\ ObservableCollection<OrderItemViewModel>();}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a62b1d25775aa615ad4169f5f49dd9e57}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!ProteinLimit@{ProteinLimit}}
+\index{ProteinLimit@{ProteinLimit}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{ProteinLimit}{ProteinLimit}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a62b1d25775aa615ad4169f5f49dd9e57} 
+decimal Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Protein\+Limit\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the calculated protein limit based on daily recommended value and people count. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00091}{91}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a9bec0a9833c301d4ae6999605baea3e5}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!ProteinPercentage@{ProteinPercentage}}
+\index{ProteinPercentage@{ProteinPercentage}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{ProteinPercentage}{ProteinPercentage}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a9bec0a9833c301d4ae6999605baea3e5} 
+double Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Protein\+Percentage\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the percentage of protein relative to the daily limit. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00116}{116}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a1fafff48db8733b5023c85ba0ef64dac}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!StartOrderCommand@{StartOrderCommand}}
+\index{StartOrderCommand@{StartOrderCommand}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{StartOrderCommand}{StartOrderCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a1fafff48db8733b5023c85ba0ef64dac} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Start\+Order\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to initiate a new order. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00158}{158}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00158\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_af0a5258967383d1146515388c9544a3d}\index{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}!TotalCart@{TotalCart}}
+\index{TotalCart@{TotalCart}!BistroQ.Presentation.ViewModels.Client.OrderCartViewModel@{BistroQ.Presentation.ViewModels.Client.OrderCartViewModel}}
+\doxysubsubsection{\texorpdfstring{TotalCart}{TotalCart}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_af0a5258967383d1146515388c9544a3d} 
+decimal Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Order\+Cart\+View\+Model.\+Total\+Cart\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the total cost of items in the cart. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderCartViewModel_8cs_source_l00138}{138}} of file \mbox{\hyperlink{OrderCartViewModel_8cs_source}{Order\+Cart\+View\+Model.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Client/Order\+Cart\+View\+Model.\+cs\end{DoxyCompactItemize}

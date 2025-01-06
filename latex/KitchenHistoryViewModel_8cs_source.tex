@@ -1,0 +1,37 @@
+\doxysection{Kitchen\+History\+View\+Model.\+cs}
+\hypertarget{KitchenHistoryViewModel_8cs_source}{}\label{KitchenHistoryViewModel_8cs_source}\index{BistroQ.Presentation/ViewModels/KitchenHistory/KitchenHistoryViewModel.cs@{BistroQ.Presentation/ViewModels/KitchenHistory/KitchenHistoryViewModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels}{BistroQ.Presentation.Contracts.ViewModels}};}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00004}\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory}{00004}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory}{BistroQ.Presentation.ViewModels.KitchenHistory}};}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00015}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1KitchenHistoryViewModel}{00015}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1KitchenHistoryViewModel}{KitchenHistoryViewModel}}\ :\ ObservableObject,\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{INavigationAware}}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00017}00017\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00021}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1KitchenHistoryViewModel_a73311b61aaba2a60ae969a777ae74b6f}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1OrderItemGridViewModel}{OrderItemGridViewModel}}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1OrderItemGridViewModel}{OrderItemGridViewModel}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00022}00022\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00024}00024\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1KitchenHistoryViewModel}{KitchenHistoryViewModel}}(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1OrderItemGridViewModel}{OrderItemGridViewModel}}\ orderItemGridViewModel)}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1OrderItemGridViewModel}{OrderItemGridViewModel}}\ =\ orderItemGridViewModel;}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00029}00029\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00031}00031\ \textcolor{preprocessor}{\ \ \ \ \#region\ Navigation\ Methods}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00037}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1KitchenHistoryViewModel_a825fc9c5b59ab83d5b02d7a8e7636902}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1KitchenHistoryViewModel_a825fc9c5b59ab83d5b02d7a8e7636902}{OnNavigatedTo}}(\textcolor{keywordtype}{object}\ parameter)}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1OrderItemGridViewModel}{OrderItemGridViewModel}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1OrderItemGridViewModel_ac30d73c349281a534d971b80f00ee580}{LoadItemsAsync}}();}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00046}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1KitchenHistoryViewModel_acebf4c5b0b4967a313371bffc8e317e0}{00046}}\ \ \ \ \ \textcolor{keyword}{public}\ Task\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1KitchenHistoryViewModel_acebf4c5b0b4967a313371bffc8e317e0}{OnNavigatedFrom}}()}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1OrderItemGridViewModel}{OrderItemGridViewModel}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1OrderItemGridViewModel_a990cf7f81c7a1fd8e5d56b9042242e39}{Dispose}}();}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.CompletedTask;}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00051}00051\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryViewModel_8cs_source_l00052}00052\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['unit_0',['Unit',['../classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm.html#af6b5acea1f08b2e28ffa06f96786d2e7',1,'BistroQ::Presentation::Models::AddProductForm']]],
+  ['updatecommand_1',['UpdateCommand',['../classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryEditPageViewModel.html#aa8d97a1c5dbd1b117ea07c92d05dfa54',1,'BistroQ.Presentation.ViewModels.AdminCategory.AdminCategoryEditPageViewModel.UpdateCommand'],['../classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductEditPageViewModel.html#af9495bd7c0d81905b0b3f98fc95d9ac1',1,'BistroQ.Presentation.ViewModels.AdminProduct.AdminProductEditPageViewModel.UpdateCommand'],['../classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneEditPageViewModel.html#af7b10eb94d3aa0c906519623cf50c133',1,'BistroQ.Presentation.ViewModels.AdminZone.AdminZoneEditPageViewModel.UpdateCommand']]],
+  ['username_2',['Username',['../classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm.html#af2a7daab5015d5998001971eda5df4b5',1,'BistroQ.Presentation.Models.AddAccountForm.Username'],['../classBistroQ_1_1Presentation_1_1Models_1_1LoginForm.html#a121614bafa5e0508f156a4148c2867b7',1,'BistroQ.Presentation.Models.LoginForm.Username']]]
+];

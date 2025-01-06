@@ -1,0 +1,35 @@
+\doxysection{Default\+Activation\+Handler.\+cs}
+\hypertarget{DefaultActivationHandler_8cs_source}{}\label{DefaultActivationHandler_8cs_source}\index{BistroQ.Presentation/Activation/DefaultActivationHandler.cs@{BistroQ.Presentation/Activation/DefaultActivationHandler.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1Services}{BistroQ.Presentation.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels}{BistroQ.Presentation.ViewModels}};}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Activation}{BistroQ.Presentation.Activation}};}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00008}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Activation_1_1DefaultActivationHandler}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Activation_1_1DefaultActivationHandler}{DefaultActivationHandler}}\ :\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Activation_1_1ActivationHandler}{ActivationHandler}}<LaunchActivatedEventArgs>}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigationService}}\ \_navigationService;}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Activation_1_1DefaultActivationHandler}{DefaultActivationHandler}}(\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigationService}}\ navigationService)}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \_navigationService\ =\ navigationService;}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{bool}\ CanHandleInternal(LaunchActivatedEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ None\ of\ the\ ActivationHandlers\ has\ handled\ the\ activation.}}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_navigationService.Frame?.Content\ ==\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{protected}\ async\ \textcolor{keyword}{override}\ Task\ HandleInternalAsync(LaunchActivatedEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00024}00024\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \_navigationService.NavigateTo(typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1MainViewModel}{MainViewModel}}).FullName!,\ args.Arguments);}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ await\ Task.CompletedTask;}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DefaultActivationHandler_8cs_source_l00029}00029\ \}}
+
+\end{DoxyCode}

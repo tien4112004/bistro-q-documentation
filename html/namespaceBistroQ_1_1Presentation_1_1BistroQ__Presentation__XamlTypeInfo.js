@@ -1,0 +1,4 @@
+var namespaceBistroQ_1_1Presentation_1_1BistroQ__Presentation__XamlTypeInfo =
+[
+    [ "XamlMetaDataProvider", "classBistroQ_1_1Presentation_1_1BistroQ__Presentation__XamlTypeInfo_1_1XamlMetaDataProvider.html", "classBistroQ_1_1Presentation_1_1BistroQ__Presentation__XamlTypeInfo_1_1XamlMetaDataProvider" ]
+];

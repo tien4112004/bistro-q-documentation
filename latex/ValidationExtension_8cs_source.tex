@@ -1,0 +1,15 @@
+\doxysection{Validation\+Extension.\+cs}
+\hypertarget{ValidationExtension_8cs_source}{}\label{ValidationExtension_8cs_source}\index{BistroQ.Presentation/Validation/ValidationExtension.cs@{BistroQ.Presentation/Validation/ValidationExtension.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ValidationExtension_8cs_source_l00001}\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Validation}{00001}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Validation}{BistroQ.Presentation.Validation}};}
+\DoxyCodeLine{\Hypertarget{ValidationExtension_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ValidationExtension_8cs_source_l00018}00018\ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }ValidationExtension}
+\DoxyCodeLine{\Hypertarget{ValidationExtension_8cs_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{ValidationExtension_8cs_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ IEnumerable<(\textcolor{keywordtype}{bool}\ IsValid,\ \textcolor{keywordtype}{string}\ Message)>\ Validate(\textcolor{keyword}{this}\ \textcolor{keywordtype}{object}?\ value,\ params\ Func<\textcolor{keywordtype}{object}?,\ (\textcolor{keywordtype}{bool},\ \textcolor{keywordtype}{string})>[]\ validators)}
+\DoxyCodeLine{\Hypertarget{ValidationExtension_8cs_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ValidationExtension_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ validators.Select(validator\ =>\ validator(value));}
+\DoxyCodeLine{\Hypertarget{ValidationExtension_8cs_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ValidationExtension_8cs_source_l00036}00036\ \}}
+
+\end{DoxyCode}

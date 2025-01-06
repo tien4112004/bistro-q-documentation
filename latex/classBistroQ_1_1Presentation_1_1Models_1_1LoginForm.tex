@@ -1,0 +1,203 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Models.\+Login\+Form Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm}{}\label{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm}\index{BistroQ.Presentation.Models.LoginForm@{BistroQ.Presentation.Models.LoginForm}}
+
+
+Represents a login form with validation capabilities. Inherits from Validator\+Base to provide validation functionality.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Models.\+Login\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Models.\+Login\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a05255f8360fa62162545c267b73c4ce6}{Login\+Form}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm}{Login\+Form} class. Sets up validators for username and password. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a20c4bcb85a094114872200b393bfa0f2}{Validate\+All}} ()
+\begin{DoxyCompactList}\small\item\em Validates all properties of the form. Executes validation rules for Username and Password. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3220acd7add1426396f6c03a6d9707d0}{Get\+Errors}} (string? property\+Name)
+\begin{DoxyCompactList}\small\item\em Retrieves validation errors for a specific property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ab4cd9b5edd381d01f2f877caee969213}{Reset\+Error}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Clears all validation errors for a specific property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad1a34c3d3ea17bb558dd231471fe20fd}{Clear\+Errors}} ()
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{Validate\+Property}} (string property\+Name, object? value)
+\begin{DoxyCompactList}\small\item\em Validates a specific property value using registered validators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a121614bafa5e0508f156a4148c2867b7}{Username}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the username for login. Validated for non-\/empty and minimum length (3 chars). Triggers validation and property change notification on set. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_ad85c84bc75a29958a3c63ce53ac29c39}{Password}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the password for login. Validated for non-\/empty value. Triggers validation and property change notification on set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ string, List$<$ string $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad671d3afa430919e586c1328e268d711}{Errors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac9110647ffbaec21cb835c2d417054f3}{Has\+Errors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a9a04545b2c20597513cd3190a83c3c9c}{Update\+Errors}} (string property\+Name, List$<$ string $>$ errors)
+\begin{DoxyCompactList}\small\item\em Updates the error collection for a property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{Add\+Validator}} (string property\+Name, Func$<$ object?, List$<$(bool Is\+Value, string Message)$>$ $>$ validators)
+\begin{DoxyCompactList}\small\item\em Registers a list of validator functions for a property. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3dad90961c53443f11ac2a7f258c1e60}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string? property\+Name=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler$<$ Data\+Errors\+Changed\+Event\+Args $>$? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a0f93a47246a401f521a75d14e01a27e1}{Errors\+Changed}}
+\item 
+Property\+Changed\+Event\+Handler? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_acd024f4924ef56609cfff07afda377e8}{Property\+Changed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a login form with validation capabilities. Inherits from Validator\+Base to provide validation functionality. 
+
+Definition at line \mbox{\hyperlink{LoginForm_8cs_source_l00009}{9}} of file \mbox{\hyperlink{LoginForm_8cs_source}{Login\+Form.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a05255f8360fa62162545c267b73c4ce6}\index{BistroQ.Presentation.Models.LoginForm@{BistroQ.Presentation.Models.LoginForm}!LoginForm@{LoginForm}}
+\index{LoginForm@{LoginForm}!BistroQ.Presentation.Models.LoginForm@{BistroQ.Presentation.Models.LoginForm}}
+\doxysubsubsection{\texorpdfstring{LoginForm()}{LoginForm()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a05255f8360fa62162545c267b73c4ce6} 
+Bistro\+Q.\+Presentation.\+Models.\+Login\+Form.\+Login\+Form (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm}{Login\+Form} class. Sets up validators for username and password. 
+
+
+
+Definition at line \mbox{\hyperlink{LoginForm_8cs_source_l00068}{68}} of file \mbox{\hyperlink{LoginForm_8cs_source}{Login\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ AddUsernameValidator();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ AddPasswordValidator();}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a20c4bcb85a094114872200b393bfa0f2}\index{BistroQ.Presentation.Models.LoginForm@{BistroQ.Presentation.Models.LoginForm}!ValidateAll@{ValidateAll}}
+\index{ValidateAll@{ValidateAll}!BistroQ.Presentation.Models.LoginForm@{BistroQ.Presentation.Models.LoginForm}}
+\doxysubsubsection{\texorpdfstring{ValidateAll()}{ValidateAll()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a20c4bcb85a094114872200b393bfa0f2} 
+override void Bistro\+Q.\+Presentation.\+Models.\+Login\+Form.\+Validate\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Validates all properties of the form. Executes validation rules for Username and Password. 
+
+This method overrides the base Validate\+All method to provide form-\/specific validation logic. 
+
+Reimplemented from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a69a3f0a52a8c3099e85297a3295e5c0a}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}.
+
+
+
+Definition at line \mbox{\hyperlink{LoginForm_8cs_source_l00118}{118}} of file \mbox{\hyperlink{LoginForm_8cs_source}{Login\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a121614bafa5e0508f156a4148c2867b7}{Username}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a121614bafa5e0508f156a4148c2867b7}{Username}});}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_ad85c84bc75a29958a3c63ce53ac29c39}{Password}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_ad85c84bc75a29958a3c63ce53ac29c39}{Password}});}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_ad85c84bc75a29958a3c63ce53ac29c39}\index{BistroQ.Presentation.Models.LoginForm@{BistroQ.Presentation.Models.LoginForm}!Password@{Password}}
+\index{Password@{Password}!BistroQ.Presentation.Models.LoginForm@{BistroQ.Presentation.Models.LoginForm}}
+\doxysubsubsection{\texorpdfstring{Password}{Password}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_ad85c84bc75a29958a3c63ce53ac29c39} 
+string Bistro\+Q.\+Presentation.\+Models.\+Login\+Form.\+Password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the password for login. Validated for non-\/empty value. Triggers validation and property change notification on set. 
+
+
+
+Definition at line \mbox{\hyperlink{LoginForm_8cs_source_l00048}{48}} of file \mbox{\hyperlink{LoginForm_8cs_source}{Login\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ \_password;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_password\ !=\ value)}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_password\ =\ value;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_ad85c84bc75a29958a3c63ce53ac29c39}{Password}}),\ value);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnPropertyChanged();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a121614bafa5e0508f156a4148c2867b7}\index{BistroQ.Presentation.Models.LoginForm@{BistroQ.Presentation.Models.LoginForm}!Username@{Username}}
+\index{Username@{Username}!BistroQ.Presentation.Models.LoginForm@{BistroQ.Presentation.Models.LoginForm}}
+\doxysubsubsection{\texorpdfstring{Username}{Username}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a121614bafa5e0508f156a4148c2867b7} 
+string Bistro\+Q.\+Presentation.\+Models.\+Login\+Form.\+Username\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the username for login. Validated for non-\/empty and minimum length (3 chars). Triggers validation and property change notification on set. 
+
+
+
+Definition at line \mbox{\hyperlink{LoginForm_8cs_source_l00029}{29}} of file \mbox{\hyperlink{LoginForm_8cs_source}{Login\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ \_username;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_username\ !=\ value)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_username\ =\ value;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a121614bafa5e0508f156a4148c2867b7}{Username}}),\ value);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnPropertyChanged();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Models/Login\+Form.\+cs\end{DoxyCompactItemize}

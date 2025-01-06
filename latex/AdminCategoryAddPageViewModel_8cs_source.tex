@@ -1,0 +1,88 @@
+\doxysection{Admin\+Category\+Add\+Page\+View\+Model.\+cs}
+\hypertarget{AdminCategoryAddPageViewModel_8cs_source}{}\label{AdminCategoryAddPageViewModel_8cs_source}\index{BistroQ.Presentation/ViewModels/AdminCategory/AdminCategoryAddPageViewModel.cs@{BistroQ.Presentation/ViewModels/AdminCategory/AdminCategoryAddPageViewModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data}{BistroQ.Domain.Contracts.Services.Data}};}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos_1_1Category}{BistroQ.Domain.Dtos.Category}};}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1Services}{BistroQ.Presentation.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Models}{BistroQ.Presentation.Models}};}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Input;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.Windows.Input;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00009}\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory}{00009}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory}{BistroQ.Presentation.ViewModels.AdminCategory}};}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00019}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel}{00019}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel}{AdminCategoryAddPageViewModel}}\ :\ ObservableRecipient}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00020}00020\ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00021}00021\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService}{ICategoryDataService}}\ \_categoryDataService;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialogService}}\ \_dialogService;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00024}00024\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00026}00026\ \textcolor{preprocessor}{\ \ \ \ \#region\ Observable\ Properties}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00030}00030\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_isProcessing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00036}00036\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddCategoryForm}{AddCategoryForm}}\ \_form\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00042}00042\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00043}00043\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ \_errorMessage\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00044}00044\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00046}00046\ \textcolor{preprocessor}{\ \ \ \ \#region\ Commands}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00050}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel_a36e7e474b7f27cc0cb6dc00ef5c5a61a}{00050}}\ \ \ \ \ \textcolor{keyword}{public}\ ICommand\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel_a36e7e474b7f27cc0cb6dc00ef5c5a61a}{AddCommand}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00051}00051\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00053}00053\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00054}00054\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel}{AdminCategoryAddPageViewModel}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService}{ICategoryDataService}}\ categoryDataService,\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialogService}}\ dialogService)}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00055}00055\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \_categoryDataService\ =\ categoryDataService;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \_dialogService\ =\ dialogService;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel_a36e7e474b7f27cc0cb6dc00ef5c5a61a}{AddCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel_a520f2ff00c3feadb0e5ebf770f4740fd}{AddCategoryAsync}});}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00060}00060\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00062}00062\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00066}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel_a99e6b1e6a12b79c656ef42a6018016bb}{00066}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel_a99e6b1e6a12b79c656ef42a6018016bb}{NavigateBack}}()}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00067}00067\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigationService}}>().GoBack();}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00076}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel_a520f2ff00c3feadb0e5ebf770f4740fd}{00076}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel_a520f2ff00c3feadb0e5ebf770f4740fd}{AddCategoryAsync}}()}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00077}00077\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ Form.ValidateAll();}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Form.HasErrors)}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.ShowErrorDialog(\textcolor{stringliteral}{"{}Data\ is\ invalid.\ Please\ check\ again."{}},\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CreateCategoryRequest}{CreateCategoryRequest}}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ Form.Name}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_categoryDataService.CreateCategoryAsync(request);}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.ShowErrorDialog(\textcolor{stringliteral}{"{}Successfully\ added\ category:\ "{}}\ +\ request.Name,\ \textcolor{stringliteral}{"{}Success"{}});}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel_a99e6b1e6a12b79c656ef42a6018016bb}{NavigateBack}}();}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ ex.Message;}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.ShowErrorDialog(ex.Message,\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00109}00109\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AdminCategoryAddPageViewModel_8cs_source_l00110}00110\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,211 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Controls.\+Custom\+List\+View\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView}{}\label{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView}\index{BistroQ.Presentation.Controls.CustomListView$<$ T $>$@{BistroQ.Presentation.Controls.CustomListView$<$ T $>$}}
+
+
+A custom List\+View implementation that supports multiple selection with observable collection binding and messaging capabilities. Inherits from List\+View and implements messaging and disposal interfaces.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Controls.\+Custom\+List\+View\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Controls.\+Custom\+List\+View\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a9e5a91886264f5e3cf2cbbc3b876d6f9}{Custom\+List\+View}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView}{Custom\+List\+View} class. Sets up event handlers, registers for messages, and configures cleanup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a604fc622570f1d4f66644aa9bca3a7a6}{Receive}} (Change\+Custom\+List\+View\+Selection\+Message$<$ T $>$ message)
+\begin{DoxyCompactList}\small\item\em Handles messages to change the List\+View\textquotesingle{}s selection. Only processes messages meant for this specific List\+View (matched by Tag). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_ac30bea047f98f345ae822e0e5aadfce4}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Performs application-\/defined tasks associated with freeing, releasing, or resetting resources. Unregisters from the messenger service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly Dependency\+Property \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a1b27373d035b9d7570ecf23b16f19ae0}{Selected\+Items\+Property}}
+\begin{DoxyCompactList}\small\item\em Dependency property for the Selected\+Items property. Enables WPF binding and property change notification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+new Observable\+Collection$<$ T $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a227b87aa50f9a4302f15d8c514cb7a55}{Selected\+Items}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the collection of selected items. Provides two-\/way binding support for selected items in the List\+View. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A custom List\+View implementation that supports multiple selection with observable collection binding and messaging capabilities. Inherits from List\+View and implements messaging and disposal interfaces. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of items contained in the List\+View.\\
+\hline
+\end{DoxyTemplParams}
+
+
+Enhances the base List\+View by\+:
+\begin{DoxyItemize}
+\item Supporting two-\/way binding for selected items
+\item Implementing messaging for selection changes
+\item Managing proper cleanup of resources 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{CustomListView_8cs_source_l00019}{19}} of file \mbox{\hyperlink{CustomListView_8cs_source}{Custom\+List\+View.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a9e5a91886264f5e3cf2cbbc3b876d6f9}\index{BistroQ.Presentation.Controls.CustomListView$<$ T $>$@{BistroQ.Presentation.Controls.CustomListView$<$ T $>$}!CustomListView@{CustomListView}}
+\index{CustomListView@{CustomListView}!BistroQ.Presentation.Controls.CustomListView$<$ T $>$@{BistroQ.Presentation.Controls.CustomListView$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CustomListView()}{CustomListView()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a9e5a91886264f5e3cf2cbbc3b876d6f9} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView}{Bistro\+Q.\+Presentation.\+Controls.\+Custom\+List\+View}}$<$ T $>$.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView}{Custom\+List\+View}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView}{Custom\+List\+View} class. Sets up event handlers, registers for messages, and configures cleanup. 
+
+
+
+Definition at line \mbox{\hyperlink{CustomListView_8cs_source_l00033}{33}} of file \mbox{\hyperlink{CustomListView_8cs_source}{Custom\+List\+View.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ base() }
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ SelectionChanged\ +=\ CustomListView\_SelectionChanged;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \_messenger\ =\ App.GetService<IMessenger>();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ this.Unloaded\ +=\ (sender,\ e)\ =>\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_ac30bea047f98f345ae822e0e5aadfce4}{Dispose}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_ac30bea047f98f345ae822e0e5aadfce4}\index{BistroQ.Presentation.Controls.CustomListView$<$ T $>$@{BistroQ.Presentation.Controls.CustomListView$<$ T $>$}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.Controls.CustomListView$<$ T $>$@{BistroQ.Presentation.Controls.CustomListView$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_ac30bea047f98f345ae822e0e5aadfce4} 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView}{Bistro\+Q.\+Presentation.\+Controls.\+Custom\+List\+View}}$<$ T $>$.Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs application-\/defined tasks associated with freeing, releasing, or resetting resources. Unregisters from the messenger service. 
+
+
+
+Definition at line \mbox{\hyperlink{CustomListView_8cs_source_l00118}{118}} of file \mbox{\hyperlink{CustomListView_8cs_source}{Custom\+List\+View.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a604fc622570f1d4f66644aa9bca3a7a6}\index{BistroQ.Presentation.Controls.CustomListView$<$ T $>$@{BistroQ.Presentation.Controls.CustomListView$<$ T $>$}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.Controls.CustomListView$<$ T $>$@{BistroQ.Presentation.Controls.CustomListView$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a604fc622570f1d4f66644aa9bca3a7a6} 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView}{Bistro\+Q.\+Presentation.\+Controls.\+Custom\+List\+View}}$<$ T $>$.Receive (\begin{DoxyParamCaption}\item[{Change\+Custom\+List\+View\+Selection\+Message$<$ T $>$}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles messages to change the List\+View\textquotesingle{}s selection. Only processes messages meant for this specific List\+View (matched by Tag). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message containing selection change information.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{CustomListView_8cs_source_l00106}{106}} of file \mbox{\hyperlink{CustomListView_8cs_source}{Custom\+List\+View.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107\ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (message.Title\ ==\ (\textcolor{keywordtype}{string})Tag)}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a227b87aa50f9a4302f15d8c514cb7a55}{SelectedItems}}\ =\ \textcolor{keyword}{new}\ ObservableCollection<T>(message.SelectedItems);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a1b27373d035b9d7570ecf23b16f19ae0}\index{BistroQ.Presentation.Controls.CustomListView$<$ T $>$@{BistroQ.Presentation.Controls.CustomListView$<$ T $>$}!SelectedItemsProperty@{SelectedItemsProperty}}
+\index{SelectedItemsProperty@{SelectedItemsProperty}!BistroQ.Presentation.Controls.CustomListView$<$ T $>$@{BistroQ.Presentation.Controls.CustomListView$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SelectedItemsProperty}{SelectedItemsProperty}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a1b27373d035b9d7570ecf23b16f19ae0} 
+readonly Dependency\+Property \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView}{Bistro\+Q.\+Presentation.\+Controls.\+Custom\+List\+View}}$<$ T $>$.Selected\+Items\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ DependencyProperty.Register(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a227b87aa50f9a4302f15d8c514cb7a55}{SelectedItems}}),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ typeof(ObservableCollection<T>),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a9e5a91886264f5e3cf2cbbc3b876d6f9}{CustomListView<T>}}),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ PropertyMetadata(\textcolor{keyword}{new}\ ObservableCollection<T>()))}
+
+\end{DoxyCode}
+
+
+Dependency property for the Selected\+Items property. Enables WPF binding and property change notification. 
+
+
+
+Definition at line \mbox{\hyperlink{CustomListView_8cs_source_l00069}{69}} of file \mbox{\hyperlink{CustomListView_8cs_source}{Custom\+List\+View.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a227b87aa50f9a4302f15d8c514cb7a55}\index{BistroQ.Presentation.Controls.CustomListView$<$ T $>$@{BistroQ.Presentation.Controls.CustomListView$<$ T $>$}!SelectedItems@{SelectedItems}}
+\index{SelectedItems@{SelectedItems}!BistroQ.Presentation.Controls.CustomListView$<$ T $>$@{BistroQ.Presentation.Controls.CustomListView$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SelectedItems}{SelectedItems}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a227b87aa50f9a4302f15d8c514cb7a55} 
+new Observable\+Collection$<$T$>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView}{Bistro\+Q.\+Presentation.\+Controls.\+Custom\+List\+View}}$<$ T $>$.Selected\+Items\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the collection of selected items. Provides two-\/way binding support for selected items in the List\+View. 
+
+This property overrides the base Selected\+Items to provide better binding support with an Observable\+Collection. 
+
+Definition at line \mbox{\hyperlink{CustomListView_8cs_source_l00051}{51}} of file \mbox{\hyperlink{CustomListView_8cs_source}{Custom\+List\+View.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ (ObservableCollection<T>)GetValue(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a1b27373d035b9d7570ecf23b16f19ae0}{SelectedItemsProperty}});}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ SetValue(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a1b27373d035b9d7570ecf23b16f19ae0}{SelectedItemsProperty}},\ value);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ base.SelectedItems.Clear();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ value)}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ base.SelectedItems.Add(item);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Controls/Custom\+List\+View.\+cs\end{DoxyCompactItemize}

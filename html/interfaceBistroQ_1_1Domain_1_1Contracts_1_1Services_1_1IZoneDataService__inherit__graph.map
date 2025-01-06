@@ -1,0 +1,5 @@
+<map id="BistroQ.Domain.Contracts.Services.IZoneDataService" name="BistroQ.Domain.Contracts.Services.IZoneDataService">
+<area shape="rect" id="Node000001" title="Interface for managing zone&#45;related data operations through API endpoints. Provides methods for CRUD ..." alt="" coords="5,5,187,48"/>
+<area shape="rect" id="Node000002" href="$classBistroQ_1_1Service_1_1Data_1_1ZoneDataService.html" title="Implementation of zone data service that communicates with the API endpoints. Handles admin,..." alt="" coords="7,96,185,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,64,99,96,93,96,93,64"/>
+</map>

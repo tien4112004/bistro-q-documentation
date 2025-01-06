@@ -1,0 +1,43 @@
+\doxysection{Add\+Zone\+Form.\+cs}
+\hypertarget{AddZoneForm_8cs_source}{}\label{AddZoneForm_8cs_source}\index{BistroQ.Presentation/Models/AddZoneForm.cs@{BistroQ.Presentation/Models/AddZoneForm.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Validation}{BistroQ.Presentation.Validation}};}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Models}{BistroQ.Presentation.Models}};}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00009}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm}{AddZoneForm}}\ :\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{ValidatorBase}}}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00011}00011\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00016}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aca420726e2ba65c0c7315f6ad2b495c6}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aca420726e2ba65c0c7315f6ad2b495c6}{Name}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00017}00017\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00019}00019\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00024}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aee490e7bcadf4a683185e513263a8a26}{00024}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aee490e7bcadf4a683185e513263a8a26}{AddZoneForm}}()}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00025}00025\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ AddZoneNameValidator();}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00028}00028\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00030}00030\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Methods}}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddZoneNameValidator()}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aca420726e2ba65c0c7315f6ad2b495c6}{Name}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Zone\ Name"{}}),}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.MinLength(v,\ 2,\ \textcolor{stringliteral}{"{}Zone\ Name"{}})}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00047}00047\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00049}00049\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00058}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_a45f521774bad6473e658b675716bba4f}{00058}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_a45f521774bad6473e658b675716bba4f}{ValidateAll}}()}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00059}00059\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aca420726e2ba65c0c7315f6ad2b495c6}{Name}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aca420726e2ba65c0c7315f6ad2b495c6}{Name}});}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00062}00062\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AddZoneForm_8cs_source_l00063}00063\ \}}
+
+\end{DoxyCode}

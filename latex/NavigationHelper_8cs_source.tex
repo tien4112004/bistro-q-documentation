@@ -1,0 +1,27 @@
+\doxysection{Navigation\+Helper.\+cs}
+\hypertarget{NavigationHelper_8cs_source}{}\label{NavigationHelper_8cs_source}\index{BistroQ.Presentation/Helpers/NavigationHelper.cs@{BistroQ.Presentation/Helpers/NavigationHelper.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00006}00006\ \textcolor{comment}{//\ Helper\ class\ to\ set\ the\ navigation\ target\ for\ a\ NavigationViewItem.}}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00007}00007\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00008}00008\ \textcolor{comment}{//\ Usage\ in\ XAML:}}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00009}00009\ \textcolor{comment}{//\ <NavigationViewItem\ x:Uid="{}Shell\_Main"{}\ Icon="{}Document"{}\ helpers:NavigationHelper.NavigateTo="{}AppName.ViewModels.MainViewModel"{}\ />}}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00010}00010\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00011}00011\ \textcolor{comment}{//\ Usage\ in\ code:}}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00012}00012\ \textcolor{comment}{//\ NavigationHelper.SetNavigateTo(navigationViewItem,\ typeof(MainViewModel).FullName);}}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00013}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Helpers_1_1NavigationHelper}{00013}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Helpers_1_1NavigationHelper}{NavigationHelper}}}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ GetNavigateTo(NavigationViewItem\ item)\ =>\ (string)item.GetValue(NavigateToProperty);}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetNavigateTo(NavigationViewItem\ item,\ \textcolor{keywordtype}{string}\ value)\ =>\ item.SetValue(NavigateToProperty,\ value);}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ readonly\ DependencyProperty\ NavigateToProperty\ =}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ DependencyProperty.RegisterAttached(\textcolor{stringliteral}{"{}NavigateTo"{}},\ typeof(\textcolor{keywordtype}{string}),\ typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Helpers_1_1NavigationHelper}{NavigationHelper}}),\ \textcolor{keyword}{new}\ PropertyMetadata(\textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{NavigationHelper_8cs_source_l00021}00021\ \}}
+
+\end{DoxyCode}

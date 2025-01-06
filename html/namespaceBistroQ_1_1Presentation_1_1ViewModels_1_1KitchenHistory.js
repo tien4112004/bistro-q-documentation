@@ -1,0 +1,5 @@
+var namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory =
+[
+    [ "KitchenHistoryViewModel", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1KitchenHistoryViewModel.html", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1KitchenHistoryViewModel" ],
+    [ "OrderItemGridViewModel", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1OrderItemGridViewModel.html", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1OrderItemGridViewModel" ]
+];

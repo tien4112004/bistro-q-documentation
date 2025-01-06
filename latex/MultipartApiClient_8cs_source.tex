@@ -1,0 +1,160 @@
+\doxysection{Multipart\+Api\+Client.\+cs}
+\hypertarget{MultipartApiClient_8cs_source}{}\label{MultipartApiClient_8cs_source}\index{BistroQ.Service/Http/MultipartApiClient.cs@{BistroQ.Service/Http/MultipartApiClient.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Http}{BistroQ.Domain.Contracts.Http}};}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos}{BistroQ.Domain.Dtos}};}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Newtonsoft.Json;}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00005}\mbox{\hyperlink{namespaceBistroQ_1_1Service_1_1Http}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Service_1_1Http}{BistroQ.Service.Http}};}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00011}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient}{00011}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient}{MultipartApiClient}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient}{IMultipartApiClient}}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00013}00013\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ HttpClient\ \_httpClient;}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00015}00015\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00017}00017\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient}{MultipartApiClient}}(HttpClient\ httpClient)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \_httpClient\ =\ httpClient\ ??\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(httpClient));}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00022}00022\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00024}00024\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00025}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_a4f8f23f3a9eae00063d2d0ad9191d61e}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiResponse<T>>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_a4f8f23f3a9eae00063d2d0ad9191d61e}{PostMultipartAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ MultipartFormDataContent\ content)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_httpClient.PostAsync(url,\ content);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ HandleResponse<T>(response);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00031}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_aae6fa278e4230911574bc4caf51f232b}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiResponse<T>>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_a4f8f23f3a9eae00063d2d0ad9191d61e}{PostMultipartAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ jsonContent,\ \textcolor{keywordtype}{string}\ jsonPartName,}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ Dictionary<\textcolor{keywordtype}{string},\ (Stream\ Stream,\ \textcolor{keywordtype}{string}\ FileName,\ \textcolor{keywordtype}{string}\ ContentType)>\ files)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }var\ content\ =\ \textcolor{keyword}{new}\ MultipartFormDataContent();}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (jsonContent\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ var\ properties\ =\ jsonContent.GetType().GetProperties();}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ property\ \textcolor{keywordflow}{in}\ properties)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ value\ =\ \textcolor{keyword}{property}.GetValue(jsonContent)?.ToString();}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ content.Add(\textcolor{keyword}{new}\ StringContent(value),\ \$\textcolor{stringliteral}{"{}\{jsonPartName\}.\{property.Name\}"{}});}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (files\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ file\ \textcolor{keywordflow}{in}\ files)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ fileContent\ =\ \textcolor{keyword}{new}\ StreamContent(file.Value.Stream);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fileContent.Headers.ContentType\ =\ \textcolor{keyword}{new}\ System.Net.Http.Headers.MediaTypeHeaderValue(file.Value.ContentType);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ content.Add(fileContent,\ file.Key,\ file.Value.FileName);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_httpClient.PostAsync(url,\ content);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ HandleResponse<T>(response);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00064}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_a1b2d3c9fd9ade23876d7a135428fca49}{00064}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiResponse<T>>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_a1b2d3c9fd9ade23876d7a135428fca49}{PutMultipartAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ jsonContent,\ \textcolor{keywordtype}{string}\ jsonPartName,}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ Dictionary<\textcolor{keywordtype}{string},\ (Stream\ Stream,\ \textcolor{keywordtype}{string}\ FileName,\ \textcolor{keywordtype}{string}\ ContentType)>\ files)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00066}00066\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }var\ content\ =\ \textcolor{keyword}{new}\ MultipartFormDataContent();}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (jsonContent\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ var\ properties\ =\ jsonContent.GetType().GetProperties();}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ property\ \textcolor{keywordflow}{in}\ properties)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ value\ =\ \textcolor{keyword}{property}.GetValue(jsonContent)?.ToString();}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ content.Add(\textcolor{keyword}{new}\ StringContent(value),\ \$\textcolor{stringliteral}{"{}\{jsonPartName\}.\{property.Name\}"{}});}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (files\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ file\ \textcolor{keywordflow}{in}\ files)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ fileContent\ =\ \textcolor{keyword}{new}\ StreamContent(file.Value.Stream);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fileContent.Headers.ContentType\ =\ \textcolor{keyword}{new}\ System.Net.Http.Headers.MediaTypeHeaderValue(file.Value.ContentType);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ content.Add(fileContent,\ file.Key,\ file.Value.FileName);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_httpClient.PutAsync(url,\ content);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ HandleResponse<T>(response);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00096}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_a7090d6d80c09acf7a79dc56f9756e6ac}{00096}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiResponse<T>>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_a1b2d3c9fd9ade23876d7a135428fca49}{PutMultipartAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ Dictionary<\textcolor{keywordtype}{string},\ (Stream\ Stream,\ \textcolor{keywordtype}{string}\ FileName,\ \textcolor{keywordtype}{string}\ ContentType)>\ files)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00097}00097\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }var\ content\ =\ \textcolor{keyword}{new}\ MultipartFormDataContent();}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ file\ \textcolor{keywordflow}{in}\ files)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ var\ fileContent\ =\ \textcolor{keyword}{new}\ StreamContent(file.Value.Stream);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ fileContent.Headers.ContentType\ =\ \textcolor{keyword}{new}\ System.Net.Http.Headers.MediaTypeHeaderValue(file.Value.ContentType);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ content.Add(fileContent,\ file.Key,\ file.Value.FileName);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_httpClient.PutAsync(url,\ content);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ HandleResponse<T>(response);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00110}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_a3fb2afb6d7282df0fcfac3138c94b8cf}{00110}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiResponse<T>>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Http_1_1MultipartApiClient_a3fb2afb6d7282df0fcfac3138c94b8cf}{PatchMultipartAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ Dictionary<\textcolor{keywordtype}{string},\ (Stream\ Stream,\ \textcolor{keywordtype}{string}\ FileName,\ \textcolor{keywordtype}{string}\ ContentType)>\ files)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00111}00111\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }var\ content\ =\ \textcolor{keyword}{new}\ MultipartFormDataContent();}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ file\ \textcolor{keywordflow}{in}\ files)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ var\ fileContent\ =\ \textcolor{keyword}{new}\ StreamContent(file.Value.Stream);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ fileContent.Headers.ContentType\ =\ \textcolor{keyword}{new}\ System.Net.Http.Headers.MediaTypeHeaderValue(file.Value.ContentType);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ content.Add(fileContent,\ file.Key,\ file.Value.FileName);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_httpClient.PatchAsync(url,\ content);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ HandleResponse<T>(response);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00122}00122\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00123}00123\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00125}00125\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Methods}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00132}00132\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ async\ Task<ApiResponse<T>>\ HandleResponse<T>(HttpResponseMessage\ response)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00133}00133\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ var\ resultContentString\ =\ await\ response.Content.ReadAsStringAsync();}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ var\ res\ =\ JsonConvert.DeserializeObject<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{ApiResponse<T>}}>(resultContentString);}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (res\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{ApiResponse<T>}}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Success\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Message\ =\ \textcolor{stringliteral}{"{}Empty\ response"{}},}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StatusCode\ =\ (int)response.StatusCode}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (JsonException\ ex)}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{ApiResponse<T>}}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Success\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Message\ =\ \textcolor{stringliteral}{"{}Failed\ to\ process\ response"{}},}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Error\ =\ ex.Message,}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StatusCode\ =\ (int)response.StatusCode}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00162}00162\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00163}00163\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{MultipartApiClient_8cs_source_l00164}00164\ \}}
+
+\end{DoxyCode}

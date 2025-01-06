@@ -1,0 +1,94 @@
+\doxysection{Local\+Settings\+Service.\+cs}
+\hypertarget{LocalSettingsService_8cs_source}{}\label{LocalSettingsService_8cs_source}\index{BistroQ.Presentation/Services/LocalSettingsService.cs@{BistroQ.Presentation/Services/LocalSettingsService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1Services}{BistroQ.Presentation.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Helpers}{BistroQ.Domain.Helpers}};}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Models}{BistroQ.Presentation.Models}};}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }Microsoft.Extensions.Options;}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }Windows.ApplicationModel;}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }Windows.Storage;}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00012}00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Services}{BistroQ.Presentation.Services}};}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00014}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService}{00014}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService}{LocalSettingsService}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1ILocalSettingsService}{ILocalSettingsService}}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \_defaultApplicationDataFolder\ =\ \textcolor{stringliteral}{"{}BistroQ/ApplicationData"{}};}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \_defaultLocalSettingsFile\ =\ \textcolor{stringliteral}{"{}LocalSettings.json"{}};}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}{IFileService}}\ \_fileService;}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LocalSettingsOptions}{LocalSettingsOptions}}\ \_options;}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{string}\ \_localApplicationData\ =\ Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{string}\ \_applicationDataFolder;}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{string}\ \_localsettingsFile;}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{private}\ IDictionary<string,\ object>\ \_settings;}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_isInitialized;}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1LocalSettingsService}{LocalSettingsService}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}{IFileService}}\ fileService,\ IOptions<LocalSettingsOptions>\ options)}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00031}00031\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \_fileService\ =\ fileService;}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \_options\ =\ options.Value;}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \_applicationDataFolder\ =\ Path.Combine(\_localApplicationData,\ \_options.ApplicationDataFolder\ ??\ \_defaultApplicationDataFolder);}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \_localsettingsFile\ =\ \_options.LocalSettingsFile\ ??\ \_defaultLocalSettingsFile;}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \_settings\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ object>();}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{private}\ async\ Task\ InitializeAsync()}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\_isInitialized)}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \_settings\ =\ await\ Task.Run(()\ =>\ \_fileService.Read<IDictionary<string,\ object>>(\_applicationDataFolder,\ \_localsettingsFile))\ ??\ \textcolor{keyword}{new}\ Dictionary<string,\ object>();}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \_isInitialized\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<T?>\ ReadSettingAsync<T>(\textcolor{keywordtype}{string}\ key)}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Helpers_1_1RuntimeHelper}{RuntimeHelper}}.IsMSIX)}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ApplicationData.Current.LocalSettings.Values.TryGetValue(key,\ out\ var\ obj))}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ Json.ToObjectAsync<T>((string)obj);}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ await\ InitializeAsync();}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_settings\ !=\ \textcolor{keyword}{null}\ \&\&\ \_settings.TryGetValue(key,\ out\ var\ obj))}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ Json.ToObjectAsync<T>((string)obj);}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00073}00073\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ SaveSettingAsync<T>(\textcolor{keywordtype}{string}\ key,\ T\ value)}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00074}00074\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Helpers_1_1RuntimeHelper}{RuntimeHelper}}.IsMSIX)}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ ApplicationData.Current.LocalSettings.Values[key]\ =\ await\ Json.StringifyAsync(value);}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ await\ InitializeAsync();}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \_settings[key]\ =\ await\ Json.StringifyAsync(value);}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.Run(()\ =>\ \_fileService.Save(\_applicationDataFolder,\ \_localsettingsFile,\ \_settings));}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LocalSettingsService_8cs_source_l00088}00088\ \}}
+
+\end{DoxyCode}

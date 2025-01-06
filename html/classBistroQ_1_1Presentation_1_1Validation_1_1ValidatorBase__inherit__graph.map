@@ -1,0 +1,19 @@
+<map id="BistroQ.Presentation.Validation.ValidatorBase" name="BistroQ.Presentation.Validation.ValidatorBase">
+<area shape="rect" id="Node000001" title="ValidatorBase is a base class that provides validation infrastructure for WinUI forms...." alt="" coords="215,172,421,215"/>
+<area shape="rect" id="Node000004" href="$classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm.html" title="Represents a form for adding new account with built&#45;in validation rules. Inherits from ValidatorBase ..." alt="" coords="469,5,661,48"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="347,159,400,107,433,81,468,58,491,46,493,51,470,62,436,85,404,111,351,162"/>
+<area shape="rect" id="Node000005" href="$classBistroQ_1_1Presentation_1_1Models_1_1AddCategoryForm.html" title="Represents a form for adding new category with built&#45;in validation rules. Inherits from ValidatorBase..." alt="" coords="469,72,661,115"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="378,163,468,124,498,113,500,118,470,129,380,168"/>
+<area shape="rect" id="Node000006" href="$classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm.html" title="Represents a form for adding new product with comprehensive validation rules. Inherits from Validator..." alt="" coords="469,139,661,181"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="436,175,468,170,469,176,437,180"/>
+<area shape="rect" id="Node000007" href="$classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm.html" title="Represents a form for adding new table with validation capabilities. Inherits from ValidatorBase to p..." alt="" coords="469,205,661,248"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="437,207,469,211,468,216,436,212"/>
+<area shape="rect" id="Node000008" href="$classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm.html" title="Represents a form for adding new zone with built&#45;in validation rules. Inherits from ValidatorBase to ..." alt="" coords="469,272,661,315"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="380,219,470,258,500,269,498,274,468,262,378,224"/>
+<area shape="rect" id="Node000009" href="$classBistroQ_1_1Presentation_1_1Models_1_1LoginForm.html" title="Represents a login form with validation capabilities. Inherits from ValidatorBase to provide validati..." alt="" coords="469,339,661,381"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="351,224,404,275,436,301,470,324,493,336,491,341,468,329,433,306,400,279,347,228"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,155,167,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,176,214,179,214,185,181,181"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="17,205,155,232"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,207,214,202,215,207,171,212"/>
+</map>

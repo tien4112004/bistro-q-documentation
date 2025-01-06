@@ -1,0 +1,155 @@
+\doxysection{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service Interface Reference}
+\hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{}\label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}\index{BistroQ.Domain.Contracts.Services.IAuthService@{BistroQ.Domain.Contracts.Services.IAuthService}}
+
+
+Defines the methods required for authentication and authorization services, including user login, token management, and logout functionality.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$(bool Success, string Message)$>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_ae7c08cb4791376aa13c337e4c32f7d07}{Login\+Async}} (string username, string password)
+\begin{DoxyCompactList}\small\item\em Attempts to log in a user with the provided username and password. \end{DoxyCompactList}\item 
+Task$<$ string $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a8643617b46ca3987290f660ec6658911}{Refresh\+Token\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Generates a new access token using a refresh token and user id to maintain an active session. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_aec0bbaecaaa25bb1aa01f3e21c637bee}{Logout\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Logs out the current user, invalidating their session. Also clears any stored tokens. \end{DoxyCompactList}\item 
+Task$<$ string $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a376cbb67857666ec660a3ab67762ad22}{Get\+Token\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current access token for the authenticated user. \end{DoxyCompactList}\item 
+Task$<$ bool $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a9409a3e2b39c75db68d17a710d5de132}{Is\+Authenticated\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Checks if a user is currently authenticated. \end{DoxyCompactList}\item 
+Task$<$ string $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a79d8b3886150a5d2d42853b748e13e85}{Get\+Role\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current user\textquotesingle{}s role. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the methods required for authentication and authorization services, including user login, token management, and logout functionality. 
+
+Definition at line \mbox{\hyperlink{IAuthService_8cs_source_l00007}{7}} of file \mbox{\hyperlink{IAuthService_8cs_source}{IAuth\+Service.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a79d8b3886150a5d2d42853b748e13e85}\index{BistroQ.Domain.Contracts.Services.IAuthService@{BistroQ.Domain.Contracts.Services.IAuthService}!GetRoleAsync@{GetRoleAsync}}
+\index{GetRoleAsync@{GetRoleAsync}!BistroQ.Domain.Contracts.Services.IAuthService@{BistroQ.Domain.Contracts.Services.IAuthService}}
+\doxysubsubsection{\texorpdfstring{GetRoleAsync()}{GetRoleAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a79d8b3886150a5d2d42853b748e13e85} 
+Task$<$ string $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service.\+Get\+Role\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current user\textquotesingle{}s role. 
+
+\begin{DoxyReturn}{Returns}
+User\textquotesingle{}s role
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a08890088cdf325c9f62d36696a06f2d8}{Bistro\+Q.\+Service.\+Auth.\+Auth\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a376cbb67857666ec660a3ab67762ad22}\index{BistroQ.Domain.Contracts.Services.IAuthService@{BistroQ.Domain.Contracts.Services.IAuthService}!GetTokenAsync@{GetTokenAsync}}
+\index{GetTokenAsync@{GetTokenAsync}!BistroQ.Domain.Contracts.Services.IAuthService@{BistroQ.Domain.Contracts.Services.IAuthService}}
+\doxysubsubsection{\texorpdfstring{GetTokenAsync()}{GetTokenAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a376cbb67857666ec660a3ab67762ad22} 
+Task$<$ string $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service.\+Get\+Token\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the current access token for the authenticated user. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains the current access token as a string.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a700734fa4eb10af62f95925a9a45b885}{Bistro\+Q.\+Service.\+Auth.\+Auth\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a9409a3e2b39c75db68d17a710d5de132}\index{BistroQ.Domain.Contracts.Services.IAuthService@{BistroQ.Domain.Contracts.Services.IAuthService}!IsAuthenticatedAsync@{IsAuthenticatedAsync}}
+\index{IsAuthenticatedAsync@{IsAuthenticatedAsync}!BistroQ.Domain.Contracts.Services.IAuthService@{BistroQ.Domain.Contracts.Services.IAuthService}}
+\doxysubsubsection{\texorpdfstring{IsAuthenticatedAsync()}{IsAuthenticatedAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a9409a3e2b39c75db68d17a710d5de132} 
+Task$<$ bool $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service.\+Is\+Authenticated\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a user is currently authenticated. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains a boolean indicating whether the user is authenticated.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a674f28712f5ee96cf42473cd17c698c7}{Bistro\+Q.\+Service.\+Auth.\+Auth\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_ae7c08cb4791376aa13c337e4c32f7d07}\index{BistroQ.Domain.Contracts.Services.IAuthService@{BistroQ.Domain.Contracts.Services.IAuthService}!LoginAsync@{LoginAsync}}
+\index{LoginAsync@{LoginAsync}!BistroQ.Domain.Contracts.Services.IAuthService@{BistroQ.Domain.Contracts.Services.IAuthService}}
+\doxysubsubsection{\texorpdfstring{LoginAsync()}{LoginAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_ae7c08cb4791376aa13c337e4c32f7d07} 
+Task$<$(bool Success, string Message)$>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service.\+Login\+Async (\begin{DoxyParamCaption}\item[{string}]{username}{, }\item[{string}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to log in a user with the provided username and password. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username of the user attempting to log in.\\
+\hline
+{\em password} & The password of the user attempting to log in.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains a tuple indicating whether the login was successful and a message with additional information.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a7e9ac19d265b3f17a1295b0bd88ce8b1}{Bistro\+Q.\+Service.\+Auth.\+Auth\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_aec0bbaecaaa25bb1aa01f3e21c637bee}\index{BistroQ.Domain.Contracts.Services.IAuthService@{BistroQ.Domain.Contracts.Services.IAuthService}!LogoutAsync@{LogoutAsync}}
+\index{LogoutAsync@{LogoutAsync}!BistroQ.Domain.Contracts.Services.IAuthService@{BistroQ.Domain.Contracts.Services.IAuthService}}
+\doxysubsubsection{\texorpdfstring{LogoutAsync()}{LogoutAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_aec0bbaecaaa25bb1aa01f3e21c637bee} 
+Task Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service.\+Logout\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Logs out the current user, invalidating their session. Also clears any stored tokens. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous logout operation.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a63355cd4efe22db4a654042b85b91281}{Bistro\+Q.\+Service.\+Auth.\+Auth\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a8643617b46ca3987290f660ec6658911}\index{BistroQ.Domain.Contracts.Services.IAuthService@{BistroQ.Domain.Contracts.Services.IAuthService}!RefreshTokenAsync@{RefreshTokenAsync}}
+\index{RefreshTokenAsync@{RefreshTokenAsync}!BistroQ.Domain.Contracts.Services.IAuthService@{BistroQ.Domain.Contracts.Services.IAuthService}}
+\doxysubsubsection{\texorpdfstring{RefreshTokenAsync()}{RefreshTokenAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a8643617b46ca3987290f660ec6658911} 
+Task$<$ string $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service.\+Refresh\+Token\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a new access token using a refresh token and user id to maintain an active session. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains a new access token as a string.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a35b0d5796e217c0952d1205e9c05a81e}{Bistro\+Q.\+Service.\+Auth.\+Auth\+Service}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Domain/\+Contracts/\+Services/\+Auth/IAuth\+Service.\+cs\end{DoxyCompactItemize}

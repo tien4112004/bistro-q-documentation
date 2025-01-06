@@ -1,0 +1,305 @@
+\doxysection{Bistro\+Q.\+Service.\+Data.\+Category\+Data\+Service Class Reference}
+\hypertarget{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService}{}\label{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService}\index{BistroQ.Service.Data.CategoryDataService@{BistroQ.Service.Data.CategoryDataService}}
+
+
+Implementation of category data service that communicates with the API endpoints. Uses Auto\+Mapper for data mapping between DTOs and domain models.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Service.\+Data.\+Category\+Data\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Service.\+Data.\+Category\+Data\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a9d1783bbb47aebeafa1f970c122ac690}{Category\+Data\+Service}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApi\+Client}} api\+Client, IMapper mapper)
+\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}} $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_aac4073246905e2bd03f9fe8b34d5ab54}{Create\+Category\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CreateCategoryRequest}{Create\+Category\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Creates a new category with the provided information. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}} $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a306c0b57f1876db5425a7033b8354754}{Update\+Category\+Async}} (int category\+Id, \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1UpdateCategoryRequest}{Update\+Category\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Updates an existing category with the provided information. \end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a4bffd452520ec4d50bf58ac9a823f541}{Delete\+Category\+Async}} (int category\+Id)
+\begin{DoxyCompactList}\small\item\em Deletes a category with the specified ID. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}} $>$ $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_afe2ddeb1aac6a489eb6a3ebc9535a13d}{Get\+Categories\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CategoryCollectionQueryParams}{Category\+Collection\+Query\+Params}} query=null)
+\begin{DoxyCompactList}\small\item\em Retrieves a paginated collection of categories based on query parameters. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}} $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a191d5d74e25cebabd4a322b9e19d08d5}{Get\+Category\+By\+Id\+Async}} (int category\+Id)
+\begin{DoxyCompactList}\small\item\em Retrieves a specific category by its ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+ICategory\+Data\+Service}}}
+
+
+\doxysubsection{Detailed Description}
+Implementation of category data service that communicates with the API endpoints. Uses Auto\+Mapper for data mapping between DTOs and domain models. 
+
+Definition at line \mbox{\hyperlink{CategoryDataService_8cs_source_l00014}{14}} of file \mbox{\hyperlink{CategoryDataService_8cs_source}{Category\+Data\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a9d1783bbb47aebeafa1f970c122ac690}\index{BistroQ.Service.Data.CategoryDataService@{BistroQ.Service.Data.CategoryDataService}!CategoryDataService@{CategoryDataService}}
+\index{CategoryDataService@{CategoryDataService}!BistroQ.Service.Data.CategoryDataService@{BistroQ.Service.Data.CategoryDataService}}
+\doxysubsubsection{\texorpdfstring{CategoryDataService()}{CategoryDataService()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a9d1783bbb47aebeafa1f970c122ac690} 
+Bistro\+Q.\+Service.\+Data.\+Category\+Data\+Service.\+Category\+Data\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApi\+Client}}}]{api\+Client}{, }\item[{IMapper}]{mapper}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{CategoryDataService_8cs_source_l00029}{29}} of file \mbox{\hyperlink{CategoryDataService_8cs_source}{Category\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \_apiClient\ =\ apiClient;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_aac4073246905e2bd03f9fe8b34d5ab54}\index{BistroQ.Service.Data.CategoryDataService@{BistroQ.Service.Data.CategoryDataService}!CreateCategoryAsync@{CreateCategoryAsync}}
+\index{CreateCategoryAsync@{CreateCategoryAsync}!BistroQ.Service.Data.CategoryDataService@{BistroQ.Service.Data.CategoryDataService}}
+\doxysubsubsection{\texorpdfstring{CreateCategoryAsync()}{CreateCategoryAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_aac4073246905e2bd03f9fe8b34d5ab54} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}} $>$ Bistro\+Q.\+Service.\+Data.\+Category\+Data\+Service.\+Create\+Category\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CreateCategoryRequest}{Create\+Category\+Request}}}]{category}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new category with the provided information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category} & The category creation details\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly created category
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_ac88016c16fe6501a5e1cbae7c4de5d99}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+ICategory\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{CategoryDataService_8cs_source_l00037}{37}} of file \mbox{\hyperlink{CategoryDataService_8cs_source}{Category\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PostAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CategoryResponse}{CategoryResponse}}>(\textcolor{stringliteral}{"{}api/admin/category"{}},\ request);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}}>(response.Data);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a4bffd452520ec4d50bf58ac9a823f541}\index{BistroQ.Service.Data.CategoryDataService@{BistroQ.Service.Data.CategoryDataService}!DeleteCategoryAsync@{DeleteCategoryAsync}}
+\index{DeleteCategoryAsync@{DeleteCategoryAsync}!BistroQ.Service.Data.CategoryDataService@{BistroQ.Service.Data.CategoryDataService}}
+\doxysubsubsection{\texorpdfstring{DeleteCategoryAsync()}{DeleteCategoryAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a4bffd452520ec4d50bf58ac9a823f541} 
+async Task$<$ bool $>$ Bistro\+Q.\+Service.\+Data.\+Category\+Data\+Service.\+Delete\+Category\+Async (\begin{DoxyParamCaption}\item[{int}]{category\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a category with the specified ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category\+Id} & The unique identifier of the category to delete\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the deletion was successful
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_a837897c1b237b3313a71c02f5f1d9c8e}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+ICategory\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{CategoryDataService_8cs_source_l00060}{60}} of file \mbox{\hyperlink{CategoryDataService_8cs_source}{Category\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.DeleteAsync<\textcolor{keywordtype}{object}>(\$\textcolor{stringliteral}{"{}api/admin/category/\{categoryId\}"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!response.Success)}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_afe2ddeb1aac6a489eb6a3ebc9535a13d}\index{BistroQ.Service.Data.CategoryDataService@{BistroQ.Service.Data.CategoryDataService}!GetCategoriesAsync@{GetCategoriesAsync}}
+\index{GetCategoriesAsync@{GetCategoriesAsync}!BistroQ.Service.Data.CategoryDataService@{BistroQ.Service.Data.CategoryDataService}}
+\doxysubsubsection{\texorpdfstring{GetCategoriesAsync()}{GetCategoriesAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_afe2ddeb1aac6a489eb6a3ebc9535a13d} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}} $>$ $>$ $>$ Bistro\+Q.\+Service.\+Data.\+Category\+Data\+Service.\+Get\+Categories\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CategoryCollectionQueryParams}{Category\+Collection\+Query\+Params}}}]{query}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a paginated collection of categories based on query parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & Optional query parameters for filtering, sorting, and pagination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A collection response containing categories and pagination information
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_aa824ce519e3880b81dc453180cf660c9}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+ICategory\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{CategoryDataService_8cs_source_l00071}{71}} of file \mbox{\hyperlink{CategoryDataService_8cs_source}{Category\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetCollectionAsync<IEnumerable<CategoryResponse>>(\textcolor{stringliteral}{"{}/api/category"{}},\ query);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ var\ categories\ =\ \_mapper.Map<IEnumerable<Category>>(response.Data);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{ApiCollectionResponse<IEnumerable<Category>}}>}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (categories,\ response.TotalItems,\ response.CurrentPage,\ response.TotalPages);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ get\ categories"{}});}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a191d5d74e25cebabd4a322b9e19d08d5}\index{BistroQ.Service.Data.CategoryDataService@{BistroQ.Service.Data.CategoryDataService}!GetCategoryByIdAsync@{GetCategoryByIdAsync}}
+\index{GetCategoryByIdAsync@{GetCategoryByIdAsync}!BistroQ.Service.Data.CategoryDataService@{BistroQ.Service.Data.CategoryDataService}}
+\doxysubsubsection{\texorpdfstring{GetCategoryByIdAsync()}{GetCategoryByIdAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a191d5d74e25cebabd4a322b9e19d08d5} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}} $>$ Bistro\+Q.\+Service.\+Data.\+Category\+Data\+Service.\+Get\+Category\+By\+Id\+Async (\begin{DoxyParamCaption}\item[{int}]{category\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a specific category by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category\+Id} & The unique identifier of the category\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The category details for the specified ID
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_a7077d79597a8b0b183a237c97776386d}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+ICategory\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{CategoryDataService_8cs_source_l00086}{86}} of file \mbox{\hyperlink{CategoryDataService_8cs_source}{Category\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CategoryResponse}{CategoryResponse}}>(\$\textcolor{stringliteral}{"{}api/category/\{categoryId\}"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}}>(response.Data);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a306c0b57f1876db5425a7033b8354754}\index{BistroQ.Service.Data.CategoryDataService@{BistroQ.Service.Data.CategoryDataService}!UpdateCategoryAsync@{UpdateCategoryAsync}}
+\index{UpdateCategoryAsync@{UpdateCategoryAsync}!BistroQ.Service.Data.CategoryDataService@{BistroQ.Service.Data.CategoryDataService}}
+\doxysubsubsection{\texorpdfstring{UpdateCategoryAsync()}{UpdateCategoryAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a306c0b57f1876db5425a7033b8354754} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}} $>$ Bistro\+Q.\+Service.\+Data.\+Category\+Data\+Service.\+Update\+Category\+Async (\begin{DoxyParamCaption}\item[{int}]{category\+Id}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1UpdateCategoryRequest}{Update\+Category\+Request}}}]{category}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates an existing category with the provided information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category\+Id} & The unique identifier of the category to update\\
+\hline
+{\em category} & The category update details\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated category
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_a2a3eb70d3774263e9d130dc4214b4550}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+ICategory\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{CategoryDataService_8cs_source_l00048}{48}} of file \mbox{\hyperlink{CategoryDataService_8cs_source}{Category\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PutAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CategoryResponse}{CategoryResponse}}>(\$\textcolor{stringliteral}{"{}api/admin/category/\{categoryId\}"{}},\ request);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}}>(response.Data);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Service/\+Data/Category\+Data\+Service.\+cs\end{DoxyCompactItemize}

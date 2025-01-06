@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classBistroQ_1_1Domain_1_1Dtos_1_1BaseCollectionQueryParams.html" title=" " alt="" coords="5,172,186,215"/>
+<area shape="rect" id="Node000001" href="$classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1AccountCollectionQueryParams.html" title=" " alt="" coords="236,5,444,48"/>
+<area shape="poly" id="edge25_Node000000_Node000001" title=" " alt="" coords="121,158,169,107,200,81,232,58,256,46,258,51,235,62,203,85,173,111,125,162"/>
+<area shape="rect" id="Node000002" href="$classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CategoryCollectionQueryParams.html" title=" " alt="" coords="234,72,446,115"/>
+<area shape="poly" id="edge26_Node000000_Node000002" title=" " alt="" coords="150,162,233,124,264,113,266,118,235,129,152,167"/>
+<area shape="rect" id="Node000003" href="$classBistroQ_1_1Domain_1_1Dtos_1_1Orders_1_1OrderItemColletionQueryParams.html" title=" " alt="" coords="235,139,445,181"/>
+<area shape="poly" id="edge27_Node000000_Node000003" title=" " alt="" coords="201,176,234,172,234,177,202,182"/>
+<area shape="rect" id="Node000004" href="$classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductCollectionQueryParams.html" title=" " alt="" coords="237,205,443,248"/>
+<area shape="poly" id="edge28_Node000000_Node000004" title=" " alt="" coords="202,205,236,210,236,215,201,210"/>
+<area shape="rect" id="Node000005" href="$classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1TableCollectionQueryParams.html" title=" " alt="" coords="244,272,436,315"/>
+<area shape="poly" id="edge29_Node000000_Node000005" title=" " alt="" coords="152,220,235,258,266,269,264,274,233,262,150,224"/>
+<area shape="rect" id="Node000006" href="$classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams.html" title=" " alt="" coords="245,339,435,381"/>
+<area shape="poly" id="edge30_Node000000_Node000006" title=" " alt="" coords="125,225,173,276,203,302,235,324,258,336,256,341,232,329,200,306,169,280,121,228"/>
+</map>

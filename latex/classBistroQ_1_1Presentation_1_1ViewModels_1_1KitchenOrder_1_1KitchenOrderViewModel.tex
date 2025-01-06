@@ -1,0 +1,328 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}}
+
+
+View\+Model responsible for managing the kitchen order interface. Coordinates between pending and in-\/progress order columns, action buttons, and handles order status transitions using strategy pattern.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_aa86b8ec3f8cb8279d428de00dc32187f}{Kitchen\+Order\+View\+Model}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrder\+Item\+Data\+Service}} order\+Item\+Data\+Service, IMessenger messenger, \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}} dialog\+Service, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory}{Kitchen\+Strategy\+Factory}} strategy\+Factory, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel}{Order\+Kanban\+Column\+View\+Model}} pending\+Column\+VM, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel}{Order\+Kanban\+Column\+View\+Model}} progress\+Column\+VM, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel}{Kitchen\+Order\+Buttons\+View\+Model}} kitchen\+Order\+Buttons\+View\+Model)
+\item 
+Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_ad806c7d3922ba60e6a684a0eed1f9d13}{On\+Navigated\+From}} ()
+\begin{DoxyCompactList}\small\item\em Handles cleanup when navigating away from this view. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_aa5a9e66ac465e4ab64976a26a0f32f08}{On\+Navigated\+To}} (object parameter)
+\begin{DoxyCompactList}\small\item\em Initializes columns and loads order items when navigating to this view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_ad4abca7bd332d1cbb2e2a5fa5c9a11eb}{Receive}} (Custom\+List\+View\+Selection\+Changed\+Message$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$ message)
+\begin{DoxyCompactList}\small\item\em Handles selection changes in the order item lists. \end{DoxyCompactList}\item 
+async void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_acc92eeff6c3667835702d7e25e449c6e}{Receive}} (Kitchen\+Action\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles kitchen action requests using strategy pattern. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a50d7fc56c4a0589e6cbfcd47086009f9}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Performs cleanup of resources used by the View\+Model and its child \doxylink{namespaceBistroQ_1_1Presentation_1_1ViewModels}{View\+Models}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel}{Order\+Kanban\+Column\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a084fb0b697a808461a7c2546bbd489c6}{Pending\+Column\+VM}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em View\+Model for managing the pending orders column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel}{Order\+Kanban\+Column\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_af81e987da5f8e8dffe5e0809b9b8d3c4}{Progress\+Column\+VM}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em View\+Model for managing the in-\/progress orders column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel}{Kitchen\+Order\+Buttons\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a04ef76e832fe04540ef11aca67205f0f}{Kitchen\+Order\+Buttons\+VM}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em View\+Model for managing kitchen order action buttons. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model responsible for managing the kitchen order interface. Coordinates between pending and in-\/progress order columns, action buttons, and handles order status transitions using strategy pattern. 
+
+Implements\+:
+\begin{DoxyItemize}
+\item Observable\+Object for MVVM pattern
+\item INavigation\+Aware for navigation lifecycle
+\item IRecipient interfaces for handling selection and action messages
+\item IDisposable for resource cleanup 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{KitchenOrderViewModel_8cs_source_l00029}{29}} of file \mbox{\hyperlink{KitchenOrderViewModel_8cs_source}{Kitchen\+Order\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_aa86b8ec3f8cb8279d428de00dc32187f}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}!KitchenOrderViewModel@{KitchenOrderViewModel}}
+\index{KitchenOrderViewModel@{KitchenOrderViewModel}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}}
+\doxysubsubsection{\texorpdfstring{KitchenOrderViewModel()}{KitchenOrderViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_aa86b8ec3f8cb8279d428de00dc32187f} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+View\+Model.\+Kitchen\+Order\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrder\+Item\+Data\+Service}}}]{order\+Item\+Data\+Service}{, }\item[{IMessenger}]{messenger}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}}}]{dialog\+Service}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory}{Kitchen\+Strategy\+Factory}}}]{strategy\+Factory}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel}{Order\+Kanban\+Column\+View\+Model}}}]{pending\+Column\+VM}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel}{Order\+Kanban\+Column\+View\+Model}}}]{progress\+Column\+VM}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel}{Kitchen\+Order\+Buttons\+View\+Model}}}]{kitchen\+Order\+Buttons\+View\+Model}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderViewModel_8cs_source_l00084}{84}} of file \mbox{\hyperlink{KitchenOrderViewModel_8cs_source}{Kitchen\+Order\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a084fb0b697a808461a7c2546bbd489c6}{PendingColumnVM}}\ =\ pendingColumnVM;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_af81e987da5f8e8dffe5e0809b9b8d3c4}{ProgressColumnVM}}\ =\ progressColumnVM;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \_dialogService\ =\ dialogService;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a04ef76e832fe04540ef11aca67205f0f}{KitchenOrderButtonsVM}}\ =\ kitchenOrderButtonsViewModel;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \_strategyFactory\ =\ strategyFactory;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \_orderItemDataService\ =\ orderItemDataService;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \_messenger\ =\ messenger;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a50d7fc56c4a0589e6cbfcd47086009f9}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a50d7fc56c4a0589e6cbfcd47086009f9} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+View\+Model.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs cleanup of resources used by the View\+Model and its child \doxylink{namespaceBistroQ_1_1Presentation_1_1ViewModels}{View\+Models}. 
+
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderViewModel_8cs_source_l00181}{181}} of file \mbox{\hyperlink{KitchenOrderViewModel_8cs_source}{Kitchen\+Order\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00182\ \ \ \ \ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a04ef76e832fe04540ef11aca67205f0f}{KitchenOrderButtonsVM}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a137786a0d2cfd8d2d8744f977072ad54}{Dispose}}();}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a084fb0b697a808461a7c2546bbd489c6}{PendingColumnVM}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel_ac983888ee7ee3410b96d054ec57f517a}{Dispose}}();}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_af81e987da5f8e8dffe5e0809b9b8d3c4}{ProgressColumnVM}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel_ac983888ee7ee3410b96d054ec57f517a}{Dispose}}();}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00187\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_ad806c7d3922ba60e6a684a0eed1f9d13}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}!OnNavigatedFrom@{OnNavigatedFrom}}
+\index{OnNavigatedFrom@{OnNavigatedFrom}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedFrom()}{OnNavigatedFrom()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_ad806c7d3922ba60e6a684a0eed1f9d13} 
+Task Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+View\+Model.\+On\+Navigated\+From (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles cleanup when navigating away from this view. 
+
+\begin{DoxyReturn}{Returns}
+A completed task
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderViewModel_8cs_source_l00108}{108}} of file \mbox{\hyperlink{KitchenOrderViewModel_8cs_source}{Kitchen\+Order\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00109\ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a50d7fc56c4a0589e6cbfcd47086009f9}{Dispose}}();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.CompletedTask;}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_aa5a9e66ac465e4ab64976a26a0f32f08}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}!OnNavigatedTo@{OnNavigatedTo}}
+\index{OnNavigatedTo@{OnNavigatedTo}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedTo()}{OnNavigatedTo()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_aa5a9e66ac465e4ab64976a26a0f32f08} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+View\+Model.\+On\+Navigated\+To (\begin{DoxyParamCaption}\item[{object}]{parameter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes columns and loads order items when navigating to this view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Navigation parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderViewModel_8cs_source_l00119}{119}} of file \mbox{\hyperlink{KitchenOrderViewModel_8cs_source}{Kitchen\+Order\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00120\ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ PendingColumnVM.ColumnType\ =\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a98f22a547d2cefb0c7e358a5e965cc16}{KitchenColumnType}}.Pending;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a084fb0b697a808461a7c2546bbd489c6}{PendingColumnVM}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel_a9aceec35185e100e3e0d3f2cc9290378}{LoadItems}}(OrderItemStatus.Pending);}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ State.PendingItems\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a084fb0b697a808461a7c2546bbd489c6}{PendingColumnVM}}.Items;}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ ProgressColumnVM.ColumnType\ =\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a98f22a547d2cefb0c7e358a5e965cc16}{KitchenColumnType}}.InProgress;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_af81e987da5f8e8dffe5e0809b9b8d3c4}{ProgressColumnVM}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel_a9aceec35185e100e3e0d3f2cc9290378}{LoadItems}}(OrderItemStatus.InProgress);}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ State.ProgressItems\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_af81e987da5f8e8dffe5e0809b9b8d3c4}{ProgressColumnVM}}.Items;}
+\DoxyCodeLine{00128\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_ad4abca7bd332d1cbb2e2a5fa5c9a11eb}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_ad4abca7bd332d1cbb2e2a5fa5c9a11eb} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Custom\+List\+View\+Selection\+Changed\+Message$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles selection changes in the order item lists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing selection change information\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderViewModel_8cs_source_l00136}{136}} of file \mbox{\hyperlink{KitchenOrderViewModel_8cs_source}{Kitchen\+Order\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137\ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ State.SelectedItems.Clear();}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a084fb0b697a808461a7c2546bbd489c6}{PendingColumnVM}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel_a4a680e4a6bc98c95ae2e76eca0673a5c}{SelectedItems}})}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ State.SelectedItems.Add(item);}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_af81e987da5f8e8dffe5e0809b9b8d3c4}{ProgressColumnVM}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel_a4a680e4a6bc98c95ae2e76eca0673a5c}{SelectedItems}})}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ State.SelectedItems.Add(item);}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a04ef76e832fe04540ef11aca67205f0f}{KitchenOrderButtonsVM}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a168311c87ea6b287fc096858a8475157}{UpdateStates}}(State.SelectedItems);}
+\DoxyCodeLine{00148\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_acc92eeff6c3667835702d7e25e449c6e}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_acc92eeff6c3667835702d7e25e449c6e} 
+async void Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Kitchen\+Action\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles kitchen action requests using strategy pattern. 
+
+Executes the appropriate strategy with a minimum delay of 200ms to prevent UI flickering. Handles errors and resets button states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the requested action\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderViewModel_8cs_source_l00158}{158}} of file \mbox{\hyperlink{KitchenOrderViewModel_8cs_source}{Kitchen\+Order\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00159\ \ \ \ \ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ var\ strategy\ =\ \_strategyFactory.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory_ac5060f222a550b26f170d153d318adbb}{GetStrategy}}(message.Action,\ State);}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ await\ TaskHelper.WithMinimumDelay(strategy.ExecuteAsync(State.SelectedItems),\ 200);}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \_\ =\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}{ShowErrorDialog}}(ex.Message,\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(ex.Message);}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a04ef76e832fe04540ef11aca67205f0f}{KitchenOrderButtonsVM}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a1e0fbd52221315ebd11b159445343b48}{ResetLoadingState}}();}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00174\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a04ef76e832fe04540ef11aca67205f0f}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}!KitchenOrderButtonsVM@{KitchenOrderButtonsVM}}
+\index{KitchenOrderButtonsVM@{KitchenOrderButtonsVM}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}}
+\doxysubsubsection{\texorpdfstring{KitchenOrderButtonsVM}{KitchenOrderButtonsVM}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a04ef76e832fe04540ef11aca67205f0f} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel}{Kitchen\+Order\+Buttons\+View\+Model}} Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+View\+Model.\+Kitchen\+Order\+Buttons\+VM\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+View\+Model for managing kitchen order action buttons. 
+
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderViewModel_8cs_source_l00050}{50}} of file \mbox{\hyperlink{KitchenOrderViewModel_8cs_source}{Kitchen\+Order\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a084fb0b697a808461a7c2546bbd489c6}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}!PendingColumnVM@{PendingColumnVM}}
+\index{PendingColumnVM@{PendingColumnVM}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}}
+\doxysubsubsection{\texorpdfstring{PendingColumnVM}{PendingColumnVM}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_a084fb0b697a808461a7c2546bbd489c6} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel}{Order\+Kanban\+Column\+View\+Model}} Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+View\+Model.\+Pending\+Column\+VM\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+View\+Model for managing the pending orders column. 
+
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderViewModel_8cs_source_l00040}{40}} of file \mbox{\hyperlink{KitchenOrderViewModel_8cs_source}{Kitchen\+Order\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_af81e987da5f8e8dffe5e0809b9b8d3c4}\index{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}!ProgressColumnVM@{ProgressColumnVM}}
+\index{ProgressColumnVM@{ProgressColumnVM}!BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel@{BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderViewModel}}
+\doxysubsubsection{\texorpdfstring{ProgressColumnVM}{ProgressColumnVM}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel_af81e987da5f8e8dffe5e0809b9b8d3c4} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel}{Order\+Kanban\+Column\+View\+Model}} Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Kitchen\+Order\+View\+Model.\+Progress\+Column\+VM\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+View\+Model for managing the in-\/progress orders column. 
+
+
+
+Definition at line \mbox{\hyperlink{KitchenOrderViewModel_8cs_source_l00045}{45}} of file \mbox{\hyperlink{KitchenOrderViewModel_8cs_source}{Kitchen\+Order\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Kitchen\+Order/Kitchen\+Order\+View\+Model.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,57 @@
+\doxysection{Kitchen\+History\+Page.\+xaml.\+cs}
+\hypertarget{KitchenHistoryPage_8xaml_8cs_source}{}\label{KitchenHistoryPage_8xaml_8cs_source}\index{BistroQ.Presentation/Views/KitchenHistory/KitchenHistoryPage.xaml.cs@{BistroQ.Presentation/Views/KitchenHistory/KitchenHistoryPage.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Enums}{BistroQ.Domain.Enums}};}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages}{BistroQ.Presentation.Messages}};}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory}{BistroQ.Presentation.ViewModels.KitchenHistory}};}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Messaging;}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }CommunityToolkit.WinUI.Controls;}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00009}00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views_1_1KitchenHistory}{BistroQ.Presentation.Views.KitchenHistory}};}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00011}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1KitchenHistory_1_1KitchenHistoryPage}{00011}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1KitchenHistory_1_1KitchenHistoryPage}{KitchenHistoryPage}}\ :\ Page}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1KitchenHistoryViewModel}{KitchenHistoryViewModel}}\ ViewModel\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{private}\ List<(OrderItemStatus\ Status,\ \textcolor{keywordtype}{string}\ DisplayName)>\ \_statusItems\ =\ \textcolor{keyword}{new}()}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ (OrderItemStatus.Pending,\ \textcolor{stringliteral}{"{}Pending"{}}),}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ (OrderItemStatus.InProgress,\ \textcolor{stringliteral}{"{}In\ Progress"{}}),}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ (OrderItemStatus.Completed,\ \textcolor{stringliteral}{"{}Completed"{}}),}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ (OrderItemStatus.Cancelled,\ \textcolor{stringliteral}{"{}Cancelled"{}})}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00021}00021\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1KitchenHistory_1_1KitchenHistoryPage}{KitchenHistoryPage}}()}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00024}00024\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ this.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1KitchenHistory_1_1KitchenHistoryPage_accdc77f116f346cf627850b569aac2b1}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ ViewModel\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1KitchenHistoryViewModel}{KitchenHistoryViewModel}}>();}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ \_statusItems.Count;\ i++)}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ Segmented.Items.Add(\textcolor{keyword}{new}\ SegmentedItem}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ \_statusItems[i].DisplayName,}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Segmented\_SelectionChanged(\textcolor{keywordtype}{object}\ sender,\ SelectionChangedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00037}00037\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ViewModel\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ var\ type\ =\ \_statusItems[Segmented.SelectedIndex].Status;}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenHistory_1_1KitchenHistoryViewModel_a73311b61aaba2a60ae969a777ae74b6f}{OrderItemGridViewModel}}.State.Query.Status\ ==\ type.ToString())}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<IMessenger>().Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a5116cb1381973ba7ee8430b774ac9bef}{OrderGridStatusChangedMessage}}(type));}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenHistoryPage_8xaml_8cs_source_l00051}00051\ \}}
+
+\end{DoxyCode}

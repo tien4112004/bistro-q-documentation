@@ -1,0 +1,5 @@
+<map id="BistroQ.Service.Data.CategoryDataService" name="BistroQ.Service.Data.CategoryDataService">
+<area shape="rect" id="Node000001" title="Implementation of category data service that communicates with the API endpoints. Uses AutoMapper for..." alt="" coords="5,80,208,123"/>
+<area shape="rect" id="Node000002" href="$interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService.html" title="Interface for managing category&#45;related data operations through API endpoints. Provides methods for C..." alt="" coords="31,5,182,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,48,109,80,104,80,104,48"/>
+</map>

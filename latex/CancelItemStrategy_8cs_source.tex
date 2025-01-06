@@ -1,0 +1,38 @@
+\doxysection{Cancel\+Item\+Strategy.\+cs}
+\hypertarget{CancelItemStrategy_8cs_source}{}\label{CancelItemStrategy_8cs_source}\index{BistroQ.Presentation/ViewModels/KitchenOrder/Strategies/CancelItemStrategy.cs@{BistroQ.Presentation/ViewModels/KitchenOrder/Strategies/CancelItemStrategy.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Enums}{BistroQ.Domain.Enums}};}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Models}{BistroQ.Presentation.ViewModels.Models}};}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1States}{BistroQ.Presentation.ViewModels.States}};}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00006}\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies}{00006}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies}{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies}};}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00012}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy}{CancelItemStrategy}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy}{IOrderItemActionStrategy}}}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrderItemDataService}}\ \_orderItemDataService;}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00022}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy_a469024875d739f60087501145afeaec3}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{KitchenOrderState}}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy_a469024875d739f60087501145afeaec3}{State}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00029}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy_a2ca06a9abb135015b86be53ee40e0199}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy_a2ca06a9abb135015b86be53ee40e0199}{CancelItemStrategy}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrderItemDataService}}\ orderItemDataService,\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{KitchenOrderState}}\ state)}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \_orderItemDataService\ =\ orderItemDataService;}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy_a469024875d739f60087501145afeaec3}{State}}\ =\ state;}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00043}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy_a39feb6e77410cf857baf2e9fea97e9ea}{00043}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy_a39feb6e77410cf857baf2e9fea97e9ea}{ExecuteAsync}}(IEnumerable<OrderItemViewModel>\ orderItems)}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00044}00044\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ var\ orderItemList\ =\ orderItems.ToList();}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ await\ \_orderItemDataService.BulkUpdateOrderItemsStatusAsync(orderItems.Select(x\ =>\ x.OrderItemId),\ OrderItemStatus.Cancelled);}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ orderItemList)}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ item.Status\ =\ OrderItemStatus.Cancelled;}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy_a469024875d739f60087501145afeaec3}{State}}.PendingItems.Remove(item);}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CancelItemStrategy_8cs_source_l00055}00055\ \}}
+
+\end{DoxyCode}

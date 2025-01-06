@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService.html" title="Interface for handling file operations with JSON serialization. Provides methods for reading,..." alt="" coords="5,5,185,48"/>
+<area shape="rect" id="Node000001" href="$classBistroQ_1_1Service_1_1Common_1_1FileService.html" title="Implementation of IFileService that handles file operations using JSON serialization." alt="" coords="233,5,428,48"/>
+<area shape="poly" id="edge17_Node000000_Node000001" title=" " alt="" coords="200,24,232,24,232,29,200,29"/>
+</map>

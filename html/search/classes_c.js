@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['pageservice_0',['PageService',['../classBistroQ_1_1Presentation_1_1Services_1_1PageService.html',1,'BistroQ::Presentation::Services']]],
+  ['pagination_1',['Pagination',['../classBistroQ_1_1Domain_1_1Dtos_1_1Common_1_1Pagination.html',1,'BistroQ::Domain::Dtos::Common']]],
+  ['paginationcontrol_2',['PaginationControl',['../classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1PaginationControl.html',1,'BistroQ::Presentation::Views::UserControls']]],
+  ['paginationviewmodel_3',['PaginationViewModel',['../classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1PaginationViewModel.html',1,'BistroQ::Presentation::ViewModels::Commons']]],
+  ['paymentqrcodecontrol_4',['PaymentQrCodeControl',['../classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1PaymentQrCodeControl.html',1,'BistroQ::Presentation::Views::UserControls::Client']]],
+  ['piechartviewmodel_5',['PieChartViewModel',['../classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductDetailControl_1_1PieChartViewModel.html',1,'BistroQ::Presentation::Views::UserControls::Client::ProductDetailControl']]],
+  ['product_6',['Product',['../classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product.html',1,'BistroQ::Domain::Models::Entities']]],
+  ['productcollectionqueryparams_7',['ProductCollectionQueryParams',['../classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductCollectionQueryParams.html',1,'BistroQ::Domain::Dtos::Products']]],
+  ['productdataservice_8',['ProductDataService',['../classBistroQ_1_1Service_1_1Data_1_1ProductDataService.html',1,'BistroQ::Service::Data']]],
+  ['productdetail_9',['ProductDetail',['../classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductDetail.html',1,'BistroQ::Presentation::Views::UserControls::Client']]],
+  ['productdetailcontrol_10',['ProductDetailControl',['../classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductDetailControl.html',1,'BistroQ::Presentation::Views::UserControls::Client']]],
+  ['productlistcontrol_11',['ProductListControl',['../classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductListControl.html',1,'BistroQ::Presentation::Views::UserControls::Client']]],
+  ['productlistviewmodel_12',['ProductListViewModel',['../classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel.html',1,'BistroQ::Presentation::ViewModels::Client']]],
+  ['productrecommendationrequest_13',['ProductRecommendationRequest',['../classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductRecommendationRequest.html',1,'BistroQ::Domain::Dtos::Products']]],
+  ['productresponse_14',['ProductResponse',['../classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductResponse.html',1,'BistroQ::Domain::Dtos::Products']]],
+  ['productviewmodel_15',['ProductViewModel',['../classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1ProductViewModel.html',1,'BistroQ::Presentation::ViewModels::Models']]],
+  ['progressbarvaluetocolorconverter_16',['ProgressBarValueToColorConverter',['../classBistroQ_1_1Presentation_1_1Converters_1_1ProgressBarValueToColorConverter.html',1,'BistroQ::Presentation::Converters']]],
+  ['publicapiclient_17',['PublicApiClient',['../classBistroQ_1_1Domain_1_1Services_1_1Http_1_1PublicApiClient.html',1,'BistroQ::Domain::Services::Http']]]
+];

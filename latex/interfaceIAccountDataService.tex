@@ -1,0 +1,181 @@
+\doxysection{IAccount\+Data\+Service Interface Reference}
+\hypertarget{interfaceIAccountDataService}{}\label{interfaceIAccountDataService}\index{IAccountDataService@{IAccountDataService}}
+
+
+Interface for managing account-\/related data operations through API endpoints. Provides methods for CRUD operations on user accounts.  
+
+
+
+
+Inheritance diagram for IAccount\+Data\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{interfaceIAccountDataService__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ $>$ $>$ \mbox{\hyperlink{interfaceIAccountDataService_ac32b1a4d9e75bdfcaf72e9ba7702f061}{Get\+Accounts\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1AccountCollectionQueryParams}{Account\+Collection\+Query\+Params}} query)
+\begin{DoxyCompactList}\small\item\em Retrieves a paginated collection of accounts based on query parameters. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ \mbox{\hyperlink{interfaceIAccountDataService_a1bc4362533212697cddd0d0bca913549}{Get\+Account\+By\+Id\+Async}} (string user\+Id)
+\begin{DoxyCompactList}\small\item\em Retrieves a specific account by its user ID. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ \mbox{\hyperlink{interfaceIAccountDataService_a8512abb1cc7424653e889e30842ffc73}{Create\+Account\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1CreateAccountRequest}{Create\+Account\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Creates a new account with the provided information. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ \mbox{\hyperlink{interfaceIAccountDataService_ac5ce3df95f1233ba0300fdb6e67c3d99}{Update\+Account\+Async}} (string user\+Id, \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1UpdateAccountRequest}{Update\+Account\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Updates an existing account with the provided information. \end{DoxyCompactList}\item 
+Task$<$ bool $>$ \mbox{\hyperlink{interfaceIAccountDataService_a33b9579e582a85020e98236cfd39cbdb}{Delete\+Account\+Async}} (string user\+Id)
+\begin{DoxyCompactList}\small\item\em Deletes an account with the specified user ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for managing account-\/related data operations through API endpoints. Provides methods for CRUD operations on user accounts. 
+
+Definition at line \mbox{\hyperlink{IAccountDataService_8cs_source_l00009}{9}} of file \mbox{\hyperlink{IAccountDataService_8cs_source}{IAccount\+Data\+Service.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfaceIAccountDataService_a8512abb1cc7424653e889e30842ffc73}\index{IAccountDataService@{IAccountDataService}!CreateAccountAsync@{CreateAccountAsync}}
+\index{CreateAccountAsync@{CreateAccountAsync}!IAccountDataService@{IAccountDataService}}
+\doxysubsubsection{\texorpdfstring{CreateAccountAsync()}{CreateAccountAsync()}}
+{\footnotesize\ttfamily \label{interfaceIAccountDataService_a8512abb1cc7424653e889e30842ffc73} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ IAccount\+Data\+Service.\+Create\+Account\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1CreateAccountRequest}{Create\+Account\+Request}}}]{request}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new account with the provided information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The account creation details\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly created account
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_aa557fdcc70a2afa8fbd630b1688a7208}{Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service}}.
+
+\Hypertarget{interfaceIAccountDataService_a33b9579e582a85020e98236cfd39cbdb}\index{IAccountDataService@{IAccountDataService}!DeleteAccountAsync@{DeleteAccountAsync}}
+\index{DeleteAccountAsync@{DeleteAccountAsync}!IAccountDataService@{IAccountDataService}}
+\doxysubsubsection{\texorpdfstring{DeleteAccountAsync()}{DeleteAccountAsync()}}
+{\footnotesize\ttfamily \label{interfaceIAccountDataService_a33b9579e582a85020e98236cfd39cbdb} 
+Task$<$ bool $>$ IAccount\+Data\+Service.\+Delete\+Account\+Async (\begin{DoxyParamCaption}\item[{string}]{user\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Deletes an account with the specified user ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The unique identifier of the user to delete\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the deletion was successful
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_a7640d2df9f68ff0d13f3a99da3bbbb99}{Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service}}.
+
+\Hypertarget{interfaceIAccountDataService_a1bc4362533212697cddd0d0bca913549}\index{IAccountDataService@{IAccountDataService}!GetAccountByIdAsync@{GetAccountByIdAsync}}
+\index{GetAccountByIdAsync@{GetAccountByIdAsync}!IAccountDataService@{IAccountDataService}}
+\doxysubsubsection{\texorpdfstring{GetAccountByIdAsync()}{GetAccountByIdAsync()}}
+{\footnotesize\ttfamily \label{interfaceIAccountDataService_a1bc4362533212697cddd0d0bca913549} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ IAccount\+Data\+Service.\+Get\+Account\+By\+Id\+Async (\begin{DoxyParamCaption}\item[{string}]{user\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a specific account by its user ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The unique identifier of the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The account details for the specified user
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_a61b204d28c7635958396eeb1cd232a7f}{Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service}}.
+
+\Hypertarget{interfaceIAccountDataService_ac32b1a4d9e75bdfcaf72e9ba7702f061}\index{IAccountDataService@{IAccountDataService}!GetAccountsAsync@{GetAccountsAsync}}
+\index{GetAccountsAsync@{GetAccountsAsync}!IAccountDataService@{IAccountDataService}}
+\doxysubsubsection{\texorpdfstring{GetAccountsAsync()}{GetAccountsAsync()}}
+{\footnotesize\ttfamily \label{interfaceIAccountDataService_ac32b1a4d9e75bdfcaf72e9ba7702f061} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ $>$ $>$ IAccount\+Data\+Service.\+Get\+Accounts\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1AccountCollectionQueryParams}{Account\+Collection\+Query\+Params}}}]{query}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a paginated collection of accounts based on query parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & Query parameters for filtering, sorting, and pagination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A collection response containing accounts and pagination information
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_ad7c36b75fa708c25f0d6c07c73c120a0}{Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service}}.
+
+\Hypertarget{interfaceIAccountDataService_ac5ce3df95f1233ba0300fdb6e67c3d99}\index{IAccountDataService@{IAccountDataService}!UpdateAccountAsync@{UpdateAccountAsync}}
+\index{UpdateAccountAsync@{UpdateAccountAsync}!IAccountDataService@{IAccountDataService}}
+\doxysubsubsection{\texorpdfstring{UpdateAccountAsync()}{UpdateAccountAsync()}}
+{\footnotesize\ttfamily \label{interfaceIAccountDataService_ac5ce3df95f1233ba0300fdb6e67c3d99} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ IAccount\+Data\+Service.\+Update\+Account\+Async (\begin{DoxyParamCaption}\item[{string}]{user\+Id}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1UpdateAccountRequest}{Update\+Account\+Request}}}]{request}{}\end{DoxyParamCaption})}
+
+
+
+Updates an existing account with the provided information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The unique identifier of the user to update\\
+\hline
+{\em request} & The account update details\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated account
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_a8310dc524e3cc408583c526467fe2e50}{Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Domain/\+Contracts/\+Services/\+Data/IAccount\+Data\+Service.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="BistroQ.Domain.Contracts.Services.ITableDataService" name="BistroQ.Domain.Contracts.Services.ITableDataService">
+<area shape="rect" id="Node000001" title="Interface for managing table&#45;related data operations through API endpoints. Provides methods for CRUD..." alt="" coords="5,5,189,48"/>
+<area shape="rect" id="Node000002" href="$classBistroQ_1_1Service_1_1Data_1_1TableDataService.html" title="Implementation of table data service that communicates with the API endpoints. Handles both admin and..." alt="" coords="7,96,187,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,64,100,96,94,96,94,64"/>
+</map>

@@ -1,0 +1,133 @@
+\doxysection{Navigation\+View\+Service.\+cs}
+\hypertarget{NavigationViewService_8cs_source}{}\label{NavigationViewService_8cs_source}\index{BistroQ.Presentation/Services/NavigationViewService.cs@{BistroQ.Presentation/Services/NavigationViewService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1Services}{BistroQ.Presentation.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Data;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Diagnostics.CodeAnalysis;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Services}{BistroQ.Presentation.Services}};}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00009}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService}{NavigationViewService}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationViewService}{INavigationViewService}}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigationService}}\ \_navigationService;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IPageService}{IPageService}}\ \_pageService;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{private}\ NavigationView?\ \_navigationView;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ Role;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{public}\ IList<object>?\ MenuItems}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ MenuItems;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{object}?\ SettingsItem\ =>\ \_navigationView?.SettingsItem;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService}{NavigationViewService}}(\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigationService}}\ navigationService,\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IPageService}{IPageService}}\ pageService)}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \_navigationService\ =\ navigationService;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \_pageService\ =\ pageService;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00032}00032\ \ \ \ \ [MemberNotNull(nameof(\_navigationView))]}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00033}00033\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(NavigationView\ navigationView,\ \textcolor{keywordtype}{string}\ role)}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00034}00034\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \_navigationView\ =\ navigationView;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ var\ items\ =\ \_navigationView.MenuItems.Where(x\ =>}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ var\ navItem\ =\ x\ as\ NavigationViewItem;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ navItem\ !=\ \textcolor{keyword}{null}\ \&\&\ (navItem.Tag?.ToString()\ ==\ role\ ||\ navItem.Tag?.ToString()\ ==\ \textcolor{stringliteral}{"{}User"{}});}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}).ToList();}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \_navigationView.MenuItems.Clear();}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ items)}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \_navigationView.MenuItems.Add(item);}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \_navigationView.BackRequested\ +=\ OnBackRequested;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \_navigationView.ItemInvoked\ +=\ OnItemInvoked;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ NavigateToEntryPoint()}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_navigationView.MenuItems.FirstOrDefault()\ is\ NavigationViewItem\ firstItem)}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \_navigationService.NavigateTo(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Helpers_1_1NavigationHelper}{NavigationHelper}}.GetNavigateTo(firstItem));}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00061}00061\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ UnregisterEvents()}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00062}00062\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_navigationView\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \_navigationView.BackRequested\ -\/=\ OnBackRequested;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \_navigationView.ItemInvoked\ -\/=\ OnItemInvoked;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00070}00070\ \ \ \ \ \textcolor{keyword}{public}\ NavigationViewItem?\ GetSelectedItem(Type\ pageType)}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00071}00071\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_navigationView\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetSelectedItem(\_navigationView.MenuItems,\ pageType)\ ??\ GetSelectedItem(\_navigationView.FooterMenuItems,\ pageType);}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00080}00080\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnBackRequested(NavigationView\ sender,\ NavigationViewBackRequestedEventArgs\ args)\ =>\ \_navigationService.GoBack();}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00082}00082\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnItemInvoked(NavigationView\ sender,\ NavigationViewItemInvokedEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00083}00083\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (args.IsSettingsInvoked)}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Navigate\ to\ the\ settings\ page.}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ var\ selectedItem\ =\ args.InvokedItemContainer\ as\ NavigationViewItem;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (selectedItem?.GetValue(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Helpers_1_1NavigationHelper}{NavigationHelper}}.NavigateToProperty)\ is\ \textcolor{keywordtype}{string}\ pageKey)}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_navigationService.NavigateTo(pageKey);}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00099}00099\ \ \ \ \ \textcolor{keyword}{private}\ NavigationViewItem?\ GetSelectedItem(IEnumerable<object>\ menuItems,\ Type\ pageType)}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00100}00100\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ menuItems.OfType<NavigationViewItem>())}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsMenuItemForPageType(item,\ pageType))}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ item;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ var\ selectedChild\ =\ GetSelectedItem(item.MenuItems,\ pageType);}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (selectedChild\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ selectedChild;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00116}00116\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00118}00118\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ IsMenuItemForPageType(NavigationViewItem\ menuItem,\ Type\ sourcePageType)}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00119}00119\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (menuItem.GetValue(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Helpers_1_1NavigationHelper}{NavigationHelper}}.NavigateToProperty)\ is\ \textcolor{keywordtype}{string}\ pageKey)}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_pageService.GetPageType(pageKey)\ ==\ sourcePageType;}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00126}00126\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{NavigationViewService_8cs_source_l00127}00127\ \}}
+
+\end{DoxyCode}

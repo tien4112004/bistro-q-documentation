@@ -1,0 +1,79 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Pagination\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1PaginationViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1PaginationViewModel}\index{BistroQ.Presentation.ViewModels.Commons.PaginationViewModel@{BistroQ.Presentation.ViewModels.Commons.PaginationViewModel}}
+
+
+View\+Model responsible for managing pagination state and calculations.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Pagination\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1PaginationViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Pagination\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1PaginationViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1PaginationViewModel_a8f131f0e7dcaf878a96502c55fd2187c}{Current\+Page}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the current page number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model responsible for managing pagination state and calculations. 
+
+Implements Observable\+Object to provide change notifications for pagination properties. Includes validation to ensure valid page numbers and maintain pagination state. 
+
+Definition at line \mbox{\hyperlink{PaginationViewModel_8cs_source_l00012}{12}} of file \mbox{\hyperlink{PaginationViewModel_8cs_source}{Pagination\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1PaginationViewModel_a8f131f0e7dcaf878a96502c55fd2187c}\index{BistroQ.Presentation.ViewModels.Commons.PaginationViewModel@{BistroQ.Presentation.ViewModels.Commons.PaginationViewModel}!CurrentPage@{CurrentPage}}
+\index{CurrentPage@{CurrentPage}!BistroQ.Presentation.ViewModels.Commons.PaginationViewModel@{BistroQ.Presentation.ViewModels.Commons.PaginationViewModel}}
+\doxysubsubsection{\texorpdfstring{CurrentPage}{CurrentPage}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1PaginationViewModel_a8f131f0e7dcaf878a96502c55fd2187c} 
+int Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Pagination\+View\+Model.\+Current\+Page\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the current page number. 
+
+Validates the page number to ensure it\textquotesingle{}s a positive integer. If an invalid value is provided (NaN or less than 1), defaults to page 1. 
+
+Definition at line \mbox{\hyperlink{PaginationViewModel_8cs_source_l00026}{26}} of file \mbox{\hyperlink{PaginationViewModel_8cs_source}{Pagination\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ \_currentPage;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{double}.IsNaN(value)\ ||\ value\ <=\ 0)}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ =\ 1;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_currentPage\ =\ value;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Commons/Pagination\+View\+Model.\+cs\end{DoxyCompactItemize}

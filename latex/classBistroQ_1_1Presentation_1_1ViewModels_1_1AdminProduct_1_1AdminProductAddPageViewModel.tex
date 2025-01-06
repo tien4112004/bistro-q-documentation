@@ -1,0 +1,271 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Product.\+Admin\+Product\+Add\+Page\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel}\index{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel}}
+
+
+View\+Model for adding new products in the admin interface. Manages the product creation form, category selection, and image upload.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Product.\+Admin\+Product\+Add\+Page\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Product.\+Admin\+Product\+Add\+Page\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a557996515339649778a64c64a1cfedc2}{Admin\+Product\+Add\+Page\+View\+Model}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService}{IProduct\+Data\+Service}} product\+Data\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService}{ICategory\+Data\+Service}} category\+Data\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}} dialog\+Service, IMapper mapper)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel}{Admin\+Product\+Add\+Page\+View\+Model} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a7aae98b828bf35fbba52a2d40a6b62e9}{Navigate\+Back}} ()
+\begin{DoxyCompactList}\small\item\em Navigates back to the previous page. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a2da2cfe88ff7fff6d061097f276b55e4}{Add\+Product\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Adds a new product using the form data. Validates the form, creates the product with image if provided, and handles any errors. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a7ba4ab82983588df4cc69461e533275b}{Load\+Categories\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Loads the list of available categories for product assignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1CategoryViewModel}{Category\+View\+Model}} $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a8832cf1bf0bb42b03a58abcff9b631d3}{Categories}}
+\begin{DoxyCompactList}\small\item\em Collection of available categories for product assignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+IRelay\+Command \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a05bb5976b7dd2b83ac2301c05690ec60}{Add\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command for adding a new product. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model for adding new products in the admin interface. Manages the product creation form, category selection, and image upload. 
+
+Uses MVVM pattern with Observable\+Recipient as its base class for property change notifications and command handling. 
+
+Definition at line \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source_l00023}{23}} of file \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source}{Admin\+Product\+Add\+Page\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a557996515339649778a64c64a1cfedc2}\index{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel}!AdminProductAddPageViewModel@{AdminProductAddPageViewModel}}
+\index{AdminProductAddPageViewModel@{AdminProductAddPageViewModel}!BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel}}
+\doxysubsubsection{\texorpdfstring{AdminProductAddPageViewModel()}{AdminProductAddPageViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a557996515339649778a64c64a1cfedc2} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Product.\+Admin\+Product\+Add\+Page\+View\+Model.\+Admin\+Product\+Add\+Page\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService}{IProduct\+Data\+Service}}}]{product\+Data\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService}{ICategory\+Data\+Service}}}]{category\+Data\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}}}]{dialog\+Service}{, }\item[{IMapper}]{mapper}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel}{Admin\+Product\+Add\+Page\+View\+Model} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Data\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for product-\/related operations.\\
+\hline
+{\em category\+Data\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for category-\/related operations.\\
+\hline
+{\em dialog\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for showing dialogs.\\
+\hline
+{\em mapper} & Auto\+Mapper instance for object mapping.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source_l00086}{86}} of file \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source}{Admin\+Product\+Add\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \_productDataService\ =\ productDataService;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \_categoryDataService\ =\ categoryDataService;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \_dialogService\ =\ dialogService;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a8832cf1bf0bb42b03a58abcff9b631d3}{Categories}}\ =\ \textcolor{keyword}{new}\ ObservableCollection<CategoryViewModel>();}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a7ba4ab82983588df4cc69461e533275b}{LoadCategoriesAsync}}();}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a05bb5976b7dd2b83ac2301c05690ec60}{AddCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a2da2cfe88ff7fff6d061097f276b55e4}{AddProductAsync}});}
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a2da2cfe88ff7fff6d061097f276b55e4}\index{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel}!AddProductAsync@{AddProductAsync}}
+\index{AddProductAsync@{AddProductAsync}!BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel}}
+\doxysubsubsection{\texorpdfstring{AddProductAsync()}{AddProductAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a2da2cfe88ff7fff6d061097f276b55e4} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Product.\+Admin\+Product\+Add\+Page\+View\+Model.\+Add\+Product\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a new product using the form data. Validates the form, creates the product with image if provided, and handles any errors. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source_l00117}{117}} of file \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source}{Admin\+Product\+Add\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ Form.ValidateAll();}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Form.HasErrors)}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}{ShowErrorDialog}}(\textcolor{stringliteral}{"{}Data\ is\ invalid.\ Please\ check\ again."{}},\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1CreateProductRequest}{CreateProductRequest}}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ Form.Name,}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CategoryId\ =\ Form.CategoryId,}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Price\ =\ Form.Price,}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Unit\ =\ Form.Unit,}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DiscountPrice\ =\ Form.DiscountPrice,}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Calories\ =\ (decimal)Form.Calories,}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Fat\ =\ (decimal)Form.Fat,}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Fiber\ =\ (decimal)Form.Fiber,}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Protein\ =\ (decimal)Form.Protein,}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Carbohydrates\ =\ (decimal)Form.Carbohydrates,}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_productDataService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService_aabe712252f1f9a2360f323d21d261de3}{CreateProductAsync}}(request,}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Form.ImageFile?.Stream,\ Form.ImageFile?.FileName,\ Form.ImageFile?.ContentType);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_ad4188d1948c0ce128c22d400605e0d4b}{ShowSuccessDialog}}(\textcolor{stringliteral}{"{}Successfully\ added\ product:\ "{}}\ +\ request.Name,\ \textcolor{stringliteral}{"{}Success"{}});}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a7aae98b828bf35fbba52a2d40a6b62e9}{NavigateBack}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(ex.StackTrace);}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ ex.Message;}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}{ShowErrorDialog}}(ex.Message,\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00161\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a7ba4ab82983588df4cc69461e533275b}\index{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel}!LoadCategoriesAsync@{LoadCategoriesAsync}}
+\index{LoadCategoriesAsync@{LoadCategoriesAsync}!BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel}}
+\doxysubsubsection{\texorpdfstring{LoadCategoriesAsync()}{LoadCategoriesAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a7ba4ab82983588df4cc69461e533275b} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Product.\+Admin\+Product\+Add\+Page\+View\+Model.\+Load\+Categories\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads the list of available categories for product assignment. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source_l00167}{167}} of file \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source}{Admin\+Product\+Add\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00168\ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_categoryDataService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_aa824ce519e3880b81dc453180cf660c9}{GetCategoriesAsync}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CategoryCollectionQueryParams}{CategoryCollectionQueryParams}}}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Size\ =\ 1000}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a8832cf1bf0bb42b03a58abcff9b631d3}{Categories}}.Clear();}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ var\ categories\ =\ \_mapper.Map<IEnumerable<CategoryViewModel>>(response.Data);}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ category\ \textcolor{keywordflow}{in}\ categories)}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a8832cf1bf0bb42b03a58abcff9b631d3}{Categories}}.Add(category);}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a8832cf1bf0bb42b03a58abcff9b631d3}{Categories}}\ =\ \textcolor{keyword}{new}\ ObservableCollection<CategoryViewModel>();}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}{ShowErrorDialog}}(ex.Message,\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a7aae98b828bf35fbba52a2d40a6b62e9}\index{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel}!NavigateBack@{NavigateBack}}
+\index{NavigateBack@{NavigateBack}!BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel}}
+\doxysubsubsection{\texorpdfstring{NavigateBack()}{NavigateBack()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a7aae98b828bf35fbba52a2d40a6b62e9} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Product.\+Admin\+Product\+Add\+Page\+View\+Model.\+Navigate\+Back (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Navigates back to the previous page. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source_l00107}{107}} of file \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source}{Admin\+Product\+Add\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00108\ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ App.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigationService}}>().GoBack();}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a8832cf1bf0bb42b03a58abcff9b631d3}\index{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel}!Categories@{Categories}}
+\index{Categories@{Categories}!BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel}}
+\doxysubsubsection{\texorpdfstring{Categories}{Categories}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a8832cf1bf0bb42b03a58abcff9b631d3} 
+Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1CategoryViewModel}{Category\+View\+Model}}$>$ Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Product.\+Admin\+Product\+Add\+Page\+View\+Model.\+Categories}
+
+
+
+Collection of available categories for product assignment. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source_l00056}{56}} of file \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source}{Admin\+Product\+Add\+Page\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a05bb5976b7dd2b83ac2301c05690ec60}\index{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel}!AddCommand@{AddCommand}}
+\index{AddCommand@{AddCommand}!BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminProduct.AdminProductAddPageViewModel}}
+\doxysubsubsection{\texorpdfstring{AddCommand}{AddCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductAddPageViewModel_a05bb5976b7dd2b83ac2301c05690ec60} 
+IRelay\+Command Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Product.\+Admin\+Product\+Add\+Page\+View\+Model.\+Add\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command for adding a new product. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source_l00063}{63}} of file \mbox{\hyperlink{AdminProductAddPageViewModel_8cs_source}{Admin\+Product\+Add\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Admin\+Product/Admin\+Product\+Add\+Page\+View\+Model.\+cs\end{DoxyCompactItemize}

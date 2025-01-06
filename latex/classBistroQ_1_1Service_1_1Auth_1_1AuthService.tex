@@ -1,0 +1,308 @@
+\doxysection{Bistro\+Q.\+Service.\+Auth.\+Auth\+Service Class Reference}
+\hypertarget{classBistroQ_1_1Service_1_1Auth_1_1AuthService}{}\label{classBistroQ_1_1Service_1_1Auth_1_1AuthService}\index{BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}}
+
+
+Implements authentication and authorization services, handling user login, token management, and authentication state. This service acts as a bridge between the client application and the authentication API endpoints.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Service.\+Auth.\+Auth\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classBistroQ_1_1Service_1_1Auth_1_1AuthService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Service.\+Auth.\+Auth\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classBistroQ_1_1Service_1_1Auth_1_1AuthService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_af7192939fae018bc542b1e2d0e7aae44}{Auth\+Service}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IPublicApiClient}{IPublic\+Api\+Client}} api\+Client, \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService}{IToken\+Storage\+Service}} token\+Storage\+Service)
+\item 
+async Task$<$(bool Success, string Message)$>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a7e9ac19d265b3f17a1295b0bd88ce8b1}{Login\+Async}} (string username, string password)
+\begin{DoxyCompactList}\small\item\em Attempts to log in a user with the provided username and password. \end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a674f28712f5ee96cf42473cd17c698c7}{Is\+Authenticated\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Checks if a user is currently authenticated. \end{DoxyCompactList}\item 
+async Task$<$ string?$>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a700734fa4eb10af62f95925a9a45b885}{Get\+Token\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current access token for the authenticated user. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a63355cd4efe22db4a654042b85b91281}{Logout\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Logs out the current user, invalidating their session. Also clears any stored tokens. \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a35b0d5796e217c0952d1205e9c05a81e}{Refresh\+Token\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Generates a new access token using a refresh token and user id to maintain an active session. \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a08890088cdf325c9f62d36696a06f2d8}{Get\+Role\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current user\textquotesingle{}s role. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service}}}
+
+
+\doxysubsection{Detailed Description}
+Implements authentication and authorization services, handling user login, token management, and authentication state. This service acts as a bridge between the client application and the authentication API endpoints. 
+
+This service\+:
+\begin{DoxyItemize}
+\item Manages user authentication state
+\item Handles token refresh and storage
+\item Provides authentication status checks
+\item Coordinates with the token storage service for persistence 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{AuthService_8cs_source_l00019}{19}} of file \mbox{\hyperlink{AuthService_8cs_source}{Auth\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1AuthService_af7192939fae018bc542b1e2d0e7aae44}\index{BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}!AuthService@{AuthService}}
+\index{AuthService@{AuthService}!BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}}
+\doxysubsubsection{\texorpdfstring{AuthService()}{AuthService()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1AuthService_af7192939fae018bc542b1e2d0e7aae44} 
+Bistro\+Q.\+Service.\+Auth.\+Auth\+Service.\+Auth\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IPublicApiClient}{IPublic\+Api\+Client}}}]{api\+Client}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService}{IToken\+Storage\+Service}}}]{token\+Storage\+Service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{AuthService_8cs_source_l00024}{24}} of file \mbox{\hyperlink{AuthService_8cs_source}{Auth\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \_apiClient\ =\ apiClient;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \_tokenStorageService\ =\ tokenStorageService;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a08890088cdf325c9f62d36696a06f2d8}\index{BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}!GetRoleAsync@{GetRoleAsync}}
+\index{GetRoleAsync@{GetRoleAsync}!BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}}
+\doxysubsubsection{\texorpdfstring{GetRoleAsync()}{GetRoleAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a08890088cdf325c9f62d36696a06f2d8} 
+async Task$<$ string $>$ Bistro\+Q.\+Service.\+Auth.\+Auth\+Service.\+Get\+Role\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current user\textquotesingle{}s role. 
+
+\begin{DoxyReturn}{Returns}
+User\textquotesingle{}s role
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a79d8b3886150a5d2d42853b748e13e85}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{AuthService_8cs_source_l00101}{101}} of file \mbox{\hyperlink{AuthService_8cs_source}{Auth\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102\ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ \_tokenStorageService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a52dbbf2df193952e1f3a77fa153b201c}{GetRoleAsync}}();}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a700734fa4eb10af62f95925a9a45b885}\index{BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}!GetTokenAsync@{GetTokenAsync}}
+\index{GetTokenAsync@{GetTokenAsync}!BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}}
+\doxysubsubsection{\texorpdfstring{GetTokenAsync()}{GetTokenAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a700734fa4eb10af62f95925a9a45b885} 
+async Task$<$ string?$>$ Bistro\+Q.\+Service.\+Auth.\+Auth\+Service.\+Get\+Token\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the current access token for the authenticated user. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains the current access token as a string.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a376cbb67857666ec660a3ab67762ad22}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{AuthService_8cs_source_l00056}{56}} of file \mbox{\hyperlink{AuthService_8cs_source}{Auth\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ var\ token\ =\ await\ \_tokenStorageService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a0f236032749b9b86ab13cf14cdb723da}{GetAccessToken}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(token))}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Exceptions_1_1UnauthorizedException}{UnauthorizedException}}(\textcolor{stringliteral}{"{}Unauthorized"{}});}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ token;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception)}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a674f28712f5ee96cf42473cd17c698c7}\index{BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}!IsAuthenticatedAsync@{IsAuthenticatedAsync}}
+\index{IsAuthenticatedAsync@{IsAuthenticatedAsync}!BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}}
+\doxysubsubsection{\texorpdfstring{IsAuthenticatedAsync()}{IsAuthenticatedAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a674f28712f5ee96cf42473cd17c698c7} 
+async Task$<$ bool $>$ Bistro\+Q.\+Service.\+Auth.\+Auth\+Service.\+Is\+Authenticated\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if a user is currently authenticated. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains a boolean indicating whether the user is authenticated.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a9409a3e2b39c75db68d17a710d5de132}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{AuthService_8cs_source_l00043}{43}} of file \mbox{\hyperlink{AuthService_8cs_source}{Auth\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a35b0d5796e217c0952d1205e9c05a81e}{RefreshTokenAsync}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception)}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a7e9ac19d265b3f17a1295b0bd88ce8b1}\index{BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}!LoginAsync@{LoginAsync}}
+\index{LoginAsync@{LoginAsync}!BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}}
+\doxysubsubsection{\texorpdfstring{LoginAsync()}{LoginAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a7e9ac19d265b3f17a1295b0bd88ce8b1} 
+async Task$<$(bool Success, string Message)$>$ Bistro\+Q.\+Service.\+Auth.\+Auth\+Service.\+Login\+Async (\begin{DoxyParamCaption}\item[{string}]{username}{, }\item[{string}]{password}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Attempts to log in a user with the provided username and password. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username of the user attempting to log in.\\
+\hline
+{\em password} & The password of the user attempting to log in.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains a tuple indicating whether the login was successful and a message with additional information.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_ae7c08cb4791376aa13c337e4c32f7d07}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{AuthService_8cs_source_l00030}{30}} of file \mbox{\hyperlink{AuthService_8cs_source}{Auth\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PostAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1LoginResponseDto}{LoginResponseDto}}>(\textcolor{stringliteral}{"{}api/auth/login"{}},\ \textcolor{keyword}{new}\ \{\ username,\ password\ \});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_tokenStorageService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a914d4a780bf5b08ec6d726e800fc3b70}{SaveTokensAsync}}(response.Data);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keyword}{true},\ response.Message\ ??\ \textcolor{stringliteral}{"{}Login\ successful"{}});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keyword}{false},\ response.Message\ ??\ \textcolor{stringliteral}{"{}Login\ failed"{}});}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a63355cd4efe22db4a654042b85b91281}\index{BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}!LogoutAsync@{LogoutAsync}}
+\index{LogoutAsync@{LogoutAsync}!BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}}
+\doxysubsubsection{\texorpdfstring{LogoutAsync()}{LogoutAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a63355cd4efe22db4a654042b85b91281} 
+async Task Bistro\+Q.\+Service.\+Auth.\+Auth\+Service.\+Logout\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Logs out the current user, invalidating their session. Also clears any stored tokens. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous logout operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_aec0bbaecaaa25bb1aa01f3e21c637bee}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{AuthService_8cs_source_l00075}{75}} of file \mbox{\hyperlink{AuthService_8cs_source}{Auth\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ await\ \_tokenStorageService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a2120592f856362982de1b371553efef8}{ClearTokensAsync}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a35b0d5796e217c0952d1205e9c05a81e}\index{BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}!RefreshTokenAsync@{RefreshTokenAsync}}
+\index{RefreshTokenAsync@{RefreshTokenAsync}!BistroQ.Service.Auth.AuthService@{BistroQ.Service.Auth.AuthService}}
+\doxysubsubsection{\texorpdfstring{RefreshTokenAsync()}{RefreshTokenAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a35b0d5796e217c0952d1205e9c05a81e} 
+async Task$<$ string $>$ Bistro\+Q.\+Service.\+Auth.\+Auth\+Service.\+Refresh\+Token\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates a new access token using a refresh token and user id to maintain an active session. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation. The task result contains a new access token as a string.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a8643617b46ca3987290f660ec6658911}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IAuth\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{AuthService_8cs_source_l00080}{80}} of file \mbox{\hyperlink{AuthService_8cs_source}{Auth\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ var\ (refreshToken,\ userId)\ =\ await\ \_tokenStorageService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_ac358938628059b1eda1e5afc9c1916bd}{GetRefreshToken}}();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PostAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1RefreshTokenResponse}{RefreshTokenResponse}}>(\textcolor{stringliteral}{"{}api/Auth/refresh"{}},\ \textcolor{keyword}{new}\ \{\ RefreshToken\ =\ refreshToken,\ UserId\ =\ userId\ \});}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_tokenStorageService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a6031bec524c9bfadd16684db2aa1df9e}{SaveAccessToken}}(response.Data.AccessToken);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ response.Data.AccessToken;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (response.Error.Contains(\textcolor{stringliteral}{"{}TokenExpired"{}}))}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Exceptions_1_1TokenExpiredException}{TokenExpiredException}}(\textcolor{stringliteral}{"{}Token\ expired"{}});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Exceptions_1_1UnauthorizedException}{UnauthorizedException}}(\textcolor{stringliteral}{"{}Unauthorized"{}});}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Service/\+Auth/Auth\+Service.\+cs\end{DoxyCompactItemize}

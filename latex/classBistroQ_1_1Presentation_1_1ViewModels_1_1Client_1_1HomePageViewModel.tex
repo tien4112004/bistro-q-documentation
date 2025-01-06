@@ -1,0 +1,354 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Home\+Page\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel}\index{BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}}
+
+
+View\+Model for the home page of the client application. Handles product listing, order cart management, and payment processing.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Home\+Page\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Home\+Page\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aa6f86f7a6a01fdc2526985d3a4aa4ce6}{Home\+Page\+View\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel}{Home\+Page\+View\+Model} class. Sets up services, commands, and event handlers for checkout process. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aada0e409d3e14bdd60a5e4226c4e1410}{On\+Navigated\+To}} (object parameter)
+\begin{DoxyCompactList}\small\item\em Handles navigation to this page. Initializes checkout service and loads existing order and product data. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_ac40a7c756f706d7ef01b46ba36f61b71}{On\+Navigated\+From}} ()
+\begin{DoxyCompactList}\small\item\em Handles navigation from this page. Performs cleanup of resources and stops the checkout service. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aba1ffc501183c1cc1e647fc81237a951}{Receive}} (Checkout\+Requested\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles checkout request messages. Notifies the checkout service when a checkout is requested for a table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel}{Product\+List\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a3e06264c996d20bfa52c6282b0c457cc}{Product\+List\+View\+Model}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em View\+Model for managing the product list display. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel}{Order\+Cart\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a86ac0a41a502ea3fe6370bbd8cfbabe9}{Order\+Cart\+View\+Model}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em View\+Model for managing the order cart. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a5a699eb1a8a17e9125129a0418a97eb0}{Add\+Product\+To\+Cart\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command for adding products to the cart. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a1264cbe1967b491cf4c5ab8f496a72c5}{Cancel\+Payment\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command for canceling the current payment process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model for the home page of the client application. Handles product listing, order cart management, and payment processing. 
+
+Implements\+:
+\begin{DoxyItemize}
+\item Observable\+Recipient for MVVM pattern
+\item INavigation\+Aware for page navigation
+\item IRecipient for handling checkout messages 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{HomePageViewModel_8cs_source_l00027}{27}} of file \mbox{\hyperlink{HomePageViewModel_8cs_source}{Home\+Page\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aa6f86f7a6a01fdc2526985d3a4aa4ce6}\index{BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}!HomePageViewModel@{HomePageViewModel}}
+\index{HomePageViewModel@{HomePageViewModel}!BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}}
+\doxysubsubsection{\texorpdfstring{HomePageViewModel()}{HomePageViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aa6f86f7a6a01fdc2526985d3a4aa4ce6} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Home\+Page\+View\+Model.\+Home\+Page\+View\+Model (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel}{Home\+Page\+View\+Model} class. Sets up services, commands, and event handlers for checkout process. 
+
+
+
+Definition at line \mbox{\hyperlink{HomePageViewModel_8cs_source_l00092}{92}} of file \mbox{\hyperlink{HomePageViewModel_8cs_source}{Home\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00093\ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a3e06264c996d20bfa52c6282b0c457cc}{ProductListViewModel}}\ =\ App.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a3e06264c996d20bfa52c6282b0c457cc}{ProductListViewModel}}>();}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a86ac0a41a502ea3fe6370bbd8cfbabe9}{OrderCartViewModel}}\ =\ App.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a86ac0a41a502ea3fe6370bbd8cfbabe9}{OrderCartViewModel}}>();}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \_checkoutService\ =\ App.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService}{ICheckoutRealTimeService}}>();}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \_dialogService\ =\ App.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialogService}}>();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \_messenger\ =\ App.GetService<IMessenger>();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \_dispatcherQueue\ =\ DispatcherQueue.GetForCurrentThread();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a1264cbe1967b491cf4c5ab8f496a72c5}{CancelPaymentCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(CancelPaymentAsync);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \_checkoutService.OnCheckoutInitiated\ +=\ (paymentData)\ =>}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \_dispatcherQueue.TryEnqueue(()\ =>}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PaymentData\ =\ paymentData;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IsShowingPayment\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \_checkoutService.OnCheckoutCompleted\ +=\ ()\ =>}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \_dispatcherQueue.TryEnqueue(async\ ()\ =>}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ LOGOUT\_DELAY\_SECONDS\ =\ 5;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ remainingSeconds\ =\ LOGOUT\_DELAY\_SECONDS;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ dialog\ =\ \textcolor{keyword}{new}\ ContentDialog}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Title\ =\ \textcolor{stringliteral}{"{}Session\ Ending"{}},}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ \$\textcolor{stringliteral}{"{}Thank\ you\ for\ dining\ with\ us!\ The\ application\ will\ log\ out\ in\ \{remainingSeconds\}\ seconds."{}},}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PrimaryButtonText\ =\ \textcolor{stringliteral}{"{}OK"{}},}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DefaultButton\ =\ ContentDialogButton.Primary}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ timer\ =\ \_dispatcherQueue.CreateTimer();}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.Interval\ =\ TimeSpan.FromSeconds(1);}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.Tick\ +=\ (s,\ e)\ =>}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ remainingSeconds-\/-\/;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dialog.Content\ =\ \$\textcolor{stringliteral}{"{}Thank\ you\ for\ dining\ with\ us!\ The\ application\ will\ log\ out\ in\ \{remainingSeconds\}\ seconds."{}};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (remainingSeconds\ <=\ 0)}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.Stop();}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dialog.Hide();}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.Start();}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\ =\ \_dialogService.ShowDialogAsync(dialog);}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.Delay(TimeSpan.FromSeconds(LOGOUT\_DELAY\_SECONDS));}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Logout}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ App.MainWindow.Hide();}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ App.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuthService}}>().LogoutAsync();}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ size\ =\ App.MainWindow.AppWindow.Size;}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ position\ =\ App.MainWindow.AppWindow.Position;}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ loginWindow\ =\ \textcolor{keyword}{new}\ LoginWindow();}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ loginWindow.Activate();}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ loginWindow.MoveAndResize(position.X,\ position.Y,\ size.Width,\ size.Height);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.Delay(1000);}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ App.MainWindow.Close();}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ OrderCartViewModel.OrderStartedCommand\ =\ \textcolor{keyword}{new}\ RelayCommand<OrderViewModel>(OnOrderStarted);}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_ac40a7c756f706d7ef01b46ba36f61b71}\index{BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}!OnNavigatedFrom@{OnNavigatedFrom}}
+\index{OnNavigatedFrom@{OnNavigatedFrom}!BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedFrom()}{OnNavigatedFrom()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_ac40a7c756f706d7ef01b46ba36f61b71} 
+Task Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Home\+Page\+View\+Model.\+On\+Navigated\+From (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles navigation from this page. Performs cleanup of resources and stops the checkout service. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{HomePageViewModel_8cs_source_l00240}{240}} of file \mbox{\hyperlink{HomePageViewModel_8cs_source}{Home\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00241\ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a86ac0a41a502ea3fe6370bbd8cfbabe9}{OrderCartViewModel}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a8e4c2a1936f49d46f0e27e40bb8d2b4c}{Dispose}}();}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \_checkoutService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a0bd95819b5bb30ce208e854a81c0ad08}{StopAsync}}();}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.CompletedTask;}
+\DoxyCodeLine{00246\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aada0e409d3e14bdd60a5e4226c4e1410}\index{BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}!OnNavigatedTo@{OnNavigatedTo}}
+\index{OnNavigatedTo@{OnNavigatedTo}!BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedTo()}{OnNavigatedTo()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aada0e409d3e14bdd60a5e4226c4e1410} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Home\+Page\+View\+Model.\+On\+Navigated\+To (\begin{DoxyParamCaption}\item[{object}]{parameter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles navigation to this page. Initializes checkout service and loads existing order and product data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Navigation parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{HomePageViewModel_8cs_source_l00208}{208}} of file \mbox{\hyperlink{HomePageViewModel_8cs_source}{Home\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00209\ \ \ \ \ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_checkoutService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_ac5259b6211d8daabc9c29324e5fccf25}{StartAsync}}();}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a86ac0a41a502ea3fe6370bbd8cfbabe9}{OrderCartViewModel}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a0460211a60d4e7d73f9dd1bbaf734912}{LoadExistingOrderAsync}}();}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ e)}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e.Message\ !=\ \textcolor{stringliteral}{"{}Order\ not\ found"{}})}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a7a5e4698e6dde84a9380c09976683a74}{ShowDialogAsync}}(\textcolor{keyword}{new}\ ContentDialog}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Title\ =\ \textcolor{stringliteral}{"{}Error\ starting\ order"{}},}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ e.Message,}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PrimaryButtonText\ =\ \textcolor{stringliteral}{"{}OK"{}},}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ OrderCartViewModel.IsLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \_\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a3e06264c996d20bfa52c6282b0c457cc}{ProductListViewModel}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a73912a214f8d9b48ca27062b9f7b61ae}{LoadCategoriesAsync}}();}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \_\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a3e06264c996d20bfa52c6282b0c457cc}{ProductListViewModel}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a57f7e3b08f9d780d5eb26e81c79ee130}{LoadProductsAsync}}();}
+\DoxyCodeLine{00233\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aba1ffc501183c1cc1e647fc81237a951}\index{BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aba1ffc501183c1cc1e647fc81237a951} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Home\+Page\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Checkout\+Requested\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles checkout request messages. Notifies the checkout service when a checkout is requested for a table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the table ID for checkout.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{HomePageViewModel_8cs_source_l00253}{253}} of file \mbox{\hyperlink{HomePageViewModel_8cs_source}{Home\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00254\ \ \ \ \ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \_checkoutService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a89c4368b753fd77c92622e412bdf51af}{NotifyCheckoutRequestedAsync}}(message.TableId\ ??\ 0);}
+\DoxyCodeLine{00256\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a5a699eb1a8a17e9125129a0418a97eb0}\index{BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}!AddProductToCartCommand@{AddProductToCartCommand}}
+\index{AddProductToCartCommand@{AddProductToCartCommand}!BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}}
+\doxysubsubsection{\texorpdfstring{AddProductToCartCommand}{AddProductToCartCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a5a699eb1a8a17e9125129a0418a97eb0} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Home\+Page\+View\+Model.\+Add\+Product\+To\+Cart\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command for adding products to the cart. 
+
+
+
+Definition at line \mbox{\hyperlink{HomePageViewModel_8cs_source_l00079}{79}} of file \mbox{\hyperlink{HomePageViewModel_8cs_source}{Home\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a1264cbe1967b491cf4c5ab8f496a72c5}\index{BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}!CancelPaymentCommand@{CancelPaymentCommand}}
+\index{CancelPaymentCommand@{CancelPaymentCommand}!BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}}
+\doxysubsubsection{\texorpdfstring{CancelPaymentCommand}{CancelPaymentCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a1264cbe1967b491cf4c5ab8f496a72c5} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Home\+Page\+View\+Model.\+Cancel\+Payment\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command for canceling the current payment process. 
+
+
+
+Definition at line \mbox{\hyperlink{HomePageViewModel_8cs_source_l00084}{84}} of file \mbox{\hyperlink{HomePageViewModel_8cs_source}{Home\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a86ac0a41a502ea3fe6370bbd8cfbabe9}\index{BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}!OrderCartViewModel@{OrderCartViewModel}}
+\index{OrderCartViewModel@{OrderCartViewModel}!BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}}
+\doxysubsubsection{\texorpdfstring{OrderCartViewModel}{OrderCartViewModel}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a86ac0a41a502ea3fe6370bbd8cfbabe9} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel}{Order\+Cart\+View\+Model}} Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Home\+Page\+View\+Model.\+Order\+Cart\+View\+Model\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+View\+Model for managing the order cart. 
+
+
+
+Definition at line \mbox{\hyperlink{HomePageViewModel_8cs_source_l00072}{72}} of file \mbox{\hyperlink{HomePageViewModel_8cs_source}{Home\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a3e06264c996d20bfa52c6282b0c457cc}\index{BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}!ProductListViewModel@{ProductListViewModel}}
+\index{ProductListViewModel@{ProductListViewModel}!BistroQ.Presentation.ViewModels.Client.HomePageViewModel@{BistroQ.Presentation.ViewModels.Client.HomePageViewModel}}
+\doxysubsubsection{\texorpdfstring{ProductListViewModel}{ProductListViewModel}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a3e06264c996d20bfa52c6282b0c457cc} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel}{Product\+List\+View\+Model}} Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Home\+Page\+View\+Model.\+Product\+List\+View\+Model\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+View\+Model for managing the product list display. 
+
+
+
+Definition at line \mbox{\hyperlink{HomePageViewModel_8cs_source_l00067}{67}} of file \mbox{\hyperlink{HomePageViewModel_8cs_source}{Home\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Client/Home\+Page\+View\+Model.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,246 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Models.\+Add\+Account\+Form Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm}{}\label{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm}\index{BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}}
+
+
+Represents a form for adding new account with built-\/in validation rules. Inherits from Validator\+Base to provide validation functionality.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Models.\+Add\+Account\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Models.\+Add\+Account\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_aa6ac9716fcc8207142356bf9d1365f61}{Add\+Account\+Form}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm}{Add\+Account\+Form} class. Sets up all required validators for Username, Password, and Role. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a069ddfd730cacb0d2b51e613cd724c89}{Validate\+All}} ()
+\begin{DoxyCompactList}\small\item\em Validates all properties of the form. Executes validation rules for Username, Password, and Role. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3220acd7add1426396f6c03a6d9707d0}{Get\+Errors}} (string? property\+Name)
+\begin{DoxyCompactList}\small\item\em Retrieves validation errors for a specific property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ab4cd9b5edd381d01f2f877caee969213}{Reset\+Error}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Clears all validation errors for a specific property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad1a34c3d3ea17bb558dd231471fe20fd}{Clear\+Errors}} ()
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{Validate\+Property}} (string property\+Name, object? value)
+\begin{DoxyCompactList}\small\item\em Validates a specific property value using registered validators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_af2a7daab5015d5998001971eda5df4b5}{Username}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the username for the new account. Validated for non-\/empty, length (3-\/50 chars), and no whitespace. \end{DoxyCompactList}\item 
+string? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a4437ded27e74616315b2ac0be0d515cc}{Password}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the password for the new account. Validated for non-\/empty and minimum length (6 chars). \end{DoxyCompactList}\item 
+string? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a3040baf0614daf7513afc4b974b47966}{Role}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the role for the new account. Validated for non-\/empty value. \end{DoxyCompactList}\item 
+int? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a0b7c380b57d30b93bcc79b7186c325f3}{Table\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the associated table ID for the account. Optional property that can be null. \end{DoxyCompactList}\item 
+int? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_adb46469da2345b7a6771f694a9551a92}{Zone\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the associated zone ID for the account. Optional property that can be null. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ string, List$<$ string $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad671d3afa430919e586c1328e268d711}{Errors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac9110647ffbaec21cb835c2d417054f3}{Has\+Errors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a9a04545b2c20597513cd3190a83c3c9c}{Update\+Errors}} (string property\+Name, List$<$ string $>$ errors)
+\begin{DoxyCompactList}\small\item\em Updates the error collection for a property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{Add\+Validator}} (string property\+Name, Func$<$ object?, List$<$(bool Is\+Value, string Message)$>$ $>$ validators)
+\begin{DoxyCompactList}\small\item\em Registers a list of validator functions for a property. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3dad90961c53443f11ac2a7f258c1e60}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string? property\+Name=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler$<$ Data\+Errors\+Changed\+Event\+Args $>$? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a0f93a47246a401f521a75d14e01a27e1}{Errors\+Changed}}
+\item 
+Property\+Changed\+Event\+Handler? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_acd024f4924ef56609cfff07afda377e8}{Property\+Changed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a form for adding new account with built-\/in validation rules. Inherits from Validator\+Base to provide validation functionality. 
+
+Definition at line \mbox{\hyperlink{AddAccountForm_8cs_source_l00009}{9}} of file \mbox{\hyperlink{AddAccountForm_8cs_source}{Add\+Account\+Form.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_aa6ac9716fcc8207142356bf9d1365f61}\index{BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}!AddAccountForm@{AddAccountForm}}
+\index{AddAccountForm@{AddAccountForm}!BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}}
+\doxysubsubsection{\texorpdfstring{AddAccountForm()}{AddAccountForm()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_aa6ac9716fcc8207142356bf9d1365f61} 
+Bistro\+Q.\+Presentation.\+Models.\+Add\+Account\+Form.\+Add\+Account\+Form (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm}{Add\+Account\+Form} class. Sets up all required validators for Username, Password, and Role. 
+
+
+
+Definition at line \mbox{\hyperlink{AddAccountForm_8cs_source_l00048}{48}} of file \mbox{\hyperlink{AddAccountForm_8cs_source}{Add\+Account\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ AddUsernameValidator();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ AddPasswordValidator();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ AddRoleValidator();}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a069ddfd730cacb0d2b51e613cd724c89}\index{BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}!ValidateAll@{ValidateAll}}
+\index{ValidateAll@{ValidateAll}!BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}}
+\doxysubsubsection{\texorpdfstring{ValidateAll()}{ValidateAll()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a069ddfd730cacb0d2b51e613cd724c89} 
+override void Bistro\+Q.\+Presentation.\+Models.\+Add\+Account\+Form.\+Validate\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Validates all properties of the form. Executes validation rules for Username, Password, and Role. 
+
+This method overrides the base Validate\+All method to provide form-\/specific validation logic. 
+
+Reimplemented from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a69a3f0a52a8c3099e85297a3295e5c0a}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}.
+
+
+
+Definition at line \mbox{\hyperlink{AddAccountForm_8cs_source_l00120}{120}} of file \mbox{\hyperlink{AddAccountForm_8cs_source}{Add\+Account\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00121\ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_af2a7daab5015d5998001971eda5df4b5}{Username}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_af2a7daab5015d5998001971eda5df4b5}{Username}});}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a4437ded27e74616315b2ac0be0d515cc}{Password}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a4437ded27e74616315b2ac0be0d515cc}{Password}});}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a3040baf0614daf7513afc4b974b47966}{Role}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a3040baf0614daf7513afc4b974b47966}{Role}});}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a4437ded27e74616315b2ac0be0d515cc}\index{BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}!Password@{Password}}
+\index{Password@{Password}!BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}}
+\doxysubsubsection{\texorpdfstring{Password}{Password}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a4437ded27e74616315b2ac0be0d515cc} 
+string? Bistro\+Q.\+Presentation.\+Models.\+Add\+Account\+Form.\+Password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the password for the new account. Validated for non-\/empty and minimum length (6 chars). 
+
+
+
+Definition at line \mbox{\hyperlink{AddAccountForm_8cs_source_l00022}{22}} of file \mbox{\hyperlink{AddAccountForm_8cs_source}{Add\+Account\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a3040baf0614daf7513afc4b974b47966}\index{BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}!Role@{Role}}
+\index{Role@{Role}!BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}}
+\doxysubsubsection{\texorpdfstring{Role}{Role}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a3040baf0614daf7513afc4b974b47966} 
+string? Bistro\+Q.\+Presentation.\+Models.\+Add\+Account\+Form.\+Role\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the role for the new account. Validated for non-\/empty value. 
+
+
+
+Definition at line \mbox{\hyperlink{AddAccountForm_8cs_source_l00028}{28}} of file \mbox{\hyperlink{AddAccountForm_8cs_source}{Add\+Account\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a0b7c380b57d30b93bcc79b7186c325f3}\index{BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}!TableId@{TableId}}
+\index{TableId@{TableId}!BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}}
+\doxysubsubsection{\texorpdfstring{TableId}{TableId}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_a0b7c380b57d30b93bcc79b7186c325f3} 
+int? Bistro\+Q.\+Presentation.\+Models.\+Add\+Account\+Form.\+Table\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the associated table ID for the account. Optional property that can be null. 
+
+
+
+Definition at line \mbox{\hyperlink{AddAccountForm_8cs_source_l00034}{34}} of file \mbox{\hyperlink{AddAccountForm_8cs_source}{Add\+Account\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_af2a7daab5015d5998001971eda5df4b5}\index{BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}!Username@{Username}}
+\index{Username@{Username}!BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}}
+\doxysubsubsection{\texorpdfstring{Username}{Username}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_af2a7daab5015d5998001971eda5df4b5} 
+string? Bistro\+Q.\+Presentation.\+Models.\+Add\+Account\+Form.\+Username\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the username for the new account. Validated for non-\/empty, length (3-\/50 chars), and no whitespace. 
+
+
+
+Definition at line \mbox{\hyperlink{AddAccountForm_8cs_source_l00016}{16}} of file \mbox{\hyperlink{AddAccountForm_8cs_source}{Add\+Account\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_adb46469da2345b7a6771f694a9551a92}\index{BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}!ZoneId@{ZoneId}}
+\index{ZoneId@{ZoneId}!BistroQ.Presentation.Models.AddAccountForm@{BistroQ.Presentation.Models.AddAccountForm}}
+\doxysubsubsection{\texorpdfstring{ZoneId}{ZoneId}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm_adb46469da2345b7a6771f694a9551a92} 
+int? Bistro\+Q.\+Presentation.\+Models.\+Add\+Account\+Form.\+Zone\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the associated zone ID for the account. Optional property that can be null. 
+
+
+
+Definition at line \mbox{\hyperlink{AddAccountForm_8cs_source_l00040}{40}} of file \mbox{\hyperlink{AddAccountForm_8cs_source}{Add\+Account\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Models/Add\+Account\+Form.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,89 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+IOrder\+Item\+Action\+Strategy Interface Reference}
+\hypertarget{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy}{}\label{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.IOrderItemActionStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.IOrderItemActionStrategy}}
+
+
+Defines the contract for kitchen order item action strategies. Part of the strategy pattern implementation for order item operations.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+IOrder\+Item\+Action\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy_ad264b4d1cc95d3f89e687ac4bd913f82}{Execute\+Async}} (IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$ order\+Items)
+\begin{DoxyCompactList}\small\item\em Executes the strategy\textquotesingle{}s action on the specified order items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{Kitchen\+Order\+State}} \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy_ab8c3c88e2855f53c71ccd019be640c85}{State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the state container for kitchen orders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the contract for kitchen order item action strategies. Part of the strategy pattern implementation for order item operations. 
+
+Definition at line \mbox{\hyperlink{IOrderItemActionStrategy_8cs_source_l00010}{10}} of file \mbox{\hyperlink{IOrderItemActionStrategy_8cs_source}{IOrder\+Item\+Action\+Strategy.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy_ad264b4d1cc95d3f89e687ac4bd913f82}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.IOrderItemActionStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.IOrderItemActionStrategy}!ExecuteAsync@{ExecuteAsync}}
+\index{ExecuteAsync@{ExecuteAsync}!BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.IOrderItemActionStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.IOrderItemActionStrategy}}
+\doxysubsubsection{\texorpdfstring{ExecuteAsync()}{ExecuteAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy_ad264b4d1cc95d3f89e687ac4bd913f82} 
+Task Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+IOrder\+Item\+Action\+Strategy.\+Execute\+Async (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$}]{order\+Items}{}\end{DoxyParamCaption})}
+
+
+
+Executes the strategy\textquotesingle{}s action on the specified order items. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Items} & The collection of order items to process\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy_a39feb6e77410cf857baf2e9fea97e9ea}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Cancel\+Item\+Strategy}}, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy_afd03e8dcaf4fca168fd9253655f94e11}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Complete\+Item\+Strategy}}, and \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_aea02b70e7734407a9d142e9ab761af2c}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Move\+Item\+Strategy}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy_ab8c3c88e2855f53c71ccd019be640c85}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.IOrderItemActionStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.IOrderItemActionStrategy}!State@{State}}
+\index{State@{State}!BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.IOrderItemActionStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.IOrderItemActionStrategy}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy_ab8c3c88e2855f53c71ccd019be640c85} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{Kitchen\+Order\+State}} Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+IOrder\+Item\+Action\+Strategy.\+State\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the state container for kitchen orders. 
+
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy_a469024875d739f60087501145afeaec3}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Cancel\+Item\+Strategy}}, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy_add84b5e23a2707bdaec26c51f351f606}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Complete\+Item\+Strategy}}, and \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy_a228007ca8ad2120ddaff2d4be876b71d}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Move\+Item\+Strategy}}.
+
+
+
+Definition at line \mbox{\hyperlink{IOrderItemActionStrategy_8cs_source_l00015}{15}} of file \mbox{\hyperlink{IOrderItemActionStrategy_8cs_source}{IOrder\+Item\+Action\+Strategy.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Kitchen\+Order/\+Strategies/IOrder\+Item\+Action\+Strategy.\+cs\end{DoxyCompactItemize}

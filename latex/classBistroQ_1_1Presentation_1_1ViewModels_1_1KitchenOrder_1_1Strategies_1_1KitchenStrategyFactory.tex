@@ -1,0 +1,84 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Kitchen\+Strategy\+Factory Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.KitchenStrategyFactory@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.KitchenStrategyFactory}}
+
+
+Factory class responsible for creating appropriate order item action strategies. Implements the factory pattern to instantiate different strategy implementations based on the requested kitchen action.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory_a64b6373e54249a725c4154af17ed22dd}{Kitchen\+Strategy\+Factory}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrder\+Item\+Data\+Service}} service)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory}{Kitchen\+Strategy\+Factory} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy}{IOrder\+Item\+Action\+Strategy}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory_ac5060f222a550b26f170d153d318adbb}{Get\+Strategy}} (\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{Kitchen\+Action}} action, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{Kitchen\+Order\+State}} state)
+\begin{DoxyCompactList}\small\item\em Creates and returns the appropriate strategy for the specified kitchen action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory class responsible for creating appropriate order item action strategies. Implements the factory pattern to instantiate different strategy implementations based on the requested kitchen action. 
+
+Definition at line \mbox{\hyperlink{KitchenStrategyFactory_8cs_source_l00012}{12}} of file \mbox{\hyperlink{KitchenStrategyFactory_8cs_source}{Kitchen\+Strategy\+Factory.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory_a64b6373e54249a725c4154af17ed22dd}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.KitchenStrategyFactory@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.KitchenStrategyFactory}!KitchenStrategyFactory@{KitchenStrategyFactory}}
+\index{KitchenStrategyFactory@{KitchenStrategyFactory}!BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.KitchenStrategyFactory@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.KitchenStrategyFactory}}
+\doxysubsubsection{\texorpdfstring{KitchenStrategyFactory()}{KitchenStrategyFactory()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory_a64b6373e54249a725c4154af17ed22dd} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Kitchen\+Strategy\+Factory.\+Kitchen\+Strategy\+Factory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrder\+Item\+Data\+Service}}}]{service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory}{Kitchen\+Strategy\+Factory} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for order item operations\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{KitchenStrategyFactory_8cs_source_l00028}{28}} of file \mbox{\hyperlink{KitchenStrategyFactory_8cs_source}{Kitchen\+Strategy\+Factory.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \_orderItemDataService\ =\ service;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \_strategies\ =\ \textcolor{keyword}{new}\ Dictionary<KitchenAction,\ Func<IOrderItemDataService,\ KitchenOrderState,\ IOrderItemActionStrategy>>}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{KitchenAction}}.Complete]\ =\ (s,\ state)\ =>\ \textcolor{keyword}{new}\ CompleteItemStrategy(s,\ state),}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{KitchenAction}}.Move]\ =\ (s,\ state)\ =>\ \textcolor{keyword}{new}\ MoveItemStrategy(s,\ state),}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{KitchenAction}}.Cancel]\ =\ (s,\ state)\ =>\ \textcolor{keyword}{new}\ CancelItemStrategy(s,\ state)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory_ac5060f222a550b26f170d153d318adbb}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.KitchenStrategyFactory@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.KitchenStrategyFactory}!GetStrategy@{GetStrategy}}
+\index{GetStrategy@{GetStrategy}!BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.KitchenStrategyFactory@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.KitchenStrategyFactory}}
+\doxysubsubsection{\texorpdfstring{GetStrategy()}{GetStrategy()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory_ac5060f222a550b26f170d153d318adbb} 
+\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy}{IOrder\+Item\+Action\+Strategy}} Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Kitchen\+Strategy\+Factory.\+Get\+Strategy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{Kitchen\+Action}}}]{action}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{Kitchen\+Order\+State}}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Creates and returns the appropriate strategy for the specified kitchen action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The kitchen action to create a strategy for\\
+\hline
+{\em state} & The current kitchen order state\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An implementation of \doxylink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy}{IOrder\+Item\+Action\+Strategy}
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Kitchen\+Order/\+Strategies/Kitchen\+Strategy\+Factory.\+cs\end{DoxyCompactItemize}

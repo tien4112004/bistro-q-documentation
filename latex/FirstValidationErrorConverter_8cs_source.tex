@@ -1,0 +1,32 @@
+\doxysection{First\+Validation\+Error\+Converter.\+cs}
+\hypertarget{FirstValidationErrorConverter_8cs_source}{}\label{FirstValidationErrorConverter_8cs_source}\index{BistroQ.Presentation/Converters/FirstValidationErrorConverter.cs@{BistroQ.Presentation/Converters/FirstValidationErrorConverter.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Data;}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Converters}{BistroQ.Presentation.Converters}};}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00009}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1FirstValidationErrorConverter}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1FirstValidationErrorConverter}{FirstValidationErrorConverter}}\ :\ IValueConverter}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{object}\ Convert(\textcolor{keywordtype}{object}\ value,\ Type\ targetType,\ \textcolor{keywordtype}{object}\ parameter,\ \textcolor{keywordtype}{string}\ language)}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ propertyName\ =\ parameter\ as\ string;}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ is\ Dictionary<\textcolor{keywordtype}{string},\ List<string>>\ errors)}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (errors.ContainsKey(propertyName))}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ errors[propertyName].FirstOrDefault();}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{object}\ ConvertBack(\textcolor{keywordtype}{object}\ value,\ Type\ targetType,\ \textcolor{keywordtype}{object}\ parameter,\ \textcolor{keywordtype}{string}\ language)}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ NotImplementedException();}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FirstValidationErrorConverter_8cs_source_l00030}00030\ \}}
+
+\end{DoxyCode}

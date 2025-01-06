@@ -1,0 +1,32 @@
+\doxysection{Kitchen\+Strategy\+Factory.\+cs}
+\hypertarget{KitchenStrategyFactory_8cs_source}{}\label{KitchenStrategyFactory_8cs_source}\index{BistroQ.Presentation/ViewModels/KitchenOrder/Strategies/KitchenStrategyFactory.cs@{BistroQ.Presentation/ViewModels/KitchenOrder/Strategies/KitchenStrategyFactory.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums}{BistroQ.Presentation.Enums}};}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1States}{BistroQ.Presentation.ViewModels.States}};}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies}{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies}};}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00012}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory}{KitchenStrategyFactory}}}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ Dictionary<KitchenAction,\ Func<IOrderItemDataService,\ KitchenOrderState,\ IOrderItemActionStrategy>>\ \_strategies;}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrderItemDataService}}\ \_orderItemDataService;}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00028}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory_a64b6373e54249a725c4154af17ed22dd}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory_a64b6373e54249a725c4154af17ed22dd}{KitchenStrategyFactory}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrderItemDataService}}\ service)}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00029}00029\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \_orderItemDataService\ =\ service;}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \_strategies\ =\ \textcolor{keyword}{new}\ Dictionary<KitchenAction,\ Func<IOrderItemDataService,\ KitchenOrderState,\ IOrderItemActionStrategy>>}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{KitchenAction}}.Complete]\ =\ (s,\ state)\ =>\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy}{CompleteItemStrategy}}(s,\ state),}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{KitchenAction}}.Move]\ =\ (s,\ state)\ =>\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy}{MoveItemStrategy}}(s,\ state),}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{KitchenAction}}.Cancel]\ =\ (s,\ state)\ =>\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy}{CancelItemStrategy}}(s,\ state)}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00045}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory_ac5060f222a550b26f170d153d318adbb}{00045}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy}{IOrderItemActionStrategy}}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory_ac5060f222a550b26f170d153d318adbb}{GetStrategy}}(\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{KitchenAction}}\ action,\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{KitchenOrderState}}\ state)\ =>}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \_strategies[action](\_orderItemDataService,\ state);}
+\DoxyCodeLine{\Hypertarget{KitchenStrategyFactory_8cs_source_l00047}00047\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,103 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Models.\+Table\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel}\index{BistroQ.Presentation.ViewModels.Models.TableViewModel@{BistroQ.Presentation.ViewModels.Models.TableViewModel}}
+
+
+View\+Model representing a restaurant table.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Models.\+Table\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Models.\+Table\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel}{Table\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel_a4742d400491b6f04cf909427e2c8ef1d}{Clone}} ()
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of the table data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel_afb30e604232257bf879222c8d30594d2}{Is\+Space\+Occupied}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets whether the table space is currently occupied (occupied and not checking out) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model representing a restaurant table. 
+
+Manages table status, location, and capacity information. Provides functionality for creating copies of table data. 
+
+Definition at line \mbox{\hyperlink{TableViewModel_8cs_source_l00012}{12}} of file \mbox{\hyperlink{TableViewModel_8cs_source}{Table\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel_a4742d400491b6f04cf909427e2c8ef1d}\index{BistroQ.Presentation.ViewModels.Models.TableViewModel@{BistroQ.Presentation.ViewModels.Models.TableViewModel}!Clone@{Clone}}
+\index{Clone@{Clone}!BistroQ.Presentation.ViewModels.Models.TableViewModel@{BistroQ.Presentation.ViewModels.Models.TableViewModel}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel_a4742d400491b6f04cf909427e2c8ef1d} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel}{Table\+View\+Model}} Bistro\+Q.\+Presentation.\+View\+Models.\+Models.\+Table\+View\+Model.\+Clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a deep copy of the table data. 
+
+\begin{DoxyReturn}{Returns}
+A new \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel}{Table\+View\+Model} instance with copied data
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{TableViewModel_8cs_source_l00073}{73}} of file \mbox{\hyperlink{TableViewModel_8cs_source}{Table\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ TableViewModel}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ TableId\ =\ TableId,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ Name,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ Number\ =\ Number,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ ZoneId\ =\ ZoneId,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ ZoneName\ =\ ZoneName,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ SeatsCount\ =\ SeatsCount,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ IsOccupied\ =\ IsOccupied,}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ IsCheckingOut\ =\ IsCheckingOut}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel_afb30e604232257bf879222c8d30594d2}\index{BistroQ.Presentation.ViewModels.Models.TableViewModel@{BistroQ.Presentation.ViewModels.Models.TableViewModel}!IsSpaceOccupied@{IsSpaceOccupied}}
+\index{IsSpaceOccupied@{IsSpaceOccupied}!BistroQ.Presentation.ViewModels.Models.TableViewModel@{BistroQ.Presentation.ViewModels.Models.TableViewModel}}
+\doxysubsubsection{\texorpdfstring{IsSpaceOccupied}{IsSpaceOccupied}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel_afb30e604232257bf879222c8d30594d2} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+Models.\+Table\+View\+Model.\+Is\+Space\+Occupied\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets whether the table space is currently occupied (occupied and not checking out) 
+
+
+
+Definition at line \mbox{\hyperlink{TableViewModel_8cs_source_l00067}{67}} of file \mbox{\hyperlink{TableViewModel_8cs_source}{Table\+View\+Model.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Models/Table\+View\+Model.\+cs\end{DoxyCompactItemize}

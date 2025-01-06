@@ -1,0 +1,60 @@
+\doxysection{Admin\+Product\+Page.\+xaml.\+cs}
+\hypertarget{AdminProductPage_8xaml_8cs_source}{}\label{AdminProductPage_8xaml_8cs_source}\index{BistroQ.Presentation/Views/AdminProduct/AdminProductPage.xaml.cs@{BistroQ.Presentation/Views/AdminProduct/AdminProductPage.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels}{BistroQ.Presentation.ViewModels}};}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }CommunityToolkit.WinUI.UI.Controls;}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Input;}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views}{BistroQ.Presentation.Views}};}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00010}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminProductPage}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminProductPage}{AdminProductPage}}\ :\ Page}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProductViewModel}{AdminProductViewModel}}\ ViewModel\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminProductPage}{AdminProductPage}}()}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ ViewModel\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProductViewModel}{AdminProductViewModel}}>();}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminProductPage_a13c1b885b02a0e4f640ad30412989c44}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ this.Unloaded\ +=\ (s,\ e)\ =>\ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProductViewModel_a8078ede86bd9805e5181753507ef96f0}{Dispose}}();}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Control2\_QuerySubmitted(AutoSuggestBox\ sender,\ AutoSuggestBoxQuerySubmittedEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00022}00022\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (args.ChosenSuggestion\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.State.SearchText\ =\ args.ChosenSuggestion.ToString();}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.State.SearchText\ =\ args.QueryText;}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProductViewModel_af0ae079491504675c9fa88758744cfb2}{SearchCommand}}.Execute(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00035}00035\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Control2\_SuggestionChosen(AutoSuggestBox\ sender,\ AutoSuggestBoxSuggestionChosenEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ sender.Text\ =\ args.SelectedItem.ToString();}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00040}00040\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ViewModel\_AdminProductDataGrid\_Sorting(\textcolor{keywordtype}{object}?\ sender,\ DataGridColumnEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00041}00041\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProductViewModel_add08be290d713e6ba52fe4f683791b4f}{AdminProductDataGrid\_Sorting}}(sender,\ e);}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00045}00045\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerEntered(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Hand);}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerExited(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00051}00051\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Arrow);}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductPage_8xaml_8cs_source_l00054}00054\ \}}
+
+\end{DoxyCode}

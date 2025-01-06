@@ -1,0 +1,85 @@
+\doxysection{Custom\+List\+View.\+cs}
+\hypertarget{CustomListView_8cs_source}{}\label{CustomListView_8cs_source}\index{BistroQ.Presentation/Controls/CustomListView.cs@{BistroQ.Presentation/Controls/CustomListView.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages}{BistroQ.Presentation.Messages}};}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Messaging;}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Collections.ObjectModel;}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00007}\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Controls}{00007}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Controls}{BistroQ.Presentation.Controls}};}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00019}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView}{00019}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView}{CustomListView}}<T>\ :\ ListView,\ IRecipient<ChangeCustomListViewSelectionMessage<T>>,\ IDisposable}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00020}00020\ \{}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00021}00021\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IMessenger\ \_messenger;}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00026}00026\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00028}00028\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00033}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a9e5a91886264f5e3cf2cbbc3b876d6f9}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a9e5a91886264f5e3cf2cbbc3b876d6f9}{CustomListView}}()\ :\ base()}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00034}00034\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ SelectionChanged\ +=\ CustomListView\_SelectionChanged;}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \_messenger\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<IMessenger>();}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ this.Unloaded\ +=\ (sender,\ e)\ =>\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_ac30bea047f98f345ae822e0e5aadfce4}{Dispose}}();}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00040}00040\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00042}00042\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00051}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a227b87aa50f9a4302f15d8c514cb7a55}{00051}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{new}\ ObservableCollection<T>\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a227b87aa50f9a4302f15d8c514cb7a55}{SelectedItems}}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ (ObservableCollection<T>)GetValue(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a1b27373d035b9d7570ecf23b16f19ae0}{SelectedItemsProperty}});}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ SetValue(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a1b27373d035b9d7570ecf23b16f19ae0}{SelectedItemsProperty}},\ value);}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ base.SelectedItems.Clear();}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ value)}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ base.SelectedItems.Add(item);}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00069}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a1b27373d035b9d7570ecf23b16f19ae0}{00069}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ readonly\ DependencyProperty\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a1b27373d035b9d7570ecf23b16f19ae0}{SelectedItemsProperty}}\ =}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ DependencyProperty.Register(}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a227b87aa50f9a4302f15d8c514cb7a55}{SelectedItems}}),}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ typeof(ObservableCollection<T>),}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView}{CustomListView<T>}}),}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ PropertyMetadata(\textcolor{keyword}{new}\ ObservableCollection<T>()));}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00075}00075\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00077}00077\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Methods}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00084}00084\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CustomListView\_SelectionChanged(\textcolor{keywordtype}{object}\ sender,\ SelectionChangedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00085}00085\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ e.RemovedItems.OfType<T>())}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a227b87aa50f9a4302f15d8c514cb7a55}{SelectedItems}}.Remove(item);}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ e.AddedItems.OfType<T>())}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a227b87aa50f9a4302f15d8c514cb7a55}{SelectedItems}}.Add(item);}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a0e4c38b6720468c23d7911e2cb096f60}{CustomListViewSelectionChangedMessage<T>}}(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a227b87aa50f9a4302f15d8c514cb7a55}{SelectedItems}},\ (\textcolor{keywordtype}{string})Tag));}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00098}00098\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00100}00100\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00106}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a604fc622570f1d4f66644aa9bca3a7a6}{00106}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a604fc622570f1d4f66644aa9bca3a7a6}{Receive}}(\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_ad0ffb3f5cad979eceaf5ccd40001b905}{ChangeCustomListViewSelectionMessage<T>}}\ message)}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00107}00107\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (message.Title\ ==\ (\textcolor{keywordtype}{string})Tag)}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_a227b87aa50f9a4302f15d8c514cb7a55}{SelectedItems}}\ =\ \textcolor{keyword}{new}\ ObservableCollection<T>(message.SelectedItems);}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00112}00112\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00118}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_ac30bea047f98f345ae822e0e5aadfce4}{00118}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Controls_1_1CustomListView_ac30bea047f98f345ae822e0e5aadfce4}{Dispose}}()}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00119}00119\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00122}00122\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00123}00123\ \}}
+\DoxyCodeLine{\Hypertarget{CustomListView_8cs_source_l00124}00124\ }
+
+\end{DoxyCode}

@@ -1,0 +1,24 @@
+\doxysection{ICategory\+Data\+Service.\+cs}
+\hypertarget{ICategoryDataService_8cs_source}{}\label{ICategoryDataService_8cs_source}\index{BistroQ.Domain/Contracts/Services/Data/ICategoryDataService.cs@{BistroQ.Domain/Contracts/Services/Data/ICategoryDataService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos}{BistroQ.Domain.Dtos}};}
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos_1_1Category}{BistroQ.Domain.Dtos.Category}};}
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Models_1_1Entities}{BistroQ.Domain.Models.Entities}};}
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00005}\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data}{BistroQ.Domain.Contracts.Services.Data}};}
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00011}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService}{00011}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{interface\ }\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService}{ICategoryDataService}}}
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00019}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_aa824ce519e3880b81dc453180cf660c9}{00019}}\ \ \ \ \ Task<ApiCollectionResponse<IEnumerable<Category>>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_aa824ce519e3880b81dc453180cf660c9}{GetCategoriesAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CategoryCollectionQueryParams}{CategoryCollectionQueryParams}}\ query\ =\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00027}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_a7077d79597a8b0b183a237c97776386d}{00027}}\ \ \ \ \ Task<Category>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_a7077d79597a8b0b183a237c97776386d}{GetCategoryByIdAsync}}(\textcolor{keywordtype}{int}\ categoryId);}
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00035}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_ac88016c16fe6501a5e1cbae7c4de5d99}{00035}}\ \ \ \ \ Task<Category>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_ac88016c16fe6501a5e1cbae7c4de5d99}{CreateCategoryAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CreateCategoryRequest}{CreateCategoryRequest}}\ category);}
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00044}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_a2a3eb70d3774263e9d130dc4214b4550}{00044}}\ \ \ \ \ Task<Category>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_a2a3eb70d3774263e9d130dc4214b4550}{UpdateCategoryAsync}}(\textcolor{keywordtype}{int}\ categoryId,\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1UpdateCategoryRequest}{UpdateCategoryRequest}}\ category);}
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00052}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_a837897c1b237b3313a71c02f5f1d9c8e}{00052}}\ \ \ \ \ Task<bool>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_a837897c1b237b3313a71c02f5f1d9c8e}{DeleteCategoryAsync}}(\textcolor{keywordtype}{int}\ categoryId);}
+\DoxyCodeLine{\Hypertarget{ICategoryDataService_8cs_source_l00053}00053\ \}}
+
+\end{DoxyCode}

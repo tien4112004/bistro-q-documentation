@@ -1,0 +1,148 @@
+\doxysection{Zone\+Table\+Grid\+Control.\+xaml.\+cs}
+\hypertarget{ZoneTableGridControl_8xaml_8cs_source}{}\label{ZoneTableGridControl_8xaml_8cs_source}\index{BistroQ.Presentation/Views/UserControls/Zones/ZoneTableGridControl.xaml.cs@{BistroQ.Presentation/Views/UserControls/Zones/ZoneTableGridControl.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums}{BistroQ.Presentation.Enums}};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages}{BistroQ.Presentation.Messages}};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable}{BistroQ.Presentation.ViewModels.CashierTable}};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Models}{BistroQ.Presentation.ViewModels.Models}};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Messaging;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }Microsoft.UI;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }Microsoft.UI.Dispatching;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00011}00011\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Input;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00012}00012\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Media;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00014}00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Zones}{BistroQ.Presentation.Views.UserControls.Zones}};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00016}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Zones_1_1ZoneTableGridControl}{00016}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Zones_1_1ZoneTableGridControl}{ZoneTableGridControl}}\ :}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00017}00017\ \ \ \ \ UserControl,}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00018}00018\ \ \ \ \ IRecipient<TableStateChangedMessage>}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Zones_1_1ZoneTableGridControl}{ZoneTableGridControl}}()}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00021}00021\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ this.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Zones_1_1ZoneTableGridControl_a7bbdfb2391fed6e3eb875b8bc8795ca5}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \_messenger\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<IMessenger>();}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ this.Unloaded\ +=\ (s,\ e)\ =>}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a520e90a959f70c96d7838b9ede02f12a}{Dispose}}();}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel}{ZoneTableGridViewModel}}\ ViewModel\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IMessenger\ \_messenger;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00035}00035\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ DispatcherQueue\ dispatcherQueue\ =\ DispatcherQueue.GetForCurrentThread();}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ readonly\ DependencyProperty\ ViewModelProperty\ =}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ DependencyProperty.Register(}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nameof(ViewModel),}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel}{ZoneTableGridViewModel}}),}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Zones_1_1ZoneTableGridControl}{ZoneTableGridControl}}),}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ PropertyMetadata(\textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00044}00044\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ VerticalScrollViewer\_ManipulationDelta(\textcolor{keywordtype}{object}\ sender,\ ManipulationDeltaRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00045}00045\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ SCROLL\_SPEED\ =\ 1.25;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ var\ scrollViewer\ =\ (ScrollViewer)sender;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ scrollViewer.ChangeView(}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ scrollViewer.VerticalOffset\ -\/\ e.Delta.Translation.Y\ *\ SCROLL\_SPEED,}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerEntered(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00056}00056\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Hand);}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerExited(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00061}00061\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Arrow);}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00065}00065\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ GridView\_SelectionChanged(\textcolor{keywordtype}{object}\ sender,\ SelectionChangedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00066}00066\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ e.AddedItems)}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ var\ container\ =\ myGridView.ContainerFromItem(item)\ as\ GridViewItem;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ container.BorderBrush\ =\ \textcolor{keyword}{new}\ SolidColorBrush(Colors.Blue);}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ container.BorderThickness\ =\ \textcolor{keyword}{new}\ Thickness(2);}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ e.RemovedItems)}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ var\ container\ =\ myGridView.ContainerFromItem(item)\ as\ GridViewItem;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ container.BorderBrush\ =\ \textcolor{keyword}{new}\ SolidColorBrush(Colors.Transparent);}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00081}00081\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Receive(\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a7fd46469b188bcae2fb9dd9b0d106341}{TableStateChangedMessage}}\ message)}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00082}00082\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (message?.TableId\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ var\ table\ =\ ViewModel.Tables.FirstOrDefault(t\ =>\ t.TableId\ ==\ message.TableId);}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (table\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ dispatcherQueue.TryEnqueue(()\ =>}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (message.State)}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{CashierTableState}}.CheckoutPending:}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.IsCheckingOut\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{CashierTableState}}.Occupied:}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.IsOccupied\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{CashierTableState}}.Available:}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.IsOccupied\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ table.IsCheckingOut\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ var\ container\ =\ myGridView.ContainerFromItem(table)\ as\ GridViewItem;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (container\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ var\ styleSelector\ =\ (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Zones_1_1TableItemStyleSelector}{TableItemStyleSelector}})Resources[\textcolor{stringliteral}{"{}TableItemStyleSelector"{}}];}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ container.Style\ =\ styleSelector.SelectStyle(table,\ container);}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ container.UpdateLayout();}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a9a93bf8dfccb29a9b278665214ac233e}{UpdateZoneState}}();}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00114}00114\ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00116}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Zones_1_1TableItemStyleSelector}{00116}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Zones_1_1TableItemStyleSelector}{TableItemStyleSelector}}\ :\ StyleSelector}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00117}00117\ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00118}00118\ \ \ \ \ \textcolor{keyword}{public}\ Style\ DefaultStyle\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00119}00119\ \ \ \ \ \textcolor{keyword}{public}\ Style\ CheckingOutStyle\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00120}00120\ \ \ \ \ \textcolor{keyword}{public}\ Style\ OccupiedStyle\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00122}00122\ \ \ \ \ \textcolor{keyword}{public}\ Style\ SelectStyle(\textcolor{keywordtype}{object}\ item,\ DependencyObject\ container)}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00123}00123\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SelectStyleCore(item,\ container);}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00125}00125\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00127}00127\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ Style\ SelectStyleCore(\textcolor{keywordtype}{object}\ item,\ DependencyObject\ container)}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00128}00128\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item\ is\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel}{TableViewModel}}\ tableVM)}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tableVM.IsCheckingOut)}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ CheckingOutStyle;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tableVM.IsSpaceOccupied)}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ OccupiedStyle;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ DefaultStyle;}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00141}00141\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ZoneTableGridControl_8xaml_8cs_source_l00142}00142\ \}}
+
+\end{DoxyCode}

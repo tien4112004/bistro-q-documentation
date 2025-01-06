@@ -1,0 +1,115 @@
+\doxysection{Kitchen\+Order\+Buttons\+View\+Model.\+cs}
+\hypertarget{KitchenOrderButtonsViewModel_8cs_source}{}\label{KitchenOrderButtonsViewModel_8cs_source}\index{BistroQ.Presentation/ViewModels/KitchenOrder/KitchenOrderButtonsViewModel.cs@{BistroQ.Presentation/ViewModels/KitchenOrder/KitchenOrderButtonsViewModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Enums}{BistroQ.Domain.Enums}};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums}{BistroQ.Presentation.Enums}};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages}{BistroQ.Presentation.Messages}};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Models}{BistroQ.Presentation.ViewModels.Models}};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Input;}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Messaging;}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }System.Collections.ObjectModel;}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00010}\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder}{00010}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder}{BistroQ.Presentation.ViewModels.KitchenOrder}};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00021}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel}{00021}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel}{KitchenOrderButtonsViewModel}}\ :\ ObservableObject,\ IDisposable}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00022}00022\ \{}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00023}00023\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IMessenger\ \_messenger;}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00028}00028\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00030}00030\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00034}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_af998484a689c72813bb807ecd6b2666c}{00034}}\ \ \ \ \ \textcolor{keyword}{public}\ ObservableCollection<OrderItemViewModel>\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_af998484a689c72813bb807ecd6b2666c}{Items}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00039}00039\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00040}00040\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_canComplete;}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00045}00045\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_canMove;}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00051}00051\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00052}00052\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_canCancel;}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00057}00057\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00058}00058\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_isCompleteLoading;}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00063}00063\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00064}00064\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_isMoveLoading;}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00069}00069\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00070}00070\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_isCancelLoading;}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00071}00071\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00073}00073\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00074}00074\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel}{KitchenOrderButtonsViewModel}}(IMessenger\ messenger)}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00075}00075\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \_messenger\ =\ messenger;}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00078}00078\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00080}00080\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00090}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a168311c87ea6b287fc096858a8475157}{00090}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a168311c87ea6b287fc096858a8475157}{UpdateStates}}(IEnumerable<OrderItemViewModel>\ items)}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00091}00091\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_af998484a689c72813bb807ecd6b2666c}{Items}}\ =\ \textcolor{keyword}{new}\ ObservableCollection<OrderItemViewModel>(items);}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ CanComplete\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_af998484a689c72813bb807ecd6b2666c}{Items}}.Any(item\ =>\ item.Status\ ==\ OrderItemStatus.InProgress);}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ CanMove\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_af998484a689c72813bb807ecd6b2666c}{Items}}.Any();}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ CanCancel\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_af998484a689c72813bb807ecd6b2666c}{Items}}.Any(item\ =>\ item.Status\ ==\ OrderItemStatus.Pending);}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00101}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a1e0fbd52221315ebd11b159445343b48}{00101}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a1e0fbd52221315ebd11b159445343b48}{ResetLoadingState}}()}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00102}00102\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ IsCompleteLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ IsMoveLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ IsCancelLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00106}00106\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00111}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a137786a0d2cfd8d2d8744f977072ad54}{00111}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel_a137786a0d2cfd8d2d8744f977072ad54}{Dispose}}()}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00112}00112\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00114}00114\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00115}00115\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00117}00117\ \textcolor{preprocessor}{\ \ \ \ \#region\ Command\ Methods}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00121}00121\ \ \ \ \ [RelayCommand]}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00122}00122\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Complete()}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00123}00123\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CanComplete)}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ CanComplete\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ CanMove\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ CanCancel\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ IsCompleteLoading\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_ae4b08e3a7e8ec63559d48c7e9bd60462}{KitchenActionMessage}}(\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{KitchenAction}}.Complete));}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00132}00132\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00137}00137\ \ \ \ \ [RelayCommand]}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00138}00138\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Move()}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00139}00139\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CanMove)}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ CanComplete\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ CanMove\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ CanCancel\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ IsMoveLoading\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_ae4b08e3a7e8ec63559d48c7e9bd60462}{KitchenActionMessage}}(\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{KitchenAction}}.Move));}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00148}00148\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00153}00153\ \ \ \ \ [RelayCommand]}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00154}00154\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Cancel()}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00155}00155\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CanCancel)}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ CanComplete\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ CanMove\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ CanCancel\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ IsCancelLoading\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_ae4b08e3a7e8ec63559d48c7e9bd60462}{KitchenActionMessage}}(\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{KitchenAction}}.Cancel));}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00164}00164\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00165}00165\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{KitchenOrderButtonsViewModel_8cs_source_l00166}00166\ \}}
+
+\end{DoxyCode}

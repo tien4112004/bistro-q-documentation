@@ -1,0 +1,12 @@
+<map id="BistroQ.Presentation.ViewModels.AdminZone.AdminZoneEditPageViewModel" name="BistroQ.Presentation.ViewModels.AdminZone.AdminZoneEditPageViewModel">
+<area shape="rect" id="Node000001" title="ViewModel for editing existing zones in the admin interface. Handles form validation,..." alt="" coords="539,71,766,130"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,52,148,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,43,155,28,196,16,260,6,310,3,360,6,424,16,510,39,587,68,586,73,509,44,423,21,360,12,310,8,260,11,198,21,157,33,120,48"/>
+<area shape="rect" id="Node000004" href="$classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneEditPageViewModel.html" title="ViewModel for editing existing zones in the admin interface. Handles form validation,..." alt="" coords="197,71,423,130"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="163,76,197,81,196,86,163,81"/>
+<area shape="rect" id="Node000003" href="$interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware.html" title=" " alt="" coords="14,111,139,138"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,134,197,139,310,145,423,139,538,122,539,127,424,144,310,150,197,144,154,140"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="154,114,196,109,197,114,154,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="439,98,539,98,539,103,439,103"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="286,53,296,47,310,44,323,46,333,52,338,61,338,70,333,71,333,62,329,56,322,51,310,50,298,52,290,58"/>
+</map>

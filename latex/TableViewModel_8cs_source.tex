@@ -1,0 +1,55 @@
+\doxysection{Table\+View\+Model.\+cs}
+\hypertarget{TableViewModel_8cs_source}{}\label{TableViewModel_8cs_source}\index{BistroQ.Presentation/ViewModels/Models/TableViewModel.cs@{BistroQ.Presentation/ViewModels/Models/TableViewModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Models}{BistroQ.Presentation.ViewModels.Models}};}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00012}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel}{TableViewModel}}\ :\ ObservableObject}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00017}00017\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}?\ \_tableId;}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00023}00023\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}?\ \_name;}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00029}00029\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}?\ \_number;}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00035}00035\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}?\ \_zoneId;}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00041}00041\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00042}00042\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}?\ \_zoneName;}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00047}00047\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00048}00048\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}?\ \_seatsCount;}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00053}00053\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00054}00054\ \ \ \ \ [NotifyPropertyChangedFor(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel_afb30e604232257bf879222c8d30594d2}{IsSpaceOccupied}}))]}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_isOccupied\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00060}00060\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00061}00061\ \ \ \ \ [NotifyPropertyChangedFor(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel_afb30e604232257bf879222c8d30594d2}{IsSpaceOccupied}}))]}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00062}00062\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_isCheckingOut\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00067}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel_afb30e604232257bf879222c8d30594d2}{00067}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel_afb30e604232257bf879222c8d30594d2}{IsSpaceOccupied}}\ =>\ IsOccupied\ \&\&\ !IsCheckingOut;}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00073}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel_a4742d400491b6f04cf909427e2c8ef1d}{00073}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel}{TableViewModel}}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel_a4742d400491b6f04cf909427e2c8ef1d}{Clone}}()}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00074}00074\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel}{TableViewModel}}}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ TableId\ =\ TableId,}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ Name,}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ Number\ =\ Number,}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ ZoneId\ =\ ZoneId,}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ ZoneName\ =\ ZoneName,}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ SeatsCount\ =\ SeatsCount,}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ IsOccupied\ =\ IsOccupied,}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ IsCheckingOut\ =\ IsCheckingOut}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableViewModel_8cs_source_l00087}00087\ \}}
+
+\end{DoxyCode}

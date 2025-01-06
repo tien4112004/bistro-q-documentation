@@ -1,0 +1,177 @@
+\doxysection{Bistro\+Q.\+Service.\+Common.\+File\+Service Class Reference}
+\hypertarget{classBistroQ_1_1Service_1_1Common_1_1FileService}{}\label{classBistroQ_1_1Service_1_1Common_1_1FileService}\index{BistroQ.Service.Common.FileService@{BistroQ.Service.Common.FileService}}
+
+
+Implementation of IFile\+Service that handles file operations using JSON serialization.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Service.\+Common.\+File\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classBistroQ_1_1Service_1_1Common_1_1FileService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Service.\+Common.\+File\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classBistroQ_1_1Service_1_1Common_1_1FileService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService_ad6a9664d214949d72fdcd35a91aeec85}{Read$<$ T $>$}} (string folder\+Path, string file\+Name)
+\begin{DoxyCompactList}\small\item\em Reads and deserializes a JSON file into the specified type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService_a212af61e829953112c541f8cc7f9e023}{Save$<$ T $>$}} (string folder\+Path, string file\+Name, T content)
+\begin{DoxyCompactList}\small\item\em Serializes and saves an object to a JSON file. Creates the directory if it doesn\textquotesingle{}t exist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Service_1_1Common_1_1FileService_ac41322a8e825d84759ae380507129dae}{Delete}} (string folder\+Path, string file\+Name)
+\begin{DoxyCompactList}\small\item\em Deletes a file from the specified folder if it exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IFile\+Service}}}
+
+
+\doxysubsection{Detailed Description}
+Implementation of IFile\+Service that handles file operations using JSON serialization. 
+
+Definition at line \mbox{\hyperlink{FileService_8cs_source_l00010}{10}} of file \mbox{\hyperlink{FileService_8cs_source}{File\+Service.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Common_1_1FileService_ac41322a8e825d84759ae380507129dae}\index{BistroQ.Service.Common.FileService@{BistroQ.Service.Common.FileService}!Delete@{Delete}}
+\index{Delete@{Delete}!BistroQ.Service.Common.FileService@{BistroQ.Service.Common.FileService}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Common_1_1FileService_ac41322a8e825d84759ae380507129dae} 
+void Bistro\+Q.\+Service.\+Common.\+File\+Service.\+Delete (\begin{DoxyParamCaption}\item[{string}]{folder\+Path}{, }\item[{string}]{file\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a file from the specified folder if it exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+Path} & The path to the folder containing the file\\
+\hline
+{\em file\+Name} & The name of the file to delete\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a28399ab6ce0afd9dd8158848548757a5}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IFile\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{FileService_8cs_source_l00055}{55}} of file \mbox{\hyperlink{FileService_8cs_source}{File\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fileName\ !=\ \textcolor{keyword}{null}\ \&\&\ File.Exists(Path.Combine(folderPath,\ fileName)))}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ File.Delete(Path.Combine(folderPath,\ fileName));}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Common_1_1FileService_ad6a9664d214949d72fdcd35a91aeec85}\index{BistroQ.Service.Common.FileService@{BistroQ.Service.Common.FileService}!Read$<$ T $>$@{Read$<$ T $>$}}
+\index{Read$<$ T $>$@{Read$<$ T $>$}!BistroQ.Service.Common.FileService@{BistroQ.Service.Common.FileService}}
+\doxysubsubsection{\texorpdfstring{Read$<$ T $>$()}{Read< T >()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Common_1_1FileService_ad6a9664d214949d72fdcd35a91aeec85} 
+T Bistro\+Q.\+Service.\+Common.\+File\+Service.\+Read$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{folder\+Path}{, }\item[{string}]{file\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads and deserializes a JSON file into the specified type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type to deserialize the JSON content into\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+Path} & The path to the folder containing the file\\
+\hline
+{\em file\+Name} & The name of the file to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized object of type T, or default value if file doesn\textquotesingle{}t exist
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a256efb094b5eb7f5ed5e3c8b8c0cb8f7}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IFile\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{FileService_8cs_source_l00019}{19}} of file \mbox{\hyperlink{FileService_8cs_source}{File\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ var\ path\ =\ Path.Combine(folderPath,\ fileName);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (File.Exists(path))}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ var\ json\ =\ File.ReadAllText(path);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ JsonConvert.DeserializeObject<T>(json);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Common_1_1FileService_a212af61e829953112c541f8cc7f9e023}\index{BistroQ.Service.Common.FileService@{BistroQ.Service.Common.FileService}!Save$<$ T $>$@{Save$<$ T $>$}}
+\index{Save$<$ T $>$@{Save$<$ T $>$}!BistroQ.Service.Common.FileService@{BistroQ.Service.Common.FileService}}
+\doxysubsubsection{\texorpdfstring{Save$<$ T $>$()}{Save< T >()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Common_1_1FileService_a212af61e829953112c541f8cc7f9e023} 
+void Bistro\+Q.\+Service.\+Common.\+File\+Service.\+Save$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{folder\+Path}{, }\item[{string}]{file\+Name}{, }\item[{T}]{content}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serializes and saves an object to a JSON file. Creates the directory if it doesn\textquotesingle{}t exist. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of object to serialize\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+Path} & The path to the folder where the file will be saved\\
+\hline
+{\em file\+Name} & The name of the file to save\\
+\hline
+{\em content} & The object to serialize and save\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a646bcda50bb0043cffd2e179ebac8d0e}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IFile\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{FileService_8cs_source_l00039}{39}} of file \mbox{\hyperlink{FileService_8cs_source}{File\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Directory.Exists(folderPath))}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ Directory.CreateDirectory(folderPath);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ var\ fileContent\ =\ JsonConvert.SerializeObject(content);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ File.WriteAllText(Path.Combine(folderPath,\ fileName),\ fileContent,\ Encoding.UTF8);}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Service/\+Common/File\+Service.\+cs\end{DoxyCompactItemize}

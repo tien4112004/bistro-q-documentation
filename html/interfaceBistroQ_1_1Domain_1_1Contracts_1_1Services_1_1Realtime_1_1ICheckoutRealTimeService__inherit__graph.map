@@ -1,0 +1,5 @@
+<map id="BistroQ.Domain.Contracts.Services.Realtime.ICheckoutRealTimeService" name="BistroQ.Domain.Contracts.Services.Realtime.ICheckoutRealTimeService">
+<area shape="rect" id="Node000001" title="Interface defining real&#45;time communication service for checkout operations. Manages bidirectional com..." alt="" coords="5,5,225,64"/>
+<area shape="rect" id="Node000002" href="$classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService.html" title="Implementation of real&#45;time checkout service using SignalR. Handles bidirectional communication betwe..." alt="" coords="26,112,204,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,79,118,112,112,112,112,79"/>
+</map>

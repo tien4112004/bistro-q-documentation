@@ -1,0 +1,89 @@
+\doxysection{Bistro\+Q.\+Domain.\+Services.\+Http.\+Api\+Client Class Reference}
+\hypertarget{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1ApiClient}{}\label{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1ApiClient}\index{BistroQ.Domain.Services.Http.ApiClient@{BistroQ.Domain.Services.Http.ApiClient}}
+
+
+Implements a secure API client with authentication capabilities. Inherits from \doxylink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient}{Base\+Api\+Client} to provide basic REST API functionality.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Domain.\+Services.\+Http.\+Api\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1ApiClient__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Domain.\+Services.\+Http.\+Api\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1ApiClient__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1ApiClient_a562cd5a404f0acc9825de90c204557e3}{Api\+Client}} (Http\+Client http\+Client)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1ApiClient}{Api\+Client} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient}{Bistro\+Q.\+Domain.\+Services.\+Http.\+Base\+Api\+Client}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_a777c981e8405cf8e3aaf27ff12241d79}{Base\+Api\+Client}} (Http\+Client http\+Client)
+\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_a046b5646668d17d19e5273d6ebdaad9e}{Post\+Async$<$ T $>$}} (string url, object content\+Value)
+\begin{DoxyCompactList}\small\item\em Sends a POST request to the specified URL with the given content. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_ada3a58509c3c8cb80bc8743f0cc1f65b}{Put\+Async$<$ T $>$}} (string url, object content\+Value)
+\begin{DoxyCompactList}\small\item\em Sends a PUT request to the specified URL with the given content. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_a87f1cbf7688d72b60bcf8c4ffad2c050}{Patch\+Async$<$ T $>$}} (string url, object content\+Value)
+\begin{DoxyCompactList}\small\item\em Sends a PATCH request to the specified URL with the given content. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_ac917357a81be1443a1c7355e4511994f}{Get\+Async$<$ T $>$}} (string url, object query\+Params=null)
+\begin{DoxyCompactList}\small\item\em Sends a GET request to the specified URL and returns the response. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_af8e759dfe05332eda20539a8d5a4f161}{Delete\+Async$<$ T $>$}} (string url, object query\+Params=null)
+\begin{DoxyCompactList}\small\item\em Sends a DELETE request to the specified URL. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_ae01efc9c9e6235b431f88f1252dd8c1b}{Get\+Collection\+Async$<$ T $>$}} (string url, object query\+Params=null)
+\begin{DoxyCompactList}\small\item\em Sends a GET request to the specified URL and returns a collection response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IBase\+Api\+Client}}}
+
+
+\doxysubsection{Detailed Description}
+Implements a secure API client with authentication capabilities. Inherits from \doxylink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient}{Base\+Api\+Client} to provide basic REST API functionality. 
+
+Definition at line \mbox{\hyperlink{ApiClient_8cs_source_l00009}{9}} of file \mbox{\hyperlink{ApiClient_8cs_source}{Api\+Client.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1ApiClient_a562cd5a404f0acc9825de90c204557e3}\index{BistroQ.Domain.Services.Http.ApiClient@{BistroQ.Domain.Services.Http.ApiClient}!ApiClient@{ApiClient}}
+\index{ApiClient@{ApiClient}!BistroQ.Domain.Services.Http.ApiClient@{BistroQ.Domain.Services.Http.ApiClient}}
+\doxysubsubsection{\texorpdfstring{ApiClient()}{ApiClient()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1ApiClient_a562cd5a404f0acc9825de90c204557e3} 
+Bistro\+Q.\+Domain.\+Services.\+Http.\+Api\+Client.\+Api\+Client (\begin{DoxyParamCaption}\item[{Http\+Client}]{http\+Client}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1ApiClient}{Api\+Client} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Client} & The HTTP client used for making requests.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ApiClient_8cs_source_l00015}{15}} of file \mbox{\hyperlink{ApiClient_8cs_source}{Api\+Client.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ base(httpClient) }
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Service/\+Http/Api\+Client.\+cs\end{DoxyCompactItemize}

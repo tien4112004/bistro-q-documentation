@@ -1,0 +1,40 @@
+\doxysection{Account\+View\+Model.\+cs}
+\hypertarget{AccountViewModel_8cs_source}{}\label{AccountViewModel_8cs_source}\index{BistroQ.Presentation/ViewModels/Models/AccountViewModel.cs@{BistroQ.Presentation/ViewModels/Models/AccountViewModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00003}\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Models}{00003}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Models}{BistroQ.Presentation.ViewModels.Models}};}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00011}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1AccountViewModel}{00011}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1AccountViewModel}{AccountViewModel}}\ :\ ObservableObject}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00016}00016\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}?\ \_userId;}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00022}00022\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}?\ \_username;}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00028}00028\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}?\ \_role;}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00034}00034\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00035}00035\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}?\ \_tableId;}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00040}00040\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}?\ \_tableNumber;}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00046}00046\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00047}00047\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}?\ \_zoneName;}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00052}00052\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}?\ \_zoneId;}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00058}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1AccountViewModel_a2583316d2735f35d9f777d6e922f684b}{00058}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1AccountViewModel_a2583316d2735f35d9f777d6e922f684b}{TableDisplay}}\ =>\ TableId.HasValue}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ ?\ \$\textcolor{stringliteral}{"{}\{ZoneName\}\ -\/\ Table\ \{TableNumber\}"{}}}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ :\ \textcolor{stringliteral}{"{}No\ Table\ Assigned"{}};}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00065}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1AccountViewModel_a6b4f3cb587610e19b68d092032f7a688}{00065}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1AccountViewModel_a6b4f3cb587610e19b68d092032f7a688}{IsSystemAdmin}}\ =>\ Role?.ToLower()\ ==\ \textcolor{stringliteral}{"{}admin"{}}\ \&\&}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Username?.ToLower()\ ==\ \textcolor{stringliteral}{"{}admin"{}};}
+\DoxyCodeLine{\Hypertarget{AccountViewModel_8cs_source_l00067}00067\ \}}
+
+\end{DoxyCode}

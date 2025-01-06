@@ -1,0 +1,103 @@
+\doxysection{Login\+View\+Model.\+cs}
+\hypertarget{LoginViewModel_8cs_source}{}\label{LoginViewModel_8cs_source}\index{BistroQ.Presentation/ViewModels/LoginViewModel.cs@{BistroQ.Presentation/ViewModels/LoginViewModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Models}{BistroQ.Presentation.Models}};}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Input;}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Windows.Input;}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels}{BistroQ.Presentation.ViewModels}};}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00013}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel}{00013}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel}{LoginViewModel}}\ :\ ObservableObject}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00015}00015\ \textcolor{preprocessor}{\ \ \ \ \#region\ Events}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00019}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a5f92884ab8f67d58ecab68dce024d4ad}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ EventHandler\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a5f92884ab8f67d58ecab68dce024d4ad}{NavigationRequested}};}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00024}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a3267ae13c32ceacbd1a1e416aa7a47a9}{00024}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ EventHandler\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a3267ae13c32ceacbd1a1e416aa7a47a9}{CloseRequested}};}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00025}00025\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00027}00027\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuthService}}\ \_authService;}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00036}00036\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_isProcessing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00042}00042\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00043}00043\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm}{LoginForm}}\ \_form\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00048}00048\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00049}00049\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ \_errorMessage\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00050}00050\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00052}00052\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00056}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_ab44027486e32cfd7f7795a9bcc5a2fe3}{00056}}\ \ \ \ \ \textcolor{keyword}{public}\ ICommand\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_ab44027486e32cfd7f7795a9bcc5a2fe3}{LoginCommand}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00061}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_aa28a6c203da745dbfc900d5f0a71739f}{00061}}\ \ \ \ \ \textcolor{keyword}{public}\ ICommand\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_aa28a6c203da745dbfc900d5f0a71739f}{FormChangeCommand}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00062}00062\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00064}00064\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00065}00065\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel}{LoginViewModel}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuthService}}\ authService)}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00066}00066\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \_authService\ =\ authService;}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_ab44027486e32cfd7f7795a9bcc5a2fe3}{LoginCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(async\ ()\ =>}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a86de8146918ab7a10993dd56e937c7b0}{Login}}();}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_aa28a6c203da745dbfc900d5f0a71739f}{FormChangeCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand<(string\ Field,\ string\ Value)>((param)\ =>}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ Form.ValidateProperty(param.Field,\ param.Value);}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00077}00077\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00079}00079\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00084}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af4602f415b84b52de61c0e5f5daa1ea0}{00084}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af4602f415b84b52de61c0e5f5daa1ea0}{CanLogin}}()}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00085}00085\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ Form.ValidateAll();}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !Form.HasErrors;}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00095}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a86de8146918ab7a10993dd56e937c7b0}{00095}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a86de8146918ab7a10993dd56e937c7b0}{Login}}()}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00096}00096\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af4602f415b84b52de61c0e5f5daa1ea0}{CanLogin}}())}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ await\ \_authService.LoginAsync(Form.Username,\ Form.Password);}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result.Success)}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ result.Message;}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af8fbaefb2a8a589641aa5536c3ae51e9}{RequestNavigation}}();}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception)}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ \textcolor{stringliteral}{"{}An\ error\ occurred.\ Please\ try\ again."{}};}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00126}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af8fbaefb2a8a589641aa5536c3ae51e9}{00126}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af8fbaefb2a8a589641aa5536c3ae51e9}{RequestNavigation}}()\ =>}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a5f92884ab8f67d58ecab68dce024d4ad}{NavigationRequested}}?.Invoke(\textcolor{keyword}{this},\ EventArgs.Empty);}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00132}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af66aa024b2ead70f01bf7e0b6b8a4814}{00132}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af66aa024b2ead70f01bf7e0b6b8a4814}{RequestClose}}()\ =>}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a3267ae13c32ceacbd1a1e416aa7a47a9}{CloseRequested}}?.Invoke(\textcolor{keyword}{this},\ EventArgs.Empty);}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00142}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a85bf2bad267683aa0c39dd43cf79eb26}{00142}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<bool>\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a85bf2bad267683aa0c39dd43cf79eb26}{IsAuthenticated}}()}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00143}00143\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ \_authService.IsAuthenticatedAsync();}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00145}00145\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00146}00146\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{LoginViewModel_8cs_source_l00147}00147\ \}}
+
+\end{DoxyCode}

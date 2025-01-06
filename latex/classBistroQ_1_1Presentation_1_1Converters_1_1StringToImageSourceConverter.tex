@@ -1,0 +1,99 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Converters.\+String\+To\+Image\+Source\+Converter Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1StringToImageSourceConverter}{}\label{classBistroQ_1_1Presentation_1_1Converters_1_1StringToImageSourceConverter}\index{BistroQ.Presentation.Converters.StringToImageSourceConverter@{BistroQ.Presentation.Converters.StringToImageSourceConverter}}
+
+
+Converter that transforms string URLs or file paths into Image\+Source objects. Supports both web URLs and local file paths, handling various error cases gracefully.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Converters.\+String\+To\+Image\+Source\+Converter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classBistroQ_1_1Presentation_1_1Converters_1_1StringToImageSourceConverter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Converters.\+String\+To\+Image\+Source\+Converter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classBistroQ_1_1Presentation_1_1Converters_1_1StringToImageSourceConverter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1StringToImageSourceConverter_a37556ddd54ddc34da9350928715c48b1}{Convert}} (object value, Type target\+Type, object parameter, string language)
+\item 
+object \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1StringToImageSourceConverter_ab9b817f288d048343fbe097b87b61fcf}{Convert\+Back}} (object value, Type target\+Type, object parameter, string language)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Converter that transforms string URLs or file paths into Image\+Source objects. Supports both web URLs and local file paths, handling various error cases gracefully. 
+
+Definition at line \mbox{\hyperlink{StringToImageSourceConverter_8cs_source_l00010}{10}} of file \mbox{\hyperlink{StringToImageSourceConverter_8cs_source}{String\+To\+Image\+Source\+Converter.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1StringToImageSourceConverter_a37556ddd54ddc34da9350928715c48b1}\index{BistroQ.Presentation.Converters.StringToImageSourceConverter@{BistroQ.Presentation.Converters.StringToImageSourceConverter}!Convert@{Convert}}
+\index{Convert@{Convert}!BistroQ.Presentation.Converters.StringToImageSourceConverter@{BistroQ.Presentation.Converters.StringToImageSourceConverter}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Converters_1_1StringToImageSourceConverter_a37556ddd54ddc34da9350928715c48b1} 
+object Bistro\+Q.\+Presentation.\+Converters.\+String\+To\+Image\+Source\+Converter.\+Convert (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{Type}]{target\+Type}{, }\item[{object}]{parameter}{, }\item[{string}]{language}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{StringToImageSourceConverter_8cs_source_l00012}{12}} of file \mbox{\hyperlink{StringToImageSourceConverter_8cs_source}{String\+To\+Image\+Source\+Converter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ is\ \textcolor{keywordtype}{string}\ imageUrl\ \&\&\ !\textcolor{keywordtype}{string}.IsNullOrEmpty(imageUrl))}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (imageUrl.StartsWith(\textcolor{stringliteral}{"{}file:"{}})\ ||\ System.IO.File.Exists(imageUrl))}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ BitmapImage(\textcolor{keyword}{new}\ Uri(imageUrl));}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (Uri.TryCreate(imageUrl,\ UriKind.Absolute,\ out\ Uri\ uri))}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ BitmapImage(uri);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1StringToImageSourceConverter_ab9b817f288d048343fbe097b87b61fcf}\index{BistroQ.Presentation.Converters.StringToImageSourceConverter@{BistroQ.Presentation.Converters.StringToImageSourceConverter}!ConvertBack@{ConvertBack}}
+\index{ConvertBack@{ConvertBack}!BistroQ.Presentation.Converters.StringToImageSourceConverter@{BistroQ.Presentation.Converters.StringToImageSourceConverter}}
+\doxysubsubsection{\texorpdfstring{ConvertBack()}{ConvertBack()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Converters_1_1StringToImageSourceConverter_ab9b817f288d048343fbe097b87b61fcf} 
+object Bistro\+Q.\+Presentation.\+Converters.\+String\+To\+Image\+Source\+Converter.\+Convert\+Back (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{Type}]{target\+Type}{, }\item[{object}]{parameter}{, }\item[{string}]{language}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{StringToImageSourceConverter_8cs_source_l00035}{35}} of file \mbox{\hyperlink{StringToImageSourceConverter_8cs_source}{String\+To\+Image\+Source\+Converter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ NotImplementedException();}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Converters/String\+To\+Image\+Source\+Converter.\+cs\end{DoxyCompactItemize}

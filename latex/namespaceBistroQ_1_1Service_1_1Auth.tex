@@ -1,0 +1,11 @@
+\doxysection{Bistro\+Q.\+Service.\+Auth Namespace Reference}
+\hypertarget{namespaceBistroQ_1_1Service_1_1Auth}{}\label{namespaceBistroQ_1_1Service_1_1Auth}\index{BistroQ.Service.Auth@{BistroQ.Service.Auth}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService}{Auth\+Service}}
+\begin{DoxyCompactList}\small\item\em Implements authentication and authorization services, handling user login, token management, and authentication state. This service acts as a bridge between the client application and the authentication API endpoints. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService}{Token\+Json\+Storage\+Service}}
+\begin{DoxyCompactList}\small\item\em A JSON-\/based storage service for authentication tokens, implementing the IToken\+Storage\+Service interface. This service stores access and refresh tokens in a JSON format, providing methods to save, retrieve, and clear tokens. This approach may be useful for scenarios where tokens need to be persisted in a lightweight, human-\/readable format. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService}{Token\+Secure\+Storage\+Service}}
+\begin{DoxyCompactList}\small\item\em A secure storage service for authentication tokens, implementing the IToken\+Storage\+Service interface. This service provides methods to securely store, retrieve, and clear access and refresh tokens, using encryption to ensure sensitive data is protected. \end{DoxyCompactList}\end{DoxyCompactItemize}

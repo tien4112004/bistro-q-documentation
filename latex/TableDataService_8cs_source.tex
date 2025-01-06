@@ -1,0 +1,104 @@
+\doxysection{Table\+Data\+Service.\+cs}
+\hypertarget{TableDataService_8cs_source}{}\label{TableDataService_8cs_source}\index{BistroQ.Service/Data/TableDataService.cs@{BistroQ.Service/Data/TableDataService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }AutoMapper;}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos}{BistroQ.Domain.Dtos}};}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos_1_1Tables}{BistroQ.Domain.Dtos.Tables}};}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Service_1_1Data}{BistroQ.Service.Data}};}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00012}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService}{TableDataService}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService}{ITableDataService}}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00014}00014\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApiClient}}\ \_apiClient;}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IMapper\ \_mapper;}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00024}00024\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00026}00026\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00032}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_aaa1dc58bd1d5bf6f6da603112085f9dd}{00032}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_aaa1dc58bd1d5bf6f6da603112085f9dd}{TableDataService}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApiClient}}\ apiClient,\ IMapper\ mapper)}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \_apiClient\ =\ apiClient;}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00037}00037\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00039}00039\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00040}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_a4bc021c0b390ccced70137c32d65c996}{00040}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiCollectionResponse<IEnumerable<Table>>>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_a4bc021c0b390ccced70137c32d65c996}{GetGridDataAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1TableCollectionQueryParams}{TableCollectionQueryParams}}\ query\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00041}00041\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetCollectionAsync<IEnumerable<TableResponse>>(\textcolor{stringliteral}{"{}/api/admin/table"{}},\ query);}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tables\ =\ \_mapper.Map<IEnumerable<Table>>(response.Data);}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{ApiCollectionResponse<IEnumerable<Table>}}>}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (tables,\ response.TotalItems,\ response.CurrentPage,\ response.TotalPages);}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ get\ tables"{}});}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00053}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_a651af4610642bd88faf859abab037528}{00053}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<Table>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_a651af4610642bd88faf859abab037528}{GetDataTableAsync}}(\textcolor{keywordtype}{int}\ tableId)}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1TableResponse}{TableResponse}}>(\$\textcolor{stringliteral}{"{}api/table/\{tableId\}"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classTable}{Table}}>(response.Data);}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ get\ table"{}});}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00064}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_ad896b7d7af459de381e0bca5ff82e89b}{00064}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<Table>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_ad896b7d7af459de381e0bca5ff82e89b}{CreateTableAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1CreateTableRequest}{CreateTableRequest}}\ request)}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00065}00065\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PostAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1TableResponse}{TableResponse}}>(\textcolor{stringliteral}{"{}api/admin/table"{}},\ request);}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classTable}{Table}}>(response.Data);}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ create\ table"{}});}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00075}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_aaa5e9ad72d17d046a106497ed1675e73}{00075}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<Table>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_aaa5e9ad72d17d046a106497ed1675e73}{UpdateTableAsync}}(\textcolor{keywordtype}{int}\ tableId,\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1UpdateTableRequest}{UpdateTableRequest}}\ request)}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00076}00076\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PutAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1TableResponse}{TableResponse}}>(\$\textcolor{stringliteral}{"{}api/admin/table/\{tableId\}"{}},\ request);}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classTable}{Table}}>(response.Data);}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ update\ table"{}});}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00086}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_a95d2fd59b0fc818d90b3aa2728b33cb8}{00086}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<bool>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_a95d2fd59b0fc818d90b3aa2728b33cb8}{DeleteTableAsync}}(\textcolor{keywordtype}{int}\ tableId)}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00087}00087\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.DeleteAsync<\textcolor{keywordtype}{object}>(\$\textcolor{stringliteral}{"{}api/admin/table/\{tableId\}"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!response.Success)}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00097}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_aac3840a5f09c647920ad01d3f2bd9920}{00097}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IEnumerable<Table>>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_aac3840a5f09c647920ad01d3f2bd9920}{GetTablesByCashierAsync}}(\textcolor{keywordtype}{int}\ zoneId,\ \textcolor{keywordtype}{string}\ type)}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00098}00098\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ isOccupied\ =\ type\ ==\ \textcolor{stringliteral}{"{}All"{}}\ ?\ \textcolor{stringliteral}{"{}false"{}}\ :\ \textcolor{stringliteral}{"{}true"{}};}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ var\ response\ =}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_apiClient.GetCollectionAsync<IEnumerable<TableResponse>>(}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\textcolor{stringliteral}{"{}api/cashier/zones/\{zoneId\}/table?isOccupied=\{isOccupied\}"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<IEnumerable<Table>>(response.Data);}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ get\ tables"{}});}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00111}00111\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00112}00112\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{TableDataService_8cs_source_l00113}00113\ \}}
+
+\end{DoxyCode}

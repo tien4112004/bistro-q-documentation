@@ -1,0 +1,290 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Models.\+File\+Wrapper Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{}\label{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}\index{BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}}
+
+
+Represents a wrapper for file operations that encapsulates file metadata and content stream. Implements IDisposable to ensure proper cleanup of resources.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Models.\+File\+Wrapper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Models.\+File\+Wrapper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a73489c00af802e0194b8478aa8acf3a7}{File\+Wrapper}} (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}{Stream}} stream, string file\+Name, string content\+Type)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a61681446f06d67c73e230bccba60fdfd}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Disposes of the resources used by the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper}} $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_aeeb9ae56594055644d7b3421e886c6d6}{From\+Storage\+File\+Async}} (Storage\+File file)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper} instance from a Storage\+File. \end{DoxyCompactList}\item 
+static async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper}} $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a5710bbcb3542243bce99cba21b083d58}{From\+Storage\+File\+With\+Validation\+Async}} (Storage\+File file, long? max\+File\+Size=null, string\mbox{[}$\,$\mbox{]}? allowed\+Content\+Types=null)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper} instance from a Storage\+File with size and content type validation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_afadcad893fad198c769cfda8cfe2577e}{File\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the name of the file. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_ae3d94eaab73dccf3c9a195339653b52f}{Content\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the MIME content type of the file. \end{DoxyCompactList}\item 
+Stream \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}{Stream}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the stream containing the file\textquotesingle{}s content. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a wrapper for file operations that encapsulates file metadata and content stream. Implements IDisposable to ensure proper cleanup of resources. 
+
+Definition at line \mbox{\hyperlink{FileWrapper_8cs_source_l00009}{9}} of file \mbox{\hyperlink{FileWrapper_8cs_source}{File\+Wrapper.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a73489c00af802e0194b8478aa8acf3a7}\index{BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}!FileWrapper@{FileWrapper}}
+\index{FileWrapper@{FileWrapper}!BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}}
+\doxysubsubsection{\texorpdfstring{FileWrapper()}{FileWrapper()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a73489c00af802e0194b8478aa8acf3a7} 
+Bistro\+Q.\+Presentation.\+Models.\+File\+Wrapper.\+File\+Wrapper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}{Stream}}}]{stream}{, }\item[{string}]{file\+Name}{, }\item[{string}]{content\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & The stream containing the file\textquotesingle{}s content.\\
+\hline
+{\em file\+Name} & The name of the file.\\
+\hline
+{\em content\+Type} & The MIME content type of the file.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{FileWrapper_8cs_source_l00035}{35}} of file \mbox{\hyperlink{FileWrapper_8cs_source}{File\+Wrapper.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}{Stream}}\ =\ stream;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_afadcad893fad198c769cfda8cfe2577e}{FileName}}\ =\ fileName;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_ae3d94eaab73dccf3c9a195339653b52f}{ContentType}}\ =\ contentType;}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a61681446f06d67c73e230bccba60fdfd}\index{BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a61681446f06d67c73e230bccba60fdfd} 
+void Bistro\+Q.\+Presentation.\+Models.\+File\+Wrapper.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Disposes of the resources used by the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper} instance. 
+
+This method ensures that the underlying stream is properly disposed. 
+
+Definition at line \mbox{\hyperlink{FileWrapper_8cs_source_l00111}{111}} of file \mbox{\hyperlink{FileWrapper_8cs_source}{File\+Wrapper.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112\ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}{Stream}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}{Stream}}.Dispose();}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_aeeb9ae56594055644d7b3421e886c6d6}\index{BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}!FromStorageFileAsync@{FromStorageFileAsync}}
+\index{FromStorageFileAsync@{FromStorageFileAsync}!BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}}
+\doxysubsubsection{\texorpdfstring{FromStorageFileAsync()}{FromStorageFileAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_aeeb9ae56594055644d7b3421e886c6d6} 
+static async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper}} $>$ Bistro\+Q.\+Presentation.\+Models.\+File\+Wrapper.\+From\+Storage\+File\+Async (\begin{DoxyParamCaption}\item[{Storage\+File}]{file}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates a \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper} instance from a Storage\+File. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The Storage\+File to wrap.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper} instance containing the file\textquotesingle{}s content and metadata.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when file is null.\\
+\hline
+{\em IOException} & Thrown when there is an error reading the file.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{FileWrapper_8cs_source_l00051}{51}} of file \mbox{\hyperlink{FileWrapper_8cs_source}{File\+Wrapper.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (file\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(file));}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ var\ stream\ =\ await\ file.OpenStreamForReadAsync();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ var\ memoryStream\ =\ \textcolor{keyword}{new}\ MemoryStream();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ await\ stream.CopyToAsync(memoryStream);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ memoryStream.Position\ =\ 0;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ var\ contentType\ =\ file.ContentType;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ var\ fileName\ =\ file.Name;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a73489c00af802e0194b8478aa8acf3a7}{FileWrapper}}(memoryStream,\ fileName,\ contentType);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IOException(\$\textcolor{stringliteral}{"{}Failed\ to\ read\ file:\ \{file.Name\}"{}},\ ex);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a5710bbcb3542243bce99cba21b083d58}\index{BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}!FromStorageFileWithValidationAsync@{FromStorageFileWithValidationAsync}}
+\index{FromStorageFileWithValidationAsync@{FromStorageFileWithValidationAsync}!BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}}
+\doxysubsubsection{\texorpdfstring{FromStorageFileWithValidationAsync()}{FromStorageFileWithValidationAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a5710bbcb3542243bce99cba21b083d58} 
+static async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper}} $>$ Bistro\+Q.\+Presentation.\+Models.\+File\+Wrapper.\+From\+Storage\+File\+With\+Validation\+Async (\begin{DoxyParamCaption}\item[{Storage\+File}]{file}{, }\item[{long?}]{max\+File\+Size}{ = {\ttfamily null}, }\item[{string?\mbox{[}$\,$\mbox{]}}]{allowed\+Content\+Types}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates a \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper} instance from a Storage\+File with size and content type validation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The Storage\+File to wrap.\\
+\hline
+{\em max\+File\+Size} & Optional maximum allowed file size in bytes. If null, no size validation is performed.\\
+\hline
+{\em allowed\+Content\+Types} & Optional array of allowed content types. If null, no content type validation is performed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper} instance containing the file\textquotesingle{}s content and metadata.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when file is null.\\
+\hline
+{\em Invalid\+Operation\+Exception} & Thrown when the file size exceeds the maximum allowed size.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{FileWrapper_8cs_source_l00083}{83}} of file \mbox{\hyperlink{FileWrapper_8cs_source}{File\+Wrapper.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (file\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(file));}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validate\ file\ size}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (maxFileSize.HasValue)}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ var\ properties\ =\ await\ file.GetBasicPropertiesAsync();}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\textcolor{keywordtype}{long})properties.Size\ >\ maxFileSize.Value)}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\textcolor{stringliteral}{"{}File\ size\ (\{properties.Size\}\ bytes)\ exceeds\ maximum\ allowed\ size\ (\{maxFileSize.Value\}\ bytes)"{}});}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_aeeb9ae56594055644d7b3421e886c6d6}{FromStorageFileAsync}}(file);}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_ae3d94eaab73dccf3c9a195339653b52f}\index{BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}!ContentType@{ContentType}}
+\index{ContentType@{ContentType}!BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}}
+\doxysubsubsection{\texorpdfstring{ContentType}{ContentType}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_ae3d94eaab73dccf3c9a195339653b52f} 
+string Bistro\+Q.\+Presentation.\+Models.\+File\+Wrapper.\+Content\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the MIME content type of the file. 
+
+
+
+Definition at line \mbox{\hyperlink{FileWrapper_8cs_source_l00020}{20}} of file \mbox{\hyperlink{FileWrapper_8cs_source}{File\+Wrapper.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_afadcad893fad198c769cfda8cfe2577e}\index{BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}!FileName@{FileName}}
+\index{FileName@{FileName}!BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}}
+\doxysubsubsection{\texorpdfstring{FileName}{FileName}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_afadcad893fad198c769cfda8cfe2577e} 
+string Bistro\+Q.\+Presentation.\+Models.\+File\+Wrapper.\+File\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the name of the file. 
+
+
+
+Definition at line \mbox{\hyperlink{FileWrapper_8cs_source_l00015}{15}} of file \mbox{\hyperlink{FileWrapper_8cs_source}{File\+Wrapper.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}\index{BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}!Stream@{Stream}}
+\index{Stream@{Stream}!BistroQ.Presentation.Models.FileWrapper@{BistroQ.Presentation.Models.FileWrapper}}
+\doxysubsubsection{\texorpdfstring{Stream}{Stream}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d} 
+Stream Bistro\+Q.\+Presentation.\+Models.\+File\+Wrapper.\+Stream\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the stream containing the file\textquotesingle{}s content. 
+
+
+
+Definition at line \mbox{\hyperlink{FileWrapper_8cs_source_l00025}{25}} of file \mbox{\hyperlink{FileWrapper_8cs_source}{File\+Wrapper.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Models/File\+Wrapper.\+cs\end{DoxyCompactItemize}

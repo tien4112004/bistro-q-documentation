@@ -1,0 +1,5 @@
+<map id="BistroQ.Service.Http.MultipartApiClient" name="BistroQ.Service.Http.MultipartApiClient">
+<area shape="rect" id="Node000001" title="Implements multipart form data handling for API requests, supporting file uploads and JSON content...." alt="" coords="5,80,202,123"/>
+<area shape="rect" id="Node000002" href="$interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient.html" title="Interface for handling multipart form data API requests. Provides methods for uploading files and JSO..." alt="" coords="39,5,168,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,48,106,80,101,80,101,48"/>
+</map>

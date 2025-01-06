@@ -1,0 +1,261 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Views.\+Admin\+Zone\+Page Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage}{}\label{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage}\index{BistroQ.Presentation.Views.AdminZonePage@{BistroQ.Presentation.Views.AdminZonePage}}
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Views.\+Admin\+Zone\+Page\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Views.\+Admin\+Zone\+Page\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_a22dca4b9ec4458e81ea098f83829081f}{Connect}} (int connection\+Id, object target)
+\begin{DoxyCompactList}\small\item\em \doxylink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_a22dca4b9ec4458e81ea098f83829081f}{Connect()} \end{DoxyCompactList}\item 
+global\+::\+Microsoft.\+UI.\+Xaml.\+Markup.\+IComponent\+Connector \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_a6d1cf4848b9184f1f523f5178596bfe7}{Get\+Binding\+Connector}} (int connection\+Id, object target)
+\begin{DoxyCompactList}\small\item\em \doxylink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_a6d1cf4848b9184f1f523f5178596bfe7}{Get\+Binding\+Connector(int connection\+Id, object target)} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_aa0ba4a320500c8c239660986e2792a23}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_aa0ba4a320500c8c239660986e2792a23}{Initialize\+Component()} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_aa0ba4a320500c8c239660986e2792a23}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_aa0ba4a320500c8c239660986e2792a23}{Initialize\+Component()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel}{Admin\+Zone\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_a89dd2854511392fcc87ec3b92b4d360e}{View\+Model}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{AdminZonePage_8xaml_8cs_source_l00010}{10}} of file \mbox{\hyperlink{AdminZonePage_8xaml_8cs_source}{Admin\+Zone\+Page.\+xaml.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_afb4c9940a28a6328d20450a10b10fd87}\index{BistroQ.Presentation.Views.AdminZonePage@{BistroQ.Presentation.Views.AdminZonePage}!AdminZonePage@{AdminZonePage}}
+\index{AdminZonePage@{AdminZonePage}!BistroQ.Presentation.Views.AdminZonePage@{BistroQ.Presentation.Views.AdminZonePage}}
+\doxysubsubsection{\texorpdfstring{AdminZonePage()}{AdminZonePage()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_afb4c9940a28a6328d20450a10b10fd87} 
+Bistro\+Q.\+Presentation.\+Views.\+Admin\+Zone\+Page.\+Admin\+Zone\+Page (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{AdminZonePage_8xaml_8cs_source_l00014}{14}} of file \mbox{\hyperlink{AdminZonePage_8xaml_8cs_source}{Admin\+Zone\+Page.\+xaml.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ ViewModel\ =\ App.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel}{AdminZoneViewModel}}>();}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ this.DataContext\ =\ ViewModel;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_aa0ba4a320500c8c239660986e2792a23}{InitializeComponent}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ this.Unloaded\ +=\ (s,\ e)\ =>\ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel_a1d1fc7f4de344da73ca4315c84227761}{Dispose}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_a22dca4b9ec4458e81ea098f83829081f}\index{BistroQ.Presentation.Views.AdminZonePage@{BistroQ.Presentation.Views.AdminZonePage}!Connect@{Connect}}
+\index{Connect@{Connect}!BistroQ.Presentation.Views.AdminZonePage@{BistroQ.Presentation.Views.AdminZonePage}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_a22dca4b9ec4458e81ea098f83829081f} 
+void Bistro\+Q.\+Presentation.\+Views.\+Admin\+Zone\+Page.\+Connect (\begin{DoxyParamCaption}\item[{int}]{connection\+Id}{, }\item[{object}]{target}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_a22dca4b9ec4458e81ea098f83829081f}{Connect()} 
+
+
+
+Definition at line \mbox{\hyperlink{Debug_2net8_80-windows10_80_822621_80_2Views_2AdminZone_2AdminZonePage_8g_8cs_source_l00680}{680}} of file \mbox{\hyperlink{Debug_2net8_80-windows10_80_822621_80_2Views_2AdminZone_2AdminZonePage_8g_8cs_source}{Admin\+Zone\+Page.\+g.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00681\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00682\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(connectionId)}
+\DoxyCodeLine{00683\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00684\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \textcolor{comment}{//\ Views\(\backslash\)AdminZone\(\backslash\)AdminZonePage.xaml\ line\ 19}}
+\DoxyCodeLine{00685\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00686\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.ContentArea\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.Grid>(target);}
+\DoxyCodeLine{00687\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00688\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00689\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \textcolor{comment}{//\ Views\(\backslash\)AdminZone\(\backslash\)AdminZonePage.xaml\ line\ 112}}
+\DoxyCodeLine{00690\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00691\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.LoadingOverlay\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.Grid>(target);}
+\DoxyCodeLine{00692\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00693\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00694\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ \textcolor{comment}{//\ Views\(\backslash\)AdminZone\(\backslash\)AdminZonePage.xaml\ line\ 154}}
+\DoxyCodeLine{00695\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00696\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.AdminZoneDataGrid\ =\ global::WinRT.CastExtensions.As<global::CommunityToolkit.WinUI.UI.Controls.DataGrid>(target);}
+\DoxyCodeLine{00697\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::CommunityToolkit.WinUI.UI.Controls.DataGrid)this.AdminZoneDataGrid).Sorting\ +=\ this.ViewModel\_AdminZoneDataGrid\_Sorting;}
+\DoxyCodeLine{00698\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00699\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00700\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:\ \textcolor{comment}{//\ Views\(\backslash\)AdminZone\(\backslash\)AdminZonePage.xaml\ line\ 36}}
+\DoxyCodeLine{00701\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00702\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.AutoSuggestBox\ element7\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.AutoSuggestBox>(target);}
+\DoxyCodeLine{00703\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.AutoSuggestBox)element7).QuerySubmitted\ +=\ this.Control2\_QuerySubmitted;}
+\DoxyCodeLine{00704\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.AutoSuggestBox)element7).SuggestionChosen\ +=\ this.Control2\_SuggestionChosen;}
+\DoxyCodeLine{00705\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00706\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00707\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:\ \textcolor{comment}{//\ Views\(\backslash\)AdminZone\(\backslash\)AdminZonePage.xaml\ line\ 46}}
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00709\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.AdminZonePage\_Buttons\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.StackPanel>(target);}
+\DoxyCodeLine{00710\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00711\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00712\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 9:\ \textcolor{comment}{//\ Views\(\backslash\)AdminZone\(\backslash\)AdminZonePage.xaml\ line\ 52}}
+\DoxyCodeLine{00713\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00714\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.Button\ element9\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.Button>(target);}
+\DoxyCodeLine{00715\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.Button)element9).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00716\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.Button)element9).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00717\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00718\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00719\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 10:\ \textcolor{comment}{//\ Views\(\backslash\)AdminZone\(\backslash\)AdminZonePage.xaml\ line\ 72}}
+\DoxyCodeLine{00720\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00721\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.Button\ element10\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.Button>(target);}
+\DoxyCodeLine{00722\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.Button)element10).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00723\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.Button)element10).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00724\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00725\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00726\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 11:\ \textcolor{comment}{//\ Views\(\backslash\)AdminZone\(\backslash\)AdminZonePage.xaml\ line\ 91}}
+\DoxyCodeLine{00727\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00728\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.Button\ element11\ =\ global::WinRT.CastExtensions.As<global::Microsoft.UI.Xaml.Controls.Button>(target);}
+\DoxyCodeLine{00729\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.Button)element11).PointerEntered\ +=\ this.Button\_PointerEntered;}
+\DoxyCodeLine{00730\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((global::Microsoft.UI.Xaml.Controls.Button)element11).PointerExited\ +=\ this.Button\_PointerExited;}
+\DoxyCodeLine{00731\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00732\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00733\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00734\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00735\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00736\ \ \ \ \ \ \ \ \ \ \ \ \ this.\_contentLoaded\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00737\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_a6d1cf4848b9184f1f523f5178596bfe7}\index{BistroQ.Presentation.Views.AdminZonePage@{BistroQ.Presentation.Views.AdminZonePage}!GetBindingConnector@{GetBindingConnector}}
+\index{GetBindingConnector@{GetBindingConnector}!BistroQ.Presentation.Views.AdminZonePage@{BistroQ.Presentation.Views.AdminZonePage}}
+\doxysubsubsection{\texorpdfstring{GetBindingConnector()}{GetBindingConnector()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_a6d1cf4848b9184f1f523f5178596bfe7} 
+global.\+Microsoft.\+UI.\+Xaml.\+Markup.\+IComponent\+Connector Bistro\+Q.\+Presentation.\+Views.\+Admin\+Zone\+Page.\+Get\+Binding\+Connector (\begin{DoxyParamCaption}\item[{int}]{connection\+Id}{, }\item[{object}]{target}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_a6d1cf4848b9184f1f523f5178596bfe7}{Get\+Binding\+Connector(int connection\+Id, object target)} 
+
+
+
+Definition at line \mbox{\hyperlink{Debug_2net8_80-windows10_80_822621_80_2Views_2AdminZone_2AdminZonePage_8g_8cs_source_l00745}{745}} of file \mbox{\hyperlink{Debug_2net8_80-windows10_80_822621_80_2Views_2AdminZone_2AdminZonePage_8g_8cs_source}{Admin\+Zone\+Page.\+g.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00746\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00747\ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Markup.IComponentConnector\ returnValue\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00748\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(connectionId)}
+\DoxyCodeLine{00749\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00750\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \textcolor{comment}{//\ Views\(\backslash\)AdminZone\(\backslash\)AdminZonePage.xaml\ line\ 1}}
+\DoxyCodeLine{00751\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00752\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Controls.Page\ element1\ =\ (global::Microsoft.UI.Xaml.Controls.Page)target;}
+\DoxyCodeLine{00753\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AdminZonePage\_obj1\_Bindings\ bindings\ =\ \textcolor{keyword}{new}\ AdminZonePage\_obj1\_Bindings();}
+\DoxyCodeLine{00754\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ returnValue\ =\ bindings;}
+\DoxyCodeLine{00755\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bindings.SetDataRoot(\textcolor{keyword}{this});}
+\DoxyCodeLine{00756\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bindings.SetConverterLookupRoot(\textcolor{keyword}{this});}
+\DoxyCodeLine{00757\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Bindings\ =\ bindings;}
+\DoxyCodeLine{00758\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ element1.Loading\ +=\ bindings.Loading;}
+\DoxyCodeLine{00759\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1,\ bindings);}
+\DoxyCodeLine{00760\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00761\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00762\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00763\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ returnValue;}
+\DoxyCodeLine{00764\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_aa0ba4a320500c8c239660986e2792a23}\index{BistroQ.Presentation.Views.AdminZonePage@{BistroQ.Presentation.Views.AdminZonePage}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!BistroQ.Presentation.Views.AdminZonePage@{BistroQ.Presentation.Views.AdminZonePage}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_aa0ba4a320500c8c239660986e2792a23} 
+void Bistro\+Q.\+Presentation.\+Views.\+Admin\+Zone\+Page.\+Initialize\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_aa0ba4a320500c8c239660986e2792a23}{Initialize\+Component()} 
+
+
+
+Definition at line \mbox{\hyperlink{Debug_2net8_80-windows10_80_822621_80_2Views_2AdminZone_2AdminZonePage_8g_8i_8cs_source_l00037}{37}} of file \mbox{\hyperlink{Debug_2net8_80-windows10_80_822621_80_2Views_2AdminZone_2AdminZonePage_8g_8i_8cs_source}{Admin\+Zone\+Page.\+g.\+i.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_contentLoaded)}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \_contentLoaded\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ global::System.Uri\ resourceLocator\ =\ \textcolor{keyword}{new}\ global::System.Uri(\textcolor{stringliteral}{"{}ms-\/appx:///Views/AdminZone/AdminZonePage.xaml"{}});}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Application.LoadComponent(\textcolor{keyword}{this},\ resourceLocator,\ global::Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation.Application);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_aa0ba4a320500c8c239660986e2792a23}\index{BistroQ.Presentation.Views.AdminZonePage@{BistroQ.Presentation.Views.AdminZonePage}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!BistroQ.Presentation.Views.AdminZonePage@{BistroQ.Presentation.Views.AdminZonePage}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_aa0ba4a320500c8c239660986e2792a23} 
+void Bistro\+Q.\+Presentation.\+Views.\+Admin\+Zone\+Page.\+Initialize\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_aa0ba4a320500c8c239660986e2792a23}{Initialize\+Component()} 
+
+
+
+Definition at line \mbox{\hyperlink{Release_2net8_80-windows10_80_822621_80_2Views_2AdminZone_2AdminZonePage_8g_8i_8cs_source_l00037}{37}} of file \mbox{\hyperlink{Release_2net8_80-windows10_80_822621_80_2Views_2AdminZone_2AdminZonePage_8g_8i_8cs_source}{Admin\+Zone\+Page.\+g.\+i.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_contentLoaded)}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \_contentLoaded\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ global::System.Uri\ resourceLocator\ =\ \textcolor{keyword}{new}\ global::System.Uri(\textcolor{stringliteral}{"{}ms-\/appx:///Views/AdminZone/AdminZonePage.xaml"{}});}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ global::Microsoft.UI.Xaml.Application.LoadComponent(\textcolor{keyword}{this},\ resourceLocator,\ global::Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation.Application);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_a89dd2854511392fcc87ec3b92b4d360e}\index{BistroQ.Presentation.Views.AdminZonePage@{BistroQ.Presentation.Views.AdminZonePage}!ViewModel@{ViewModel}}
+\index{ViewModel@{ViewModel}!BistroQ.Presentation.Views.AdminZonePage@{BistroQ.Presentation.Views.AdminZonePage}}
+\doxysubsubsection{\texorpdfstring{ViewModel}{ViewModel}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Views_1_1AdminZonePage_a89dd2854511392fcc87ec3b92b4d360e} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZoneViewModel}{Admin\+Zone\+View\+Model}} Bistro\+Q.\+Presentation.\+Views.\+Admin\+Zone\+Page.\+View\+Model\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{AdminZonePage_8xaml_8cs_source_l00012}{12}} of file \mbox{\hyperlink{AdminZonePage_8xaml_8cs_source}{Admin\+Zone\+Page.\+xaml.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/obj/x64/\+Debug/net8.\+0-\/windows10.\+0.\+22621.\+0/\+Views/\+Admin\+Zone/Admin\+Zone\+Page.\+g.\+cs\item 
+Bistro\+Q.\+Presentation/obj/x64/\+Debug/net8.\+0-\/windows10.\+0.\+22621.\+0/\+Views/\+Admin\+Zone/Admin\+Zone\+Page.\+g.\+i.\+cs\item 
+Bistro\+Q.\+Presentation/obj/x64/\+Release/net8.\+0-\/windows10.\+0.\+22621.\+0/\+Views/\+Admin\+Zone/Admin\+Zone\+Page.\+g.\+i.\+cs\item 
+Bistro\+Q.\+Presentation/\+Views/\+Admin\+Zone/Admin\+Zone\+Page.\+xaml.\+cs\end{DoxyCompactItemize}

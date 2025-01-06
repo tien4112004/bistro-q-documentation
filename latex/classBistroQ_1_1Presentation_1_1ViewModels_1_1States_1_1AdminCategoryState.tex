@@ -1,0 +1,168 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Category\+State Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState}\index{BistroQ.Presentation.ViewModels.States.AdminCategoryState@{BistroQ.Presentation.ViewModels.States.AdminCategoryState}}
+
+
+State management class for the admin category interface. Handles category data, selection state, and search functionality.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Category\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Category\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_ab7faf2fafa4d052ab73a46c19f4ca964}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the state to default values. Clears selection, source data, and query parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_aa2d5d70ef856377b86b663b43b11c3c2}{Return\+To\+First\+Page}} ()
+\begin{DoxyCompactList}\small\item\em Returns to the first page of results. Used when search criteria change. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_aef0db92852c437f6244e087ef0d566b1}{Search\+Text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the search text for filtering categories. Directly maps to Query.\+Name with change notification. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_a5d239fe07874f0054fc5c71c7c1d78e7}{Can\+Edit}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets whether a category is selected and can be edited. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_ae1b012f519a9b2b18ac938445343d997}{Can\+Delete}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets whether the selected category can be deleted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+State management class for the admin category interface. Handles category data, selection state, and search functionality. 
+
+Manages category data including\+:
+\begin{DoxyItemize}
+\item Search by name
+\item Selection tracking
+\item Data source management 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{AdminCategoryState_8cs_source_l00018}{18}} of file \mbox{\hyperlink{AdminCategoryState_8cs_source}{Admin\+Category\+State.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_ab7faf2fafa4d052ab73a46c19f4ca964}\index{BistroQ.Presentation.ViewModels.States.AdminCategoryState@{BistroQ.Presentation.ViewModels.States.AdminCategoryState}!Reset@{Reset}}
+\index{Reset@{Reset}!BistroQ.Presentation.ViewModels.States.AdminCategoryState@{BistroQ.Presentation.ViewModels.States.AdminCategoryState}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_ab7faf2fafa4d052ab73a46c19f4ca964} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Category\+State.\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the state to default values. Clears selection, source data, and query parameters. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryState_8cs_source_l00080}{80}} of file \mbox{\hyperlink{AdminCategoryState_8cs_source}{Admin\+Category\+State.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ SelectedCategory\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ Source.Clear();}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ Query\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CategoryCollectionQueryParams}{CategoryCollectionQueryParams}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_aa2d5d70ef856377b86b663b43b11c3c2}\index{BistroQ.Presentation.ViewModels.States.AdminCategoryState@{BistroQ.Presentation.ViewModels.States.AdminCategoryState}!ReturnToFirstPage@{ReturnToFirstPage}}
+\index{ReturnToFirstPage@{ReturnToFirstPage}!BistroQ.Presentation.ViewModels.States.AdminCategoryState@{BistroQ.Presentation.ViewModels.States.AdminCategoryState}}
+\doxysubsubsection{\texorpdfstring{ReturnToFirstPage()}{ReturnToFirstPage()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_aa2d5d70ef856377b86b663b43b11c3c2} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Category\+State.\+Return\+To\+First\+Page (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns to the first page of results. Used when search criteria change. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryState_8cs_source_l00092}{92}} of file \mbox{\hyperlink{AdminCategoryState_8cs_source}{Admin\+Category\+State.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00093\ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ Query.Page\ =\ 1;}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_ae1b012f519a9b2b18ac938445343d997}\index{BistroQ.Presentation.ViewModels.States.AdminCategoryState@{BistroQ.Presentation.ViewModels.States.AdminCategoryState}!CanDelete@{CanDelete}}
+\index{CanDelete@{CanDelete}!BistroQ.Presentation.ViewModels.States.AdminCategoryState@{BistroQ.Presentation.ViewModels.States.AdminCategoryState}}
+\doxysubsubsection{\texorpdfstring{CanDelete}{CanDelete}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_ae1b012f519a9b2b18ac938445343d997} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Category\+State.\+Can\+Delete\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets whether the selected category can be deleted. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryState_8cs_source_l00074}{74}} of file \mbox{\hyperlink{AdminCategoryState_8cs_source}{Admin\+Category\+State.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_a5d239fe07874f0054fc5c71c7c1d78e7}\index{BistroQ.Presentation.ViewModels.States.AdminCategoryState@{BistroQ.Presentation.ViewModels.States.AdminCategoryState}!CanEdit@{CanEdit}}
+\index{CanEdit@{CanEdit}!BistroQ.Presentation.ViewModels.States.AdminCategoryState@{BistroQ.Presentation.ViewModels.States.AdminCategoryState}}
+\doxysubsubsection{\texorpdfstring{CanEdit}{CanEdit}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_a5d239fe07874f0054fc5c71c7c1d78e7} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Category\+State.\+Can\+Edit\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets whether a category is selected and can be edited. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryState_8cs_source_l00069}{69}} of file \mbox{\hyperlink{AdminCategoryState_8cs_source}{Admin\+Category\+State.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_aef0db92852c437f6244e087ef0d566b1}\index{BistroQ.Presentation.ViewModels.States.AdminCategoryState@{BistroQ.Presentation.ViewModels.States.AdminCategoryState}!SearchText@{SearchText}}
+\index{SearchText@{SearchText}!BistroQ.Presentation.ViewModels.States.AdminCategoryState@{BistroQ.Presentation.ViewModels.States.AdminCategoryState}}
+\doxysubsubsection{\texorpdfstring{SearchText}{SearchText}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminCategoryState_aef0db92852c437f6244e087ef0d566b1} 
+string Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Category\+State.\+Search\+Text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the search text for filtering categories. Directly maps to Query.\+Name with change notification. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryState_8cs_source_l00053}{53}} of file \mbox{\hyperlink{AdminCategoryState_8cs_source}{Admin\+Category\+State.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ Query.Name\ ??\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Query.Name\ !=\ value)}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Query.Name\ =\ value;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnPropertyChanged();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+States/Admin\+Category\+State.\+cs\end{DoxyCompactItemize}

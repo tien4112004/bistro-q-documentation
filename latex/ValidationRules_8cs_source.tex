@@ -1,0 +1,82 @@
+\doxysection{Validation\+Rules.\+cs}
+\hypertarget{ValidationRules_8cs_source}{}\label{ValidationRules_8cs_source}\index{BistroQ.Presentation/Validation/ValidationRules.cs@{BistroQ.Presentation/Validation/ValidationRules.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00001}00001\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Validation}{BistroQ.Presentation.Validation}};}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00007}00007\ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }ValidationRules}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }IntRules}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ (\textcolor{keywordtype}{bool}\ IsValid,\ \textcolor{keywordtype}{string}\ Message)\ NotEmpty(\textcolor{keywordtype}{object}?\ value,\ \textcolor{keywordtype}{string}\ fieldName)}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value\ is\ \textcolor{keyword}{null}}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ (\textcolor{keyword}{false},\ \$\textcolor{stringliteral}{"{}\{fieldName\}\ is\ required"{}})}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ (true,\ string.Empty);}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }StringRules}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00037}00037\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ (\textcolor{keywordtype}{bool}\ IsValid,\ \textcolor{keywordtype}{string}\ Message)\ NotEmpty(\textcolor{keywordtype}{object}?\ value,\ \textcolor{keywordtype}{string}\ fieldName)}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ var\ strValue\ =\ value\ as\ string;}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keywordtype}{string}.IsNullOrWhiteSpace(strValue)}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ (\textcolor{keyword}{false},\ \$\textcolor{stringliteral}{"{}\{fieldName\}\ is\ required"{}})}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ (true,\ string.Empty);}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ (\textcolor{keywordtype}{bool}\ IsValid,\ \textcolor{keywordtype}{string}\ Message)\ MinLength(\textcolor{keywordtype}{object}?\ value,\ \textcolor{keywordtype}{int}\ minLength,\ \textcolor{keywordtype}{string}\ fieldName)}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ var\ strValue\ =\ value\ as\ \textcolor{keywordtype}{string}\ ??\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ strValue.Length\ <\ minLength}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ (\textcolor{keyword}{false},\ \$\textcolor{stringliteral}{"{}\{fieldName\}\ must\ be\ at\ least\ \{minLength\}\ characters\ long"{}})}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ (true,\ string.Empty);}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ (\textcolor{keywordtype}{bool}\ IsValid,\ \textcolor{keywordtype}{string}\ Message)\ OnlyDigit(\textcolor{keywordtype}{object}?\ value,\ \textcolor{keywordtype}{string}\ fieldName)}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ var\ strValue\ =\ value\ as\ \textcolor{keywordtype}{string}\ ??\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isDigitOnly\ =\ strValue.All(\textcolor{keywordtype}{char}.IsDigit);}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isDigitOnly}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ (\textcolor{keyword}{true},\ \textcolor{keywordtype}{string}.Empty)}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ (false,\ \$\textcolor{stringliteral}{"{}\{fieldName\}\ must\ contain\ only\ digits"{}});}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ (\textcolor{keywordtype}{bool}\ IsValid,\ \textcolor{keywordtype}{string}\ Message)\ MaxLength(\textcolor{keywordtype}{object}?\ value,\ \textcolor{keywordtype}{int}\ maxLength,\ \textcolor{keywordtype}{string}\ fieldName)}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ var\ strValue\ =\ value\ as\ \textcolor{keywordtype}{string}\ ??\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ strValue.Length\ >\ maxLength}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ (\textcolor{keyword}{false},\ \$\textcolor{stringliteral}{"{}\{fieldName\}\ must\ be\ at\ most\ \{maxLength\}\ characters\ long"{}})}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ (true,\ string.Empty);}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ (\textcolor{keywordtype}{bool}\ IsValid,\ \textcolor{keywordtype}{string}\ Message)\ NoWhitespace(\textcolor{keywordtype}{object}?\ value,\ \textcolor{keywordtype}{string}\ fieldName)}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ var\ strValue\ =\ value\ as\ \textcolor{keywordtype}{string}\ ??\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ strValue.Contains(\textcolor{charliteral}{'\ '})}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ (\textcolor{keyword}{false},\ \$\textcolor{stringliteral}{"{}\{fieldName\}\ must\ not\ contain\ whitespace"{}})}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ (true,\ string.Empty);}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00126}00126\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00132}00132\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }DecimalRules}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00133}00133\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ (\textcolor{keywordtype}{bool}\ IsValid,\ \textcolor{keywordtype}{string}\ Message)\ NotEmpty(\textcolor{keywordtype}{object}?\ value,\ \textcolor{keywordtype}{string}\ fieldName)}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value\ is\ \textcolor{keyword}{null}}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ (\textcolor{keyword}{false},\ \$\textcolor{stringliteral}{"{}\{fieldName\}\ is\ required"{}})}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ (true,\ string.Empty);}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ (\textcolor{keywordtype}{bool}\ IsValid,\ \textcolor{keywordtype}{string}\ Message)\ Min(\textcolor{keywordtype}{object}?\ value,\ decimal\ minValue,\ \textcolor{keywordtype}{string}\ fieldName)}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value\ is\ decimal\ decimalValue\ \&\&\ decimalValue\ <\ minValue}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ (\textcolor{keyword}{false},\ \$\textcolor{stringliteral}{"{}\{fieldName\}\ must\ be\ greater\ than\ or\ equal\ to\ \{minValue\}"{}})}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ (true,\ string.Empty);}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00167}00167\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ValidationRules_8cs_source_l00168}00168\ \}}
+
+\end{DoxyCode}

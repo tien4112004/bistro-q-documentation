@@ -1,0 +1,5 @@
+<map id="IAccountDataService" name="IAccountDataService">
+<area shape="rect" id="Node000001" title="Interface for managing account&#45;related data operations through API endpoints. Provides methods for CR..." alt="" coords="31,5,177,32"/>
+<area shape="rect" id="Node000002" href="$classBistroQ_1_1Service_1_1Data_1_1AccountDataService.html" title="Implementation of account data service that communicates with the API endpoints. Uses AutoMapper for ..." alt="" coords="5,80,203,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,48,107,80,101,80,101,48"/>
+</map>

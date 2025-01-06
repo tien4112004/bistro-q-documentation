@@ -1,0 +1,89 @@
+\doxysection{Activation\+Service.\+cs}
+\hypertarget{ActivationService_8cs_source}{}\label{ActivationService_8cs_source}\index{BistroQ.Presentation/Services/ActivationService.cs@{BistroQ.Presentation/Services/ActivationService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Activation}{BistroQ.Presentation.Activation}};}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1Services}{BistroQ.Presentation.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views}{BistroQ.Presentation.Views}};}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00008}\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Services}{00008}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Services}{BistroQ.Presentation.Services}};}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00010}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1ActivationService}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1ActivationService}{ActivationService}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IActivationService}{IActivationService}}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Activation_1_1ActivationHandler}{ActivationHandler<LaunchActivatedEventArgs>}}\ \_defaultHandler;}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IEnumerable<IActivationHandler>\ \_activationHandlers;}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IThemeSelectorService}{IThemeSelectorService}}\ \_themeSelectorService;}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{private}\ UIElement?\ \_shell\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1ActivationService}{ActivationService}}(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Activation_1_1ActivationHandler}{ActivationHandler<LaunchActivatedEventArgs>}}\ defaultHandler,\ IEnumerable<IActivationHandler>\ activationHandlers,\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IThemeSelectorService}{IThemeSelectorService}}\ themeSelectorService)}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \_defaultHandler\ =\ defaultHandler;}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \_activationHandlers\ =\ activationHandlers;}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \_themeSelectorService\ =\ themeSelectorService;}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ ActivateAsync(\textcolor{keywordtype}{object}\ activationArgs)}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00025}00025\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_shell\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cleanup\ shell}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \_shell\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Execute\ tasks\ before\ activation.}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ await\ InitializeAsync();}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow\ is\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1MainWindow}{MainWindow}}\ mainWindow\ \&\&\ mainWindow.IsClosed)}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ App.MainWindow\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1MainWindow}{MainWindow}}();}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ the\ MainWindow\ Content.}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.Content\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \_shell\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage}{ShellPage}}>();}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ App.MainWindow.Content\ =\ \_shell\ ??\ \textcolor{keyword}{new}\ Frame();}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ activation\ via\ ActivationHandlers.}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ await\ HandleActivationAsync(activationArgs);}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Activate\ the\ MainWindow.}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.Activate();}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Execute\ tasks\ after\ activation.}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ await\ StartupAsync();}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00057}00057\ \ \ \ \ \textcolor{keyword}{private}\ async\ Task\ HandleActivationAsync(\textcolor{keywordtype}{object}\ activationArgs)}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00058}00058\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ var\ activationHandler\ =\ \_activationHandlers.FirstOrDefault(h\ =>\ h.CanHandle(activationArgs));}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (activationHandler\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ await\ activationHandler.HandleAsync(activationArgs);}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_defaultHandler.CanHandle(activationArgs))}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_defaultHandler.HandleAsync(activationArgs);}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00072}00072\ \ \ \ \ \textcolor{keyword}{private}\ async\ Task\ InitializeAsync()}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00073}00073\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ await\ \_themeSelectorService.InitializeAsync().ConfigureAwait(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ await\ Task.CompletedTask;}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00078}00078\ \ \ \ \ \textcolor{keyword}{private}\ async\ Task\ StartupAsync()}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00079}00079\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ await\ \_themeSelectorService.SetRequestedThemeAsync();}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ await\ Task.CompletedTask;}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActivationService_8cs_source_l00083}00083\ \}}
+
+\end{DoxyCode}

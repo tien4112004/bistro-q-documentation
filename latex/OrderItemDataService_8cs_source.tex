@@ -1,0 +1,108 @@
+\doxysection{Order\+Item\+Data\+Service.\+cs}
+\hypertarget{OrderItemDataService_8cs_source}{}\label{OrderItemDataService_8cs_source}\index{BistroQ.Service/Data/OrderItemDataService.cs@{BistroQ.Service/Data/OrderItemDataService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }AutoMapper;}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos}{BistroQ.Domain.Dtos}};}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos_1_1Orders}{BistroQ.Domain.Dtos.Orders}};}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Enums}{BistroQ.Domain.Enums}};}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Models_1_1Entities}{BistroQ.Domain.Models.Entities}};}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Service_1_1Data}{BistroQ.Service.Data}};}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00014}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderItemDataService}{00014}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderItemDataService}{OrderItemDataService}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrderItemDataService}}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00016}00016\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApiClient}}\ \_apiClient;}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IMapper\ \_mapper;}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00026}00026\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00028}00028\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00034}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderItemDataService_a4969beb90f5f97298d5e8061982c1732}{00034}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderItemDataService_a4969beb90f5f97298d5e8061982c1732}{OrderItemDataService}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApiClient}}\ apiClient,\ IMapper\ mapper)}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00035}00035\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \_apiClient\ =\ apiClient;}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00039}00039\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00041}00041\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00042}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderItemDataService_a2fe1b86eaa06849eacfe1c19384b5f2a}{00042}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IEnumerable<OrderItem>>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderItemDataService_a2fe1b86eaa06849eacfe1c19384b5f2a}{BulkUpdateOrderItemsStatusAsync}}(IEnumerable<string>\ orderItemIds,\ OrderItemStatus\ status)}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00043}00043\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PatchAsync<IEnumerable<DetailOrderItemResponse>>(\textcolor{stringliteral}{"{}api/Kitchen/Order/Status"{}},}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Orders_1_1UpdateOrderItemStatusRequest}{UpdateOrderItemStatusRequest}}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OrderItemIds\ =\ orderItemIds.Select(x\ =>\ x.ToString()),}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Status\ =\ status.ToString()}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<IEnumerable<OrderItem>>(response.Data);}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00059}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderItemDataService_ab2e2b0aaab8d0b1f6cb7774a8bfbf626}{00059}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiCollectionResponse<IEnumerable<OrderItem>>>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderItemDataService_ab2e2b0aaab8d0b1f6cb7774a8bfbf626}{GetOrderItemsAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Orders_1_1OrderItemColletionQueryParams}{OrderItemColletionQueryParams}}\ queryParams\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00060}00060\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (queryParams\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ queryParams\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Orders_1_1OrderItemColletionQueryParams}{OrderItemColletionQueryParams}}();}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ queryParams.OrderBy\ =\ \textcolor{stringliteral}{"{}UpdatedAt"{}};}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ queryParams.OrderDirection\ =\ \textcolor{stringliteral}{"{}desc"{}};}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetCollectionAsync<IEnumerable<DetailOrderItemResponse>>(\textcolor{stringliteral}{"{}api/Kitchen/Order"{}},\ queryParams);}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ var\ orderItems\ =\ \_mapper.Map<IEnumerable<OrderItem>>(response.Data);}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{ApiCollectionResponse<IEnumerable<OrderItem>}}>(orderItems,\ response.TotalItems,\ response.CurrentPage,\ response.TotalPages);}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00080}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderItemDataService_a673941f0d7023fa960cf25140b84a36a}{00080}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<IEnumerable<OrderItem>>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderItemDataService_a673941f0d7023fa960cf25140b84a36a}{GetOrderItemsByStatusAsync}}(OrderItemStatus\ status)}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00081}00081\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetAsync<IEnumerable<DetailOrderItemResponse>>(\textcolor{stringliteral}{"{}api/Kitchen/Order"{}},}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Orders_1_1OrderItemColletionQueryParams}{OrderItemColletionQueryParams}}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Status\ =\ status.ToString(),}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OrderBy\ =\ \textcolor{stringliteral}{"{}CreatedAt"{}},}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OrderDirection\ =\ \textcolor{stringliteral}{"{}desc"{}},}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Size\ =\ 10000,}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<IEnumerable<OrderItem>>(response.Data);}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00099}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderItemDataService_a02e1408bf19c5260fd734aac479432a5}{00099}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<OrderItem?>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderItemDataService_a02e1408bf19c5260fd734aac479432a5}{UpdateOrderItemStatusAsync}}(\textcolor{keywordtype}{int}\ orderItemId,\ OrderItemStatus\ status)}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00100}00100\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PatchAsync<IEnumerable<DetailOrderItemResponse>>(\textcolor{stringliteral}{"{}api/Kitchen/Order/Status"{}},}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Orders_1_1UpdateOrderItemStatusRequest}{UpdateOrderItemStatusRequest}}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OrderItemIds\ =\ \textcolor{keyword}{new}\ List<string>(orderItemId),}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Status\ =\ status.ToString()}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ var\ orderItems\ =\ \_mapper.Map<IEnumerable<OrderItem>>(response.Data);}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ orderItems.FirstOrDefault();}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00116}00116\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{OrderItemDataService_8cs_source_l00117}00117\ \}}
+
+\end{DoxyCode}

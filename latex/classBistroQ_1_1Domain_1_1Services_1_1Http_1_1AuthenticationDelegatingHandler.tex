@@ -1,0 +1,157 @@
+\doxysection{Bistro\+Q.\+Domain.\+Services.\+Http.\+Authentication\+Delegating\+Handler Class Reference}
+\hypertarget{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler}{}\label{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler}\index{BistroQ.Domain.Services.Http.AuthenticationDelegatingHandler@{BistroQ.Domain.Services.Http.AuthenticationDelegatingHandler}}
+
+
+Handles HTTP request authentication by automatically adding and refreshing authentication tokens. Implements a delegating handler pattern to intercept and modify HTTP requests.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Domain.\+Services.\+Http.\+Authentication\+Delegating\+Handler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Domain.\+Services.\+Http.\+Authentication\+Delegating\+Handler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler_a933c34d6b4965919049ba1e426cebc43}{Authentication\+Delegating\+Handler}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuth\+Service}} auth\+Service)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler}{Authentication\+Delegating\+Handler} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override async Task$<$ Http\+Response\+Message $>$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler_ac0d85ae5d69ffd37aba73a34de1b2949}{Send\+Async}} (Http\+Request\+Message request, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Processes HTTP requests by adding authentication and handling token refresh scenarios. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles HTTP request authentication by automatically adding and refreshing authentication tokens. Implements a delegating handler pattern to intercept and modify HTTP requests. 
+
+This handler\+:
+\begin{DoxyItemize}
+\item Adds authentication headers to outgoing requests
+\item Handles 401 Unauthorized responses by attempting to refresh the token
+\item Automatically retries failed requests with the new token
+\item Triggers logout on authentication failures 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{AuthDelegateHandler_8cs_source_l00018}{18}} of file \mbox{\hyperlink{AuthDelegateHandler_8cs_source}{Auth\+Delegate\+Handler.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler_a933c34d6b4965919049ba1e426cebc43}\index{BistroQ.Domain.Services.Http.AuthenticationDelegatingHandler@{BistroQ.Domain.Services.Http.AuthenticationDelegatingHandler}!AuthenticationDelegatingHandler@{AuthenticationDelegatingHandler}}
+\index{AuthenticationDelegatingHandler@{AuthenticationDelegatingHandler}!BistroQ.Domain.Services.Http.AuthenticationDelegatingHandler@{BistroQ.Domain.Services.Http.AuthenticationDelegatingHandler}}
+\doxysubsubsection{\texorpdfstring{AuthenticationDelegatingHandler()}{AuthenticationDelegatingHandler()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler_a933c34d6b4965919049ba1e426cebc43} 
+Bistro\+Q.\+Domain.\+Services.\+Http.\+Authentication\+Delegating\+Handler.\+Authentication\+Delegating\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuth\+Service}}}]{auth\+Service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler}{Authentication\+Delegating\+Handler} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em auth\+Service} & The authentication service used for token management.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{AuthDelegateHandler_8cs_source_l00032}{32}} of file \mbox{\hyperlink{AuthDelegateHandler_8cs_source}{Auth\+Delegate\+Handler.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \_authService\ =\ authService;}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler_ac0d85ae5d69ffd37aba73a34de1b2949}\index{BistroQ.Domain.Services.Http.AuthenticationDelegatingHandler@{BistroQ.Domain.Services.Http.AuthenticationDelegatingHandler}!SendAsync@{SendAsync}}
+\index{SendAsync@{SendAsync}!BistroQ.Domain.Services.Http.AuthenticationDelegatingHandler@{BistroQ.Domain.Services.Http.AuthenticationDelegatingHandler}}
+\doxysubsubsection{\texorpdfstring{SendAsync()}{SendAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler_ac0d85ae5d69ffd37aba73a34de1b2949} 
+override async Task$<$ Http\+Response\+Message $>$ Bistro\+Q.\+Domain.\+Services.\+Http.\+Authentication\+Delegating\+Handler.\+Send\+Async (\begin{DoxyParamCaption}\item[{Http\+Request\+Message}]{request}{, }\item[{Cancellation\+Token}]{cancellation\+Token}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Processes HTTP requests by adding authentication and handling token refresh scenarios. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The HTTP request message to send.\\
+\hline
+{\em cancellation\+Token} & Token for cancelling the operation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Task$<$\+Http\+Response\+Message$>$ representing the result of the HTTP request. 
+\end{DoxyReturn}
+
+
+The method implements a token refresh strategy\+:
+\begin{DoxyEnumerate}
+\item Adds the current authentication token
+\item Sends the request
+\item If unauthorized (401)\+:
+\begin{DoxyItemize}
+\item Attempts to refresh the token
+\item Retries the request with the new token
+\item Logs out on failure 
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+Definition at line \mbox{\hyperlink{AuthDelegateHandler_8cs_source_l00056}{56}} of file \mbox{\hyperlink{AuthDelegateHandler_8cs_source}{Auth\+Delegate\+Handler.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ token\ to\ initial\ request}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ await\ AddAuthenticationHeader(request);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Send\ the\ request}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ base.SendAsync(request,\ cancellationToken);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ unauthorized,\ try\ refresh\ and\ retry\ once}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.StatusCode\ ==\ HttpStatusCode.Unauthorized)}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Just\ refresh\ -\/\ no\ need\ for\ complex\ concurrency}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ newToken\ =\ await\ \_authService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a8643617b46ca3987290f660ec6658911}{RefreshTokenAsync}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ newRequest\ =\ await\ CloneRequest(request);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newRequest.Headers.Authorization\ =}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ AuthenticationHeaderValue(\textcolor{stringliteral}{"{}Bearer"{}},\ newToken);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ base.SendAsync(newRequest,\ cancellationToken);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception)}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_authService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_aec0bbaecaaa25bb1aa01f3e21c637bee}{LogoutAsync}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ response;}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Service/\+Http/Auth\+Delegate\+Handler.\+cs\end{DoxyCompactItemize}

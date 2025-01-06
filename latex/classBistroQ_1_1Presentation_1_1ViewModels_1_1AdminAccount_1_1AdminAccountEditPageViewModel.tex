@@ -1,0 +1,496 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+
+
+View model for the admin account editing page. Handles the logic for modifying existing admin accounts and managing related data such as zones and tables.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a3b21d254887ccf35e9418f364296d69d}{Admin\+Account\+Edit\+Page\+View\+Model}} (\mbox{\hyperlink{interfaceIAccountDataService}{IAccount\+Data\+Service}} account\+Data\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}{IZone\+Data\+Service}} zone\+Data\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService}{ITable\+Data\+Service}} table\+Data\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}} dialog\+Service, IMapper mapper)
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ab60290c958ebef442ae6b0b0b9e67b08}{Navigate\+Back}} ()
+\begin{DoxyCompactList}\small\item\em Navigates back to the previous page. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a5be3cfafd061f0d0fea7acde5243c644}{Update\+Account\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Updates the account with the provided form data. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a5491a503ca917c081b2402dc1a0fd589}{Load\+Zones\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Loads the list of available zones. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a4cf72cc5dd79ce3bbab3025762e0fa2c}{Load\+Tables\+Async}} (int zone\+Id)
+\begin{DoxyCompactList}\small\item\em Loads the tables for a specific zone. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_af92d3d3bf93e52d35c78ea3c1163e64e}{On\+Navigated\+To}} (object parameter)
+\begin{DoxyCompactList}\small\item\em Handles navigation to this page. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ad0b7878998b01e939ca9f41f039d63bc}{On\+Navigated\+From}} ()
+\begin{DoxyCompactList}\small\item\em Handles navigation from this page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a26bc4340b524aa594c5d0572841ab9d4}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Performs application-\/defined tasks associated with freeing, releasing, or resetting unmanaged resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1ZoneViewModel}{Zone\+View\+Model}} $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ada196d2c9cf5d0ead0d7edab2d31c4cf}{Zones}}
+\begin{DoxyCompactList}\small\item\em Collection of available zones in the system. \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel}{Table\+View\+Model}} $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ad2da725c9e87ed53fb123b4a869593e4}{Tables}}
+\begin{DoxyCompactList}\small\item\em Collection of available tables in the selected zone. \end{DoxyCompactList}\item 
+Observable\+Collection$<$ string $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a0536ef4f6bbdbdc199f6bcbbc6b1a660}{Roles}}
+\begin{DoxyCompactList}\small\item\em Collection of available user roles in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1AccountViewModel}{Account\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a0d721e8526069204f416643822557635}{Account}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The account being edited. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a139ac37d0a6b8955e58c62ffff4627fc}{Edit\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command for updating the account details. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a92bcec1e7097d9a295a2bde58060952b}{Enable\+Password\+Edit\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command for enabling password editing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View model for the admin account editing page. Handles the logic for modifying existing admin accounts and managing related data such as zones and tables. 
+
+This class implements INavigation\+Aware for navigation handling and IDisposable for resource cleanup. It uses the MVVM pattern with Observable\+Recipient as its base class. 
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00027}{27}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a3b21d254887ccf35e9418f364296d69d}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!AdminAccountEditPageViewModel@{AdminAccountEditPageViewModel}}
+\index{AdminAccountEditPageViewModel@{AdminAccountEditPageViewModel}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{AdminAccountEditPageViewModel()}{AdminAccountEditPageViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a3b21d254887ccf35e9418f364296d69d} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+Admin\+Account\+Edit\+Page\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceIAccountDataService}{IAccount\+Data\+Service}}}]{account\+Data\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}{IZone\+Data\+Service}}}]{zone\+Data\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService}{ITable\+Data\+Service}}}]{table\+Data\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}}}]{dialog\+Service}{, }\item[{IMapper}]{mapper}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00100}{100}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \_accountDataService\ =\ accountDataService;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \_zoneDataService\ =\ zoneDataService;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \_tableDataService\ =\ tableDataService;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \_dialogService\ =\ dialogService;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ada196d2c9cf5d0ead0d7edab2d31c4cf}{Zones}}\ =\ \textcolor{keyword}{new}\ ObservableCollection<ZoneViewModel>();}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ad2da725c9e87ed53fb123b4a869593e4}{Tables}}\ =\ \textcolor{keyword}{new}\ ObservableCollection<TableViewModel>();}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a0536ef4f6bbdbdc199f6bcbbc6b1a660}{Roles}}\ =\ \textcolor{keyword}{new}\ ObservableCollection<string>\ \{\ \textcolor{stringliteral}{"{}Admin"{}},\ \textcolor{stringliteral}{"{}Kitchen"{}},\ \textcolor{stringliteral}{"{}Cashier"{}},\ \textcolor{stringliteral}{"{}Client"{}}\ \};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a139ac37d0a6b8955e58c62ffff4627fc}{EditCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a5be3cfafd061f0d0fea7acde5243c644}{UpdateAccountAsync}},\ CanEditAccount);}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a92bcec1e7097d9a295a2bde58060952b}{EnablePasswordEditCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand(EnablePasswordEdit);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ this.PropertyChanged\ +=\ OnPropertyChanged;}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a26bc4340b524aa594c5d0572841ab9d4}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a26bc4340b524aa594c5d0572841ab9d4} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs application-\/defined tasks associated with freeing, releasing, or resetting unmanaged resources. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00332}{332}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00333\ \ \ \ \ \{}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_isDisposed)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \_isDisposed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ this.PropertyChanged\ -\/=\ OnPropertyChanged;}
+\DoxyCodeLine{00337\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a4cf72cc5dd79ce3bbab3025762e0fa2c}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!LoadTablesAsync@{LoadTablesAsync}}
+\index{LoadTablesAsync@{LoadTablesAsync}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{LoadTablesAsync()}{LoadTablesAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a4cf72cc5dd79ce3bbab3025762e0fa2c} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+Load\+Tables\+Async (\begin{DoxyParamCaption}\item[{int}]{zone\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads the tables for a specific zone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Id} & The ID of the zone to load tables for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00257}{257}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00258\ \ \ \ \ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tables\ =\ await\ \_tableDataService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a1b48417687e40debd67779094e764545}{GetGridDataAsync}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1TableCollectionQueryParams}{TableCollectionQueryParams}}}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ZoneId\ =\ zoneId,}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Size\ =\ 1000}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ad2da725c9e87ed53fb123b4a869593e4}{Tables}}.Clear();}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tableViewModels\ =\ \_mapper.Map<IEnumerable<TableViewModel>>(tables.Data);}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ table\ \textcolor{keywordflow}{in}\ tableViewModels)}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ad2da725c9e87ed53fb123b4a869593e4}{Tables}}.Add(table);}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ IsTableSelectionEnabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}{ShowErrorDialog}}(ex.Message,\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ IsTableSelectionEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00280\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a5491a503ca917c081b2402dc1a0fd589}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!LoadZonesAsync@{LoadZonesAsync}}
+\index{LoadZonesAsync@{LoadZonesAsync}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{LoadZonesAsync()}{LoadZonesAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a5491a503ca917c081b2402dc1a0fd589} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+Load\+Zones\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads the list of available zones. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00230}{230}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00231\ \ \ \ \ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_zoneDataService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a7b09bc9f67d3845e4366b42cbb481f7c}{GetGridDataAsync}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams}{ZoneCollectionQueryParams}}}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Size\ =\ 1000}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ada196d2c9cf5d0ead0d7edab2d31c4cf}{Zones}}.Clear();}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ var\ zones\ =\ \_mapper.Map<IEnumerable<ZoneViewModel>>(response.Data);}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ zone\ \textcolor{keywordflow}{in}\ zones)}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ada196d2c9cf5d0ead0d7edab2d31c4cf}{Zones}}.Add(zone);}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}{ShowErrorDialog}}(ex.Message,\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00250\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ab60290c958ebef442ae6b0b0b9e67b08}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!NavigateBack@{NavigateBack}}
+\index{NavigateBack@{NavigateBack}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{NavigateBack()}{NavigateBack()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ab60290c958ebef442ae6b0b0b9e67b08} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+Navigate\+Back (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Navigates back to the previous page. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00180}{180}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181\ \ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ App.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigationService}}>().GoBack();}
+\DoxyCodeLine{00183\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ad0b7878998b01e939ca9f41f039d63bc}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!OnNavigatedFrom@{OnNavigatedFrom}}
+\index{OnNavigatedFrom@{OnNavigatedFrom}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedFrom()}{OnNavigatedFrom()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ad0b7878998b01e939ca9f41f039d63bc} 
+Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+On\+Navigated\+From (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles navigation from this page. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00323}{323}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00324\ \ \ \ \ \{}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a26bc4340b524aa594c5d0572841ab9d4}{Dispose}}();}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.CompletedTask;}
+\DoxyCodeLine{00327\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_af92d3d3bf93e52d35c78ea3c1163e64e}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!OnNavigatedTo@{OnNavigatedTo}}
+\index{OnNavigatedTo@{OnNavigatedTo}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedTo()}{OnNavigatedTo()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_af92d3d3bf93e52d35c78ea3c1163e64e} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+On\+Navigated\+To (\begin{DoxyParamCaption}\item[{object}]{parameter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles navigation to this page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Navigation parameter containing the account to edit.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00287}{287}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00288\ \ \ \ \ \{}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parameter\ is\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1AccountViewModel}{AccountViewModel}}\ account)}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a0d721e8526069204f416643822557635}{Account}}\ =\ account;}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a5491a503ca917c081b2402dc1a0fd589}{LoadZonesAsync}}();}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a0d721e8526069204f416643822557635}{Account}}.TableId\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a4cf72cc5dd79ce3bbab3025762e0fa2c}{LoadTablesAsync}}(account.ZoneId\ ??\ 0);}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Form\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm}{AddAccountForm}}}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Username\ =\ account.Username,}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Role\ =\ account.Role,}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TableId\ =\ account.TableId,}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Password\ =\ \textcolor{keyword}{null},}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ZoneId\ =\ account.ZoneId}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IsTableSelectionEnabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Form\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddAccountForm}{AddAccountForm}}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Username\ =\ account.Username,}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Role\ =\ account.Role,}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IsTableSelectionEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00317\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a5be3cfafd061f0d0fea7acde5243c644}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!UpdateAccountAsync@{UpdateAccountAsync}}
+\index{UpdateAccountAsync@{UpdateAccountAsync}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{UpdateAccountAsync()}{UpdateAccountAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a5be3cfafd061f0d0fea7acde5243c644} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+Update\+Account\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the account with the provided form data. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00189}{189}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00190\ \ \ \ \ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ ValidateForm();}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!CanEditAccount())}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}{ShowErrorDialog}}(\textcolor{stringliteral}{"{}Data\ is\ invalid.\ Please\ check\ again."{}},\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1UpdateAccountRequest}{UpdateAccountRequest}}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Username\ =\ Form.Username,}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Role\ =\ Form.Role,}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Password\ =\ Form.Password,}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TableId\ =\ Form.TableId}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_accountDataService.\mbox{\hyperlink{interfaceIAccountDataService_ac5ce3df95f1233ba0300fdb6e67c3d99}{UpdateAccountAsync}}(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a0d721e8526069204f416643822557635}{Account}}.UserId,\ request);}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_ad4188d1948c0ce128c22d400605e0d4b}{ShowSuccessDialog}}(\textcolor{stringliteral}{"{}Account\ updated\ successfully."{}},\ \textcolor{stringliteral}{"{}Success"{}});}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ab60290c958ebef442ae6b0b0b9e67b08}{NavigateBack}}();}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(ex.StackTrace);}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}{ShowErrorDialog}}(ex.Message,\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00224\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a0536ef4f6bbdbdc199f6bcbbc6b1a660}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!Roles@{Roles}}
+\index{Roles@{Roles}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{Roles}{Roles}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a0536ef4f6bbdbdc199f6bcbbc6b1a660} 
+Observable\+Collection$<$string$>$ Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+Roles}
+
+
+
+Collection of available user roles in the system. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00043}{43}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ad2da725c9e87ed53fb123b4a869593e4}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!Tables@{Tables}}
+\index{Tables@{Tables}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{Tables}{Tables}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ad2da725c9e87ed53fb123b4a869593e4} 
+Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1TableViewModel}{Table\+View\+Model}}$>$ Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+Tables}
+
+
+
+Collection of available tables in the selected zone. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00038}{38}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ada196d2c9cf5d0ead0d7edab2d31c4cf}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!Zones@{Zones}}
+\index{Zones@{Zones}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{Zones}{Zones}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_ada196d2c9cf5d0ead0d7edab2d31c4cf} 
+Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1ZoneViewModel}{Zone\+View\+Model}}$>$ Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+Zones}
+
+
+
+Collection of available zones in the system. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00033}{33}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a0d721e8526069204f416643822557635}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!Account@{Account}}
+\index{Account@{Account}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{Account}{Account}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a0d721e8526069204f416643822557635} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1AccountViewModel}{Account\+View\+Model}} Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+Account\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The account being edited. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00048}{48}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a139ac37d0a6b8955e58c62ffff4627fc}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!EditCommand@{EditCommand}}
+\index{EditCommand@{EditCommand}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{EditCommand}{EditCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a139ac37d0a6b8955e58c62ffff4627fc} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+Edit\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command for updating the account details. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00091}{91}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a92bcec1e7097d9a295a2bde58060952b}\index{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}!EnablePasswordEditCommand@{EnablePasswordEditCommand}}
+\index{EnablePasswordEditCommand@{EnablePasswordEditCommand}!BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel@{BistroQ.Presentation.ViewModels.AdminAccount.AdminAccountEditPageViewModel}}
+\doxysubsubsection{\texorpdfstring{EnablePasswordEditCommand}{EnablePasswordEditCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminAccount_1_1AdminAccountEditPageViewModel_a92bcec1e7097d9a295a2bde58060952b} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Account.\+Admin\+Account\+Edit\+Page\+View\+Model.\+Enable\+Password\+Edit\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command for enabling password editing. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source_l00096}{96}} of file \mbox{\hyperlink{AdminAccountEditPageViewModel_8cs_source}{Admin\+Account\+Edit\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Admin\+Account/Admin\+Account\+Edit\+Page\+View\+Model.\+cs\end{DoxyCompactItemize}

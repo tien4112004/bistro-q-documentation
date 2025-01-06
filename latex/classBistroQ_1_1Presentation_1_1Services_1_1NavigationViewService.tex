@@ -1,0 +1,245 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Services.\+Navigation\+View\+Service Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService}{}\label{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService}\index{BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}}
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Services.\+Navigation\+View\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Services.\+Navigation\+View\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a58e26674f0359647084cc08c4bfc3f3a}{Navigation\+View\+Service}} (\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigation\+Service}} navigation\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IPageService}{IPage\+Service}} page\+Service)
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a0289694ed5467ba73c5ca3d4156c6358}{Initialize}} (Navigation\+View navigation\+View, string role)
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_aeb763520328eb14277e64fba83ea2265}{Navigate\+To\+Entry\+Point}} ()
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a1ae83a7646b3029d9cffd3083787f908}{Unregister\+Events}} ()
+\item 
+Navigation\+View\+Item? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a33616c88f6d68fd05de01121bfd83faa}{Get\+Selected\+Item}} (Type page\+Type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationViewService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+INavigation\+View\+Service}}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a6a294e27c31dcb04929596f41c08cc6c}{Role}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+IList$<$ object $>$? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a118c891acbb621d30344d118f65220b9}{Menu\+Items}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+object? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a590d23df8b88f534656358fc7b02716a}{Settings\+Item}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationViewService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+INavigation\+View\+Service}}}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{NavigationViewService_8cs_source_l00009}{9}} of file \mbox{\hyperlink{NavigationViewService_8cs_source}{Navigation\+View\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a58e26674f0359647084cc08c4bfc3f3a}\index{BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}!NavigationViewService@{NavigationViewService}}
+\index{NavigationViewService@{NavigationViewService}!BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}}
+\doxysubsubsection{\texorpdfstring{NavigationViewService()}{NavigationViewService()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a58e26674f0359647084cc08c4bfc3f3a} 
+Bistro\+Q.\+Presentation.\+Services.\+Navigation\+View\+Service.\+Navigation\+View\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigation\+Service}}}]{navigation\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IPageService}{IPage\+Service}}}]{page\+Service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{NavigationViewService_8cs_source_l00026}{26}} of file \mbox{\hyperlink{NavigationViewService_8cs_source}{Navigation\+View\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \_navigationService\ =\ navigationService;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \_pageService\ =\ pageService;}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a33616c88f6d68fd05de01121bfd83faa}\index{BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}!GetSelectedItem@{GetSelectedItem}}
+\index{GetSelectedItem@{GetSelectedItem}!BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}}
+\doxysubsubsection{\texorpdfstring{GetSelectedItem()}{GetSelectedItem()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a33616c88f6d68fd05de01121bfd83faa} 
+Navigation\+View\+Item? Bistro\+Q.\+Presentation.\+Services.\+Navigation\+View\+Service.\+Get\+Selected\+Item (\begin{DoxyParamCaption}\item[{Type}]{page\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationViewService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+INavigation\+View\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{NavigationViewService_8cs_source_l00070}{70}} of file \mbox{\hyperlink{NavigationViewService_8cs_source}{Navigation\+View\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_navigationView\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetSelectedItem(\_navigationView.MenuItems,\ pageType)\ ??\ GetSelectedItem(\_navigationView.FooterMenuItems,\ pageType);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a0289694ed5467ba73c5ca3d4156c6358}\index{BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a0289694ed5467ba73c5ca3d4156c6358} 
+void Bistro\+Q.\+Presentation.\+Services.\+Navigation\+View\+Service.\+Initialize (\begin{DoxyParamCaption}\item[{Navigation\+View}]{navigation\+View}{, }\item[{string}]{role}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationViewService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+INavigation\+View\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{NavigationViewService_8cs_source_l00033}{33}} of file \mbox{\hyperlink{NavigationViewService_8cs_source}{Navigation\+View\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \_navigationView\ =\ navigationView;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ var\ items\ =\ \_navigationView.MenuItems.Where(x\ =>}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ var\ navItem\ =\ x\ as\ NavigationViewItem;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ navItem\ !=\ \textcolor{keyword}{null}\ \&\&\ (navItem.Tag?.ToString()\ ==\ role\ ||\ navItem.Tag?.ToString()\ ==\ \textcolor{stringliteral}{"{}User"{}});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}).ToList();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \_navigationView.MenuItems.Clear();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ items)}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \_navigationView.MenuItems.Add(item);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \_navigationView.BackRequested\ +=\ OnBackRequested;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \_navigationView.ItemInvoked\ +=\ OnItemInvoked;}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_aeb763520328eb14277e64fba83ea2265}\index{BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}!NavigateToEntryPoint@{NavigateToEntryPoint}}
+\index{NavigateToEntryPoint@{NavigateToEntryPoint}!BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}}
+\doxysubsubsection{\texorpdfstring{NavigateToEntryPoint()}{NavigateToEntryPoint()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_aeb763520328eb14277e64fba83ea2265} 
+void Bistro\+Q.\+Presentation.\+Services.\+Navigation\+View\+Service.\+Navigate\+To\+Entry\+Point (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationViewService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+INavigation\+View\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{NavigationViewService_8cs_source_l00053}{53}} of file \mbox{\hyperlink{NavigationViewService_8cs_source}{Navigation\+View\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_navigationView.MenuItems.FirstOrDefault()\ is\ NavigationViewItem\ firstItem)}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \_navigationService.NavigateTo(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Helpers_1_1NavigationHelper}{NavigationHelper}}.GetNavigateTo(firstItem));}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a1ae83a7646b3029d9cffd3083787f908}\index{BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}!UnregisterEvents@{UnregisterEvents}}
+\index{UnregisterEvents@{UnregisterEvents}!BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}}
+\doxysubsubsection{\texorpdfstring{UnregisterEvents()}{UnregisterEvents()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a1ae83a7646b3029d9cffd3083787f908} 
+void Bistro\+Q.\+Presentation.\+Services.\+Navigation\+View\+Service.\+Unregister\+Events (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationViewService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+INavigation\+View\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{NavigationViewService_8cs_source_l00061}{61}} of file \mbox{\hyperlink{NavigationViewService_8cs_source}{Navigation\+View\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_navigationView\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \_navigationView.BackRequested\ -\/=\ OnBackRequested;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \_navigationView.ItemInvoked\ -\/=\ OnItemInvoked;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a6a294e27c31dcb04929596f41c08cc6c}\index{BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}!Role@{Role}}
+\index{Role@{Role}!BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}}
+\doxysubsubsection{\texorpdfstring{Role}{Role}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a6a294e27c31dcb04929596f41c08cc6c} 
+string Bistro\+Q.\+Presentation.\+Services.\+Navigation\+View\+Service.\+Role}
+
+
+
+Definition at line \mbox{\hyperlink{NavigationViewService_8cs_source_l00017}{17}} of file \mbox{\hyperlink{NavigationViewService_8cs_source}{Navigation\+View\+Service.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a118c891acbb621d30344d118f65220b9}\index{BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}!MenuItems@{MenuItems}}
+\index{MenuItems@{MenuItems}!BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}}
+\doxysubsubsection{\texorpdfstring{MenuItems}{MenuItems}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a118c891acbb621d30344d118f65220b9} 
+IList$<$object$>$? Bistro\+Q.\+Presentation.\+Services.\+Navigation\+View\+Service.\+Menu\+Items\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationViewService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+INavigation\+View\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{NavigationViewService_8cs_source_l00019}{19}} of file \mbox{\hyperlink{NavigationViewService_8cs_source}{Navigation\+View\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ MenuItems;}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a590d23df8b88f534656358fc7b02716a}\index{BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}!SettingsItem@{SettingsItem}}
+\index{SettingsItem@{SettingsItem}!BistroQ.Presentation.Services.NavigationViewService@{BistroQ.Presentation.Services.NavigationViewService}}
+\doxysubsubsection{\texorpdfstring{SettingsItem}{SettingsItem}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1NavigationViewService_a590d23df8b88f534656358fc7b02716a} 
+object? Bistro\+Q.\+Presentation.\+Services.\+Navigation\+View\+Service.\+Settings\+Item\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationViewService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+INavigation\+View\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{NavigationViewService_8cs_source_l00024}{24}} of file \mbox{\hyperlink{NavigationViewService_8cs_source}{Navigation\+View\+Service.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Services/Navigation\+View\+Service.\+cs\end{DoxyCompactItemize}

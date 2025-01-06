@@ -1,0 +1,39 @@
+\doxysection{Pagination\+View\+Model.\+cs}
+\hypertarget{PaginationViewModel_8cs_source}{}\label{PaginationViewModel_8cs_source}\index{BistroQ.Presentation/ViewModels/Commons/PaginationViewModel.cs@{BistroQ.Presentation/ViewModels/Commons/PaginationViewModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00003}\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Commons}{00003}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Commons}{BistroQ.Presentation.ViewModels.Commons}};}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00012}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1PaginationViewModel}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1PaginationViewModel}{PaginationViewModel}}\ :\ ObservableObject}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_currentPage;}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00026}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1PaginationViewModel_a8f131f0e7dcaf878a96502c55fd2187c}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1PaginationViewModel_a8f131f0e7dcaf878a96502c55fd2187c}{CurrentPage}}}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ \_currentPage;}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{double}.IsNaN(value)\ ||\ value\ <=\ 0)}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_currentPage\ =\ value;}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00045}00045\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_totalPages\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00051}00051\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00052}00052\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_totalItems\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00058}00058\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00059}00059\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_pageSize\ =\ 10;}
+\DoxyCodeLine{\Hypertarget{PaginationViewModel_8cs_source_l00060}00060\ \}}
+
+\end{DoxyCode}

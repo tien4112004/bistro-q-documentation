@@ -1,0 +1,279 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Services.\+Dialog\+Service Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1DialogService}{}\label{classBistroQ_1_1Presentation_1_1Services_1_1DialogService}\index{BistroQ.Presentation.Services.DialogService@{BistroQ.Presentation.Services.DialogService}}
+
+
+Implements IDialog\+Service to handle the display of various dialog boxes in the application. Ensures thread-\/safe dialog display and proper cleanup of resources.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Services.\+Dialog\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classBistroQ_1_1Presentation_1_1Services_1_1DialogService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Services.\+Dialog\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classBistroQ_1_1Presentation_1_1Services_1_1DialogService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_ad3cc60b86d504d0a71fcfbea9c0f89e1}{Dialog\+Service}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService}{Dialog\+Service} class. \end{DoxyCompactList}\item 
+async Task$<$ Content\+Dialog\+Result $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a76781bcaf453a0957edf0b0bad30f193}{Show\+Confirm\+Delete\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Displays a confirmation dialog for delete operations.
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation with the dialog result.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a80650c2b2be37c2976d08752f4928aeb}{Show\+Success\+Dialog}} (string message, string title="{}Success"{})
+\begin{DoxyCompactList}\small\item\em Displays a success dialog with a custom message and title.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to display in the dialog.\\
+\hline
+{\em title} & The title of the dialog.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a92f9aaac4b5b32a276e4e5784d746d11}{Show\+Error\+Dialog}} (string message, string title="{}Error"{})
+\begin{DoxyCompactList}\small\item\em Displays an error dialog with a custom message and title.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to display in the dialog.\\
+\hline
+{\em title} & The title of the dialog.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\item 
+async Task$<$ Content\+Dialog\+Result $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a70f9d29442b5294c909b20a4af3dcba8}{Show\+Dialog\+Async}} (Content\+Dialog dialog)
+\begin{DoxyCompactList}\small\item\em Displays a custom content dialog.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dialog} & The content dialog to display.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation with the dialog result.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+IDialog\+Service}}}
+
+
+\doxysubsection{Detailed Description}
+Implements IDialog\+Service to handle the display of various dialog boxes in the application. Ensures thread-\/safe dialog display and proper cleanup of resources. 
+
+Definition at line \mbox{\hyperlink{DialogService_8cs_source_l00011}{11}} of file \mbox{\hyperlink{DialogService_8cs_source}{Dialog\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_ad3cc60b86d504d0a71fcfbea9c0f89e1}\index{BistroQ.Presentation.Services.DialogService@{BistroQ.Presentation.Services.DialogService}!DialogService@{DialogService}}
+\index{DialogService@{DialogService}!BistroQ.Presentation.Services.DialogService@{BistroQ.Presentation.Services.DialogService}}
+\doxysubsubsection{\texorpdfstring{DialogService()}{DialogService()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_ad3cc60b86d504d0a71fcfbea9c0f89e1} 
+Bistro\+Q.\+Presentation.\+Services.\+Dialog\+Service.\+Dialog\+Service (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService}{Dialog\+Service} class. 
+
+
+
+Definition at line \mbox{\hyperlink{DialogService_8cs_source_l00029}{29}} of file \mbox{\hyperlink{DialogService_8cs_source}{Dialog\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a76781bcaf453a0957edf0b0bad30f193}\index{BistroQ.Presentation.Services.DialogService@{BistroQ.Presentation.Services.DialogService}!ShowConfirmDeleteDialog@{ShowConfirmDeleteDialog}}
+\index{ShowConfirmDeleteDialog@{ShowConfirmDeleteDialog}!BistroQ.Presentation.Services.DialogService@{BistroQ.Presentation.Services.DialogService}}
+\doxysubsubsection{\texorpdfstring{ShowConfirmDeleteDialog()}{ShowConfirmDeleteDialog()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a76781bcaf453a0957edf0b0bad30f193} 
+async Task$<$ Content\+Dialog\+Result $>$ Bistro\+Q.\+Presentation.\+Services.\+Dialog\+Service.\+Show\+Confirm\+Delete\+Dialog (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays a confirmation dialog for delete operations.
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation with the dialog result.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_ad526c18c114070153ae56ee5e534f564}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+IDialog\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{DialogService_8cs_source_l00036}{36}} of file \mbox{\hyperlink{DialogService_8cs_source}{Dialog\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ var\ dialog\ =\ \textcolor{keyword}{new}\ ContentDialog}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ XamlRoot\ =\ App.MainWindow.Content.XamlRoot,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ Title\ =\ \textcolor{stringliteral}{"{}Confirm\ delete"{}},}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ \textcolor{stringliteral}{"{}Are\ you\ sure\ you\ want\ to\ delete\ this\ entry?"{}},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ PrimaryButtonText\ =\ \textcolor{stringliteral}{"{}Delete"{}},}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ SecondaryButtonText\ =\ \textcolor{stringliteral}{"{}Cancel"{}},}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ SecondaryButtonStyle\ =\ Application.Current.Resources[\textcolor{stringliteral}{"{}AccentButtonStyle"{}}]\ as\ Style}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ ShowDialogCoreAsync(dialog);}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a70f9d29442b5294c909b20a4af3dcba8}\index{BistroQ.Presentation.Services.DialogService@{BistroQ.Presentation.Services.DialogService}!ShowDialogAsync@{ShowDialogAsync}}
+\index{ShowDialogAsync@{ShowDialogAsync}!BistroQ.Presentation.Services.DialogService@{BistroQ.Presentation.Services.DialogService}}
+\doxysubsubsection{\texorpdfstring{ShowDialogAsync()}{ShowDialogAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a70f9d29442b5294c909b20a4af3dcba8} 
+async Task$<$ Content\+Dialog\+Result $>$ Bistro\+Q.\+Presentation.\+Services.\+Dialog\+Service.\+Show\+Dialog\+Async (\begin{DoxyParamCaption}\item[{Content\+Dialog}]{dialog}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays a custom content dialog.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dialog} & The content dialog to display.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation with the dialog result.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a7a5e4698e6dde84a9380c09976683a74}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+IDialog\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{DialogService_8cs_source_l00077}{77}} of file \mbox{\hyperlink{DialogService_8cs_source}{Dialog\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ dialog.XamlRoot\ =\ App.MainWindow.Content.XamlRoot;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ ShowDialogCoreAsync(dialog);}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a92f9aaac4b5b32a276e4e5784d746d11}\index{BistroQ.Presentation.Services.DialogService@{BistroQ.Presentation.Services.DialogService}!ShowErrorDialog@{ShowErrorDialog}}
+\index{ShowErrorDialog@{ShowErrorDialog}!BistroQ.Presentation.Services.DialogService@{BistroQ.Presentation.Services.DialogService}}
+\doxysubsubsection{\texorpdfstring{ShowErrorDialog()}{ShowErrorDialog()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a92f9aaac4b5b32a276e4e5784d746d11} 
+async Task Bistro\+Q.\+Presentation.\+Services.\+Dialog\+Service.\+Show\+Error\+Dialog (\begin{DoxyParamCaption}\item[{string}]{message}{, }\item[{string}]{title}{ = {\ttfamily "{}Error"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays an error dialog with a custom message and title.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to display in the dialog.\\
+\hline
+{\em title} & The title of the dialog.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+IDialog\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{DialogService_8cs_source_l00064}{64}} of file \mbox{\hyperlink{DialogService_8cs_source}{Dialog\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ var\ dialog\ =\ \textcolor{keyword}{new}\ ContentDialog}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ XamlRoot\ =\ App.MainWindow.Content.XamlRoot,}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ Title\ =\ title,}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ message,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ CloseButtonText\ =\ \textcolor{stringliteral}{"{}OK"{}}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ await\ ShowDialogCoreAsync(dialog);}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a80650c2b2be37c2976d08752f4928aeb}\index{BistroQ.Presentation.Services.DialogService@{BistroQ.Presentation.Services.DialogService}!ShowSuccessDialog@{ShowSuccessDialog}}
+\index{ShowSuccessDialog@{ShowSuccessDialog}!BistroQ.Presentation.Services.DialogService@{BistroQ.Presentation.Services.DialogService}}
+\doxysubsubsection{\texorpdfstring{ShowSuccessDialog()}{ShowSuccessDialog()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a80650c2b2be37c2976d08752f4928aeb} 
+async Task Bistro\+Q.\+Presentation.\+Services.\+Dialog\+Service.\+Show\+Success\+Dialog (\begin{DoxyParamCaption}\item[{string}]{message}{, }\item[{string}]{title}{ = {\ttfamily "{}Success"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays a success dialog with a custom message and title.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to display in the dialog.\\
+\hline
+{\em title} & The title of the dialog.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_ad4188d1948c0ce128c22d400605e0d4b}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+IDialog\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{DialogService_8cs_source_l00051}{51}} of file \mbox{\hyperlink{DialogService_8cs_source}{Dialog\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ var\ dialog\ =\ \textcolor{keyword}{new}\ ContentDialog}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ XamlRoot\ =\ App.MainWindow.Content.XamlRoot,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ Title\ =\ title,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ message,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ CloseButtonText\ =\ \textcolor{stringliteral}{"{}OK"{}}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ await\ ShowDialogCoreAsync(dialog);}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Services/Dialog\+Service.\+cs\end{DoxyCompactItemize}

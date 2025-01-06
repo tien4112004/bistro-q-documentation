@@ -1,0 +1,11 @@
+<map id="BistroQ.Presentation.LoginWindow" name="BistroQ.Presentation.LoginWindow">
+<area shape="rect" id="Node000001" title=" " alt="" coords="243,56,420,99"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="66,5,134,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,28,245,53,244,58,149,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="34,56,166,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,92,242,92,242,98,181,97"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="181,75,242,75,242,80,181,80"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="181,57,242,57,242,62,181,63"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,123,195,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="207,115,262,97,264,102,208,120"/>
+</map>

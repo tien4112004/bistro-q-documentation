@@ -1,0 +1,62 @@
+\doxysection{Admin\+Table\+Add\+Page.\+xaml.\+cs}
+\hypertarget{AdminTableAddPage_8xaml_8cs_source}{}\label{AdminTableAddPage_8xaml_8cs_source}\index{BistroQ.Presentation/Views/AdminTable/AdminTableAddPage.xaml.cs@{BistroQ.Presentation/Views/AdminTable/AdminTableAddPage.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTable}{BistroQ.Presentation.ViewModels.AdminTable}};}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Input;}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views_1_1AdminTable}{BistroQ.Presentation.Views.AdminTable}};}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00009}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminTable_1_1AdminTableAddPage}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminTable_1_1AdminTableAddPage}{AdminTableAddPage}}\ :\ Page}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTable_1_1AdminTableAddPageViewModel}{AdminTableAddPageViewModel}}\ ViewModel\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminTable_1_1AdminTableAddPage}{AdminTableAddPage}}()}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ this.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminTable_1_1AdminTableAddPage_a7a08fbc49ee416247ec0e9d07b3b08c0}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ ViewModel\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTable_1_1AdminTableAddPageViewModel}{AdminTableAddPageViewModel}}>();}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ this.DataContext\ =\ ViewModel;}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ this.Loaded\ +=\ AdminTableAddPage\_Loaded;}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AdminTableAddPage\_Loaded(\textcolor{keywordtype}{object}\ sender,\ Microsoft.UI.Xaml.RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00023}00023\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \_\ =\ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTable_1_1AdminTableAddPageViewModel_a6845bc3f0da34242872e99c48f8f5917}{LoadZonesAsync}}();}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AdminTableAddPage\_CancelButton\_Click(\textcolor{keywordtype}{object}\ sender,\ Microsoft.UI.Xaml.RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTable_1_1AdminTableAddPageViewModel_a91295c57076a57e379abe6ee120b8cb2}{NavigateBack}}();}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnNavigateBack(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminTable_1_1AdminTableAddPageViewModel_a91295c57076a57e379abe6ee120b8cb2}{NavigateBack}}();}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ TableAddPage\_SeatsCountNumberBox\_GettingFocus(Microsoft.UI.Xaml.UIElement\ sender,\ Microsoft.UI.Xaml.Input.GettingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ ViewModel.Form.ResetError(nameof(ViewModel.Form.SeatsCount));}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00042}00042\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ TableAddPage\_ZoneComboBox\_GettingFocus(Microsoft.UI.Xaml.UIElement\ sender,\ Microsoft.UI.Xaml.Input.GettingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00043}00043\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ ViewModel.Form.ResetError(nameof(ViewModel.Form.ZoneId));}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00047}00047\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerEntered(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00048}00048\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Hand);}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00052}00052\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerExited(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00053}00053\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Arrow);}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminTableAddPage_8xaml_8cs_source_l00056}00056\ \}}
+
+\end{DoxyCode}

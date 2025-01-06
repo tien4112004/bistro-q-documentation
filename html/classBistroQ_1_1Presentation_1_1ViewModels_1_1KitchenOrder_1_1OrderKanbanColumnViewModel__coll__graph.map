@@ -1,0 +1,9 @@
+<map id="BistroQ.Presentation.ViewModels.KitchenOrder.OrderKanbanColumnViewModel" name="BistroQ.Presentation.ViewModels.KitchenOrder.OrderKanbanColumnViewModel">
+<area shape="rect" id="Node000001" title="ViewModel responsible for managing a single column in the kitchen order kanban board...." alt="" coords="146,96,369,155"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,131,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,45,202,93,200,98,105,50"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="154,5,360,48"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="260,63,260,96,255,96,255,63"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="384,13,474,40"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="395,50,310,98,307,93,392,46"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="BistroQ.Domain.Contracts.Services.IBaseApiClient" name="BistroQ.Domain.Contracts.Services.IBaseApiClient">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,185,115"/>
+<area shape="rect" id="Node000002" href="$interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient.html" title="This interface is used to define the secure API client." alt="" coords="233,5,412,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,65,246,46,248,51,185,70"/>
+<area shape="rect" id="Node000004" href="$interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IPublicApiClient.html" title="This interface is used to define the public API client." alt="" coords="233,139,412,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="185,117,248,135,246,141,183,122"/>
+<area shape="rect" id="Node000006" href="$classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient.html" title=" " alt="" coords="236,72,409,115"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="200,91,235,91,235,96,200,96"/>
+<area shape="rect" id="Node000003" href="$classBistroQ_1_1Domain_1_1Services_1_1Http_1_1ApiClient.html" title="Implements a secure API client with authentication capabilities. Inherits from BaseApiClient to provi..." alt="" coords="460,39,633,81"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="428,40,460,44,459,50,427,45"/>
+<area shape="rect" id="Node000005" href="$classBistroQ_1_1Domain_1_1Services_1_1Http_1_1PublicApiClient.html" title="Implements a public API client without authentication requirements. Inherits from BaseApiClient to pr..." alt="" coords="460,121,633,164"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="427,149,459,147,460,152,428,155"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="424,76,459,70,460,76,425,81"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="425,113,460,121,459,126,424,118"/>
+</map>

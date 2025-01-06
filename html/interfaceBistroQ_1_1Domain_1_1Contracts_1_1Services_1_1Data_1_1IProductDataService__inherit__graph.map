@@ -1,0 +1,5 @@
+<map id="BistroQ.Domain.Contracts.Services.Data.IProductDataService" name="BistroQ.Domain.Contracts.Services.Data.IProductDataService">
+<area shape="rect" id="Node000001" title="Interface for managing product&#45;related data operations through API endpoints. Provides methods for CR..." alt="" coords="5,5,235,48"/>
+<area shape="rect" id="Node000002" href="$classBistroQ_1_1Service_1_1Data_1_1ProductDataService.html" title="Implementation of product data service that communicates with the API endpoints. Handles both regular..." alt="" coords="23,96,217,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,64,123,96,117,96,117,64"/>
+</map>

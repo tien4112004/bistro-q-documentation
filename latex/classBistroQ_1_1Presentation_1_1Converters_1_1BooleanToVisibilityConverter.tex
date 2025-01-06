@@ -1,0 +1,96 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Converters.\+Boolean\+To\+Visibility\+Converter Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1BooleanToVisibilityConverter}{}\label{classBistroQ_1_1Presentation_1_1Converters_1_1BooleanToVisibilityConverter}\index{BistroQ.Presentation.Converters.BooleanToVisibilityConverter@{BistroQ.Presentation.Converters.BooleanToVisibilityConverter}}
+
+
+Converter that transforms boolean values to Visibility enumeration values. Supports inversion of the conversion through a parameter.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Converters.\+Boolean\+To\+Visibility\+Converter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classBistroQ_1_1Presentation_1_1Converters_1_1BooleanToVisibilityConverter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Converters.\+Boolean\+To\+Visibility\+Converter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classBistroQ_1_1Presentation_1_1Converters_1_1BooleanToVisibilityConverter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1BooleanToVisibilityConverter_ad294636c8ee6b631253bc62f26eda00c}{Convert}} (object value, Type target\+Type, object parameter, string language)
+\item 
+object \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1BooleanToVisibilityConverter_a2ade56d3bb51af58063afb859b6a0121}{Convert\+Back}} (object value, Type target\+Type, object parameter, string language)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Converter that transforms boolean values to Visibility enumeration values. Supports inversion of the conversion through a parameter. 
+
+Definition at line \mbox{\hyperlink{BooleanToVisibilityConverter_8cs_source_l00010}{10}} of file \mbox{\hyperlink{BooleanToVisibilityConverter_8cs_source}{Boolean\+To\+Visibility\+Converter.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1BooleanToVisibilityConverter_ad294636c8ee6b631253bc62f26eda00c}\index{BistroQ.Presentation.Converters.BooleanToVisibilityConverter@{BistroQ.Presentation.Converters.BooleanToVisibilityConverter}!Convert@{Convert}}
+\index{Convert@{Convert}!BistroQ.Presentation.Converters.BooleanToVisibilityConverter@{BistroQ.Presentation.Converters.BooleanToVisibilityConverter}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Converters_1_1BooleanToVisibilityConverter_ad294636c8ee6b631253bc62f26eda00c} 
+object Bistro\+Q.\+Presentation.\+Converters.\+Boolean\+To\+Visibility\+Converter.\+Convert (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{Type}]{target\+Type}{, }\item[{object}]{parameter}{, }\item[{string}]{language}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{BooleanToVisibilityConverter_8cs_source_l00012}{12}} of file \mbox{\hyperlink{BooleanToVisibilityConverter_8cs_source}{Boolean\+To\+Visibility\+Converter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ is\ \textcolor{keywordtype}{bool}\ booleanValue)}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parameter\ is\ \textcolor{keywordtype}{string}\ stringParameter\ \&\&\ stringParameter\ ==\ \textcolor{stringliteral}{"{}invert"{}})}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ booleanValue\ ?\ Visibility.Collapsed\ :\ Visibility.Visible;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ booleanValue\ ?\ Visibility.Visible\ :\ Visibility.Collapsed;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Visibility.Collapsed;}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1BooleanToVisibilityConverter_a2ade56d3bb51af58063afb859b6a0121}\index{BistroQ.Presentation.Converters.BooleanToVisibilityConverter@{BistroQ.Presentation.Converters.BooleanToVisibilityConverter}!ConvertBack@{ConvertBack}}
+\index{ConvertBack@{ConvertBack}!BistroQ.Presentation.Converters.BooleanToVisibilityConverter@{BistroQ.Presentation.Converters.BooleanToVisibilityConverter}}
+\doxysubsubsection{\texorpdfstring{ConvertBack()}{ConvertBack()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Converters_1_1BooleanToVisibilityConverter_a2ade56d3bb51af58063afb859b6a0121} 
+object Bistro\+Q.\+Presentation.\+Converters.\+Boolean\+To\+Visibility\+Converter.\+Convert\+Back (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{Type}]{target\+Type}{, }\item[{object}]{parameter}{, }\item[{string}]{language}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{BooleanToVisibilityConverter_8cs_source_l00027}{27}} of file \mbox{\hyperlink{BooleanToVisibilityConverter_8cs_source}{Boolean\+To\+Visibility\+Converter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ is\ Visibility\ visibility)}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ visibility\ ==\ Visibility.Visible;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Converters/Boolean\+To\+Visibility\+Converter.\+cs\end{DoxyCompactItemize}

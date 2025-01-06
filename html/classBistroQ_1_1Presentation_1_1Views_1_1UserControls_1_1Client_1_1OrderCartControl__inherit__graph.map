@@ -1,0 +1,17 @@
+<map id="BistroQ.Presentation.Views.UserControls.Client.OrderCartControl" name="BistroQ.Presentation.Views.UserControls.Client.OrderCartControl">
+<area shape="rect" id="Node000001" title=" " alt="" coords="248,113,487,156"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,200,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,54,201,82,270,110,268,115,199,86,131,59"/>
+<area shape="poly" id="edge3_Node000001_Node000002" title=" " alt="" coords="184,51,201,58,321,110,319,115,199,62,182,56"/>
+<area shape="poly" id="edge4_Node000001_Node000002" title=" " alt="" coords="215,39,293,75,352,111,349,115,291,80,213,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="8,72,197,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,113,247,117,247,122,213,118"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="57,155,148,181"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="163,158,247,147,248,152,164,163"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="8,205,197,248"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="180,197,199,191,303,154,305,159,201,196,182,202"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="16,272,189,315"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="188,263,198,258,239,233,278,205,341,154,344,158,282,209,242,237,201,262,190,268"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="57,339,148,365"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="162,340,198,324,249,285,292,238,327,192,351,155,356,158,331,195,296,241,252,289,201,329,164,345"/>
+</map>

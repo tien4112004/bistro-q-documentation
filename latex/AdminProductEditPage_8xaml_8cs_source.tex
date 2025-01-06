@@ -1,0 +1,128 @@
+\doxysection{Admin\+Product\+Edit\+Page.\+xaml.\+cs}
+\hypertarget{AdminProductEditPage_8xaml_8cs_source}{}\label{AdminProductEditPage_8xaml_8cs_source}\index{BistroQ.Presentation/Views/AdminProduct/AdminProductEditPage.xaml.cs@{BistroQ.Presentation/Views/AdminProduct/AdminProductEditPage.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Models}{BistroQ.Presentation.Models}};}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct}{BistroQ.Presentation.ViewModels.AdminProduct}};}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Input;}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }Windows.Storage.Pickers;}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }WinRT.Interop;}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00010}00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views_1_1AdminProduct}{BistroQ.Presentation.Views.AdminProduct}};}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00012}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminProduct_1_1AdminProductEditPage}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminProduct_1_1AdminProductEditPage}{AdminProductEditPage}}\ :\ Page}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductEditPageViewModel}{AdminProductEditPageViewModel}}\ ViewModel\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminProduct_1_1AdminProductEditPage}{AdminProductEditPage}}()}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1AdminProduct_1_1AdminProductEditPage_a6f1046c1c491d2c790f09fc85f2e78b2}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ ViewModel\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductEditPageViewModel}{AdminProductEditPageViewModel}}>();}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ this.DataContext\ =\ ViewModel;}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ this.Loaded\ +=\ AdminProductEditPage\_Loaded;}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{private}\ async\ \textcolor{keywordtype}{void}\ AdminProductEditPage\_Loaded(\textcolor{keywordtype}{object}\ sender,\ Microsoft.UI.Xaml.RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ await\ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductEditPageViewModel_ace13fc4d532f4da7af918a71fd5faaa8}{LoadCategoriesAsync}}();}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ ProductEditPage\_CategoryComboBox.SelectedValue\ =\ ViewModel.Form.CategoryId;}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnNavigateBack(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00032}00032\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductEditPageViewModel_ae966df543688618677fff98185a5c2d3}{NavigateBack}}();}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AdminProductEditPage\_CancelButton\_Click(\textcolor{keywordtype}{object}\ sender,\ Microsoft.UI.Xaml.RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00037}00037\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminProduct_1_1AdminProductEditPageViewModel_ae966df543688618677fff98185a5c2d3}{NavigateBack}}();}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ProductEditPage\_CategoryComboBox\_GettingFocus(Microsoft.UI.Xaml.UIElement\ sender,\ Microsoft.UI.Xaml.Input.GettingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ ViewModel.Form.ResetError(nameof(ViewModel.Form.CategoryId));}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Name\_GettingFocus(Microsoft.UI.Xaml.UIElement\ sender,\ Microsoft.UI.Xaml.Input.GettingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ ViewModel.Form.ResetError(nameof(ViewModel.Form.Name));}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Unit\_GettingFocus(Microsoft.UI.Xaml.UIElement\ sender,\ Microsoft.UI.Xaml.Input.GettingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ ViewModel.Form.ResetError(nameof(ViewModel.Form.Unit));}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00056}00056\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ProductEditPage\_PriceNumberBox\_GettingFocus(Microsoft.UI.Xaml.UIElement\ sender,\ Microsoft.UI.Xaml.Input.GettingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00057}00057\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ ViewModel.Form.ResetError(nameof(ViewModel.Form.Price));}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00061}00061\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ProductEditPage\_DiscountPriceNumberBox\_GettingFocus(Microsoft.UI.Xaml.UIElement\ sender,\ Microsoft.UI.Xaml.Input.GettingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00062}00062\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ ViewModel.Form.ResetError(nameof(ViewModel.Form.DiscountPrice));}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ProductEditPage\_CaloriesNumberBox\_GettingFocus(Microsoft.UI.Xaml.UIElement\ sender,\ Microsoft.UI.Xaml.Input.GettingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00067}00067\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ ViewModel.Form.ResetError(nameof(ViewModel.Form.Calories));}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00071}00071\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ProductEditPage\_FatNumberBox\_GettingFocus(Microsoft.UI.Xaml.UIElement\ sender,\ Microsoft.UI.Xaml.Input.GettingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00072}00072\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ ViewModel.Form.ResetError(nameof(ViewModel.Form.Fat));}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00076}00076\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ProductEditPage\_FiberNumberBox\_GettingFocus(Microsoft.UI.Xaml.UIElement\ sender,\ Microsoft.UI.Xaml.Input.GettingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00077}00077\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ ViewModel.Form.ResetError(nameof(ViewModel.Form.Fiber));}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00081}00081\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ProductEditPage\_ProteinNumberBox\_GettingFocus(Microsoft.UI.Xaml.UIElement\ sender,\ Microsoft.UI.Xaml.Input.GettingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00082}00082\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ ViewModel.Form.ResetError(nameof(ViewModel.Form.Protein));}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00086}00086\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ProductEditPage\_CarbohydratesNumberBox\_GettingFocus(Microsoft.UI.Xaml.UIElement\ sender,\ Microsoft.UI.Xaml.Input.GettingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00087}00087\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ ViewModel.Form.ResetError(nameof(ViewModel.Form.Protein));}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00091}00091\ \ \ \ \ \textcolor{keyword}{private}\ async\ \textcolor{keywordtype}{void}\ ProductEditPage\_SelectImageButton\_Click(\textcolor{keywordtype}{object}\ sender,\ Microsoft.UI.Xaml.RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00092}00092\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ FileOpenPicker\ fileOpenPicker\ =\ \textcolor{keyword}{new}()}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ ViewMode\ =\ PickerViewMode.Thumbnail,}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ FileTypeFilter\ =\ \{\ \textcolor{stringliteral}{"{}.jpg"{}},\ \textcolor{stringliteral}{"{}.jpeg"{}},\ \textcolor{stringliteral}{"{}.png"{}},\ \textcolor{stringliteral}{"{}.gif"{}}\ \},}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ var\ windowHandle\ =\ WindowNative.GetWindowHandle(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow);}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ InitializeWithWindow.Initialize(fileOpenPicker,\ windowHandle);}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ var\ file\ =\ await\ fileOpenPicker.PickSingleFileAsync();}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (file\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.Form.ImageUrl\ =\ file.Path;}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.IsProcessing\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.Form.ImageFile\ =\ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{FileWrapper}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_aeeb9ae56594055644d7b3421e886c6d6}{FromStorageFileAsync}}(file);}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.IsProcessing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00111}00111\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00113}00113\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerEntered(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00114}00114\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Hand);}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00116}00116\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00118}00118\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerExited(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00119}00119\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Arrow);}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminProductEditPage_8xaml_8cs_source_l00122}00122\ \}}
+
+\end{DoxyCode}

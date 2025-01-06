@@ -1,0 +1,87 @@
+\doxysection{Login\+Form.\+cs}
+\hypertarget{LoginForm_8cs_source}{}\label{LoginForm_8cs_source}\index{BistroQ.Presentation/Models/LoginForm.cs@{BistroQ.Presentation/Models/LoginForm.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Validation}{BistroQ.Presentation.Validation}};}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Models}{BistroQ.Presentation.Models}};}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00009}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm}{LoginForm}}\ :\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{ValidatorBase}}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00011}00011\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ \_username\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ \_password\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00021}00021\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00023}00023\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00029}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a121614bafa5e0508f156a4148c2867b7}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a121614bafa5e0508f156a4148c2867b7}{Username}}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ \_username;}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_username\ !=\ value)}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_username\ =\ value;}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a121614bafa5e0508f156a4148c2867b7}{Username}}),\ value);}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnPropertyChanged();}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00048}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_ad85c84bc75a29958a3c63ce53ac29c39}{00048}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_ad85c84bc75a29958a3c63ce53ac29c39}{Password}}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ \_password;}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_password\ !=\ value)}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_password\ =\ value;}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_ad85c84bc75a29958a3c63ce53ac29c39}{Password}}),\ value);}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnPropertyChanged();}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00061}00061\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00063}00063\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00068}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a05255f8360fa62162545c267b73c4ce6}{00068}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a05255f8360fa62162545c267b73c4ce6}{LoginForm}}()}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00069}00069\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ AddUsernameValidator();}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ AddPasswordValidator();}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00073}00073\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00075}00075\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Methods}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00082}00082\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddUsernameValidator()}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00083}00083\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a121614bafa5e0508f156a4148c2867b7}{Username}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Username"{}}),}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.MinLength(v,\ 3,\ \textcolor{stringliteral}{"{}Username"{}})}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00098}00098\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddPasswordValidator()}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00099}00099\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_ad85c84bc75a29958a3c63ce53ac29c39}{Password}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Password"{}})}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00106}00106\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00107}00107\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00109}00109\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00118}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a20c4bcb85a094114872200b393bfa0f2}{00118}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a20c4bcb85a094114872200b393bfa0f2}{ValidateAll}}()}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00119}00119\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a121614bafa5e0508f156a4148c2867b7}{Username}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_a121614bafa5e0508f156a4148c2867b7}{Username}});}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_ad85c84bc75a29958a3c63ce53ac29c39}{Password}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1LoginForm_ad85c84bc75a29958a3c63ce53ac29c39}{Password}});}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00122}00122\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00123}00123\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{LoginForm_8cs_source_l00124}00124\ \}}
+
+\end{DoxyCode}

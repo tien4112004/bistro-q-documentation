@@ -1,0 +1,25 @@
+\doxysection{IBase\+Api\+Client.\+cs}
+\hypertarget{IBaseApiClient_8cs_source}{}\label{IBaseApiClient_8cs_source}\index{BistroQ.Domain/Contracts/Http/IBaseApiClient.cs@{BistroQ.Domain/Contracts/Http/IBaseApiClient.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos}{BistroQ.Domain.Dtos}};}
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00005}00005\ \textcolor{comment}{//\ <summary>}}
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00008}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_a6e184566a7abe6f5a0611d05ab1a725d}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{interface\ }\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient}{IBaseApiClient}}}
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00017}00017\ \ \ \ \ Task<ApiResponse<T>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_adb5659970dacaafad2829a162127e047}{PostAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ contentValue);}
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00026}00026\ \ \ \ \ Task<ApiResponse<T>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_af4adb49013823d086c4633b53897867a}{PutAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ contentValue);}
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00035}00035\ \ \ \ \ Task<ApiResponse<T>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_a88dd2c4dc5defd8780282bb8c46c57e5}{PatchAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ contentValue);}
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00044}00044\ \ \ \ \ Task<ApiResponse<T>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_ad23de20341ee05101495cb03fc2eafbc}{GetAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ contentValue);}
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00052}00052\ \ \ \ \ Task<ApiResponse<T>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_a6e184566a7abe6f5a0611d05ab1a725d}{DeleteAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ contentValue);}
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00061}00061\ \ \ \ \ Task<ApiCollectionResponse<T>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_abeaf5c29d53be01c8986d000fd11a4d0}{GetCollectionAsync<T>}}(\textcolor{keywordtype}{string}\ url,\ \textcolor{keywordtype}{object}\ contentValue)\ where\ T\ :\ \textcolor{keyword}{class};}
+\DoxyCodeLine{\Hypertarget{IBaseApiClient_8cs_source_l00062}00062\ \}}
+
+\end{DoxyCode}

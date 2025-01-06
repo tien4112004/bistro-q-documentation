@@ -1,0 +1,5 @@
+var namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory =
+[
+    [ "AdminCategoryAddPageViewModel", "classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel.html", "classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryAddPageViewModel" ],
+    [ "AdminCategoryEditPageViewModel", "classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryEditPageViewModel.html", "classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategory_1_1AdminCategoryEditPageViewModel" ]
+];

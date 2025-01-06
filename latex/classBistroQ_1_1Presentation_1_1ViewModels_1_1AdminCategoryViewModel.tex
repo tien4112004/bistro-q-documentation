@@ -1,0 +1,388 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel}\index{BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}}
+
+
+View\+Model for managing categories in the admin interface. Handles listing, adding, editing, and deleting categories with support for pagination and sorting.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a9919f3de2e63f5dcc28eb505b134f422}{Admin\+Category\+View\+Model}} (\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigation\+Service}} navigation\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService}{ICategory\+Data\+Service}} category\+Data\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}} dialog\+Service, IMapper mapper, IMessenger messenger)
+\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_ad0a9321babe7616d8d71e66d74be6250}{On\+Navigated\+To}} (object parameter)
+\begin{DoxyCompactList}\small\item\em Handles navigation to this page. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a7cdf3cf8c04b36f9a3a22b5f44b3aa34}{On\+Navigated\+From}} ()
+\begin{DoxyCompactList}\small\item\em Handles navigation from this page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_af17b9822344d22fbaa1e181a3b5916ec}{Admin\+Category\+Data\+Grid\+\_\+\+Sorting}} (object sender, Data\+Grid\+Column\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Handles the sorting event of the category data grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a9f5cda13762cae850b1af6bf775f6aaf}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Performs application-\/defined tasks associated with freeing, releasing, or resetting unmanaged resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a63e6ca5852d5b72134844eb7ff7de7b8}{Receive}} (Page\+Size\+Changed\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles the page size changed message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a71234d9864b7bd2e68cb2ac208498647}{Receive}} (Current\+Page\+Changed\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles the current page changed message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+IRelay\+Command \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a3fd27027e0037e83464dac97de2d211a}{Add\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to navigate to the add category page. \end{DoxyCompactList}\item 
+IRelay\+Command \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_ada37bfbb1381c6d2be74274d35ee1978}{Edit\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to navigate to the edit category page. \end{DoxyCompactList}\item 
+IAsync\+Relay\+Command \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a37c1544d0bf41d79e27a2166ab0761d1}{Delete\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to delete the selected category. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_af288d98ac446795c6472013694733d2b}{Sort\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to sort the categories grid. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a983a26686ad9d85e1abea9ce6c9b7114}{Search\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to search categories. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model for managing categories in the admin interface. Handles listing, adding, editing, and deleting categories with support for pagination and sorting. 
+
+Implements multiple interfaces for navigation, messaging, and resource cleanup\+:
+\begin{DoxyItemize}
+\item Observable\+Recipient for MVVM pattern
+\item INavigation\+Aware for page navigation
+\item IDisposable for cleanup
+\item IRecipient for handling pagination messages 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{AdminCategoryViewModel_8cs_source_l00031}{31}} of file \mbox{\hyperlink{AdminCategoryViewModel_8cs_source}{Admin\+Category\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a9919f3de2e63f5dcc28eb505b134f422}\index{BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}!AdminCategoryViewModel@{AdminCategoryViewModel}}
+\index{AdminCategoryViewModel@{AdminCategoryViewModel}!BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}}
+\doxysubsubsection{\texorpdfstring{AdminCategoryViewModel()}{AdminCategoryViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a9919f3de2e63f5dcc28eb505b134f422} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model.\+Admin\+Category\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigation\+Service}}}]{navigation\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService}{ICategory\+Data\+Service}}}]{category\+Data\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}}}]{dialog\+Service}{, }\item[{IMapper}]{mapper}{, }\item[{IMessenger}]{messenger}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryViewModel_8cs_source_l00084}{84}} of file \mbox{\hyperlink{AdminCategoryViewModel_8cs_source}{Admin\+Category\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090\ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \_navigationService\ =\ navigationService;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \_categoryDataService\ =\ categoryDataService;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \_dialogService\ =\ dialogService;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \_messenger\ =\ messenger;}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ State.PropertyChanged\ +=\ StatePropertyChanged;}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a3fd27027e0037e83464dac97de2d211a}{AddCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand(NavigateToAddPage);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_ada37bfbb1381c6d2be74274d35ee1978}{EditCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand(NavigateToEditPage,\ ()\ =>\ State.CanEdit);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a37c1544d0bf41d79e27a2166ab0761d1}{DeleteCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(DeleteSelectedCategoryAsync,\ ()\ =>\ State.CanDelete);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_af288d98ac446795c6472013694733d2b}{SortCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand<(string\ column,\ string\ direction)>(ExecuteSortCommand);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a983a26686ad9d85e1abea9ce6c9b7114}{SearchCommand}}\ =\ \textcolor{keyword}{new}\ RelayCommand(ExecuteSearchCommand);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_af17b9822344d22fbaa1e181a3b5916ec}\index{BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}!AdminCategoryDataGrid\_Sorting@{AdminCategoryDataGrid\_Sorting}}
+\index{AdminCategoryDataGrid\_Sorting@{AdminCategoryDataGrid\_Sorting}!BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}}
+\doxysubsubsection{\texorpdfstring{AdminCategoryDataGrid\_Sorting()}{AdminCategoryDataGrid\_Sorting()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_af17b9822344d22fbaa1e181a3b5916ec} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model.\+Admin\+Category\+Data\+Grid\+\_\+\+Sorting (\begin{DoxyParamCaption}\item[{object}]{sender}{, }\item[{Data\+Grid\+Column\+Event\+Args}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the sorting event of the category data grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & The source of the event.\\
+\hline
+{\em e} & Event arguments containing the column information.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryViewModel_8cs_source_l00253}{253}} of file \mbox{\hyperlink{AdminCategoryViewModel_8cs_source}{Admin\+Category\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00254\ \ \ \ \ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ var\ column\ =\ e.Column;}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ var\ sortDirection\ =\ column.SortDirection\ ==\ \textcolor{keyword}{null}\ ||\ column.SortDirection\ ==\ DataGridSortDirection.Descending}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ ?\ \textcolor{stringliteral}{"{}asc"{}}}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \textcolor{stringliteral}{"{}des"{}};}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ column.SortDirection\ =\ sortDirection\ ==\ \textcolor{stringliteral}{"{}asc"{}}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ ?\ DataGridSortDirection.Ascending}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ :\ DataGridSortDirection.Descending;}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ var\ sortParams\ =\ (column.Tag.ToString(),\ sortDirection);}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_af288d98ac446795c6472013694733d2b}{SortCommand}}.Execute(sortParams);}
+\DoxyCodeLine{00266\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a9f5cda13762cae850b1af6bf775f6aaf}\index{BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a9f5cda13762cae850b1af6bf775f6aaf} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs application-\/defined tasks associated with freeing, releasing, or resetting unmanaged resources. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryViewModel_8cs_source_l00271}{271}} of file \mbox{\hyperlink{AdminCategoryViewModel_8cs_source}{Admin\+Category\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00272\ \ \ \ \ \{}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_isDisposed)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \_isDisposed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (State\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ State.PropertyChanged\ -\/=\ StatePropertyChanged;}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00281\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a7cdf3cf8c04b36f9a3a22b5f44b3aa34}\index{BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}!OnNavigatedFrom@{OnNavigatedFrom}}
+\index{OnNavigatedFrom@{OnNavigatedFrom}!BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedFrom()}{OnNavigatedFrom()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a7cdf3cf8c04b36f9a3a22b5f44b3aa34} 
+Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model.\+On\+Navigated\+From (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles navigation from this page. 
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryViewModel_8cs_source_l00138}{138}} of file \mbox{\hyperlink{AdminCategoryViewModel_8cs_source}{Admin\+Category\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00139\ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a9f5cda13762cae850b1af6bf775f6aaf}{Dispose}}();}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.CompletedTask;}
+\DoxyCodeLine{00142\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_ad0a9321babe7616d8d71e66d74be6250}\index{BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}!OnNavigatedTo@{OnNavigatedTo}}
+\index{OnNavigatedTo@{OnNavigatedTo}!BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}}
+\doxysubsubsection{\texorpdfstring{OnNavigatedTo()}{OnNavigatedTo()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_ad0a9321babe7616d8d71e66d74be6250} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model.\+On\+Navigated\+To (\begin{DoxyParamCaption}\item[{object}]{parameter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles navigation to this page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Navigation parameter.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{Bistro\+Q.\+Presentation.\+Contracts.\+View\+Models.\+INavigation\+Aware}}.
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryViewModel_8cs_source_l00130}{130}} of file \mbox{\hyperlink{AdminCategoryViewModel_8cs_source}{Admin\+Category\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00131\ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ await\ LoadDataAsync();}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a71234d9864b7bd2e68cb2ac208498647}\index{BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a71234d9864b7bd2e68cb2ac208498647} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Current\+Page\+Changed\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the current page changed message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the new current page.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryViewModel_8cs_source_l00298}{298}} of file \mbox{\hyperlink{AdminCategoryViewModel_8cs_source}{Admin\+Category\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00299\ \ \ \ \ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ State.Query.Page\ =\ message.NewCurrentPage;}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \_\ =\ LoadDataAsync();}
+\DoxyCodeLine{00302\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a63e6ca5852d5b72134844eb7ff7de7b8}\index{BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a63e6ca5852d5b72134844eb7ff7de7b8} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Page\+Size\+Changed\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the page size changed message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the new page size.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryViewModel_8cs_source_l00287}{287}} of file \mbox{\hyperlink{AdminCategoryViewModel_8cs_source}{Admin\+Category\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00288\ \ \ \ \ \{}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ State.Query.Size\ =\ message.NewPageSize;}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ State.ReturnToFirstPage();}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \_\ =\ LoadDataAsync();}
+\DoxyCodeLine{00292\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a3fd27027e0037e83464dac97de2d211a}\index{BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}!AddCommand@{AddCommand}}
+\index{AddCommand@{AddCommand}!BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}}
+\doxysubsubsection{\texorpdfstring{AddCommand}{AddCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a3fd27027e0037e83464dac97de2d211a} 
+IRelay\+Command Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model.\+Add\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to navigate to the add category page. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryViewModel_8cs_source_l00060}{60}} of file \mbox{\hyperlink{AdminCategoryViewModel_8cs_source}{Admin\+Category\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a37c1544d0bf41d79e27a2166ab0761d1}\index{BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}!DeleteCommand@{DeleteCommand}}
+\index{DeleteCommand@{DeleteCommand}!BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}}
+\doxysubsubsection{\texorpdfstring{DeleteCommand}{DeleteCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a37c1544d0bf41d79e27a2166ab0761d1} 
+IAsync\+Relay\+Command Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model.\+Delete\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to delete the selected category. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryViewModel_8cs_source_l00070}{70}} of file \mbox{\hyperlink{AdminCategoryViewModel_8cs_source}{Admin\+Category\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_ada37bfbb1381c6d2be74274d35ee1978}\index{BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}!EditCommand@{EditCommand}}
+\index{EditCommand@{EditCommand}!BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}}
+\doxysubsubsection{\texorpdfstring{EditCommand}{EditCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_ada37bfbb1381c6d2be74274d35ee1978} 
+IRelay\+Command Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model.\+Edit\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to navigate to the edit category page. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryViewModel_8cs_source_l00065}{65}} of file \mbox{\hyperlink{AdminCategoryViewModel_8cs_source}{Admin\+Category\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a983a26686ad9d85e1abea9ce6c9b7114}\index{BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}!SearchCommand@{SearchCommand}}
+\index{SearchCommand@{SearchCommand}!BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}}
+\doxysubsubsection{\texorpdfstring{SearchCommand}{SearchCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_a983a26686ad9d85e1abea9ce6c9b7114} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model.\+Search\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to search categories. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryViewModel_8cs_source_l00080}{80}} of file \mbox{\hyperlink{AdminCategoryViewModel_8cs_source}{Admin\+Category\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_af288d98ac446795c6472013694733d2b}\index{BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}!SortCommand@{SortCommand}}
+\index{SortCommand@{SortCommand}!BistroQ.Presentation.ViewModels.AdminCategoryViewModel@{BistroQ.Presentation.ViewModels.AdminCategoryViewModel}}
+\doxysubsubsection{\texorpdfstring{SortCommand}{SortCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminCategoryViewModel_af288d98ac446795c6472013694733d2b} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Category\+View\+Model.\+Sort\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to sort the categories grid. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminCategoryViewModel_8cs_source_l00075}{75}} of file \mbox{\hyperlink{AdminCategoryViewModel_8cs_source}{Admin\+Category\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Admin\+Category/Admin\+Category\+View\+Model.\+cs\end{DoxyCompactItemize}

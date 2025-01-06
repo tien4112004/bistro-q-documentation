@@ -1,0 +1,5 @@
+<map id="BistroQ.Presentation.Converters.BooleanToVisibilityConverter" name="BistroQ.Presentation.Converters.BooleanToVisibilityConverter">
+<area shape="rect" id="Node000001" title="Converter that transforms boolean values to Visibility enumeration values. Supports inversion of the ..." alt="" coords="5,80,220,123"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="55,5,170,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,48,115,80,110,80,110,48"/>
+</map>

@@ -1,0 +1,58 @@
+\doxysection{Admin\+Zone\+State.\+cs}
+\hypertarget{AdminZoneState_8cs_source}{}\label{AdminZoneState_8cs_source}\index{BistroQ.Presentation/ViewModels/States/AdminZoneState.cs@{BistroQ.Presentation/ViewModels/States/AdminZoneState.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos_1_1Zones}{BistroQ.Domain.Dtos.Zones}};}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Models}{BistroQ.Presentation.ViewModels.Models}};}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Collections.ObjectModel;}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1States}{BistroQ.Presentation.ViewModels.States}};}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00018}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminZoneState}{00018}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminZoneState}{AdminZoneState}}\ :\ ObservableObject}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00024}00024\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00025}00025\ \ \ \ \ [NotifyPropertyChangedFor(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminZoneState_a42ce3eabc7375e850d4dd5648d20df60}{SearchText}}))]}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams}{ZoneCollectionQueryParams}}\ \_query\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00032}00032\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00033}00033\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1ZoneViewModel}{ZoneViewModel}}?\ \_selectedZone;}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00039}00039\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00040}00040\ \ \ \ \ \textcolor{keyword}{private}\ ObservableCollection<ZoneViewModel>\ source\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00046}00046\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00047}00047\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ isLoading;}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00053}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminZoneState_a42ce3eabc7375e850d4dd5648d20df60}{00053}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminZoneState_a42ce3eabc7375e850d4dd5648d20df60}{SearchText}}}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ Query.Name\ ??\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Query.Name\ !=\ value)}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Query.Name\ =\ value;}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnPropertyChanged();}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00069}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminZoneState_aaa86cd078fb554ccb40a3ba7b3e815a9}{00069}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminZoneState_aaa86cd078fb554ccb40a3ba7b3e815a9}{CanEdit}}\ =>\ SelectedZone\ !=\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00074}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminZoneState_a54361e94bb188a56f9cdbd5ca0f47551}{00074}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminZoneState_a54361e94bb188a56f9cdbd5ca0f47551}{CanDelete}}\ =>\ SelectedZone\ !=\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00080}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminZoneState_af9b9ae62114461c9bba197a410d2a386}{00080}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminZoneState_af9b9ae62114461c9bba197a410d2a386}{Reset}}()}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00081}00081\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ SelectedZone\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ Source.Clear();}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ Query\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams}{ZoneCollectionQueryParams}}();}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00092}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminZoneState_a684353d5ea9a10b93a0d2283924cb078}{00092}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminZoneState_a684353d5ea9a10b93a0d2283924cb078}{ReturnToFirstPage}}()}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00093}00093\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ Query.Page\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneState_8cs_source_l00096}00096\ \}}
+
+\end{DoxyCode}

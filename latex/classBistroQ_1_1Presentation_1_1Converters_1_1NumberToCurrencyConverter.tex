@@ -1,0 +1,113 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Converters.\+Number\+To\+Currency\+Converter Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1NumberToCurrencyConverter}{}\label{classBistroQ_1_1Presentation_1_1Converters_1_1NumberToCurrencyConverter}\index{BistroQ.Presentation.Converters.NumberToCurrencyConverter@{BistroQ.Presentation.Converters.NumberToCurrencyConverter}}
+
+
+Converter that transforms numeric values to Vietnamese currency format (VND) using the vi-\/\+VN culture settings.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Converters.\+Number\+To\+Currency\+Converter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classBistroQ_1_1Presentation_1_1Converters_1_1NumberToCurrencyConverter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Converters.\+Number\+To\+Currency\+Converter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classBistroQ_1_1Presentation_1_1Converters_1_1NumberToCurrencyConverter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1NumberToCurrencyConverter_a30da360781dea807a0f90dd197dfb901}{Convert}} (object value, Type target\+Type, object parameter, string language)
+\item 
+object \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1NumberToCurrencyConverter_a588d26a6daf1659552a55b065d2aaebe}{Convert\+Back}} (object value, Type target\+Type, object parameter, string language)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Converter that transforms numeric values to Vietnamese currency format (VND) using the vi-\/\+VN culture settings. 
+
+Definition at line \mbox{\hyperlink{NumberToCurrencyConverter_8cs_source_l00010}{10}} of file \mbox{\hyperlink{NumberToCurrencyConverter_8cs_source}{Number\+To\+Currency\+Converter.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1NumberToCurrencyConverter_a963418be923dcc9b8bac44e8ac0a1070}\index{BistroQ.Presentation.Converters.NumberToCurrencyConverter@{BistroQ.Presentation.Converters.NumberToCurrencyConverter}!NumberToCurrencyConverter@{NumberToCurrencyConverter}}
+\index{NumberToCurrencyConverter@{NumberToCurrencyConverter}!BistroQ.Presentation.Converters.NumberToCurrencyConverter@{BistroQ.Presentation.Converters.NumberToCurrencyConverter}}
+\doxysubsubsection{\texorpdfstring{NumberToCurrencyConverter()}{NumberToCurrencyConverter()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Converters_1_1NumberToCurrencyConverter_a963418be923dcc9b8bac44e8ac0a1070} 
+Bistro\+Q.\+Presentation.\+Converters.\+Number\+To\+Currency\+Converter.\+Number\+To\+Currency\+Converter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{NumberToCurrencyConverter_8cs_source_l00014}{14}} of file \mbox{\hyperlink{NumberToCurrencyConverter_8cs_source}{Number\+To\+Currency\+Converter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \_vietnameseCulture\ =\ \textcolor{keyword}{new}\ CultureInfo(\textcolor{stringliteral}{"{}vi-\/VN"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1NumberToCurrencyConverter_a30da360781dea807a0f90dd197dfb901}\index{BistroQ.Presentation.Converters.NumberToCurrencyConverter@{BistroQ.Presentation.Converters.NumberToCurrencyConverter}!Convert@{Convert}}
+\index{Convert@{Convert}!BistroQ.Presentation.Converters.NumberToCurrencyConverter@{BistroQ.Presentation.Converters.NumberToCurrencyConverter}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Converters_1_1NumberToCurrencyConverter_a30da360781dea807a0f90dd197dfb901} 
+object Bistro\+Q.\+Presentation.\+Converters.\+Number\+To\+Currency\+Converter.\+Convert (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{Type}]{target\+Type}{, }\item[{object}]{parameter}{, }\item[{string}]{language}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{NumberToCurrencyConverter_8cs_source_l00019}{19}} of file \mbox{\hyperlink{NumberToCurrencyConverter_8cs_source}{Number\+To\+Currency\+Converter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ is\ decimal\ decimalValue)}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ decimalValue.ToString(\textcolor{stringliteral}{"{}C"{}},\ \_vietnameseCulture);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1NumberToCurrencyConverter_a588d26a6daf1659552a55b065d2aaebe}\index{BistroQ.Presentation.Converters.NumberToCurrencyConverter@{BistroQ.Presentation.Converters.NumberToCurrencyConverter}!ConvertBack@{ConvertBack}}
+\index{ConvertBack@{ConvertBack}!BistroQ.Presentation.Converters.NumberToCurrencyConverter@{BistroQ.Presentation.Converters.NumberToCurrencyConverter}}
+\doxysubsubsection{\texorpdfstring{ConvertBack()}{ConvertBack()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Converters_1_1NumberToCurrencyConverter_a588d26a6daf1659552a55b065d2aaebe} 
+object Bistro\+Q.\+Presentation.\+Converters.\+Number\+To\+Currency\+Converter.\+Convert\+Back (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{Type}]{target\+Type}{, }\item[{object}]{parameter}{, }\item[{string}]{language}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{NumberToCurrencyConverter_8cs_source_l00029}{29}} of file \mbox{\hyperlink{NumberToCurrencyConverter_8cs_source}{Number\+To\+Currency\+Converter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ is\ \textcolor{keywordtype}{string}\ stringValue)}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (decimal.TryParse(stringValue,\ NumberStyles.Currency,\ \_vietnameseCulture,\ out\ decimal\ result))}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Converters/Number\+To\+Currency\+Converter.\+cs\end{DoxyCompactItemize}

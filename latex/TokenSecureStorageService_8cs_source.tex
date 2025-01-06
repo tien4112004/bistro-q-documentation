@@ -1,0 +1,226 @@
+\doxysection{Token\+Secure\+Storage\+Service.\+cs}
+\hypertarget{TokenSecureStorageService_8cs_source}{}\label{TokenSecureStorageService_8cs_source}\index{BistroQ.Service/Auth/TokenSecureStorageService.cs@{BistroQ.Service/Auth/TokenSecureStorageService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Security.Cryptography;}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Text.Json;}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos}{BistroQ.Domain.Dtos}};}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Models_1_1Exceptions}{BistroQ.Domain.Models.Exceptions}};}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Service_1_1Auth}{BistroQ.Service.Auth}};}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00015}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService}{00015}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService}{TokenSecureStorageService}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService}{ITokenStorageService}}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ SemaphoreSlim\ \_semaphore;}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{string}\ \_folderPath;}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{string}\ \_fileName;}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}{IFileService}}\ \_fileService;}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{byte}[]\ \_entropy;}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService}{TokenSecureStorageService}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}{IFileService}}\ fileService)}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00024}00024\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \_fileService\ =\ fileService;}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \_semaphore\ =\ \textcolor{keyword}{new}\ SemaphoreSlim(1,\ 1);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \_entropy\ =\ Encoding.UTF8.GetBytes(\textcolor{stringliteral}{"{}BistroQ"{}});}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ File\ path\ will\ be:\ ./bin/x64/Debug/net7.0-\/windows10.0.19041.0\(\backslash\)AppX\(\backslash\)Data}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \_folderPath\ =\ Path.Combine(AppContext.BaseDirectory,\ \textcolor{stringliteral}{"{}Data"{}});}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \_fileName\ =\ \textcolor{stringliteral}{"{}tokens.dat"{}};}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00032}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_ad8c39e32e97725ac279b0d90afeec6da}{00032}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_ad8c39e32e97725ac279b0d90afeec6da}{SaveTokensAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1LoginResponseDto}{LoginResponseDto}}\ responseDto)}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ await\ \_semaphore.WaitAsync();}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ var\ res\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ string>()}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}AccessToken"{}},\ \textcolor{keyword}{null}\ \},}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}RefreshToken"{}},\ \textcolor{keyword}{null}\ \},}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}UserId"{}},\ \textcolor{keyword}{null}\ \},}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Role"{}},\ \textcolor{keyword}{null}\ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ var\ tasks\ =\ \textcolor{keyword}{new}\ Task[]}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ Task.Run(async\ ()\ =>\ res[\textcolor{stringliteral}{"{}AccessToken"{}}]\ =\ await\ EncryptData(responseDto.AccessToken)),}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ Task.Run(async\ ()\ =>\ res[\textcolor{stringliteral}{"{}RefreshToken"{}}]\ =\ await\ EncryptData(responseDto.RefreshToken)),}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ Task.Run(async\ ()\ =>\ res[\textcolor{stringliteral}{"{}UserId"{}}]\ =\ await\ EncryptData(responseDto.UserId)),}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ Task.Run(async\ ()\ =>\ res[\textcolor{stringliteral}{"{}Role"{}}]\ =\ await\ EncryptData(responseDto.Role))}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.WhenAll(tasks);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.Run(()\ =>}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_fileService.Save(\_folderPath,\ \_fileName,\ res);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \_semaphore.Release();}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00067}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a94f63b8112965bdde3669181f9a0f8f5}{00067}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a94f63b8112965bdde3669181f9a0f8f5}{ClearTokensAsync}}()}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00068}00068\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ await\ \_semaphore.WaitAsync();}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.Run(()\ =>}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_fileService.Delete(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \_semaphore.Release();}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00084}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a4a00212bfa670acda9f50c978e2dc99e}{00084}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<string>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a4a00212bfa670acda9f50c978e2dc99e}{GetAccessToken}}()}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00085}00085\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ await\ \_semaphore.WaitAsync();}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tokens\ =\ await\ Task.Run(()\ =>}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_fileService.Read<Dictionary<string,\ string>>(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tokens\ ==\ \textcolor{keyword}{null}\ ||\ !tokens.ContainsKey(\textcolor{stringliteral}{"{}AccessToken"{}}))}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Exceptions_1_1TokenStorageException}{TokenStorageException}}(\textcolor{stringliteral}{"{}No\ access\ token\ found"{}});}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ DecryptData(tokens[\textcolor{stringliteral}{"{}AccessToken"{}}]);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \_semaphore.Release();}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00106}00106\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00108}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_aac6527f20e5726f0a7ab1b0996580449}{00108}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<(\textcolor{keywordtype}{string}\ refreshToken,\ \textcolor{keywordtype}{string}\ userId)>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_aac6527f20e5726f0a7ab1b0996580449}{GetRefreshToken}}()}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00109}00109\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ await\ \_semaphore.WaitAsync();}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tokens\ =\ await\ Task.Run(()\ =>}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_fileService.Read<Dictionary<string,\ string>>(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tokens\ ==\ \textcolor{keyword}{null}\ ||\ !tokens.ContainsKey(\textcolor{stringliteral}{"{}AccessToken"{}})\ ||\ !tokens.ContainsKey(\textcolor{stringliteral}{"{}UserId"{}}))}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Exceptions_1_1TokenStorageException}{TokenStorageException}}(\textcolor{stringliteral}{"{}No\ tokens\ found"{}});}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ DecryptData(tokens[\textcolor{stringliteral}{"{}RefreshToken"{}}]),}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ DecryptData(tokens[\textcolor{stringliteral}{"{}UserId"{}}])}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \_semaphore.Release();}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00133}00133\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00135}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_abd6142c75a8d381ec3eb38ec91d54be1}{00135}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_abd6142c75a8d381ec3eb38ec91d54be1}{SaveAccessToken}}(\textcolor{keywordtype}{string}\ accessToken)}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00136}00136\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ await\ \_semaphore.WaitAsync();}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ await\ Task.Run(()\ =>}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_fileService.Read<Dictionary<string,\ string>>(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Exceptions_1_1TokenStorageException}{TokenStorageException}}(\textcolor{stringliteral}{"{}No\ tokens\ found"{}});}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ result[\textcolor{stringliteral}{"{}AccessToken"{}}]\ =\ await\ EncryptData(accessToken);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.Run(()\ =>}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_fileService.Save(\_folderPath,\ \_fileName,\ result);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \_semaphore.Release();}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00161}00161\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00163}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a918feb0ddf39fa6cec68997105307690}{00163}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<string>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenSecureStorageService_a918feb0ddf39fa6cec68997105307690}{GetRoleAsync}}()}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00164}00164\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ await\ \_semaphore.WaitAsync();}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ await\ Task.Run(()\ =>}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_fileService.Read<Dictionary<string,\ string>>(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result\ ==\ \textcolor{keyword}{null}\ ||\ !result.ContainsKey(\textcolor{stringliteral}{"{}Role"{}}))}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}User"{}};}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ DecryptData(result[\textcolor{stringliteral}{"{}Role"{}}]);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \_semaphore.Release();}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00184}00184\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00193}00193\ \ \ \ \ \textcolor{keyword}{private}\ Task<string>\ EncryptData(\textcolor{keywordtype}{string}\ data)}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00194}00194\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(data))}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(data));}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ var\ jsonData\ =\ JsonSerializer.Serialize(data);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ var\ dataBytes\ =\ Encoding.UTF8.GetBytes(jsonData);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Encrypt\ using\ DPAPI}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00202}00202\ \textcolor{preprocessor}{\#pragma\ warning\ disable\ CA1416\ }\textcolor{comment}{//\ Validate\ platform\ compatibility}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ var\ encryptedData\ =\ ProtectedData.Protect(}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ dataBytes,}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \_entropy,}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ DataProtectionScope.CurrentUser}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.FromResult(Convert.ToBase64String(encryptedData));}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00210}00210\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00211}00211\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00219}00219\ \ \ \ \ \textcolor{keyword}{private}\ Task<string>\ DecryptData(\textcolor{keywordtype}{string}\ data)}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00220}00220\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(data))}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(data));}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ var\ byteData\ =\ Convert.FromBase64String(data);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00225}00225\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Decrypt\ using\ DPAPI}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00227}00227\ \textcolor{preprocessor}{\#pragma\ warning\ disable\ CA1416\ }\textcolor{comment}{//\ Validate\ platform\ compatibility}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ var\ decryptedData\ =\ ProtectedData.Unprotect(}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ byteData,}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \_entropy,}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ DataProtectionScope.CurrentUser}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ var\ jsonData\ =\ Encoding.UTF8.GetString(decryptedData);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ var\ dataString\ =\ JsonSerializer.Deserialize<\textcolor{keywordtype}{string}>(jsonData);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.FromResult(dataString);}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00238}00238\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TokenSecureStorageService_8cs_source_l00239}00239\ \}}
+
+\end{DoxyCode}

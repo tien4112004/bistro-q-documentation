@@ -1,0 +1,99 @@
+\doxysection{Item\+Quantity\+Control.\+xaml.\+cs}
+\hypertarget{ItemQuantityControl_8xaml_8cs_source}{}\label{ItemQuantityControl_8xaml_8cs_source}\index{BistroQ.Presentation/Views/UserControls/ItemQuantityControl.xaml.cs@{BistroQ.Presentation/Views/UserControls/ItemQuantityControl.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Models}{BistroQ.Presentation.ViewModels.Models}};}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Input;}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Input;}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00009}00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views_1_1UserControls}{BistroQ.Presentation.Views.UserControls}};}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00011}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1ItemQuantityControl}{00011}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1ItemQuantityControl}{ItemQuantityControl}}\ :\ UserControl}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ readonly\ DependencyProperty\ ItemProperty\ =\ DependencyProperty.Register(}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ nameof(Item),}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{OrderItemViewModel}}),}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1ItemQuantityControl}{ItemQuantityControl}}),}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ PropertyMetadata(\textcolor{keyword}{null},\ OnItemChanged));}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{OrderItemViewModel}}\ Item}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{OrderItemViewModel}})GetValue(ItemProperty);}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ SetValue(ItemProperty,\ value);}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateVisualState();}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{public}\ IRelayCommand\ IncreaseQuantityCommand\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{public}\ IRelayCommand\ DecreaseQuantityCommand\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1ItemQuantityControl}{ItemQuantityControl}}()}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00032}00032\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ this.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1ItemQuantityControl_ab364f76ed86368b9d1aef3542bfa2c96}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ IncreaseQuantityCommand\ =\ \textcolor{keyword}{new}\ RelayCommand(Increase);}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ DecreaseQuantityCommand\ =\ \textcolor{keyword}{new}\ RelayCommand(Decrease,\ CanDecrease);}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00039}00039\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ OnItemChanged(DependencyObject\ d,\ DependencyPropertyChangedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00040}00040\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ var\ control\ =\ (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1ItemQuantityControl}{ItemQuantityControl}})d;}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ var\ oldItem\ =\ e.OldValue\ as\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{OrderItemViewModel}};}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ var\ newItem\ =\ e.NewValue\ as\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{OrderItemViewModel}};}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (oldItem\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ oldItem.PropertyChanged\ -\/=\ control.Item\_PropertyChanged;}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newItem\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ newItem.PropertyChanged\ +=\ control.Item\_PropertyChanged;}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ control.UpdateVisualState();}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00057}00057\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Item\_PropertyChanged(\textcolor{keywordtype}{object}\ sender,\ PropertyChangedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00058}00058\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e.PropertyName\ ==\ nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{OrderItemViewModel}}.Quantity))}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateVisualState();}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00065}00065\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ UpdateVisualState()}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00066}00066\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Item\ ==\ \textcolor{keyword}{null})\ \{\ \textcolor{keywordflow}{return};\ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ VisualStateManager.GoToState(\textcolor{keyword}{this},\ Item.Quantity\ >\ 0\ ?\ \textcolor{stringliteral}{"{}InCart"{}}\ :\ \textcolor{stringliteral}{"{}NotInCart"{}},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ DecreaseQuantityCommand.NotifyCanExecuteChanged();}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00072}00072\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Increase()\ =>\ Item.Quantity++;}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00074}00074\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ CanDecrease()\ =>\ Item?.Quantity\ >\ 1;}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00075}00075\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Decrease()}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00076}00076\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Item.Quantity\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ Item.Quantity-\/-\/;}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ DecreaseQuantityCommand.NotifyCanExecuteChanged();}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00084}00084\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerEntered(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00085}00085\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Hand);}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00089}00089\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerExited(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00090}00090\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Arrow);}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ItemQuantityControl_8xaml_8cs_source_l00093}00093\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,154 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Complete\+Item\+Strategy Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy}}
+
+
+Strategy implementation for completing order items. Handles the completion process and updates item status accordingly.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Complete\+Item\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Complete\+Item\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy_a6e5be92afc24b61632f3abc8abd4b16a}{Complete\+Item\+Strategy}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrder\+Item\+Data\+Service}} order\+Item\+Data\+Service, \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{Kitchen\+Order\+State}} state)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy}{Complete\+Item\+Strategy} class. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy_afd03e8dcaf4fca168fd9253655f94e11}{Execute\+Async}} (IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$ order\+Items)
+\begin{DoxyCompactList}\small\item\em Executes the completion strategy on the specified order items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+IOrder\+Item\+Action\+Strategy}}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{Kitchen\+Order\+State}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy_add84b5e23a2707bdaec26c51f351f606}{State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the state container for kitchen orders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+IOrder\+Item\+Action\+Strategy}}}
+
+
+\doxysubsection{Detailed Description}
+Strategy implementation for completing order items. Handles the completion process and updates item status accordingly. 
+
+Definition at line \mbox{\hyperlink{CompleteItemStrategy_8cs_source_l00012}{12}} of file \mbox{\hyperlink{CompleteItemStrategy_8cs_source}{Complete\+Item\+Strategy.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy_a6e5be92afc24b61632f3abc8abd4b16a}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy}!CompleteItemStrategy@{CompleteItemStrategy}}
+\index{CompleteItemStrategy@{CompleteItemStrategy}!BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy}}
+\doxysubsubsection{\texorpdfstring{CompleteItemStrategy()}{CompleteItemStrategy()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy_a6e5be92afc24b61632f3abc8abd4b16a} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Complete\+Item\+Strategy.\+Complete\+Item\+Strategy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrder\+Item\+Data\+Service}}}]{order\+Item\+Data\+Service}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{Kitchen\+Order\+State}}}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy}{Complete\+Item\+Strategy} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Item\+Data\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for order item operations\\
+\hline
+{\em state} & The current kitchen order state\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{CompleteItemStrategy_8cs_source_l00029}{29}} of file \mbox{\hyperlink{CompleteItemStrategy_8cs_source}{Complete\+Item\+Strategy.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \_orderItemDataService\ =\ orderItemDataService;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy_add84b5e23a2707bdaec26c51f351f606}{State}}\ =\ state;}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy_afd03e8dcaf4fca168fd9253655f94e11}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy}!ExecuteAsync@{ExecuteAsync}}
+\index{ExecuteAsync@{ExecuteAsync}!BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy}}
+\doxysubsubsection{\texorpdfstring{ExecuteAsync()}{ExecuteAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy_afd03e8dcaf4fca168fd9253655f94e11} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Complete\+Item\+Strategy.\+Execute\+Async (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$}]{order\+Items}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Executes the completion strategy on the specified order items. 
+
+Updates the status of items to Completed and removes them from the in-\/progress items collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Items} & The collection of order items to complete\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy_ad264b4d1cc95d3f89e687ac4bd913f82}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+IOrder\+Item\+Action\+Strategy}}.
+
+
+
+Definition at line \mbox{\hyperlink{CompleteItemStrategy_8cs_source_l00043}{43}} of file \mbox{\hyperlink{CompleteItemStrategy_8cs_source}{Complete\+Item\+Strategy.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ var\ orderItemList\ =\ orderItems.ToList();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ await\ \_orderItemDataService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService_ac1b1dea631790a7d0289c7ddc274581f}{BulkUpdateOrderItemsStatusAsync}}(orderItems.Select(i\ =>\ i.OrderItemId),\ OrderItemStatus.Completed);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ orderItemList)}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ item.Status\ =\ OrderItemStatus.Completed;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy_add84b5e23a2707bdaec26c51f351f606}{State}}.ProgressItems.Remove(item);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy_add84b5e23a2707bdaec26c51f351f606}\index{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy}!State@{State}}
+\index{State@{State}!BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy@{BistroQ.Presentation.ViewModels.KitchenOrder.Strategies.CompleteItemStrategy}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy_add84b5e23a2707bdaec26c51f351f606} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1KitchenOrderState}{Kitchen\+Order\+State}} Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+Complete\+Item\+Strategy.\+State\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the state container for kitchen orders. 
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy_ab8c3c88e2855f53c71ccd019be640c85}{Bistro\+Q.\+Presentation.\+View\+Models.\+Kitchen\+Order.\+Strategies.\+IOrder\+Item\+Action\+Strategy}}.
+
+
+
+Definition at line \mbox{\hyperlink{CompleteItemStrategy_8cs_source_l00022}{22}} of file \mbox{\hyperlink{CompleteItemStrategy_8cs_source}{Complete\+Item\+Strategy.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Kitchen\+Order/\+Strategies/Complete\+Item\+Strategy.\+cs\end{DoxyCompactItemize}

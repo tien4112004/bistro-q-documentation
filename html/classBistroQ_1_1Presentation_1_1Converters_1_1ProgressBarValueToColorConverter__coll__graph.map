@@ -1,0 +1,5 @@
+<map id="BistroQ.Presentation.Converters.ProgressBarValueToColorConverter" name="BistroQ.Presentation.Converters.ProgressBarValueToColorConverter">
+<area shape="rect" id="Node000001" title="Converter that changes the color of a progress bar based on its value, displaying a critical color wh..." alt="" coords="5,80,233,123"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="62,5,176,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,48,122,80,116,80,116,48"/>
+</map>

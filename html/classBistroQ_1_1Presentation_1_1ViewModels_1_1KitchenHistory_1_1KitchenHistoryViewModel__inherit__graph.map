@@ -1,0 +1,7 @@
+<map id="BistroQ.Presentation.ViewModels.KitchenHistory.KitchenHistoryViewModel" name="BistroQ.Presentation.ViewModels.KitchenHistory.KitchenHistoryViewModel">
+<area shape="rect" id="Node000001" title="ViewModel responsible for managing the kitchen history view. Handles navigation lifecycle and coordin..." alt="" coords="22,80,264,139"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,131,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,43,120,78,116,81,87,46"/>
+<area shape="rect" id="Node000003" href="$interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware.html" title=" " alt="" coords="155,5,280,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,46,169,81,165,78,195,43"/>
+</map>

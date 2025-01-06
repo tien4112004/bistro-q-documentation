@@ -1,0 +1,91 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Converters.\+First\+Validation\+Error\+Converter Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1FirstValidationErrorConverter}{}\label{classBistroQ_1_1Presentation_1_1Converters_1_1FirstValidationErrorConverter}\index{BistroQ.Presentation.Converters.FirstValidationErrorConverter@{BistroQ.Presentation.Converters.FirstValidationErrorConverter}}
+
+
+Converter that extracts the first validation error message from a dictionary of validation errors for a specific property name provided as a parameter.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Converters.\+First\+Validation\+Error\+Converter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classBistroQ_1_1Presentation_1_1Converters_1_1FirstValidationErrorConverter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Converters.\+First\+Validation\+Error\+Converter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classBistroQ_1_1Presentation_1_1Converters_1_1FirstValidationErrorConverter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1FirstValidationErrorConverter_a2facfd3aec6f7ce9eade2834d4a6a5e9}{Convert}} (object value, Type target\+Type, object parameter, string language)
+\item 
+object \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1FirstValidationErrorConverter_a2cb27a1ef741ebaa706df6346f34b68c}{Convert\+Back}} (object value, Type target\+Type, object parameter, string language)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Converter that extracts the first validation error message from a dictionary of validation errors for a specific property name provided as a parameter. 
+
+Definition at line \mbox{\hyperlink{FirstValidationErrorConverter_8cs_source_l00009}{9}} of file \mbox{\hyperlink{FirstValidationErrorConverter_8cs_source}{First\+Validation\+Error\+Converter.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1FirstValidationErrorConverter_a2facfd3aec6f7ce9eade2834d4a6a5e9}\index{BistroQ.Presentation.Converters.FirstValidationErrorConverter@{BistroQ.Presentation.Converters.FirstValidationErrorConverter}!Convert@{Convert}}
+\index{Convert@{Convert}!BistroQ.Presentation.Converters.FirstValidationErrorConverter@{BistroQ.Presentation.Converters.FirstValidationErrorConverter}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Converters_1_1FirstValidationErrorConverter_a2facfd3aec6f7ce9eade2834d4a6a5e9} 
+object Bistro\+Q.\+Presentation.\+Converters.\+First\+Validation\+Error\+Converter.\+Convert (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{Type}]{target\+Type}{, }\item[{object}]{parameter}{, }\item[{string}]{language}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{FirstValidationErrorConverter_8cs_source_l00011}{11}} of file \mbox{\hyperlink{FirstValidationErrorConverter_8cs_source}{First\+Validation\+Error\+Converter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ propertyName\ =\ parameter\ as\ string;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ is\ Dictionary<\textcolor{keywordtype}{string},\ List<string>>\ errors)}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (errors.ContainsKey(propertyName))}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ errors[propertyName].FirstOrDefault();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1FirstValidationErrorConverter_a2cb27a1ef741ebaa706df6346f34b68c}\index{BistroQ.Presentation.Converters.FirstValidationErrorConverter@{BistroQ.Presentation.Converters.FirstValidationErrorConverter}!ConvertBack@{ConvertBack}}
+\index{ConvertBack@{ConvertBack}!BistroQ.Presentation.Converters.FirstValidationErrorConverter@{BistroQ.Presentation.Converters.FirstValidationErrorConverter}}
+\doxysubsubsection{\texorpdfstring{ConvertBack()}{ConvertBack()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Converters_1_1FirstValidationErrorConverter_a2cb27a1ef741ebaa706df6346f34b68c} 
+object Bistro\+Q.\+Presentation.\+Converters.\+First\+Validation\+Error\+Converter.\+Convert\+Back (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{Type}]{target\+Type}{, }\item[{object}]{parameter}{, }\item[{string}]{language}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{FirstValidationErrorConverter_8cs_source_l00026}{26}} of file \mbox{\hyperlink{FirstValidationErrorConverter_8cs_source}{First\+Validation\+Error\+Converter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ NotImplementedException();}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Converters/First\+Validation\+Error\+Converter.\+cs\end{DoxyCompactItemize}

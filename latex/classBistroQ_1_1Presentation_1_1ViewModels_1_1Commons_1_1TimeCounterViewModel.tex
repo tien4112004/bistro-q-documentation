@@ -1,0 +1,285 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Time\+Counter\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel}\index{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}}
+
+
+View\+Model responsible for managing a time counter with elapsed time display. Provides functionality for starting, stopping, and resetting a timer, as well as formatting the elapsed time for display.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Time\+Counter\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Time\+Counter\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a7cb90c34a03ab1fd737da4452d1b2069}{Set\+Start\+Time}} (Date\+Time start\+Time)
+\begin{DoxyCompactList}\small\item\em Sets the start time for the counter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a3499c838b7fbbd491ee6c750ceeb801d}{Set\+Start\+Time}} (Time\+Span time\+Ago)
+\begin{DoxyCompactList}\small\item\em Sets the start time relative to the current time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a26148118f7497c2f59c02340e6846795}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the timer from the current time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_ab932f26c27db3a1a7d251194400b464f}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_af2fe834137128e739fbf24751723ae15}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the timer to zero and stops it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a857e881233c7fc8d5459029b80a14820}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Disposes of the timer resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Time\+Span \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a159673508f81dae7498424baa082557a}{Elapsed\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the elapsed time since the counter started. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a5ab1484d9d56f98647a56ce4e2a042a0}{Formatted\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the elapsed time formatted as "{}hh\+:mm\+:ss"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model responsible for managing a time counter with elapsed time display. Provides functionality for starting, stopping, and resetting a timer, as well as formatting the elapsed time for display. 
+
+Implements Observable\+Object to provide change notifications for timer properties. Uses Dispatcher\+Timer for UI thread-\/safe time updates. 
+
+Definition at line \mbox{\hyperlink{TimeCounterViewModel_8cs_source_l00015}{15}} of file \mbox{\hyperlink{TimeCounterViewModel_8cs_source}{Time\+Counter\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a88568cc2dea08ac0626a7c2ced150efb}\index{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}!TimeCounterViewModel@{TimeCounterViewModel}}
+\index{TimeCounterViewModel@{TimeCounterViewModel}!BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}}
+\doxysubsubsection{\texorpdfstring{TimeCounterViewModel()}{TimeCounterViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a88568cc2dea08ac0626a7c2ced150efb} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Time\+Counter\+View\+Model.\+Time\+Counter\+View\+Model (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{TimeCounterViewModel_8cs_source_l00060}{60}} of file \mbox{\hyperlink{TimeCounterViewModel_8cs_source}{Time\+Counter\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \_timer\ =\ \textcolor{keyword}{new}\ DispatcherTimer();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \_timer.Interval\ =\ TimeSpan.FromSeconds(1);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \_timer.Tick\ +=\ Timer\_Tick;}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a857e881233c7fc8d5459029b80a14820}\index{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a857e881233c7fc8d5459029b80a14820} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Time\+Counter\+View\+Model.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Disposes of the timer resources. 
+
+
+
+Definition at line \mbox{\hyperlink{TimeCounterViewModel_8cs_source_l00127}{127}} of file \mbox{\hyperlink{TimeCounterViewModel_8cs_source}{Time\+Counter\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00128\ \ \ \ \ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \_timer?.Stop();}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \_timer\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00131\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_af2fe834137128e739fbf24751723ae15}\index{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}!Reset@{Reset}}
+\index{Reset@{Reset}!BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_af2fe834137128e739fbf24751723ae15} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Time\+Counter\+View\+Model.\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the timer to zero and stops it. 
+
+
+
+Definition at line \mbox{\hyperlink{TimeCounterViewModel_8cs_source_l00118}{118}} of file \mbox{\hyperlink{TimeCounterViewModel_8cs_source}{Time\+Counter\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_ab932f26c27db3a1a7d251194400b464f}{Stop}}();}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a159673508f81dae7498424baa082557a}{ElapsedTime}}\ =\ TimeSpan.Zero;}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a7cb90c34a03ab1fd737da4452d1b2069}\index{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}!SetStartTime@{SetStartTime}}
+\index{SetStartTime@{SetStartTime}!BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}}
+\doxysubsubsection{\texorpdfstring{SetStartTime()}{SetStartTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a7cb90c34a03ab1fd737da4452d1b2069} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Time\+Counter\+View\+Model.\+Set\+Start\+Time (\begin{DoxyParamCaption}\item[{Date\+Time}]{start\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the start time for the counter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Time} & The datetime to set as start time\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Thrown when start time is in the future\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{TimeCounterViewModel_8cs_source_l00074}{74}} of file \mbox{\hyperlink{TimeCounterViewModel_8cs_source}{Time\+Counter\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (startTime\ >\ DateTime.Now)}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentException(\textcolor{stringliteral}{"{}Start\ time\ cannot\ be\ in\ the\ future"{}});}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \_startTime\ =\ startTime;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a159673508f81dae7498424baa082557a}{ElapsedTime}}\ =\ DateTime.Now\ -\/\ \_startTime;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\_timer.IsEnabled)}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \_timer.Start();}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a3499c838b7fbbd491ee6c750ceeb801d}\index{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}!SetStartTime@{SetStartTime}}
+\index{SetStartTime@{SetStartTime}!BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}}
+\doxysubsubsection{\texorpdfstring{SetStartTime()}{SetStartTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a3499c838b7fbbd491ee6c750ceeb801d} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Time\+Counter\+View\+Model.\+Set\+Start\+Time (\begin{DoxyParamCaption}\item[{Time\+Span}]{time\+Ago}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the start time relative to the current time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Ago} & The timespan representing how long ago to start the timer\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{TimeCounterViewModel_8cs_source_l00092}{92}} of file \mbox{\hyperlink{TimeCounterViewModel_8cs_source}{Time\+Counter\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00093\ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a7cb90c34a03ab1fd737da4452d1b2069}{SetStartTime}}(DateTime.Now\ -\/\ timeAgo);}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a26148118f7497c2f59c02340e6846795}\index{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}!Start@{Start}}
+\index{Start@{Start}!BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a26148118f7497c2f59c02340e6846795} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Time\+Counter\+View\+Model.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts the timer from the current time. 
+
+
+
+Definition at line \mbox{\hyperlink{TimeCounterViewModel_8cs_source_l00100}{100}} of file \mbox{\hyperlink{TimeCounterViewModel_8cs_source}{Time\+Counter\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00101\ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \_startTime\ =\ DateTime.Now;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a159673508f81dae7498424baa082557a}{ElapsedTime}}\ =\ TimeSpan.Zero;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \_timer.Start();}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_ab932f26c27db3a1a7d251194400b464f}\index{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}!Stop@{Stop}}
+\index{Stop@{Stop}!BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_ab932f26c27db3a1a7d251194400b464f} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Time\+Counter\+View\+Model.\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stops the timer. 
+
+
+
+Definition at line \mbox{\hyperlink{TimeCounterViewModel_8cs_source_l00110}{110}} of file \mbox{\hyperlink{TimeCounterViewModel_8cs_source}{Time\+Counter\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111\ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \_timer.Stop();}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a159673508f81dae7498424baa082557a}\index{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}!ElapsedTime@{ElapsedTime}}
+\index{ElapsedTime@{ElapsedTime}!BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}}
+\doxysubsubsection{\texorpdfstring{ElapsedTime}{ElapsedTime}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a159673508f81dae7498424baa082557a} 
+Time\+Span Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Time\+Counter\+View\+Model.\+Elapsed\+Time\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the elapsed time since the counter started. 
+
+Updates the Formatted\+Time property when changed 
+
+Definition at line \mbox{\hyperlink{TimeCounterViewModel_8cs_source_l00041}{41}} of file \mbox{\hyperlink{TimeCounterViewModel_8cs_source}{Time\+Counter\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ \_elapsedTime;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{set}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SetProperty(ref\ \_elapsedTime,\ value))}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnPropertyChanged(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a5ab1484d9d56f98647a56ce4e2a042a0}{FormattedTime}}));}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a5ab1484d9d56f98647a56ce4e2a042a0}\index{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}!FormattedTime@{FormattedTime}}
+\index{FormattedTime@{FormattedTime}!BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel@{BistroQ.Presentation.ViewModels.Commons.TimeCounterViewModel}}
+\doxysubsubsection{\texorpdfstring{FormattedTime}{FormattedTime}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a5ab1484d9d56f98647a56ce4e2a042a0} 
+string Bistro\+Q.\+Presentation.\+View\+Models.\+Commons.\+Time\+Counter\+View\+Model.\+Formatted\+Time\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the elapsed time formatted as "{}hh\+:mm\+:ss"{}. 
+
+
+
+Definition at line \mbox{\hyperlink{TimeCounterViewModel_8cs_source_l00056}{56}} of file \mbox{\hyperlink{TimeCounterViewModel_8cs_source}{Time\+Counter\+View\+Model.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Commons/Time\+Counter\+View\+Model.\+cs\end{DoxyCompactItemize}

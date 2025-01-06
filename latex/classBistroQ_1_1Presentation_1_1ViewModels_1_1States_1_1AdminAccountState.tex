@@ -1,0 +1,163 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Account\+State Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState}\index{BistroQ.Presentation.ViewModels.States.AdminAccountState@{BistroQ.Presentation.ViewModels.States.AdminAccountState}}
+
+
+State management class for the admin account interface. Handles account data, selection state, and search functionality.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Account\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Account\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_a9077d81b07f21e270c9ad7cf5f179cad}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the state to default values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_a3c5df1e4f3568b85af9c5c130de2ede1}{Return\+To\+First\+Page}} ()
+\begin{DoxyCompactList}\small\item\em Returns to the first page of results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_aa7c2b1feeed25c9c7c2713c601e5924f}{Search\+Text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the search text for filtering accounts. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_aacea4adacbe36614207269c2851ba72f}{Can\+Edit}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets whether an account is selected and can be edited. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_a170705aa0c5655c6048c5c42006125b3}{Can\+Delete}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets whether the selected account can be deleted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+State management class for the admin account interface. Handles account data, selection state, and search functionality. 
+
+Provides special handling for the default admin account to prevent deletion. 
+
+Definition at line \mbox{\hyperlink{AdminAccountState_8cs_source_l00015}{15}} of file \mbox{\hyperlink{AdminAccountState_8cs_source}{Admin\+Account\+State.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_a9077d81b07f21e270c9ad7cf5f179cad}\index{BistroQ.Presentation.ViewModels.States.AdminAccountState@{BistroQ.Presentation.ViewModels.States.AdminAccountState}!Reset@{Reset}}
+\index{Reset@{Reset}!BistroQ.Presentation.ViewModels.States.AdminAccountState@{BistroQ.Presentation.ViewModels.States.AdminAccountState}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_a9077d81b07f21e270c9ad7cf5f179cad} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Account\+State.\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the state to default values. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountState_8cs_source_l00080}{80}} of file \mbox{\hyperlink{AdminAccountState_8cs_source}{Admin\+Account\+State.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ SelectedAccount\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ Source.Clear();}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ Query\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1AccountCollectionQueryParams}{AccountCollectionQueryParams}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_a3c5df1e4f3568b85af9c5c130de2ede1}\index{BistroQ.Presentation.ViewModels.States.AdminAccountState@{BistroQ.Presentation.ViewModels.States.AdminAccountState}!ReturnToFirstPage@{ReturnToFirstPage}}
+\index{ReturnToFirstPage@{ReturnToFirstPage}!BistroQ.Presentation.ViewModels.States.AdminAccountState@{BistroQ.Presentation.ViewModels.States.AdminAccountState}}
+\doxysubsubsection{\texorpdfstring{ReturnToFirstPage()}{ReturnToFirstPage()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_a3c5df1e4f3568b85af9c5c130de2ede1} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Account\+State.\+Return\+To\+First\+Page (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns to the first page of results. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountState_8cs_source_l00091}{91}} of file \mbox{\hyperlink{AdminAccountState_8cs_source}{Admin\+Account\+State.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092\ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ Query.Page\ =\ 1;}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_a170705aa0c5655c6048c5c42006125b3}\index{BistroQ.Presentation.ViewModels.States.AdminAccountState@{BistroQ.Presentation.ViewModels.States.AdminAccountState}!CanDelete@{CanDelete}}
+\index{CanDelete@{CanDelete}!BistroQ.Presentation.ViewModels.States.AdminAccountState@{BistroQ.Presentation.ViewModels.States.AdminAccountState}}
+\doxysubsubsection{\texorpdfstring{CanDelete}{CanDelete}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_a170705aa0c5655c6048c5c42006125b3} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Account\+State.\+Can\+Delete\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets whether the selected account can be deleted. 
+
+Prevents deletion of the default admin account 
+
+Definition at line \mbox{\hyperlink{AdminAccountState_8cs_source_l00069}{69}} of file \mbox{\hyperlink{AdminAccountState_8cs_source}{Admin\+Account\+State.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_aacea4adacbe36614207269c2851ba72f}\index{BistroQ.Presentation.ViewModels.States.AdminAccountState@{BistroQ.Presentation.ViewModels.States.AdminAccountState}!CanEdit@{CanEdit}}
+\index{CanEdit@{CanEdit}!BistroQ.Presentation.ViewModels.States.AdminAccountState@{BistroQ.Presentation.ViewModels.States.AdminAccountState}}
+\doxysubsubsection{\texorpdfstring{CanEdit}{CanEdit}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_aacea4adacbe36614207269c2851ba72f} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Account\+State.\+Can\+Edit\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets whether an account is selected and can be edited. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountState_8cs_source_l00061}{61}} of file \mbox{\hyperlink{AdminAccountState_8cs_source}{Admin\+Account\+State.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_aa7c2b1feeed25c9c7c2713c601e5924f}\index{BistroQ.Presentation.ViewModels.States.AdminAccountState@{BistroQ.Presentation.ViewModels.States.AdminAccountState}!SearchText@{SearchText}}
+\index{SearchText@{SearchText}!BistroQ.Presentation.ViewModels.States.AdminAccountState@{BistroQ.Presentation.ViewModels.States.AdminAccountState}}
+\doxysubsubsection{\texorpdfstring{SearchText}{SearchText}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1States_1_1AdminAccountState_aa7c2b1feeed25c9c7c2713c601e5924f} 
+string Bistro\+Q.\+Presentation.\+View\+Models.\+States.\+Admin\+Account\+State.\+Search\+Text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the search text for filtering accounts. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminAccountState_8cs_source_l00045}{45}} of file \mbox{\hyperlink{AdminAccountState_8cs_source}{Admin\+Account\+State.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ Query.Username\ ??\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Query.Username\ !=\ value)}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Query.Username\ =\ value;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnPropertyChanged();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+States/Admin\+Account\+State.\+cs\end{DoxyCompactItemize}

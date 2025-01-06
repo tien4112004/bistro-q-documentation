@@ -1,0 +1,28 @@
+\doxysection{Json.\+cs}
+\hypertarget{Json_8cs_source}{}\label{Json_8cs_source}\index{BistroQ.Domain/Helpers/Json.cs@{BistroQ.Domain/Helpers/Json.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Newtonsoft.Json;}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00003}\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Helpers}{00003}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Helpers}{BistroQ.Domain.Helpers}};}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00005}00005\ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }Json}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ async\ Task<T>\ ToObjectAsync<T>(\textcolor{keywordtype}{string}\ value)}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ Task.Run<T>(()\ =>}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ JsonConvert.DeserializeObject<T>(value);}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00013}00013\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ async\ Task<string>\ StringifyAsync(\textcolor{keywordtype}{object}\ value)}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ Task.Run<\textcolor{keywordtype}{string}>(()\ =>}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ JsonConvert.SerializeObject(value);}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Json_8cs_source_l00022}00022\ \}}
+
+\end{DoxyCode}

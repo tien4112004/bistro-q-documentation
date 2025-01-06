@@ -1,0 +1,358 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel}\index{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}}
+
+
+View\+Model for managing and displaying table order details. Handles order status updates, checkout operations, and timer management.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a3a1ece3105586b3089a4c93a089d8e0f}{Table\+Order\+Detail\+View\+Model}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService}{IOrder\+Data\+Service}} order\+Data\+Service, IMapper mapper, IMessenger messenger)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel}{Table\+Order\+Detail\+View\+Model} class. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{Order\+View\+Model}}?$>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_ae2d83f7aed855141aae0161fae6cdce9}{On\+Table\+Changed\+Async}} (int? table\+Id)
+\begin{DoxyCompactList}\small\item\em Updates the order details when a table changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a5abcaa9ea56b7acb633faad28c8c7f7a}{Checkout\+Requested\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Command handler for checkout requests. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a6da06472dc8458f627f3f4045b9c16f5}{Receive}} (Table\+Selected\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles table selection messages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a0d214ace8e350f9ab812078befec3cf5}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Performs cleanup of resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a2101998c887103bb155299428f3c50d0}{Receive}} (Table\+State\+Changed\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles table state change messages and updates the order accordingly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel}{Time\+Counter\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Timer for tracking order duration. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a82bc0c851250fb33fe29a065baf1166b}{Does\+Not\+Have\+Order}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets whether there is no current order. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_aac58af9fb5816d16bbde12dee90ed9c0}{Does\+Not\+Have\+Order\+Detail}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets whether there is an order but no order details. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a6d63e6bd45274b4e7268152f81189da5}{Has\+Order\+Detail}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets whether there is an order with details. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a1a8ab1abea97abf69ebd55ad9e220594}{Is\+Checkout\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets whether checkout is enabled for the current order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model for managing and displaying table order details. Handles order status updates, checkout operations, and timer management. 
+
+Implements multiple interfaces for functionality\+:
+\begin{DoxyItemize}
+\item Observable\+Object for MVVM pattern
+\item IRecipient for handling table selection and state messages
+\item IDisposable for resource cleanup 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source_l00027}{27}} of file \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source}{Table\+Order\+Detail\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a3a1ece3105586b3089a4c93a089d8e0f}\index{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}!TableOrderDetailViewModel@{TableOrderDetailViewModel}}
+\index{TableOrderDetailViewModel@{TableOrderDetailViewModel}!BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}}
+\doxysubsubsection{\texorpdfstring{TableOrderDetailViewModel()}{TableOrderDetailViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a3a1ece3105586b3089a4c93a089d8e0f} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model.\+Table\+Order\+Detail\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService}{IOrder\+Data\+Service}}}]{order\+Data\+Service}{, }\item[{IMapper}]{mapper}{, }\item[{IMessenger}]{messenger}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel}{Table\+Order\+Detail\+View\+Model} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Data\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for order data operations.\\
+\hline
+{\em mapper} & \doxylink{namespaceBistroQ_1_1Service}{Service} for object mapping.\\
+\hline
+{\em messenger} & \doxylink{namespaceBistroQ_1_1Service}{Service} for messaging between components.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source_l00105}{105}} of file \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source}{Table\+Order\+Detail\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \_orderDataService\ =\ orderDataService;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \_messenger\ =\ messenger;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ dispatcherQueue\ =\ DispatcherQueue.GetForCurrentThread();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel}{TimeCounterViewModel}}();}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a5abcaa9ea56b7acb633faad28c8c7f7a}\index{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}!CheckoutRequestedCommand@{CheckoutRequestedCommand}}
+\index{CheckoutRequestedCommand@{CheckoutRequestedCommand}!BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}}
+\doxysubsubsection{\texorpdfstring{CheckoutRequestedCommand()}{CheckoutRequestedCommand()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a5abcaa9ea56b7acb633faad28c8c7f7a} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model.\+Checkout\+Requested\+Command (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Command handler for checkout requests. 
+
+
+
+Definition at line \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source_l00153}{153}} of file \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source}{Table\+Order\+Detail\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00154\ \ \ \ \ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a0f7eff89937d3c6e7e2577740253fc91}{CompleteCheckoutRequestedMessage}}(Order.TableId));}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a0d214ace8e350f9ab812078befec3cf5}\index{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a0d214ace8e350f9ab812078befec3cf5} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs cleanup of resources. 
+
+
+
+Definition at line \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source_l00170}{170}} of file \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source}{Table\+Order\+Detail\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00171\ \ \ \ \ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00173\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_ae2d83f7aed855141aae0161fae6cdce9}\index{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}!OnTableChangedAsync@{OnTableChangedAsync}}
+\index{OnTableChangedAsync@{OnTableChangedAsync}!BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}}
+\doxysubsubsection{\texorpdfstring{OnTableChangedAsync()}{OnTableChangedAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_ae2d83f7aed855141aae0161fae6cdce9} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{Order\+View\+Model}}?$>$ Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model.\+On\+Table\+Changed\+Async (\begin{DoxyParamCaption}\item[{int?}]{table\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the order details when a table changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Id} & ID of the selected table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated order view model, or null if not found.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source_l00122}{122}} of file \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source}{Table\+Order\+Detail\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00123\ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ var\ order\ =\ await\ TaskHelper.WithMinimumDelay(}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_orderDataService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService_acbc5baec37cf968709248847864fe146}{GetOrderByCashierAsync}}(tableId\ ??\ 0),}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 200);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ Order\ =\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{OrderViewModel}}>(order);}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a7cb90c34a03ab1fd737da4452d1b2069}{SetStartTime}}(Order.StartTime\ ??\ DateTime.Now);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Order;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ Order\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{OrderViewModel}}();}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a7cb90c34a03ab1fd737da4452d1b2069}{SetStartTime}}(DateTime.Now);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(ex.Message);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a6da06472dc8458f627f3f4045b9c16f5}\index{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a6da06472dc8458f627f3f4045b9c16f5} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Table\+Selected\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles table selection messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the selected table ID.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source_l00162}{162}} of file \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source}{Table\+Order\+Detail\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00163\ \ \ \ \ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_ae2d83f7aed855141aae0161fae6cdce9}{OnTableChangedAsync}}(message.TableId);}
+\DoxyCodeLine{00165\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a2101998c887103bb155299428f3c50d0}\index{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a2101998c887103bb155299428f3c50d0} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Table\+State\+Changed\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles table state change messages and updates the order accordingly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the table state change information.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source_l00179}{179}} of file \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source}{Table\+Order\+Detail\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00180\ \ \ \ \ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ dispatcherQueue.TryEnqueue(async\ ()\ =>}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (message.TableId\ ==\ Order.TableId)}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (message.State)}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{CashierTableState}}.Available:}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Order\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_af2fe834137128e739fbf24751723ae15}{Reset}}();}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{CashierTableState}}.Occupied:}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a26148118f7497c2f59c02340e6846795}{Start}}();}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{CashierTableState}}.CheckoutPending:}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_ae2d83f7aed855141aae0161fae6cdce9}{OnTableChangedAsync}}(message.TableId);}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ updatedOrder\ =\ Order.Clone();}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ updatedOrder.Status\ =\ OrderStatus.Pending;}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Order\ =\ updatedOrder;}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}{Timer}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_ab932f26c27db3a1a7d251194400b464f}{Stop}}();}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00204\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a82bc0c851250fb33fe29a065baf1166b}\index{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}!DoesNotHaveOrder@{DoesNotHaveOrder}}
+\index{DoesNotHaveOrder@{DoesNotHaveOrder}!BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}}
+\doxysubsubsection{\texorpdfstring{DoesNotHaveOrder}{DoesNotHaveOrder}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a82bc0c851250fb33fe29a065baf1166b} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model.\+Does\+Not\+Have\+Order\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets whether there is no current order. 
+
+
+
+Definition at line \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source_l00080}{80}} of file \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source}{Table\+Order\+Detail\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_aac58af9fb5816d16bbde12dee90ed9c0}\index{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}!DoesNotHaveOrderDetail@{DoesNotHaveOrderDetail}}
+\index{DoesNotHaveOrderDetail@{DoesNotHaveOrderDetail}!BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}}
+\doxysubsubsection{\texorpdfstring{DoesNotHaveOrderDetail}{DoesNotHaveOrderDetail}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_aac58af9fb5816d16bbde12dee90ed9c0} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model.\+Does\+Not\+Have\+Order\+Detail\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets whether there is an order but no order details. 
+
+
+
+Definition at line \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source_l00085}{85}} of file \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source}{Table\+Order\+Detail\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a6d63e6bd45274b4e7268152f81189da5}\index{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}!HasOrderDetail@{HasOrderDetail}}
+\index{HasOrderDetail@{HasOrderDetail}!BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}}
+\doxysubsubsection{\texorpdfstring{HasOrderDetail}{HasOrderDetail}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a6d63e6bd45274b4e7268152f81189da5} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model.\+Has\+Order\+Detail\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets whether there is an order with details. 
+
+
+
+Definition at line \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source_l00090}{90}} of file \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source}{Table\+Order\+Detail\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a1a8ab1abea97abf69ebd55ad9e220594}\index{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}!IsCheckoutEnabled@{IsCheckoutEnabled}}
+\index{IsCheckoutEnabled@{IsCheckoutEnabled}!BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}}
+\doxysubsubsection{\texorpdfstring{IsCheckoutEnabled}{IsCheckoutEnabled}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a1a8ab1abea97abf69ebd55ad9e220594} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model.\+Is\+Checkout\+Enabled\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets whether checkout is enabled for the current order. 
+
+
+
+Definition at line \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source_l00095}{95}} of file \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source}{Table\+Order\+Detail\+View\+Model.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a}\index{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}!Timer@{Timer}}
+\index{Timer@{Timer}!BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel@{BistroQ.Presentation.ViewModels.CashierTable.TableOrderDetailViewModel}}
+\doxysubsubsection{\texorpdfstring{Timer}{Timer}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel_a706dfc42a9e929372ff575241b580a0a} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel}{Time\+Counter\+View\+Model}} Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Table\+Order\+Detail\+View\+Model.\+Timer\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Timer for tracking order duration. 
+
+
+
+Definition at line \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source_l00075}{75}} of file \mbox{\hyperlink{TableOrderDetailViewModel_8cs_source}{Table\+Order\+Detail\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Cashier\+Table/Table\+Order\+Detail\+View\+Model.\+cs\end{DoxyCompactItemize}

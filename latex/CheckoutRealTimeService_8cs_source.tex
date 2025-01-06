@@ -1,0 +1,102 @@
+\doxysection{Checkout\+Real\+Time\+Service.\+cs}
+\hypertarget{CheckoutRealTimeService_8cs_source}{}\label{CheckoutRealTimeService_8cs_source}\index{BistroQ.Service/Realtime/CheckoutRealTimeService.cs@{BistroQ.Service/Realtime/CheckoutRealTimeService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime}{BistroQ.Domain.Contracts.Services.Realtime}};}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.AspNetCore.SignalR.Client;}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Diagnostics;}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00007}\mbox{\hyperlink{namespaceBistroQ_1_1Service_1_1Realtime}{00007}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Service_1_1Realtime}{BistroQ.Service.Realtime}};}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00013}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService}{00013}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService}{CheckoutRealTimeService}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService}{ICheckoutRealTimeService}}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00015}00015\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ HubConnection\ \_hubConnection;}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuthService}}\ \_authService;}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00025}00025\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00027}00027\ \textcolor{preprocessor}{\ \ \ \ \#region\ Events}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ Action<string>\ OnCheckoutInitiated;}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ Action\ OnCheckoutCompleted;}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ Action<int,\ int,\ string>\ OnNewCheckout;}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00031}00031\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00033}00033\ \textcolor{preprocessor}{\ \ \ \ \#region\ Properties}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00037}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a8206625c78815720321d2b440536de82}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a8206625c78815720321d2b440536de82}{IsConnected}}\ =>\ \_hubConnection.State\ ==\ HubConnectionState.Connected;}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00038}00038\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00040}00040\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService}{CheckoutRealTimeService}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuthService}}\ authService)}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \_authService\ =\ authService;}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \_hubConnection\ =\ \textcolor{keyword}{new}\ HubConnectionBuilder()}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ .WithUrl(\textcolor{stringliteral}{"{}http://localhost:5256/hubs/checkout"{}},\ options\ =>}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ options.AccessTokenProvider\ =\ async\ ()\ =>\ await\ authService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a376cbb67857666ec660a3ab67762ad22}{GetTokenAsync}}();}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \})}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ .WithAutomaticReconnect()}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ .Build();}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Shows\ the\ payment\ URL\ to\ the\ client}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \_hubConnection.On<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}CheckoutInitiated"{}},\ (paymentData)\ =>}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnCheckoutInitiated?.Invoke(paymentData));}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Notifies\ the\ client\ that\ the\ payment\ has\ been\ completed}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \_hubConnection.On(\textcolor{stringliteral}{"{}CheckoutCompleted"{}},\ ()\ =>}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnCheckoutCompleted?.Invoke());}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Notifies\ the\ cashier\ that\ a\ new\ checkout\ has\ been\ requested}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \_hubConnection.On<int,\ int,\ \textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}NewCheckout"{}},\ (tableId,\ tableNumber,\ zoneName)\ =>}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ OnNewCheckout?.Invoke(tableId,\ tableNumber,\ zoneName));}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00064}00064\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00066}00066\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00067}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_aa7c2c8ff6641abe5e317342e103b077c}{00067}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_aa7c2c8ff6641abe5e317342e103b077c}{StartAsync}}()}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00068}00068\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a8206625c78815720321d2b440536de82}{IsConnected}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ await\ \_hubConnection.StartAsync();}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00074}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a946b83b374872537e2d25f5bdc291b1a}{00074}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a946b83b374872537e2d25f5bdc291b1a}{StopAsync}}()}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00075}00075\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_hubConnection.State\ !=\ HubConnectionState.Disconnected)}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_hubConnection.StopAsync();}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ OnCheckoutInitiated\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ OnCheckoutCompleted\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ OnNewCheckout\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00085}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a05d5c8acc13baf597a9a8372cb4b9df1}{00085}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a05d5c8acc13baf597a9a8372cb4b9df1}{NotifyCheckoutRequestedAsync}}(\textcolor{keywordtype}{int}\ tableId)}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00086}00086\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_hubConnection.InvokeAsync(\textcolor{stringliteral}{"{}InitiateCheckout"{}},\ tableId);}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ e)}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(e);}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00097}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_aa07a55ea52232738b42b4a702e08871d}{00097}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_aa07a55ea52232738b42b4a702e08871d}{NotifyCheckoutCompletedAsync}}(\textcolor{keywordtype}{int}\ tableId)}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00098}00098\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_hubConnection.InvokeAsync(\textcolor{stringliteral}{"{}CompleteCheckout"{}},\ tableId);}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ e)}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(e);}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00107}00107\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00108}00108\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{CheckoutRealTimeService_8cs_source_l00109}00109\ \}}
+
+\end{DoxyCode}

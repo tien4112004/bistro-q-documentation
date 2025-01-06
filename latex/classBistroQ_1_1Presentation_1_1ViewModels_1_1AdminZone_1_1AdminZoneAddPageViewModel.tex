@@ -1,0 +1,209 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone.\+Admin\+Zone\+Add\+Page\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel}\index{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel}}
+
+
+View\+Model for adding new zones in the admin interface. Handles form validation, zone creation, and navigation.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone.\+Admin\+Zone\+Add\+Page\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone.\+Admin\+Zone\+Add\+Page\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a2ac029134f3f80b3f238f81f70160410}{Admin\+Zone\+Add\+Page\+View\+Model}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}{IZone\+Data\+Service}} zone\+Data\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}} dialog\+Service)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel}{Admin\+Zone\+Add\+Page\+View\+Model} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a791340b48ee67bafabaacfa1139340ac}{Can\+Add}} ()
+\begin{DoxyCompactList}\small\item\em Determines whether a zone can be added based on form validation and processing state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a0e2adfdb0736078dbee76d689150a8fe}{Navigate\+Back}} ()
+\begin{DoxyCompactList}\small\item\em Navigates back to the previous page. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a3774245029a706e9fda7325bd8b5f605}{Add\+Zone\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Asynchronously adds a new zone after validating the form data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a07214b55b08efff16b249f1c725a3b03}{Add\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to trigger the zone creation process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model for adding new zones in the admin interface. Handles form validation, zone creation, and navigation. 
+
+Inherits from Observable\+Recipient for MVVM pattern implementation. 
+
+Definition at line \mbox{\hyperlink{AdminZoneAddPageViewModel_8cs_source_l00018}{18}} of file \mbox{\hyperlink{AdminZoneAddPageViewModel_8cs_source}{Admin\+Zone\+Add\+Page\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a2ac029134f3f80b3f238f81f70160410}\index{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel}!AdminZoneAddPageViewModel@{AdminZoneAddPageViewModel}}
+\index{AdminZoneAddPageViewModel@{AdminZoneAddPageViewModel}!BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel}}
+\doxysubsubsection{\texorpdfstring{AdminZoneAddPageViewModel()}{AdminZoneAddPageViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a2ac029134f3f80b3f238f81f70160410} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone.\+Admin\+Zone\+Add\+Page\+View\+Model.\+Admin\+Zone\+Add\+Page\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}{IZone\+Data\+Service}}}]{zone\+Data\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialog\+Service}}}]{dialog\+Service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel}{Admin\+Zone\+Add\+Page\+View\+Model} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Data\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for zone data operations.\\
+\hline
+{\em dialog\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for displaying dialogs.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{AdminZoneAddPageViewModel_8cs_source_l00063}{63}} of file \mbox{\hyperlink{AdminZoneAddPageViewModel_8cs_source}{Admin\+Zone\+Add\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \_zoneDataService\ =\ zoneDataService;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \_dialogService\ =\ dialogService;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a07214b55b08efff16b249f1c725a3b03}{AddCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a3774245029a706e9fda7325bd8b5f605}{AddZoneAsync}},\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a791340b48ee67bafabaacfa1139340ac}{CanAdd}});}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a3774245029a706e9fda7325bd8b5f605}\index{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel}!AddZoneAsync@{AddZoneAsync}}
+\index{AddZoneAsync@{AddZoneAsync}!BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel}}
+\doxysubsubsection{\texorpdfstring{AddZoneAsync()}{AddZoneAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a3774245029a706e9fda7325bd8b5f605} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone.\+Admin\+Zone\+Add\+Page\+View\+Model.\+Add\+Zone\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Asynchronously adds a new zone after validating the form data. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{AdminZoneAddPageViewModel_8cs_source_l00093}{93}} of file \mbox{\hyperlink{AdminZoneAddPageViewModel_8cs_source}{Admin\+Zone\+Add\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ Form.ValidateAll();}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Form.HasErrors)}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}{ShowErrorDialog}}(\textcolor{stringliteral}{"{}Data\ is\ invalid.\ Please\ check\ again."{}},\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1CreateZoneRequest}{CreateZoneRequest}}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ Form.Name}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_zoneDataService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a98cc4caccfd78a1fbd5e5d8a6de5a7aa}{CreateZoneAsync}}(request);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}{ShowErrorDialog}}(\textcolor{stringliteral}{"{}Successfully\ added\ zone:\ "{}}\ +\ request.Name,\ \textcolor{stringliteral}{"{}Success"{}});}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a0e2adfdb0736078dbee76d689150a8fe}{NavigateBack}}();}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ ex.Message;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}{ShowErrorDialog}}(ex.Message,\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a791340b48ee67bafabaacfa1139340ac}\index{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel}!CanAdd@{CanAdd}}
+\index{CanAdd@{CanAdd}!BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel}}
+\doxysubsubsection{\texorpdfstring{CanAdd()}{CanAdd()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a791340b48ee67bafabaacfa1139340ac} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone.\+Admin\+Zone\+Add\+Page\+View\+Model.\+Can\+Add (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determines whether a zone can be added based on form validation and processing state. 
+
+\begin{DoxyReturn}{Returns}
+True if the zone can be added; otherwise, false.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{AdminZoneAddPageViewModel_8cs_source_l00076}{76}} of file \mbox{\hyperlink{AdminZoneAddPageViewModel_8cs_source}{Admin\+Zone\+Add\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077\ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !Form.HasErrors\ \&\&\ !IsProcessing;}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a0e2adfdb0736078dbee76d689150a8fe}\index{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel}!NavigateBack@{NavigateBack}}
+\index{NavigateBack@{NavigateBack}!BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel}}
+\doxysubsubsection{\texorpdfstring{NavigateBack()}{NavigateBack()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a0e2adfdb0736078dbee76d689150a8fe} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone.\+Admin\+Zone\+Add\+Page\+View\+Model.\+Navigate\+Back (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Navigates back to the previous page. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminZoneAddPageViewModel_8cs_source_l00084}{84}} of file \mbox{\hyperlink{AdminZoneAddPageViewModel_8cs_source}{Admin\+Zone\+Add\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ App.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigationService}}>().GoBack();}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a07214b55b08efff16b249f1c725a3b03}\index{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel}!AddCommand@{AddCommand}}
+\index{AddCommand@{AddCommand}!BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel@{BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel}}
+\doxysubsubsection{\texorpdfstring{AddCommand}{AddCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a07214b55b08efff16b249f1c725a3b03} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Admin\+Zone.\+Admin\+Zone\+Add\+Page\+View\+Model.\+Add\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Command to trigger the zone creation process. 
+
+
+
+Definition at line \mbox{\hyperlink{AdminZoneAddPageViewModel_8cs_source_l00054}{54}} of file \mbox{\hyperlink{AdminZoneAddPageViewModel_8cs_source}{Admin\+Zone\+Add\+Page\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \{\ \textcolor{keyword}{get};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Admin\+Zone/Admin\+Zone\+Add\+Page\+View\+Model.\+cs\end{DoxyCompactItemize}

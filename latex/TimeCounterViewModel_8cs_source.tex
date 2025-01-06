@@ -1,0 +1,98 @@
+\doxysection{Time\+Counter\+View\+Model.\+cs}
+\hypertarget{TimeCounterViewModel_8cs_source}{}\label{TimeCounterViewModel_8cs_source}\index{BistroQ.Presentation/ViewModels/Commons/TimeCounterViewModel.cs@{BistroQ.Presentation/ViewModels/Commons/TimeCounterViewModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Commons}{BistroQ.Presentation.ViewModels.Commons}};}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00015}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel}{00015}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel}{TimeCounterViewModel}}\ :\ ObservableObject}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00017}00017\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ DispatcherTimer\ \_timer;}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{private}\ TimeSpan\ \_elapsedTime;}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{private}\ DateTime\ \_startTime;}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00032}00032\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00034}00034\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00041}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a159673508f81dae7498424baa082557a}{00041}}\ \ \ \ \ \textcolor{keyword}{public}\ TimeSpan\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a159673508f81dae7498424baa082557a}{ElapsedTime}}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ \_elapsedTime;}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{set}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SetProperty(ref\ \_elapsedTime,\ value))}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnPropertyChanged(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a5ab1484d9d56f98647a56ce4e2a042a0}{FormattedTime}}));}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00056}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a5ab1484d9d56f98647a56ce4e2a042a0}{00056}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a5ab1484d9d56f98647a56ce4e2a042a0}{FormattedTime}}\ =>\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a159673508f81dae7498424baa082557a}{ElapsedTime}}.ToString(\textcolor{stringliteral}{@"{}hh\(\backslash\):mm\(\backslash\):ss"{}});}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00057}00057\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00059}00059\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel}{TimeCounterViewModel}}()}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00061}00061\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \_timer\ =\ \textcolor{keyword}{new}\ DispatcherTimer();}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \_timer.Interval\ =\ TimeSpan.FromSeconds(1);}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \_timer.Tick\ +=\ Timer\_Tick;}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00066}00066\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00068}00068\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00074}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a7cb90c34a03ab1fd737da4452d1b2069}{00074}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a7cb90c34a03ab1fd737da4452d1b2069}{SetStartTime}}(DateTime\ startTime)}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00075}00075\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (startTime\ >\ DateTime.Now)}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentException(\textcolor{stringliteral}{"{}Start\ time\ cannot\ be\ in\ the\ future"{}});}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \_startTime\ =\ startTime;}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a159673508f81dae7498424baa082557a}{ElapsedTime}}\ =\ DateTime.Now\ -\/\ \_startTime;}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\_timer.IsEnabled)}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \_timer.Start();}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00092}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a3499c838b7fbbd491ee6c750ceeb801d}{00092}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a3499c838b7fbbd491ee6c750ceeb801d}{SetStartTime}}(TimeSpan\ timeAgo)}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00093}00093\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a7cb90c34a03ab1fd737da4452d1b2069}{SetStartTime}}(DateTime.Now\ -\/\ timeAgo);}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00100}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a26148118f7497c2f59c02340e6846795}{00100}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a26148118f7497c2f59c02340e6846795}{Start}}()}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00101}00101\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \_startTime\ =\ DateTime.Now;}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a159673508f81dae7498424baa082557a}{ElapsedTime}}\ =\ TimeSpan.Zero;}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \_timer.Start();}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00110}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_ab932f26c27db3a1a7d251194400b464f}{00110}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_ab932f26c27db3a1a7d251194400b464f}{Stop}}()}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00111}00111\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \_timer.Stop();}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00118}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_af2fe834137128e739fbf24751723ae15}{00118}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_af2fe834137128e739fbf24751723ae15}{Reset}}()}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00119}00119\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_ab932f26c27db3a1a7d251194400b464f}{Stop}}();}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a159673508f81dae7498424baa082557a}{ElapsedTime}}\ =\ TimeSpan.Zero;}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00122}00122\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00127}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a857e881233c7fc8d5459029b80a14820}{00127}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a857e881233c7fc8d5459029b80a14820}{Dispose}}()}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00128}00128\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \_timer?.Stop();}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \_timer\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00132}00132\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00134}00134\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Methods}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00141}00141\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Timer\_Tick(\textcolor{keywordtype}{object}\ sender,\ \textcolor{keywordtype}{object}\ e)}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00142}00142\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Commons_1_1TimeCounterViewModel_a159673508f81dae7498424baa082557a}{ElapsedTime}}\ =\ DateTime.Now\ -\/\ \_startTime;}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00144}00144\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00145}00145\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{TimeCounterViewModel_8cs_source_l00146}00146\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,9 @@
+<map id="BistroQ.Presentation.ViewModels.Client.HomePageViewModel" name="BistroQ.Presentation.ViewModels.Client.HomePageViewModel">
+<area shape="rect" id="Node000001" title="ViewModel for the home page of the client application. Handles product listing, order cart management..." alt="" coords="117,96,351,139"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,148,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,46,199,93,196,98,111,50"/>
+<area shape="rect" id="Node000003" href="$interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware.html" title=" " alt="" coords="172,13,296,40"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,56,236,96,231,96,231,56"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="320,5,532,48"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="368,57,280,98,277,93,366,53"/>
+</map>

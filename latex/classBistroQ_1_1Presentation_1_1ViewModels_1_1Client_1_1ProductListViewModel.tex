@@ -1,0 +1,274 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Product\+List\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel}\index{BistroQ.Presentation.ViewModels.Client.ProductListViewModel@{BistroQ.Presentation.ViewModels.Client.ProductListViewModel}}
+
+
+View\+Model responsible for managing the product list functionality in the client interface. Handles product loading, category filtering, and pagination support.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Product\+List\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Product\+List\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a0afb78a53ab85a07f5a9ace95019d698}{Product\+List\+View\+Model}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService}{ICategory\+Data\+Service}} category\+Service, \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService}{IProduct\+Data\+Service}} product\+Service, IMapper mapper)
+\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a73912a214f8d9b48ca27062b9f7b61ae}{Load\+Categories\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Loads all available categories including special categories (All, Recommended) \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a57f7e3b08f9d780d5eb26e81c79ee130}{Load\+Products\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Loads products based on the selected category. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a4ddfc86cc8d4d722d3bff5adf178d521}{Load\+More\+Product\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Loads the next page of products for the current category. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a510f9105b545aae02760c37ae0c86de3}{Change\+Category\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to handle category change operations. \end{DoxyCompactList}\item 
+ICommand \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_affa5dfa90bb2c3ac1818bdad6e863c3d}{Load\+More\+Products\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to load more products for pagination. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model responsible for managing the product list functionality in the client interface. Handles product loading, category filtering, and pagination support. 
+
+Implements Observable\+Recipient for MVVM pattern support and change notifications. 
+
+Definition at line \mbox{\hyperlink{ProductListViewModel_8cs_source_l00022}{22}} of file \mbox{\hyperlink{ProductListViewModel_8cs_source}{Product\+List\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a0afb78a53ab85a07f5a9ace95019d698}\index{BistroQ.Presentation.ViewModels.Client.ProductListViewModel@{BistroQ.Presentation.ViewModels.Client.ProductListViewModel}!ProductListViewModel@{ProductListViewModel}}
+\index{ProductListViewModel@{ProductListViewModel}!BistroQ.Presentation.ViewModels.Client.ProductListViewModel@{BistroQ.Presentation.ViewModels.Client.ProductListViewModel}}
+\doxysubsubsection{\texorpdfstring{ProductListViewModel()}{ProductListViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a0afb78a53ab85a07f5a9ace95019d698} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Product\+List\+View\+Model.\+Product\+List\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService}{ICategory\+Data\+Service}}}]{category\+Service}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService}{IProduct\+Data\+Service}}}]{product\+Service}{, }\item[{IMapper}]{mapper}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{ProductListViewModel_8cs_source_l00109}{109}} of file \mbox{\hyperlink{ProductListViewModel_8cs_source}{Product\+List\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113\ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \_categoryService\ =\ categoryService;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \_productService\ =\ productService;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a510f9105b545aae02760c37ae0c86de3}{ChangeCategoryCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand<CategoryViewModel>(ChangeCategory);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_affa5dfa90bb2c3ac1818bdad6e863c3d}{LoadMoreProductsCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a4ddfc86cc8d4d722d3bff5adf178d521}{LoadMoreProductAsync}});}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a73912a214f8d9b48ca27062b9f7b61ae}\index{BistroQ.Presentation.ViewModels.Client.ProductListViewModel@{BistroQ.Presentation.ViewModels.Client.ProductListViewModel}!LoadCategoriesAsync@{LoadCategoriesAsync}}
+\index{LoadCategoriesAsync@{LoadCategoriesAsync}!BistroQ.Presentation.ViewModels.Client.ProductListViewModel@{BistroQ.Presentation.ViewModels.Client.ProductListViewModel}}
+\doxysubsubsection{\texorpdfstring{LoadCategoriesAsync()}{LoadCategoriesAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a73912a214f8d9b48ca27062b9f7b61ae} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Product\+List\+View\+Model.\+Load\+Categories\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads all available categories including special categories (All, Recommended) 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ProductListViewModel_8cs_source_l00141}{141}} of file \mbox{\hyperlink{ProductListViewModel_8cs_source}{Product\+List\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00142\ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ IsLoadingCategory\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ var\ categoriesResponse\ =\ await\ \_categoryService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService_aa824ce519e3880b81dc453180cf660c9}{GetCategoriesAsync}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ var\ categoriesData\ =\ categoriesResponse.Data;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ var\ categories\ =\ \_mapper.Map<IEnumerable<CategoryViewModel>>(categoriesData);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ var\ allCategory\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1CategoryViewModel}{CategoryViewModel}}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ \textcolor{stringliteral}{"{}All"{}},}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ var\ recommendedCategory\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1CategoryViewModel}{CategoryViewModel}}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ \textcolor{stringliteral}{"{}Recommended"{}},}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ Categories\ =\ \textcolor{keyword}{new}\ List<CategoryViewModel>\ \{\ recommendedCategory,\ allCategory\ \}.Concat(categories).ToList();}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ IsLoadingCategory\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a4ddfc86cc8d4d722d3bff5adf178d521}\index{BistroQ.Presentation.ViewModels.Client.ProductListViewModel@{BistroQ.Presentation.ViewModels.Client.ProductListViewModel}!LoadMoreProductAsync@{LoadMoreProductAsync}}
+\index{LoadMoreProductAsync@{LoadMoreProductAsync}!BistroQ.Presentation.ViewModels.Client.ProductListViewModel@{BistroQ.Presentation.ViewModels.Client.ProductListViewModel}}
+\doxysubsubsection{\texorpdfstring{LoadMoreProductAsync()}{LoadMoreProductAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a4ddfc86cc8d4d722d3bff5adf178d521} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Product\+List\+View\+Model.\+Load\+More\+Product\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads the next page of products for the current category. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ProductListViewModel_8cs_source_l00211}{211}} of file \mbox{\hyperlink{ProductListViewModel_8cs_source}{Product\+List\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00212\ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \_page++;}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ IsLoadingProduct\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ var\ query\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductCollectionQueryParams}{ProductCollectionQueryParams}}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CategoryId\ =\ SelectedCategory?.CategoryId\ ??\ \textcolor{keyword}{null},}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Size\ =\ 12,}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Page\ =\ \_page}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_productService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService_aabccca3b28894e901fba97bf2129d7a7}{GetProductsAsync}}(query);}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ var\ products\ =\ \_mapper.Map<IEnumerable<ProductViewModel>>(response.Data);}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ product\ \textcolor{keywordflow}{in}\ products)}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Products.Add(product);}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ CanLoadMore\ =\ products.Count()\ ==\ 12;}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ OnPropertyChanged(nameof(Products));}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(ex);}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ IsLoadingProduct\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00241\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a57f7e3b08f9d780d5eb26e81c79ee130}\index{BistroQ.Presentation.ViewModels.Client.ProductListViewModel@{BistroQ.Presentation.ViewModels.Client.ProductListViewModel}!LoadProductsAsync@{LoadProductsAsync}}
+\index{LoadProductsAsync@{LoadProductsAsync}!BistroQ.Presentation.ViewModels.Client.ProductListViewModel@{BistroQ.Presentation.ViewModels.Client.ProductListViewModel}}
+\doxysubsubsection{\texorpdfstring{LoadProductsAsync()}{LoadProductsAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a57f7e3b08f9d780d5eb26e81c79ee130} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Product\+List\+View\+Model.\+Load\+Products\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads products based on the selected category. 
+
+If "{}\+Recommended"{} category is selected, loads recommended products. Otherwise, loads products from the selected category with pagination. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ProductListViewModel_8cs_source_l00168}{168}} of file \mbox{\hyperlink{ProductListViewModel_8cs_source}{Product\+List\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00169\ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \_page\ =\ 1;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ Products.Clear();}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ IsLoadingProduct\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{ApiCollectionResponse<IEnumerable<Product>}}>\ response;}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SelectedCategory?.Name\ ==\ \textcolor{stringliteral}{"{}Recommended"{}})}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ response\ =\ await\ \_productService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService_ae546383f76373b30f76de8204f81f51b}{GetRecommendationAsync}}();}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ query\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductCollectionQueryParams}{ProductCollectionQueryParams}}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CategoryId\ =\ SelectedCategory?.CategoryId\ ??\ \textcolor{keyword}{null},}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Size\ =\ 12,}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ response\ =\ await\ \_productService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService_aabccca3b28894e901fba97bf2129d7a7}{GetProductsAsync}}(query);}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ var\ products\ =\ \_mapper.Map<IEnumerable<ProductViewModel>>(response.Data);}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ Products\ =\ \textcolor{keyword}{new}\ ObservableCollection<ProductViewModel>(products);}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ CanLoadMore\ =\ products.Count()\ ==\ 12;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ IsEmptyList\ =\ !(Products.Any());}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(ex);}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ IsLoadingProduct\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00205\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a510f9105b545aae02760c37ae0c86de3}\index{BistroQ.Presentation.ViewModels.Client.ProductListViewModel@{BistroQ.Presentation.ViewModels.Client.ProductListViewModel}!ChangeCategoryCommand@{ChangeCategoryCommand}}
+\index{ChangeCategoryCommand@{ChangeCategoryCommand}!BistroQ.Presentation.ViewModels.Client.ProductListViewModel@{BistroQ.Presentation.ViewModels.Client.ProductListViewModel}}
+\doxysubsubsection{\texorpdfstring{ChangeCategoryCommand}{ChangeCategoryCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a510f9105b545aae02760c37ae0c86de3} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Product\+List\+View\+Model.\+Change\+Category\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Command to handle category change operations. 
+
+
+
+Definition at line \mbox{\hyperlink{ProductListViewModel_8cs_source_l00100}{100}} of file \mbox{\hyperlink{ProductListViewModel_8cs_source}{Product\+List\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_affa5dfa90bb2c3ac1818bdad6e863c3d}\index{BistroQ.Presentation.ViewModels.Client.ProductListViewModel@{BistroQ.Presentation.ViewModels.Client.ProductListViewModel}!LoadMoreProductsCommand@{LoadMoreProductsCommand}}
+\index{LoadMoreProductsCommand@{LoadMoreProductsCommand}!BistroQ.Presentation.ViewModels.Client.ProductListViewModel@{BistroQ.Presentation.ViewModels.Client.ProductListViewModel}}
+\doxysubsubsection{\texorpdfstring{LoadMoreProductsCommand}{LoadMoreProductsCommand}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_affa5dfa90bb2c3ac1818bdad6e863c3d} 
+ICommand Bistro\+Q.\+Presentation.\+View\+Models.\+Client.\+Product\+List\+View\+Model.\+Load\+More\+Products\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Command to load more products for pagination. 
+
+
+
+Definition at line \mbox{\hyperlink{ProductListViewModel_8cs_source_l00105}{105}} of file \mbox{\hyperlink{ProductListViewModel_8cs_source}{Product\+List\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Client/Product\+List\+View\+Model.\+cs\end{DoxyCompactItemize}

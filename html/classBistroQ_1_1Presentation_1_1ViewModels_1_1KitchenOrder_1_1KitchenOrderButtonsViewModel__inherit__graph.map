@@ -1,0 +1,7 @@
+<map id="BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel" name="BistroQ.Presentation.ViewModels.KitchenOrder.KitchenOrderButtonsViewModel">
+<area shape="rect" id="Node000001" title="ViewModel responsible for managing kitchen order action buttons and their states. Handles completion,..." alt="" coords="22,80,245,139"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,131,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,43,114,78,110,81,84,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="155,5,245,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,46,157,81,153,78,179,43"/>
+</map>

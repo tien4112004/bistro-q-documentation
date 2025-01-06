@@ -1,0 +1,23 @@
+\doxysection{IOrder\+Item\+Data\+Service.\+cs}
+\hypertarget{IOrderItemDataService_8cs_source}{}\label{IOrderItemDataService_8cs_source}\index{BistroQ.Domain/Contracts/Services/Data/IOrderItemDataService.cs@{BistroQ.Domain/Contracts/Services/Data/IOrderItemDataService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos}{BistroQ.Domain.Dtos}};}
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos_1_1Orders}{BistroQ.Domain.Dtos.Orders}};}
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Enums}{BistroQ.Domain.Enums}};}
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Models_1_1Entities}{BistroQ.Domain.Models.Entities}};}
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00012}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{interface\ }\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService}{IOrderItemDataService}}}
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00021}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService_ac9377d9622f00122b2d35dc6782867e6}{00021}}\ \ \ \ \ Task<OrderItem>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService_ac9377d9622f00122b2d35dc6782867e6}{UpdateOrderItemStatusAsync}}(\textcolor{keywordtype}{int}\ orderItemId,\ OrderItemStatus\ status);}
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00030}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService_ac1b1dea631790a7d0289c7ddc274581f}{00030}}\ \ \ \ \ Task<IEnumerable<OrderItem>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService_ac1b1dea631790a7d0289c7ddc274581f}{BulkUpdateOrderItemsStatusAsync}}(IEnumerable<string>\ orderItemIds,\ OrderItemStatus\ status);}
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00038}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService_a0300a6d163eccf0ae285766b32ff9b1a}{00038}}\ \ \ \ \ Task<IEnumerable<OrderItem>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService_a0300a6d163eccf0ae285766b32ff9b1a}{GetOrderItemsByStatusAsync}}(OrderItemStatus\ status);}
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00046}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService_ad74b659a9b65c91d36a317d5a74d7b93}{00046}}\ \ \ \ \ Task<ApiCollectionResponse<IEnumerable<OrderItem>>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderItemDataService_ad74b659a9b65c91d36a317d5a74d7b93}{GetOrderItemsAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Orders_1_1OrderItemColletionQueryParams}{OrderItemColletionQueryParams}}\ queryParams);}
+\DoxyCodeLine{\Hypertarget{IOrderItemDataService_8cs_source_l00047}00047\ \}}
+
+\end{DoxyCode}

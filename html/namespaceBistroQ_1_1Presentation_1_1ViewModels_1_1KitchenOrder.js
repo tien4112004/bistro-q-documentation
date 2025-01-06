@@ -1,0 +1,7 @@
+var namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder =
+[
+    [ "Strategies", "namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies.html", "namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies" ],
+    [ "KitchenOrderButtonsViewModel", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel.html", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderButtonsViewModel" ],
+    [ "KitchenOrderViewModel", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel.html", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1KitchenOrderViewModel" ],
+    [ "OrderKanbanColumnViewModel", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel.html", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1OrderKanbanColumnViewModel" ]
+];

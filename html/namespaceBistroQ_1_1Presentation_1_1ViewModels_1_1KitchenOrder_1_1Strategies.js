@@ -1,0 +1,8 @@
+var namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies =
+[
+    [ "CancelItemStrategy", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy.html", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CancelItemStrategy" ],
+    [ "CompleteItemStrategy", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy.html", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1CompleteItemStrategy" ],
+    [ "IOrderItemActionStrategy", "interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy.html", "interfaceBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1IOrderItemActionStrategy" ],
+    [ "KitchenStrategyFactory", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory.html", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1KitchenStrategyFactory" ],
+    [ "MoveItemStrategy", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy.html", "classBistroQ_1_1Presentation_1_1ViewModels_1_1KitchenOrder_1_1Strategies_1_1MoveItemStrategy" ]
+];

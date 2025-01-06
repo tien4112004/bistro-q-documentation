@@ -1,0 +1,80 @@
+\doxysection{Login\+Page.\+xaml.\+cs}
+\hypertarget{LoginPage_8xaml_8cs_source}{}\label{LoginPage_8xaml_8cs_source}\index{BistroQ.Presentation/Views/LoginPage.xaml.cs@{BistroQ.Presentation/Views/LoginPage.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1Services}{BistroQ.Presentation.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels}{BistroQ.Presentation.ViewModels}};}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Input;}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views}{BistroQ.Presentation.Views}};}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00010}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1LoginPage}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1LoginPage}{LoginPage}}\ :\ Page}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel}{LoginViewModel}}\ ViewModel\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ Window\ \_window;}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1LoginPage}{LoginPage}}(Window\ window)}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ this.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1LoginPage_aef071d969314f26efe251293e811a595}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \_window\ =\ window;}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ ViewModel\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel}{LoginViewModel}}>();}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ ViewModel.NavigationRequested\ +=\ async\ (s,\ e)\ =>}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IActivationService}{IActivationService}}>().ActivateAsync(EventArgs.Empty);}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \_window.Close();}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ ViewModel.CloseRequested\ +=\ (s,\ e)\ =>\ \_window.Close();}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{private}\ async\ \textcolor{keywordtype}{void}\ On\_Loaded(\textcolor{keywordtype}{object}\ sender,\ RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00031}00031\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (await\ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_a85bf2bad267683aa0c39dd43cf79eb26}{IsAuthenticated}}())}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_af8fbaefb2a8a589641aa5536c3ae51e9}{RequestNavigation}}();}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00038}00038\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Text\_KeyDown(\textcolor{keywordtype}{object}\ sender,\ KeyRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00039}00039\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e.Key\ ==\ Windows.System.VirtualKey.Enter)}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_ab44027486e32cfd7f7795a9bcc5a2fe3}{LoginCommand}}.Execute(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ TextBox\_LosingFocus(UIElement\ sender,\ LosingFocusEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (sender)}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ TextBox\ textBox:}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_aa28a6c203da745dbfc900d5f0a71739f}{FormChangeCommand}}.Execute((textBox.Name,\ textBox.Text));}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ PasswordBox\ passwordBox:}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1LoginViewModel_aa28a6c203da745dbfc900d5f0a71739f}{FormChangeCommand}}.Execute((passwordBox.Name,\ passwordBox.Password));}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00063}00063\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerEntered(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00064}00064\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Hand);}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00068}00068\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerExited(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00069}00069\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Arrow);}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00072}00072\ \}}
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{LoginPage_8xaml_8cs_source_l00074}00074\ }
+
+\end{DoxyCode}

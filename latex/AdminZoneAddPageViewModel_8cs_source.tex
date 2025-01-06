@@ -1,0 +1,90 @@
+\doxysection{Admin\+Zone\+Add\+Page\+View\+Model.\+cs}
+\hypertarget{AdminZoneAddPageViewModel_8cs_source}{}\label{AdminZoneAddPageViewModel_8cs_source}\index{BistroQ.Presentation/ViewModels/AdminZone/AdminZoneAddPageViewModel.cs@{BistroQ.Presentation/ViewModels/AdminZone/AdminZoneAddPageViewModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos_1_1Zones}{BistroQ.Domain.Dtos.Zones}};}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1Services}{BistroQ.Presentation.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Models}{BistroQ.Presentation.Models}};}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Input;}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.Windows.Input;}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00009}\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone}{00009}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone}{BistroQ.Presentation.ViewModels.AdminZone}};}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00018}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel}{00018}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel}{AdminZoneAddPageViewModel}}\ :\ ObservableRecipient}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00020}00020\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00024}00024\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_isProcessing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00030}00030\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm}{AddZoneForm}}\ \_form\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00036}00036\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ \_errorMessage\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00042}00042\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}{IZoneDataService}}\ \_zoneDataService;}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00047}00047\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialogService}}\ \_dialogService;}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00048}00048\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00050}00050\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00054}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a07214b55b08efff16b249f1c725a3b03}{00054}}\ \ \ \ \ \textcolor{keyword}{public}\ ICommand\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a07214b55b08efff16b249f1c725a3b03}{AddCommand}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00055}00055\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00057}00057\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00063}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a2ac029134f3f80b3f238f81f70160410}{00063}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a2ac029134f3f80b3f238f81f70160410}{AdminZoneAddPageViewModel}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}{IZoneDataService}}\ zoneDataService,\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialogService}}\ dialogService)}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00064}00064\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \_zoneDataService\ =\ zoneDataService;}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \_dialogService\ =\ dialogService;}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a07214b55b08efff16b249f1c725a3b03}{AddCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a3774245029a706e9fda7325bd8b5f605}{AddZoneAsync}},\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a791340b48ee67bafabaacfa1139340ac}{CanAdd}});}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00069}00069\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00071}00071\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00076}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a791340b48ee67bafabaacfa1139340ac}{00076}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a791340b48ee67bafabaacfa1139340ac}{CanAdd}}()}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00077}00077\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !Form.HasErrors\ \&\&\ !IsProcessing;}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00084}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a0e2adfdb0736078dbee76d689150a8fe}{00084}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a0e2adfdb0736078dbee76d689150a8fe}{NavigateBack}}()}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00085}00085\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigationService}}>().GoBack();}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00093}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a3774245029a706e9fda7325bd8b5f605}{00093}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a3774245029a706e9fda7325bd8b5f605}{AddZoneAsync}}()}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00094}00094\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ Form.ValidateAll();}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Form.HasErrors)}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.ShowErrorDialog(\textcolor{stringliteral}{"{}Data\ is\ invalid.\ Please\ check\ again."{}},\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1CreateZoneRequest}{CreateZoneRequest}}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ Form.Name}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_zoneDataService.CreateZoneAsync(request);}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.ShowErrorDialog(\textcolor{stringliteral}{"{}Successfully\ added\ zone:\ "{}}\ +\ request.Name,\ \textcolor{stringliteral}{"{}Success"{}});}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1AdminZone_1_1AdminZoneAddPageViewModel_a0e2adfdb0736078dbee76d689150a8fe}{NavigateBack}}();}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorMessage\ =\ ex.Message;}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.ShowErrorDialog(ex.Message,\ \textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ IsProcessing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00123}00123\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00124}00124\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AdminZoneAddPageViewModel_8cs_source_l00125}00125\ \}}
+
+\end{DoxyCode}

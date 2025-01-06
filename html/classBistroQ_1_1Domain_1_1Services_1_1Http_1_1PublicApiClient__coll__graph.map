@@ -1,0 +1,10 @@
+<map id="BistroQ.Domain.Services.Http.PublicApiClient" name="BistroQ.Domain.Services.Http.PublicApiClient">
+<area shape="rect" id="Node000001" title="Implements a public API client without authentication requirements. Inherits from BaseApiClient to pr..." alt="" coords="38,155,211,197"/>
+<area shape="rect" id="Node000002" href="$classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient.html" title=" " alt="" coords="5,80,110,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,117,109,153,105,156,76,121"/>
+<area shape="rect" id="Node000003" href="$interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient.html" title=" " alt="" coords="70,5,178,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,45,71,81,67,78,100,42"/>
+<area shape="rect" id="Node000004" href="$interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IPublicApiClient.html" title="This interface is used to define the public API client." alt="" coords="134,80,248,107"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="148,42,181,78,177,81,144,45"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,121,143,156,139,153,169,117"/>
+</map>

@@ -1,0 +1,87 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Converters.\+Date\+Time\+To\+Time\+Only\+Converter Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1DateTimeToTimeOnlyConverter}{}\label{classBistroQ_1_1Presentation_1_1Converters_1_1DateTimeToTimeOnlyConverter}\index{BistroQ.Presentation.Converters.DateTimeToTimeOnlyConverter@{BistroQ.Presentation.Converters.DateTimeToTimeOnlyConverter}}
+
+
+Converter that transforms Date\+Time values to formatted time strings based on the provided format parameter.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Converters.\+Date\+Time\+To\+Time\+Only\+Converter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classBistroQ_1_1Presentation_1_1Converters_1_1DateTimeToTimeOnlyConverter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Converters.\+Date\+Time\+To\+Time\+Only\+Converter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classBistroQ_1_1Presentation_1_1Converters_1_1DateTimeToTimeOnlyConverter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1DateTimeToTimeOnlyConverter_a39bec9728cea6390cf7358d7a68318c7}{Convert}} (object value, Type target\+Type, object parameter, string language)
+\item 
+object \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Converters_1_1DateTimeToTimeOnlyConverter_af35ff42cd9cdf8b1f54ad167fc687b62}{Convert\+Back}} (object value, Type target\+Type, object parameter, string language)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Converter that transforms Date\+Time values to formatted time strings based on the provided format parameter. 
+
+Definition at line \mbox{\hyperlink{DateTimeToTimeOnlyConverter_8cs_source_l00008}{8}} of file \mbox{\hyperlink{DateTimeToTimeOnlyConverter_8cs_source}{Date\+Time\+To\+Time\+Only\+Converter.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1DateTimeToTimeOnlyConverter_a39bec9728cea6390cf7358d7a68318c7}\index{BistroQ.Presentation.Converters.DateTimeToTimeOnlyConverter@{BistroQ.Presentation.Converters.DateTimeToTimeOnlyConverter}!Convert@{Convert}}
+\index{Convert@{Convert}!BistroQ.Presentation.Converters.DateTimeToTimeOnlyConverter@{BistroQ.Presentation.Converters.DateTimeToTimeOnlyConverter}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Converters_1_1DateTimeToTimeOnlyConverter_a39bec9728cea6390cf7358d7a68318c7} 
+object Bistro\+Q.\+Presentation.\+Converters.\+Date\+Time\+To\+Time\+Only\+Converter.\+Convert (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{Type}]{target\+Type}{, }\item[{object}]{parameter}{, }\item[{string}]{language}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{DateTimeToTimeOnlyConverter_8cs_source_l00010}{10}} of file \mbox{\hyperlink{DateTimeToTimeOnlyConverter_8cs_source}{Date\+Time\+To\+Time\+Only\+Converter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Format:\ https://www.c-\/sharpcorner.com/blogs/date-\/and-\/time-\/format-\/in-\/c-\/sharp-\/programming1}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ is\ DateTime\ dateTime\ \&\&\ parameter\ is\ \textcolor{keywordtype}{string}\ format)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dateTime.ToString(format);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Converters_1_1DateTimeToTimeOnlyConverter_af35ff42cd9cdf8b1f54ad167fc687b62}\index{BistroQ.Presentation.Converters.DateTimeToTimeOnlyConverter@{BistroQ.Presentation.Converters.DateTimeToTimeOnlyConverter}!ConvertBack@{ConvertBack}}
+\index{ConvertBack@{ConvertBack}!BistroQ.Presentation.Converters.DateTimeToTimeOnlyConverter@{BistroQ.Presentation.Converters.DateTimeToTimeOnlyConverter}}
+\doxysubsubsection{\texorpdfstring{ConvertBack()}{ConvertBack()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Converters_1_1DateTimeToTimeOnlyConverter_af35ff42cd9cdf8b1f54ad167fc687b62} 
+object Bistro\+Q.\+Presentation.\+Converters.\+Date\+Time\+To\+Time\+Only\+Converter.\+Convert\+Back (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{Type}]{target\+Type}{, }\item[{object}]{parameter}{, }\item[{string}]{language}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{DateTimeToTimeOnlyConverter_8cs_source_l00021}{21}} of file \mbox{\hyperlink{DateTimeToTimeOnlyConverter_8cs_source}{Date\+Time\+To\+Time\+Only\+Converter.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ NotImplementedException();}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Converters/Date\+Time\+To\+Time\+Only\+Converter.\+cs\end{DoxyCompactItemize}

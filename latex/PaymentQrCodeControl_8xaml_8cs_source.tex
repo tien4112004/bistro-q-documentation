@@ -1,0 +1,120 @@
+\doxysection{Payment\+Qr\+Code\+Control.\+xaml.\+cs}
+\hypertarget{PaymentQrCodeControl_8xaml_8cs_source}{}\label{PaymentQrCodeControl_8xaml_8cs_source}\index{BistroQ.Presentation/Views/UserControls/Client/PaymentQrCodeControl.xaml.cs@{BistroQ.Presentation/Views/UserControls/Client/PaymentQrCodeControl.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Input;}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Media.Imaging;}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Windows.Input;}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client}{BistroQ.Presentation.Views.UserControls.Client}};}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00010}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1PaymentQrCodeControl}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1PaymentQrCodeControl}{PaymentQrCodeControl}}\ :\ UserControl}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ readonly\ DependencyProperty\ PaymentDataProperty\ =}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ DependencyProperty.Register(nameof(PaymentData),\ typeof(\textcolor{keywordtype}{string}),\ typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1PaymentQrCodeControl}{PaymentQrCodeControl}}),}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ PropertyMetadata(\textcolor{keyword}{null},\ OnPaymentDataChanged));}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ readonly\ DependencyProperty\ CancelCommandProperty\ =}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ DependencyProperty.Register(nameof(CancelCommand),\ typeof(ICommand),\ typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1PaymentQrCodeControl}{PaymentQrCodeControl}}),}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ PropertyMetadata(\textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ PaymentData}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00021}00021\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ (string)GetValue(PaymentDataProperty);}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ =>\ SetValue(PaymentDataProperty,\ value);}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{public}\ ICommand\ CancelCommand}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ (ICommand)GetValue(CancelCommandProperty);}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ =>\ SetValue(CancelCommandProperty,\ value);}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1PaymentQrCodeControl}{PaymentQrCodeControl}}()}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ this.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1PaymentQrCodeControl_af2ad7fcfe8c30eb8ac16ad35ca4574b6}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ OnPaymentDataChanged(DependencyObject\ d,\ DependencyPropertyChangedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (d\ is\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1PaymentQrCodeControl}{PaymentQrCodeControl}}\ control)}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ control.GenerateQRCode((\textcolor{keywordtype}{string})e.NewValue);}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ Old\ implementation\ -\/\ using\ QRCodeGenerator}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00046}00046\ \ \ \ \ \textcolor{comment}{//private\ async\ void\ GenerateQRCode(string\ data)}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//\{}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ \ \ \ if\ (string.IsNullOrEmpty(data))}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ QRCodeImage.Source\ =\ null;}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ return;}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//\ \ \ \ try}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ using\ var\ qrGenerator\ =\ new\ QRCodeGenerator();}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ using\ var\ qrCodeData\ =\ qrGenerator.CreateQrCode(data,\ QRCodeGenerator.ECCLevel.Q);}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00058}00058\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ using\ var\ qrCode\ =\ new\ BitmapByteQRCode(qrCodeData);}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ var\ qrCodeBytes\ =\ qrCode.GetGraphic(20);}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ using\ var\ stream\ =\ new\ InMemoryRandomAccessStream();}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00062}00062\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ using\ (var\ writer\ =\ new\ DataWriter(stream.GetOutputStreamAt(0)))}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00064}00064\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ writer.WriteBytes(qrCodeBytes);}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00065}00065\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ await\ writer.StoreAsync();}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00066}00066\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ var\ bitmap\ =\ new\ BitmapImage();}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00069}00069\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ await\ bitmap.SetSourceAsync(stream);}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00070}00070\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ QRCodeImage.Source\ =\ bitmap;}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00072}00072\ \ \ \ \ \textcolor{comment}{//\ \ \ \ catch\ (Exception\ ex)}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00073}00073\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00074}00074\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ QRCodeImage.Source\ =\ null;}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00075}00075\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00076}00076\ \ \ \ \ \textcolor{comment}{//\}}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00078}00078\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ GenerateQRCode(\textcolor{keywordtype}{string}\ data)}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00079}00079\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(data))}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ QRCodeImage.Source\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ var\ rawData\ =\ data.Contains(\textcolor{stringliteral}{"{},"{}})\ ?\ data.Split(\textcolor{charliteral}{','})[1]\ :\ data;}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ var\ bytes\ =\ Convert.FromBase64String(rawData);}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ var\ image\ =\ \textcolor{keyword}{new}\ BitmapImage();}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (var\ stream\ =\ \textcolor{keyword}{new}\ MemoryStream(bytes))}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stream.Position\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ image.SetSource(stream.AsRandomAccessStream());}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ QRCodeImage.Source\ =\ image;}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ e)}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ QRCodeImage.Source\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00105}00105\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerEntered(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00106}00106\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Hand);}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00110}00110\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerExited(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00111}00111\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Arrow);}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PaymentQrCodeControl_8xaml_8cs_source_l00114}00114\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,51 @@
+\doxysection{Shell\+View\+Model.\+cs}
+\hypertarget{ShellViewModel_8cs_source}{}\label{ShellViewModel_8cs_source}\index{BistroQ.Presentation/ViewModels/ShellViewModel.cs@{BistroQ.Presentation/ViewModels/ShellViewModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1Services}{BistroQ.Presentation.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Navigation;}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels}{BistroQ.Presentation.ViewModels}};}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00016}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel}{00016}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel}{ShellViewModel}}\ :\ ObservableRecipient}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00018}00018\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00022}00022\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ isBackEnabled;}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00028}00028\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{object}?\ selected;}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00030}00030\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00032}00032\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00039}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel_a1858b33877fd16d8fd11138ce6e322d7}{00039}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigationService}}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel_a1858b33877fd16d8fd11138ce6e322d7}{NavigationService}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00047}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel_a86f58e56d26624182c54cfeea394c71b}{00047}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationViewService}{INavigationViewService}}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel_a86f58e56d26624182c54cfeea394c71b}{NavigationViewService}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00048}00048\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00050}00050\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel}{ShellViewModel}}(\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigationService}}\ navigationService,\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationViewService}{INavigationViewService}}\ navigationViewService)}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel_a1858b33877fd16d8fd11138ce6e322d7}{NavigationService}}\ =\ navigationService;}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ NavigationService.Navigated\ +=\ OnNavigated;}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel_a86f58e56d26624182c54cfeea394c71b}{NavigationViewService}}\ =\ navigationViewService;}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00057}00057\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00059}00059\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Methods}}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnNavigated(\textcolor{keywordtype}{object}\ sender,\ NavigationEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00067}00067\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ IsBackEnabled\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel_a1858b33877fd16d8fd11138ce6e322d7}{NavigationService}}.CanGoBack;}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ var\ selectedItem\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel_a86f58e56d26624182c54cfeea394c71b}{NavigationViewService}}.GetSelectedItem(e.SourcePageType);}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (selectedItem\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ Selected\ =\ selectedItem;}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00075}00075\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{ShellViewModel_8cs_source_l00076}00076\ \}}
+
+\end{DoxyCode}

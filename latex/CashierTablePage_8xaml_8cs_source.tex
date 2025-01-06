@@ -1,0 +1,36 @@
+\doxysection{Cashier\+Table\+Page.\+xaml.\+cs}
+\hypertarget{CashierTablePage_8xaml_8cs_source}{}\label{CashierTablePage_8xaml_8cs_source}\index{BistroQ.Presentation/Views/CashierTable/CashierTablePage.xaml.cs@{BistroQ.Presentation/Views/CashierTable/CashierTablePage.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable}{BistroQ.Presentation.ViewModels.CashierTable}};}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views_1_1CashierTable}{BistroQ.Presentation.Views.CashierTable}};}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00005}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1CashierTable_1_1CashierTablePage}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1CashierTable_1_1CashierTablePage}{CashierTablePage}}\ :\ Page}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel}{CashierTableViewModel}}\ ViewModel\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1CashierTable_1_1CashierTablePage}{CashierTablePage}}()}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ ViewModel\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel}{CashierTableViewModel}}>();}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ this.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1CashierTable_1_1CashierTablePage_a7841e75246b58b28c76d22765f27b729}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ ViewModel.NewCheckoutNotification\ +=\ OnNewCheckoutNotification;}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ this.Unloaded\ +=\ (s,\ e)\ =>}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.NewCheckoutNotification\ -\/=\ OnNewCheckoutNotification;}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1CashierTableViewModel_a3d03fe96da564ddf9822e458e1e0c96c}{Dispose}}();}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnNewCheckoutNotification(\textcolor{keywordtype}{object}\ sender,\ (\textcolor{keywordtype}{int}\ tableNumber,\ \textcolor{keywordtype}{string}\ zoneName)\ checkoutInfo)}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00021}00021\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ DispatcherQueue.TryEnqueue(()\ =>}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ PreZoneText.Text\ =\ \$\textcolor{stringliteral}{"{}Table\ \{checkoutInfo.tableNumber\}\ in\ zone"{}};}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ ZoneText.Text\ =\ checkoutInfo.zoneName;}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ PostZoneText.Text\ =\ \textcolor{stringliteral}{"{}has\ completed\ checkout"{}};}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ CheckoutNotification.IsOpen\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CashierTablePage_8xaml_8cs_source_l00030}00030\ \}}
+
+\end{DoxyCode}

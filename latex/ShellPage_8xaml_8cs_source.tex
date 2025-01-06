@@ -1,0 +1,129 @@
+\doxysection{Shell\+Page.\+xaml.\+cs}
+\hypertarget{ShellPage_8xaml_8cs_source}{}\label{ShellPage_8xaml_8cs_source}\index{BistroQ.Presentation/Views/ShellPage.xaml.cs@{BistroQ.Presentation/Views/ShellPage.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1Services}{BistroQ.Presentation.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels}{BistroQ.Presentation.ViewModels}};}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Input;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }Windows.System;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00010}00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views}{BistroQ.Presentation.Views}};}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00012}00012\ \textcolor{comment}{//\ TODO:\ Update\ NavigationViewItem\ titles\ and\ icons\ in\ ShellPage.xaml.}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00013}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage}{00013}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage}{ShellPage}}\ :\ Page}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel}{ShellViewModel}}\ ViewModel}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get};}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage}{ShellPage}}(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel}{ShellViewModel}}\ viewModel)}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00021}00021\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ ViewModel\ =\ viewModel;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage_a0f24964c68f958919fb05753ff8894fb}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ ViewModel.NavigationService.Frame\ =\ NavigationFrame;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Set\ the\ title\ bar\ icon\ by\ updating\ /Assets/WindowIcon.ico.}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ A\ custom\ title\ bar\ is\ required\ for\ full\ window\ theme\ and\ Mica\ support.}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ https://docs.microsoft.com/windows/apps/develop/title-\/bar?tabs=winui3\#full-\/customization}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ App.MainWindow.ExtendsContentIntoTitleBar\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.SetTitleBar(AppTitleBar);}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ App.MainWindow.Activated\ +=\ MainWindow\_Activated;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ AppTitleBarText.Text\ =\ \textcolor{stringliteral}{"{}AppDisplayName"{}}.GetLocalized();}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{private}\ async\ \textcolor{keywordtype}{void}\ OnLoaded(\textcolor{keywordtype}{object}\ sender,\ Microsoft.UI.Xaml.RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00037}00037\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ TitleBarHelper.UpdateTitleBar(RequestedTheme);}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel_a86f58e56d26624182c54cfeea394c71b}{NavigationViewService}}.Initialize(NavigationViewControl,}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuthService}}>().\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a79d8b3886150a5d2d42853b748e13e85}{GetRoleAsync}}()}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1ShellViewModel_a86f58e56d26624182c54cfeea394c71b}{NavigationViewService}}.NavigateToEntryPoint();}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ KeyboardAccelerators.Add(BuildKeyboardAccelerator(VirtualKey.Left,\ VirtualKeyModifiers.Menu));}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ KeyboardAccelerators.Add(BuildKeyboardAccelerator(VirtualKey.GoBack));}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ MainWindow\_Activated(\textcolor{keywordtype}{object}\ sender,\ WindowActivatedEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00051}00051\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ App.AppTitlebar\ =\ AppTitleBarText\ as\ UIElement;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ NavigationViewControl\_DisplayModeChanged(NavigationView\ sender,\ NavigationViewDisplayModeChangedEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00056}00056\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ AppTitleBar.Margin\ =\ \textcolor{keyword}{new}\ Thickness()}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ Left\ =\ sender.CompactPaneLength\ *\ (sender.DisplayMode\ ==\ NavigationViewDisplayMode.Minimal\ ?\ 2\ :\ 1),}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ Top\ =\ AppTitleBar.Margin.Top,}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ Right\ =\ AppTitleBar.Margin.Right,}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ Bottom\ =\ AppTitleBar.Margin.Bottom}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ KeyboardAccelerator\ BuildKeyboardAccelerator(VirtualKey\ key,\ VirtualKeyModifiers?\ modifiers\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00067}00067\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ var\ keyboardAccelerator\ =\ \textcolor{keyword}{new}\ KeyboardAccelerator()\ \{\ Key\ =\ key\ \};}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (modifiers.HasValue)}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ keyboardAccelerator.Modifiers\ =\ modifiers.Value;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ keyboardAccelerator.Invoked\ +=\ OnKeyboardAcceleratorInvoked;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ keyboardAccelerator;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00080}00080\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ async\ \textcolor{keywordtype}{void}\ OnKeyboardAcceleratorInvoked(KeyboardAccelerator\ sender,\ KeyboardAcceleratorInvokedEventArgs\ args)}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00081}00081\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ var\ navigationService\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1INavigationService}{INavigationService}}>();}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ var\ result\ =\ await\ navigationService.GoBack();}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ args.Handled\ =\ result;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00089}00089\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SettingsItem\_Tapped(\textcolor{keywordtype}{object}\ sender,\ TappedRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00090}00090\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ var\ settingsItem\ =\ sender\ as\ NavigationViewItem;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (settingsItem?.ContextFlyout\ is\ MenuFlyout\ flyout)}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ flyout.ShowAt(settingsItem);}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00098}00098\ \ \ \ \ \textcolor{keyword}{private}\ async\ \textcolor{keywordtype}{void}\ LogOut\_Click(\textcolor{keywordtype}{object}\ sender,\ RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00099}00099\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.Hide();}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuthService}}>().LogoutAsync();}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ var\ size\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.AppWindow.Size;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ var\ position\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.AppWindow.Position;}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ var\ loginWindow\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1LoginWindow}{LoginWindow}}();}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ loginWindow.Activate();}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ loginWindow.MoveAndResize(position.X,\ position.Y,\ size.Width,\ size.Height);}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ await\ Task.Delay(1000);}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.Close();}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00112}00112\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00114}00114\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerEntered(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00115}00115\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Hand);}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00119}00119\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerExited(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00120}00120\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Arrow);}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00122}00122\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ShellPage_8xaml_8cs_source_l00123}00123\ \}}
+
+\end{DoxyCode}

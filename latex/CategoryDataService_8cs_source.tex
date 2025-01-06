@@ -1,0 +1,94 @@
+\doxysection{Category\+Data\+Service.\+cs}
+\hypertarget{CategoryDataService_8cs_source}{}\label{CategoryDataService_8cs_source}\index{BistroQ.Service/Data/CategoryDataService.cs@{BistroQ.Service/Data/CategoryDataService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }AutoMapper;}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data}{BistroQ.Domain.Contracts.Services.Data}};}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos}{BistroQ.Domain.Dtos}};}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos_1_1Category}{BistroQ.Domain.Dtos.Category}};}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Models_1_1Entities}{BistroQ.Domain.Models.Entities}};}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Service_1_1Data}{BistroQ.Service.Data}};}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00014}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService}{00014}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService}{CategoryDataService}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1ICategoryDataService}{ICategoryDataService}}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00016}00016\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApiClient}}\ \_apiClient;}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IMapper\ \_mapper;}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00026}00026\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00028}00028\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService}{CategoryDataService}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApiClient}}\ apiClient,\ IMapper\ mapper)}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \_apiClient\ =\ apiClient;}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00034}00034\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00036}00036\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00037}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_aac4073246905e2bd03f9fe8b34d5ab54}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<Category>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_aac4073246905e2bd03f9fe8b34d5ab54}{CreateCategoryAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CreateCategoryRequest}{CreateCategoryRequest}}\ request)}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PostAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CategoryResponse}{CategoryResponse}}>(\textcolor{stringliteral}{"{}api/admin/category"{}},\ request);}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}}>(response.Data);}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00048}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a306c0b57f1876db5425a7033b8354754}{00048}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<Category>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a306c0b57f1876db5425a7033b8354754}{UpdateCategoryAsync}}(\textcolor{keywordtype}{int}\ categoryId,\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1UpdateCategoryRequest}{UpdateCategoryRequest}}\ request)}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PutAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CategoryResponse}{CategoryResponse}}>(\$\textcolor{stringliteral}{"{}api/admin/category/\{categoryId\}"{}},\ request);}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}}>(response.Data);}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00060}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a4bffd452520ec4d50bf58ac9a823f541}{00060}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<bool>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a4bffd452520ec4d50bf58ac9a823f541}{DeleteCategoryAsync}}(\textcolor{keywordtype}{int}\ categoryId)}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00061}00061\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.DeleteAsync<\textcolor{keywordtype}{object}>(\$\textcolor{stringliteral}{"{}api/admin/category/\{categoryId\}"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!response.Success)}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00071}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_afe2ddeb1aac6a489eb6a3ebc9535a13d}{00071}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<ApiCollectionResponse<IEnumerable<Category>>>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_afe2ddeb1aac6a489eb6a3ebc9535a13d}{GetCategoriesAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CategoryCollectionQueryParams}{CategoryCollectionQueryParams}}\ query\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00072}00072\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetCollectionAsync<IEnumerable<CategoryResponse>>(\textcolor{stringliteral}{"{}/api/category"{}},\ query);}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ var\ categories\ =\ \_mapper.Map<IEnumerable<Category>>(response.Data);}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{ApiCollectionResponse<IEnumerable<Category>}}>}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (categories,\ response.TotalItems,\ response.CurrentPage,\ response.TotalPages);}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ get\ categories"{}});}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00086}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a191d5d74e25cebabd4a322b9e19d08d5}{00086}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<Category>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1CategoryDataService_a191d5d74e25cebabd4a322b9e19d08d5}{GetCategoryByIdAsync}}(\textcolor{keywordtype}{int}\ categoryId)}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00087}00087\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Category_1_1CategoryResponse}{CategoryResponse}}>(\$\textcolor{stringliteral}{"{}api/category/\{categoryId\}"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Category}{Category}}>(response.Data);}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00097}00097\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{CategoryDataService_8cs_source_l00098}00098\ \}}
+
+\end{DoxyCode}

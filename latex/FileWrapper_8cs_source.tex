@@ -1,0 +1,84 @@
+\doxysection{File\+Wrapper.\+cs}
+\hypertarget{FileWrapper_8cs_source}{}\label{FileWrapper_8cs_source}\index{BistroQ.Presentation/Models/FileWrapper.cs@{BistroQ.Presentation/Models/FileWrapper.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Windows.Storage;}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Models}{BistroQ.Presentation.Models}};}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00009}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{FileWrapper}}\ :\ IDisposable}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00011}00011\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00015}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_afadcad893fad198c769cfda8cfe2577e}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_afadcad893fad198c769cfda8cfe2577e}{FileName}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00020}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_ae3d94eaab73dccf3c9a195339653b52f}{00020}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_ae3d94eaab73dccf3c9a195339653b52f}{ContentType}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00025}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}{Stream}}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}{Stream}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00026}00026\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00028}00028\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00035}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a73489c00af802e0194b8478aa8acf3a7}{00035}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a73489c00af802e0194b8478aa8acf3a7}{FileWrapper}}(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}{Stream}}\ stream,\ \textcolor{keywordtype}{string}\ fileName,\ \textcolor{keywordtype}{string}\ contentType)}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}{Stream}}\ =\ stream;}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_afadcad893fad198c769cfda8cfe2577e}{FileName}}\ =\ fileName;}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_ae3d94eaab73dccf3c9a195339653b52f}{ContentType}}\ =\ contentType;}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00041}00041\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00043}00043\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00051}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_aeeb9ae56594055644d7b3421e886c6d6}{00051}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ async\ Task<FileWrapper>\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_aeeb9ae56594055644d7b3421e886c6d6}{FromStorageFileAsync}}(StorageFile\ file)}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (file\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(file));}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ var\ stream\ =\ await\ file.OpenStreamForReadAsync();}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ var\ memoryStream\ =\ \textcolor{keyword}{new}\ MemoryStream();}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ await\ stream.CopyToAsync(memoryStream);}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ memoryStream.Position\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ var\ contentType\ =\ file.ContentType;}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ var\ fileName\ =\ file.Name;}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a73489c00af802e0194b8478aa8acf3a7}{FileWrapper}}(memoryStream,\ fileName,\ contentType);}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IOException(\$\textcolor{stringliteral}{"{}Failed\ to\ read\ file:\ \{file.Name\}"{}},\ ex);}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00083}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a5710bbcb3542243bce99cba21b083d58}{00083}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ async\ Task<FileWrapper>\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a5710bbcb3542243bce99cba21b083d58}{FromStorageFileWithValidationAsync}}(}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ StorageFile\ file,}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}?\ maxFileSize\ =\ \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[]?\ allowedContentTypes\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00087}00087\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (file\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(file));}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validate\ file\ size}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (maxFileSize.HasValue)}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ var\ properties\ =\ await\ file.GetBasicPropertiesAsync();}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\textcolor{keywordtype}{long})properties.Size\ >\ maxFileSize.Value)}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\textcolor{stringliteral}{"{}File\ size\ (\{properties.Size\}\ bytes)\ exceeds\ maximum\ allowed\ size\ (\{maxFileSize.Value\}\ bytes)"{}});}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_aeeb9ae56594055644d7b3421e886c6d6}{FromStorageFileAsync}}(file);}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00111}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a61681446f06d67c73e230bccba60fdfd}{00111}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a61681446f06d67c73e230bccba60fdfd}{Dispose}}()}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00112}00112\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}{Stream}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper_a8d0c83a885caa1eccf304b7c330aeb0d}{Stream}}.Dispose();}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00118}00118\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{FileWrapper_8cs_source_l00119}00119\ \}}
+
+\end{DoxyCode}

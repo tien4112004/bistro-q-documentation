@@ -1,0 +1,239 @@
+\doxysection{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IZone\+Data\+Service Interface Reference}
+\hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}{}\label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}\index{BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}}
+
+
+Interface for managing zone-\/related data operations through API endpoints. Provides methods for CRUD operations on restaurant zones, with specific endpoints for admin and cashier access.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IZone\+Data\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneResponse}{Zone\+Response}} $>$ $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a7b09bc9f67d3845e4366b42cbb481f7c}{Get\+Grid\+Data\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams}{Zone\+Collection\+Query\+Params}} query)
+\begin{DoxyCompactList}\small\item\em Retrieves a paginated collection of zones for admin grid view. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Zone}{Zone}} $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a98cc4caccfd78a1fbd5e5d8a6de5a7aa}{Create\+Zone\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1CreateZoneRequest}{Create\+Zone\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Creates a new zone in the system. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Zone}{Zone}} $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a1051fcac46b10b55dca7002d0048283b}{Update\+Zone\+Async}} (int zone\+Id, \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1UpdateZoneRequest}{Update\+Zone\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Updates an existing zone\textquotesingle{}s details. \end{DoxyCompactList}\item 
+Task$<$ bool $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a23393b659ab598b9dc135c4fcc10d518}{Delete\+Zone\+Async}} (int zone\+Id)
+\begin{DoxyCompactList}\small\item\em Deletes a zone from the system. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Zone}{Zone}} $>$ $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a26c3da9c1970777cef58c373e28763f7}{Get\+Zones\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams}{Zone\+Collection\+Query\+Params}} query)
+\begin{DoxyCompactList}\small\item\em Retrieves a paginated collection of zones for general access. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Zone}{Zone}} $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_afd234760b12b574412107aa793d17daf}{Get\+Zone\+By\+Id\+Async}} (int zone\+Id)
+\begin{DoxyCompactList}\small\item\em Retrieves details for a specific zone. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Zone}{Zone}} $>$ $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a28ae5398e6ca97d96e27406474bb1d36}{Get\+Zones\+By\+Cashier\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams}{Zone\+Collection\+Query\+Params}} query=null)
+\begin{DoxyCompactList}\small\item\em Retrieves a paginated collection of zones accessible to cashiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for managing zone-\/related data operations through API endpoints. Provides methods for CRUD operations on restaurant zones, with specific endpoints for admin and cashier access. 
+
+Definition at line \mbox{\hyperlink{IZoneDataService_8cs_source_l00011}{11}} of file \mbox{\hyperlink{IZoneDataService_8cs_source}{IZone\+Data\+Service.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a98cc4caccfd78a1fbd5e5d8a6de5a7aa}\index{BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}!CreateZoneAsync@{CreateZoneAsync}}
+\index{CreateZoneAsync@{CreateZoneAsync}!BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}}
+\doxysubsubsection{\texorpdfstring{CreateZoneAsync()}{CreateZoneAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a98cc4caccfd78a1fbd5e5d8a6de5a7aa} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Zone}{Zone}} $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IZone\+Data\+Service.\+Create\+Zone\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1CreateZoneRequest}{Create\+Zone\+Request}}}]{request}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new zone in the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The zone creation details\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly created zone
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown with the API error message when the request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ZoneDataService_abef0de82f03b2b308863bcf2fa589af5}{Bistro\+Q.\+Service.\+Data.\+Zone\+Data\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a23393b659ab598b9dc135c4fcc10d518}\index{BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}!DeleteZoneAsync@{DeleteZoneAsync}}
+\index{DeleteZoneAsync@{DeleteZoneAsync}!BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}}
+\doxysubsubsection{\texorpdfstring{DeleteZoneAsync()}{DeleteZoneAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a23393b659ab598b9dc135c4fcc10d518} 
+Task$<$ bool $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IZone\+Data\+Service.\+Delete\+Zone\+Async (\begin{DoxyParamCaption}\item[{int}]{zone\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Deletes a zone from the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Id} & The unique identifier of the zone to delete\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the deletion was successful
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown with the API error message when the request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ZoneDataService_ad12d1c47c1cd4b6a3c92f8ad116816dd}{Bistro\+Q.\+Service.\+Data.\+Zone\+Data\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a7b09bc9f67d3845e4366b42cbb481f7c}\index{BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}!GetGridDataAsync@{GetGridDataAsync}}
+\index{GetGridDataAsync@{GetGridDataAsync}!BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}}
+\doxysubsubsection{\texorpdfstring{GetGridDataAsync()}{GetGridDataAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a7b09bc9f67d3845e4366b42cbb481f7c} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneResponse}{Zone\+Response}} $>$ $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IZone\+Data\+Service.\+Get\+Grid\+Data\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams}{Zone\+Collection\+Query\+Params}}}]{query}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a paginated collection of zones for admin grid view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & Query parameters for filtering, sorting, and pagination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A collection response containing zone responses and pagination information
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown with message "{}\+Failed to get zones"{} when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ZoneDataService_a76fcc7b6c11c0a4bf3cda2da866da1fa}{Bistro\+Q.\+Service.\+Data.\+Zone\+Data\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_afd234760b12b574412107aa793d17daf}\index{BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}!GetZoneByIdAsync@{GetZoneByIdAsync}}
+\index{GetZoneByIdAsync@{GetZoneByIdAsync}!BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}}
+\doxysubsubsection{\texorpdfstring{GetZoneByIdAsync()}{GetZoneByIdAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_afd234760b12b574412107aa793d17daf} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Zone}{Zone}} $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IZone\+Data\+Service.\+Get\+Zone\+By\+Id\+Async (\begin{DoxyParamCaption}\item[{int}]{zone\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves details for a specific zone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Id} & The unique identifier of the zone\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The zone details
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown with the API error message when the request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ZoneDataService_aa515bf18c6c1bc629518330d55645f77}{Bistro\+Q.\+Service.\+Data.\+Zone\+Data\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a26c3da9c1970777cef58c373e28763f7}\index{BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}!GetZonesAsync@{GetZonesAsync}}
+\index{GetZonesAsync@{GetZonesAsync}!BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}}
+\doxysubsubsection{\texorpdfstring{GetZonesAsync()}{GetZonesAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a26c3da9c1970777cef58c373e28763f7} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Zone}{Zone}} $>$ $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IZone\+Data\+Service.\+Get\+Zones\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams}{Zone\+Collection\+Query\+Params}}}]{query}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a paginated collection of zones for general access. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & Query parameters for filtering, sorting, and pagination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A collection response containing zones and pagination information
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown with message "{}\+Failed to get zones"{} when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ZoneDataService_a1506cf726404fed7cf7f34ecdfe6ca8e}{Bistro\+Q.\+Service.\+Data.\+Zone\+Data\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a28ae5398e6ca97d96e27406474bb1d36}\index{BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}!GetZonesByCashierAsync@{GetZonesByCashierAsync}}
+\index{GetZonesByCashierAsync@{GetZonesByCashierAsync}!BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}}
+\doxysubsubsection{\texorpdfstring{GetZonesByCashierAsync()}{GetZonesByCashierAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a28ae5398e6ca97d96e27406474bb1d36} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Zone}{Zone}} $>$ $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IZone\+Data\+Service.\+Get\+Zones\+By\+Cashier\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams}{Zone\+Collection\+Query\+Params}}}]{query}{ = {\ttfamily null}}\end{DoxyParamCaption})}
+
+
+
+Retrieves a paginated collection of zones accessible to cashiers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & Optional query parameters for filtering, sorting, and pagination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A collection response containing zones and pagination information
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown with message "{}\+Failed to get zones"{} when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ZoneDataService_acadcb64352dbede4a01c9535ded9f25f}{Bistro\+Q.\+Service.\+Data.\+Zone\+Data\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a1051fcac46b10b55dca7002d0048283b}\index{BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}!UpdateZoneAsync@{UpdateZoneAsync}}
+\index{UpdateZoneAsync@{UpdateZoneAsync}!BistroQ.Domain.Contracts.Services.IZoneDataService@{BistroQ.Domain.Contracts.Services.IZoneDataService}}
+\doxysubsubsection{\texorpdfstring{UpdateZoneAsync()}{UpdateZoneAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a1051fcac46b10b55dca7002d0048283b} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Zone}{Zone}} $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IZone\+Data\+Service.\+Update\+Zone\+Async (\begin{DoxyParamCaption}\item[{int}]{zone\+Id}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1UpdateZoneRequest}{Update\+Zone\+Request}}}]{request}{}\end{DoxyParamCaption})}
+
+
+
+Updates an existing zone\textquotesingle{}s details. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Id} & The unique identifier of the zone to update\\
+\hline
+{\em request} & The zone update details\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated zone
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown with the API error message when the request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ZoneDataService_abb15b7d5909757ce9ee7e099b0c8c846}{Bistro\+Q.\+Service.\+Data.\+Zone\+Data\+Service}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Domain/\+Contracts/\+Services/\+Data/IZone\+Data\+Service.\+cs\end{DoxyCompactItemize}

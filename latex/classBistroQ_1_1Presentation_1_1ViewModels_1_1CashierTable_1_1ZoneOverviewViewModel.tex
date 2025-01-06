@@ -1,0 +1,226 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Overview\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel}\index{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel}}
+
+
+View\+Model for managing zone overview in the cashier interface. Handles zone selection, filtering, and state management.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Overview\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Overview\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_aee80b5cbd30ec00c65c34c4ed4bb7ff2}{Zone\+Overview\+View\+Model}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}{IZone\+Data\+Service}} zone\+Data\+Service, IMapper mapper, IMessenger messenger)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel}{Zone\+Overview\+View\+Model} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_a919dd5f58bfad6329071ae306aa3aaa5}{Update\+Filter}} (string filter\+Type)
+\begin{DoxyCompactList}\small\item\em Updates the zone filter based on the specified filter type. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_a399a15673a2b72053653ee0d2b638102}{Initialize\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the zone overview by loading zone data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_a804206690306b9d209a0f93f766494b8}{Receive}} (Zone\+State\+Changed\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles zone state change messages and updates the corresponding zone\textquotesingle{}s status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_a6e8b00367f7a3bb7067f85e62a5ffb47}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Performs cleanup of resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model for managing zone overview in the cashier interface. Handles zone selection, filtering, and state management. 
+
+Implements multiple interfaces for functionality\+:
+\begin{DoxyItemize}
+\item Observable\+Object for MVVM pattern
+\item IRecipient for handling zone state messages
+\item IDisposable for resource cleanup 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{ZoneOverviewViewModel_8cs_source_l00025}{25}} of file \mbox{\hyperlink{ZoneOverviewViewModel_8cs_source}{Zone\+Overview\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_aee80b5cbd30ec00c65c34c4ed4bb7ff2}\index{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel}!ZoneOverviewViewModel@{ZoneOverviewViewModel}}
+\index{ZoneOverviewViewModel@{ZoneOverviewViewModel}!BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel}}
+\doxysubsubsection{\texorpdfstring{ZoneOverviewViewModel()}{ZoneOverviewViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_aee80b5cbd30ec00c65c34c4ed4bb7ff2} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Overview\+View\+Model.\+Zone\+Overview\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService}{IZone\+Data\+Service}}}]{zone\+Data\+Service}{, }\item[{IMapper}]{mapper}{, }\item[{IMessenger}]{messenger}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel}{Zone\+Overview\+View\+Model} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Data\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for zone data operations.\\
+\hline
+{\em mapper} & \doxylink{namespaceBistroQ_1_1Service}{Service} for object mapping.\\
+\hline
+{\em messenger} & \doxylink{namespaceBistroQ_1_1Service}{Service} for messaging between components.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ZoneOverviewViewModel_8cs_source_l00074}{74}} of file \mbox{\hyperlink{ZoneOverviewViewModel_8cs_source}{Zone\+Overview\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \_zoneDataService\ =\ zoneDataService;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \_messenger\ =\ messenger;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ dispatcherQueue\ =\ DispatcherQueue.GetForCurrentThread();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_a6e8b00367f7a3bb7067f85e62a5ffb47}\index{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_a6e8b00367f7a3bb7067f85e62a5ffb47} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Overview\+View\+Model.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs cleanup of resources. 
+
+
+
+Definition at line \mbox{\hyperlink{ZoneOverviewViewModel_8cs_source_l00147}{147}} of file \mbox{\hyperlink{ZoneOverviewViewModel_8cs_source}{Zone\+Overview\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00148\ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00150\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_a399a15673a2b72053653ee0d2b638102}\index{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel}!InitializeAsync@{InitializeAsync}}
+\index{InitializeAsync@{InitializeAsync}!BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel}}
+\doxysubsubsection{\texorpdfstring{InitializeAsync()}{InitializeAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_a399a15673a2b72053653ee0d2b638102} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Overview\+View\+Model.\+Initialize\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes the zone overview by loading zone data. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ZoneOverviewViewModel_8cs_source_l00101}{101}} of file \mbox{\hyperlink{ZoneOverviewViewModel_8cs_source}{Zone\+Overview\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102\ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ var\ zonesData\ =\ await\ TaskHelper.WithMinimumDelay(}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_zoneDataService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IZoneDataService_a28ae5398e6ca97d96e27406474bb1d36}{GetZonesByCashierAsync}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Zones_1_1ZoneCollectionQueryParams}{ZoneCollectionQueryParams}}()),}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 200);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ var\ zones\ =\ \_mapper.Map<IEnumerable<ZoneViewModel>>(zonesData.Data);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ Zones\ =\ \textcolor{keyword}{new}\ ObservableCollection<ZoneViewModel>(zones);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Zones.Any())}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SelectedZone\ =\ Zones.First();}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(ex.Message);}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_a804206690306b9d209a0f93f766494b8}\index{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_a804206690306b9d209a0f93f766494b8} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Overview\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Zone\+State\+Changed\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles zone state change messages and updates the corresponding zone\textquotesingle{}s status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the zone state change information.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ZoneOverviewViewModel_8cs_source_l00132}{132}} of file \mbox{\hyperlink{ZoneOverviewViewModel_8cs_source}{Zone\+Overview\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00133\ \ \ \ \ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ dispatcherQueue.TryEnqueue(()\ =>}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ var\ zone\ =\ Zones.FirstOrDefault(z\ =>\ z.Name\ ==\ message.ZoneName);}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (zone\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ zone.HasCheckingOutTables\ =\ message.HasCheckingoutTables;}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00142\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_a919dd5f58bfad6329071ae306aa3aaa5}\index{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel}!UpdateFilter@{UpdateFilter}}
+\index{UpdateFilter@{UpdateFilter}!BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneOverviewViewModel}}
+\doxysubsubsection{\texorpdfstring{UpdateFilter()}{UpdateFilter()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneOverviewViewModel_a919dd5f58bfad6329071ae306aa3aaa5} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Overview\+View\+Model.\+Update\+Filter (\begin{DoxyParamCaption}\item[{string}]{filter\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the zone filter based on the specified filter type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter\+Type} & Type of filter to apply.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ZoneOverviewViewModel_8cs_source_l00089}{89}} of file \mbox{\hyperlink{ZoneOverviewViewModel_8cs_source}{Zone\+Overview\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090\ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SelectedZone\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_aada7030576b1cdaa7987aaa8fff66f21}{ZoneSelectedMessage}}(SelectedZone.ZoneId,\ filterType));}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Cashier\+Table/Zone\+Overview\+View\+Model.\+cs\end{DoxyCompactItemize}

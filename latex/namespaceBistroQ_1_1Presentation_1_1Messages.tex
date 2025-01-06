@@ -1,0 +1,335 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Messages Namespace Reference}
+\hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages}{}\label{namespaceBistroQ_1_1Presentation_1_1Messages}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_aada7030576b1cdaa7987aaa8fff66f21}{Zone\+Selected\+Message}} (int? Zone\+Id, string Type)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when a zone is selected. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_af30b117e2cdd03ca1257d66adb06707b}{Table\+Selected\+Message}} (int? Table\+Id)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when a table is selected. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a89a45e6587a9782713b4c8882ee80e76}{Order\+Updated\+Message}} (int? Table\+Id)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when an order is updated. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a0f7eff89937d3c6e7e2577740253fc91}{Complete\+Checkout\+Requested\+Message}} (int? Table\+Id)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when a checkout is requested for completion. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a7fd46469b188bcae2fb9dd9b0d106341}{Table\+State\+Changed\+Message}} (int? Table\+Id, \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{Cashier\+Table\+State}} State)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when a table\textquotesingle{}s state changes. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_aa15dd7a13aa826fcb225bba2e3560b0f}{Zone\+State\+Changed\+Message}} (string Zone\+Name, bool Has\+Checkingout\+Tables)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when a zone\textquotesingle{}s state changes regarding checkout status. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_af450d2a49ae82c86cfac7fd89528b4c7}{Add\+Product\+To\+Cart\+Message}} (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1ProductViewModel}{Product\+View\+Model}} Product)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when a product is added to the shopping cart. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_aef25e9e622dba993c47235f4964328d9}{Order\+Requested\+Message}} (IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$ Order\+Items)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when an order is requested to be placed. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_af2a6939cb1e9944e4255355bf2bfcc65}\label{namespaceBistroQ_1_1Presentation_1_1Messages_af2a6939cb1e9944e4255355bf2bfcc65} 
+record {\bfseries Order\+Succeeded\+Message} ()
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when an order has been successfully processed. Contains no parameters as it\textquotesingle{}s used purely as a notification signal. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_ae5aeb6008a8ab4fb8c6e26d3b5c2743f}{Checkout\+Requested\+Message}} (int? Table\+Id)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when a checkout is requested for a table. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_ad0ffb3f5cad979eceaf5ccd40001b905}{Change\+Custom\+List\+View\+Selection\+Message$<$ T $>$}} (Observable\+Collection$<$ T $>$ Selected\+Items, string Title)
+\begin{DoxyCompactList}\small\item\em Record representing a message to change the selection state of a Custom\+List\+View. Used to programmatically control selection in a specific Custom\+List\+View instance. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a0e4c38b6720468c23d7911e2cb096f60}{Custom\+List\+View\+Selection\+Changed\+Message$<$ T $>$}} (Observable\+Collection$<$ T $>$ Selected\+Items, string Title)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when the selection in a Custom\+List\+View has changed. Notifies subscribers about selection changes in a specific Custom\+List\+View instance. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a6b65c0e0a6e9d6ed941d46ec1f5f8e95}{Remove\+Order\+Items\+Message}} (IEnumerable$<$ string $>$ Order\+Item\+Ids, \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a98f22a547d2cefb0c7e358a5e965cc16}{Kitchen\+Column\+Type}} Source)
+\begin{DoxyCompactList}\small\item\em Record representing a message to remove order items from a kitchen column. Used in the kitchen interface to manage order item removals. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_ae4b08e3a7e8ec63559d48c7e9bd60462}{Kitchen\+Action\+Message}} (\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{Kitchen\+Action}} Action)
+\begin{DoxyCompactList}\small\item\em Record representing a message to execute a kitchen-\/related action. Used to trigger specific operations in the kitchen workflow. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a5116cb1381973ba7ee8430b774ac9bef}{Order\+Grid\+Status\+Changed\+Message}} (Order\+Item\+Status Status)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when the status of orders in the grid changes. Used to notify components about updates to order status. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a7c462b5d62e8af7a9f6ae9da55bc6a54}{Page\+Size\+Changed\+Message}} (int New\+Page\+Size)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when the page size for pagination changes. Used to notify components about changes in the number of items displayed per page. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_aee2328e898c189ea1430ad967218ea36}{Current\+Page\+Changed\+Message}} (int New\+Current\+Page)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when the current page number changes. Used to notify components about navigation to a different page in paginated data. \end{DoxyCompactList}\item 
+record \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_a60702475f12376af36235a2e4a74dd02}{Pagination\+Changed\+Message}} (int Total\+Items, int Current\+Page, int Total\+Pages)
+\begin{DoxyCompactList}\small\item\em Record representing a message sent when pagination state changes. Provides comprehensive information about the current pagination state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_af450d2a49ae82c86cfac7fd89528b4c7}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!AddProductToCartMessage@{AddProductToCartMessage}}
+\index{AddProductToCartMessage@{AddProductToCartMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{AddProductToCartMessage()}{AddProductToCartMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_af450d2a49ae82c86cfac7fd89528b4c7} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Add\+Product\+To\+Cart\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1ProductViewModel}{Product\+View\+Model}}}]{Product}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when a product is added to the shopping cart. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Product} & The product view model to be added to the cart.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_ad0ffb3f5cad979eceaf5ccd40001b905}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!ChangeCustomListViewSelectionMessage$<$ T $>$@{ChangeCustomListViewSelectionMessage$<$ T $>$}}
+\index{ChangeCustomListViewSelectionMessage$<$ T $>$@{ChangeCustomListViewSelectionMessage$<$ T $>$}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{ChangeCustomListViewSelectionMessage$<$ T $>$()}{ChangeCustomListViewSelectionMessage< T >()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_ad0ffb3f5cad979eceaf5ccd40001b905} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Change\+Custom\+List\+View\+Selection\+Message$<$ T $>$ (\begin{DoxyParamCaption}\item[{Observable\+Collection$<$ T $>$}]{Selected\+Items}{, }\item[{string}]{Title}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message to change the selection state of a Custom\+List\+View. Used to programmatically control selection in a specific Custom\+List\+View instance. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of items in the Custom\+List\+View.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em Selected\+Items} & Collection of items to be set as selected.\\
+\hline
+{\em Title} & Identifier of the target Custom\+List\+View, matching its Tag property.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_ae5aeb6008a8ab4fb8c6e26d3b5c2743f}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!CheckoutRequestedMessage@{CheckoutRequestedMessage}}
+\index{CheckoutRequestedMessage@{CheckoutRequestedMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{CheckoutRequestedMessage()}{CheckoutRequestedMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_ae5aeb6008a8ab4fb8c6e26d3b5c2743f} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Checkout\+Requested\+Message (\begin{DoxyParamCaption}\item[{int?}]{Table\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when a checkout is requested for a table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Table\+Id} & The ID of the table requesting checkout. Null if not associated with a specific table.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_a0f7eff89937d3c6e7e2577740253fc91}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!CompleteCheckoutRequestedMessage@{CompleteCheckoutRequestedMessage}}
+\index{CompleteCheckoutRequestedMessage@{CompleteCheckoutRequestedMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{CompleteCheckoutRequestedMessage()}{CompleteCheckoutRequestedMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_a0f7eff89937d3c6e7e2577740253fc91} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Complete\+Checkout\+Requested\+Message (\begin{DoxyParamCaption}\item[{int?}]{Table\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when a checkout is requested for completion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Table\+Id} & The ID of the table requesting checkout completion. Null if not associated with a specific table.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_aee2328e898c189ea1430ad967218ea36}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!CurrentPageChangedMessage@{CurrentPageChangedMessage}}
+\index{CurrentPageChangedMessage@{CurrentPageChangedMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{CurrentPageChangedMessage()}{CurrentPageChangedMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_aee2328e898c189ea1430ad967218ea36} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Current\+Page\+Changed\+Message (\begin{DoxyParamCaption}\item[{int}]{New\+Current\+Page}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when the current page number changes. Used to notify components about navigation to a different page in paginated data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Current\+Page} & The new current page number (1-\/based indexing).\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_a0e4c38b6720468c23d7911e2cb096f60}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!CustomListViewSelectionChangedMessage$<$ T $>$@{CustomListViewSelectionChangedMessage$<$ T $>$}}
+\index{CustomListViewSelectionChangedMessage$<$ T $>$@{CustomListViewSelectionChangedMessage$<$ T $>$}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{CustomListViewSelectionChangedMessage$<$ T $>$()}{CustomListViewSelectionChangedMessage< T >()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_a0e4c38b6720468c23d7911e2cb096f60} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Custom\+List\+View\+Selection\+Changed\+Message$<$ T $>$ (\begin{DoxyParamCaption}\item[{Observable\+Collection$<$ T $>$}]{Selected\+Items}{, }\item[{string}]{Title}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when the selection in a Custom\+List\+View has changed. Notifies subscribers about selection changes in a specific Custom\+List\+View instance. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of items in the Custom\+List\+View.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em Selected\+Items} & Collection of currently selected items after the change.\\
+\hline
+{\em Title} & Identifier of the Custom\+List\+View where selection changed, matching its Tag property.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_ae4b08e3a7e8ec63559d48c7e9bd60462}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!KitchenActionMessage@{KitchenActionMessage}}
+\index{KitchenActionMessage@{KitchenActionMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{KitchenActionMessage()}{KitchenActionMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_ae4b08e3a7e8ec63559d48c7e9bd60462} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Kitchen\+Action\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a8c8bd9a361fe6ccce59dafcba0207af5}{Kitchen\+Action}}}]{Action}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message to execute a kitchen-\/related action. Used to trigger specific operations in the kitchen workflow. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Action} & The kitchen action to be performed.\\
+\hline
+\end{DoxyParams}
+
+
+This message is typically used for actions such as starting preparation, marking orders as ready, or handling other kitchen workflow states. \Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_a5116cb1381973ba7ee8430b774ac9bef}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!OrderGridStatusChangedMessage@{OrderGridStatusChangedMessage}}
+\index{OrderGridStatusChangedMessage@{OrderGridStatusChangedMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{OrderGridStatusChangedMessage()}{OrderGridStatusChangedMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_a5116cb1381973ba7ee8430b774ac9bef} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Order\+Grid\+Status\+Changed\+Message (\begin{DoxyParamCaption}\item[{Order\+Item\+Status}]{Status}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when the status of orders in the grid changes. Used to notify components about updates to order status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Status} & The new status of the orders in the grid.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_aef25e9e622dba993c47235f4964328d9}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!OrderRequestedMessage@{OrderRequestedMessage}}
+\index{OrderRequestedMessage@{OrderRequestedMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{OrderRequestedMessage()}{OrderRequestedMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_aef25e9e622dba993c47235f4964328d9} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Order\+Requested\+Message (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$}]{Order\+Items}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when an order is requested to be placed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Order\+Items} & Collection of order items to be processed in the order.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_a89a45e6587a9782713b4c8882ee80e76}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!OrderUpdatedMessage@{OrderUpdatedMessage}}
+\index{OrderUpdatedMessage@{OrderUpdatedMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{OrderUpdatedMessage()}{OrderUpdatedMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_a89a45e6587a9782713b4c8882ee80e76} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Order\+Updated\+Message (\begin{DoxyParamCaption}\item[{int?}]{Table\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when an order is updated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Table\+Id} & The ID of the table whose order was updated. Null if not associated with a specific table.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_a7c462b5d62e8af7a9f6ae9da55bc6a54}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!PageSizeChangedMessage@{PageSizeChangedMessage}}
+\index{PageSizeChangedMessage@{PageSizeChangedMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{PageSizeChangedMessage()}{PageSizeChangedMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_a7c462b5d62e8af7a9f6ae9da55bc6a54} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Page\+Size\+Changed\+Message (\begin{DoxyParamCaption}\item[{int}]{New\+Page\+Size}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when the page size for pagination changes. Used to notify components about changes in the number of items displayed per page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Page\+Size} & The new number of items to display per page.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_a60702475f12376af36235a2e4a74dd02}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!PaginationChangedMessage@{PaginationChangedMessage}}
+\index{PaginationChangedMessage@{PaginationChangedMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{PaginationChangedMessage()}{PaginationChangedMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_a60702475f12376af36235a2e4a74dd02} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Pagination\+Changed\+Message (\begin{DoxyParamCaption}\item[{int}]{Total\+Items}{, }\item[{int}]{Current\+Page}{, }\item[{int}]{Total\+Pages}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when pagination state changes. Provides comprehensive information about the current pagination state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Total\+Items} & The total number of items across all pages.\\
+\hline
+{\em Current\+Page} & The current page number (1-\/based indexing).\\
+\hline
+{\em Total\+Pages} & The total number of available pages.\\
+\hline
+\end{DoxyParams}
+
+
+This message typically occurs when\+:
+\begin{DoxyItemize}
+\item Data is initially loaded
+\item Data is filtered or searched
+\item Total number of items changes 
+\end{DoxyItemize}\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_a6b65c0e0a6e9d6ed941d46ec1f5f8e95}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!RemoveOrderItemsMessage@{RemoveOrderItemsMessage}}
+\index{RemoveOrderItemsMessage@{RemoveOrderItemsMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{RemoveOrderItemsMessage()}{RemoveOrderItemsMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_a6b65c0e0a6e9d6ed941d46ec1f5f8e95} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Remove\+Order\+Items\+Message (\begin{DoxyParamCaption}\item[{IEnumerable$<$ string $>$}]{Order\+Item\+Ids}{, }\item[{\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_a98f22a547d2cefb0c7e358a5e965cc16}{Kitchen\+Column\+Type}}}]{Source}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message to remove order items from a kitchen column. Used in the kitchen interface to manage order item removals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Order\+Item\+Ids} & Collection of order item IDs to be removed.\\
+\hline
+{\em Source} & The type of kitchen column from which the items should be removed.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_af30b117e2cdd03ca1257d66adb06707b}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!TableSelectedMessage@{TableSelectedMessage}}
+\index{TableSelectedMessage@{TableSelectedMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{TableSelectedMessage()}{TableSelectedMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_af30b117e2cdd03ca1257d66adb06707b} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Table\+Selected\+Message (\begin{DoxyParamCaption}\item[{int?}]{Table\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when a table is selected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Table\+Id} & The ID of the selected table. Null if no table is selected.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_a7fd46469b188bcae2fb9dd9b0d106341}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!TableStateChangedMessage@{TableStateChangedMessage}}
+\index{TableStateChangedMessage@{TableStateChangedMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{TableStateChangedMessage()}{TableStateChangedMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_a7fd46469b188bcae2fb9dd9b0d106341} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Table\+State\+Changed\+Message (\begin{DoxyParamCaption}\item[{int?}]{Table\+Id}{, }\item[{\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Enums_aaf2d62e4b01ec51b73453ae6cb615f40}{Cashier\+Table\+State}}}]{State}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when a table\textquotesingle{}s state changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Table\+Id} & The ID of the table whose state changed. Null if not associated with a specific table.\\
+\hline
+{\em State} & The new state of the table in the cashier interface.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_aada7030576b1cdaa7987aaa8fff66f21}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!ZoneSelectedMessage@{ZoneSelectedMessage}}
+\index{ZoneSelectedMessage@{ZoneSelectedMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{ZoneSelectedMessage()}{ZoneSelectedMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_aada7030576b1cdaa7987aaa8fff66f21} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Zone\+Selected\+Message (\begin{DoxyParamCaption}\item[{int?}]{Zone\+Id}{, }\item[{string}]{Type}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when a zone is selected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Zone\+Id} & The ID of the selected zone. Null if no zone is selected.\\
+\hline
+{\em Type} & The type or context of the zone selection.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceBistroQ_1_1Presentation_1_1Messages_aa15dd7a13aa826fcb225bba2e3560b0f}\index{BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}!ZoneStateChangedMessage@{ZoneStateChangedMessage}}
+\index{ZoneStateChangedMessage@{ZoneStateChangedMessage}!BistroQ.Presentation.Messages@{BistroQ.Presentation.Messages}}
+\doxysubsubsection{\texorpdfstring{ZoneStateChangedMessage()}{ZoneStateChangedMessage()}}
+{\footnotesize\ttfamily \label{namespaceBistroQ_1_1Presentation_1_1Messages_aa15dd7a13aa826fcb225bba2e3560b0f} 
+record Bistro\+Q.\+Presentation.\+Messages.\+Zone\+State\+Changed\+Message (\begin{DoxyParamCaption}\item[{string}]{Zone\+Name}{, }\item[{bool}]{Has\+Checkingout\+Tables}{}\end{DoxyParamCaption})}
+
+
+
+Record representing a message sent when a zone\textquotesingle{}s state changes regarding checkout status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Zone\+Name} & The name of the zone whose state changed.\\
+\hline
+{\em Has\+Checkingout\+Tables} & Boolean indicating whether the zone has any tables in checkout process.\\
+\hline
+\end{DoxyParams}

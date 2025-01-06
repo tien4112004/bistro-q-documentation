@@ -1,0 +1,114 @@
+\doxysection{Product\+List\+Control.\+xaml.\+cs}
+\hypertarget{ProductListControl_8xaml_8cs_source}{}\label{ProductListControl_8xaml_8cs_source}\index{BistroQ.Presentation/Views/UserControls/Client/ProductListControl.xaml.cs@{BistroQ.Presentation/Views/UserControls/Client/ProductListControl.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1Services}{BistroQ.Presentation.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages}{BistroQ.Presentation.Messages}};}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Client}{BistroQ.Presentation.ViewModels.Client}};}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Models}{BistroQ.Presentation.ViewModels.Models}};}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Messaging;}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Input;}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00011}00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client}{BistroQ.Presentation.Views.UserControls.Client}};}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00013}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductListControl}{00013}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductListControl}{ProductListControl}}\ :\ UserControl}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ readonly\ DependencyProperty\ ViewModelProperty\ =\ DependencyProperty.Register(}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ nameof(ViewModel),}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel}{ProductListViewModel}}),}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductListControl}{ProductListControl}}),}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ PropertyMetadata(\textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ IMessenger\ \_messenger\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<IMessenger>();}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialogService}}\ \_dialogService;}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel}{ProductListViewModel}}\ ViewModel}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel}{ProductListViewModel}})GetValue(ViewModelProperty);}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ =>\ SetValue(ViewModelProperty,\ value);}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ EventHandler<ProductViewModel>\ ProductSelected;}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductListControl}{ProductListControl}}()}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00035}00035\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ this.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductListControl_a29902fb20af065df2b2e1d91728811c9}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ this.Loaded\ +=\ ProductListControl\_Loaded;}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ this.\_dialogService\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialogService}}>();}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00042}00042\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ProductListControl\_Loaded(\textcolor{keywordtype}{object}\ sender,\ RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00043}00043\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ DataContext\ =\ ViewModel;}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00047}00047\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CategoryList\_SelectionChanged(\textcolor{keywordtype}{object}\ sender,\ SelectionChangedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00048}00048\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ViewModel\ !=\ \textcolor{keyword}{null}\ \&\&\ e.AddedItems.Count\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.SelectedCategory\ =\ e.AddedItems[0]\ as\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1CategoryViewModel}{CategoryViewModel}};}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a510f9105b545aae02760c37ae0c86de3}{ChangeCategoryCommand}}.CanExecute(ViewModel.SelectedCategory))}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ViewModel.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a510f9105b545aae02760c37ae0c86de3}{ChangeCategoryCommand}}.Execute(ViewModel.SelectedCategory);}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00059}00059\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ HorizontalScrollViewer\_ManipulationDelta(\textcolor{keywordtype}{object}\ sender,\ ManipulationDeltaRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00060}00060\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ SCROLL\_SPEED\ =\ 1.25;}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ var\ scrollViewer\ =\ (ScrollViewer)sender;}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ scrollViewer.ChangeView(}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ scrollViewer.HorizontalOffset\ -\/\ e.Delta.Translation.X\ *\ SCROLL\_SPEED,}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00070}00070\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ VerticalScrollViewer\_ManipulationDelta(\textcolor{keywordtype}{object}\ sender,\ ManipulationDeltaRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00071}00071\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ SCROLL\_SPEED\ =\ 1.25;}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ var\ scrollViewer\ =\ (ScrollViewer)sender;}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ scrollViewer.ChangeView(}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ scrollViewer.VerticalOffset\ -\/\ e.Delta.Translation.Y\ *\ SCROLL\_SPEED,}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00081}00081\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerEntered(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00082}00082\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Hand);}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00086}00086\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerExited(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00087}00087\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Arrow);}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00091}00091\ \ \ \ \ \textcolor{keyword}{private}\ async\ \textcolor{keywordtype}{void}\ SingleProductControl\_ProductClicked(\textcolor{keywordtype}{object}\ sender,\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1ProductViewModel}{ProductViewModel}}\ e)}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00092}00092\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ var\ productDetailControl\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductDetailControl}{ProductDetailControl}}(e);}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ var\ productDetailDialog\ =\ \textcolor{keyword}{new}\ ContentDialog}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ productDetailControl,}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ Title\ =\ \textcolor{stringliteral}{"{}Product\ Detail"{}},}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ CloseButtonText\ =\ \textcolor{stringliteral}{"{}Close"{}},}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ PrimaryButtonText\ =\ \textcolor{stringliteral}{"{}Add\ to\ cart"{}},}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ DefaultButton\ =\ ContentDialogButton.Primary}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ var\ dialogResult\ =\ await\ \_dialogService.ShowDialogAsync(productDetailDialog);}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dialogResult\ ==\ ContentDialogResult.Primary)}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_af450d2a49ae82c86cfac7fd89528b4c7}{AddProductToCartMessage}}(e));}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00107}00107\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProductListControl_8xaml_8cs_source_l00108}00108\ \}}
+
+\end{DoxyCode}

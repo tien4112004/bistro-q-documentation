@@ -1,0 +1,158 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Models.\+Add\+Zone\+Form Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm}{}\label{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm}\index{BistroQ.Presentation.Models.AddZoneForm@{BistroQ.Presentation.Models.AddZoneForm}}
+
+
+Represents a form for adding new zone with built-\/in validation rules. Inherits from Validator\+Base to provide validation functionality.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Models.\+Add\+Zone\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Models.\+Add\+Zone\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aee490e7bcadf4a683185e513263a8a26}{Add\+Zone\+Form}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm}{Add\+Zone\+Form} class. Sets up the validator for the zone name. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_a45f521774bad6473e658b675716bba4f}{Validate\+All}} ()
+\begin{DoxyCompactList}\small\item\em Validates all properties of the form. Executes validation rules for the zone Name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3220acd7add1426396f6c03a6d9707d0}{Get\+Errors}} (string? property\+Name)
+\begin{DoxyCompactList}\small\item\em Retrieves validation errors for a specific property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ab4cd9b5edd381d01f2f877caee969213}{Reset\+Error}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Clears all validation errors for a specific property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad1a34c3d3ea17bb558dd231471fe20fd}{Clear\+Errors}} ()
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{Validate\+Property}} (string property\+Name, object? value)
+\begin{DoxyCompactList}\small\item\em Validates a specific property value using registered validators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aca420726e2ba65c0c7315f6ad2b495c6}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the name of the zone. Validated for non-\/empty and minimum length (2 chars). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ string, List$<$ string $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad671d3afa430919e586c1328e268d711}{Errors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac9110647ffbaec21cb835c2d417054f3}{Has\+Errors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a9a04545b2c20597513cd3190a83c3c9c}{Update\+Errors}} (string property\+Name, List$<$ string $>$ errors)
+\begin{DoxyCompactList}\small\item\em Updates the error collection for a property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{Add\+Validator}} (string property\+Name, Func$<$ object?, List$<$(bool Is\+Value, string Message)$>$ $>$ validators)
+\begin{DoxyCompactList}\small\item\em Registers a list of validator functions for a property. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3dad90961c53443f11ac2a7f258c1e60}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string? property\+Name=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler$<$ Data\+Errors\+Changed\+Event\+Args $>$? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a0f93a47246a401f521a75d14e01a27e1}{Errors\+Changed}}
+\item 
+Property\+Changed\+Event\+Handler? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_acd024f4924ef56609cfff07afda377e8}{Property\+Changed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a form for adding new zone with built-\/in validation rules. Inherits from Validator\+Base to provide validation functionality. 
+
+Definition at line \mbox{\hyperlink{AddZoneForm_8cs_source_l00009}{9}} of file \mbox{\hyperlink{AddZoneForm_8cs_source}{Add\+Zone\+Form.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aee490e7bcadf4a683185e513263a8a26}\index{BistroQ.Presentation.Models.AddZoneForm@{BistroQ.Presentation.Models.AddZoneForm}!AddZoneForm@{AddZoneForm}}
+\index{AddZoneForm@{AddZoneForm}!BistroQ.Presentation.Models.AddZoneForm@{BistroQ.Presentation.Models.AddZoneForm}}
+\doxysubsubsection{\texorpdfstring{AddZoneForm()}{AddZoneForm()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aee490e7bcadf4a683185e513263a8a26} 
+Bistro\+Q.\+Presentation.\+Models.\+Add\+Zone\+Form.\+Add\+Zone\+Form (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm}{Add\+Zone\+Form} class. Sets up the validator for the zone name. 
+
+
+
+Definition at line \mbox{\hyperlink{AddZoneForm_8cs_source_l00024}{24}} of file \mbox{\hyperlink{AddZoneForm_8cs_source}{Add\+Zone\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ AddZoneNameValidator();}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_a45f521774bad6473e658b675716bba4f}\index{BistroQ.Presentation.Models.AddZoneForm@{BistroQ.Presentation.Models.AddZoneForm}!ValidateAll@{ValidateAll}}
+\index{ValidateAll@{ValidateAll}!BistroQ.Presentation.Models.AddZoneForm@{BistroQ.Presentation.Models.AddZoneForm}}
+\doxysubsubsection{\texorpdfstring{ValidateAll()}{ValidateAll()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_a45f521774bad6473e658b675716bba4f} 
+override void Bistro\+Q.\+Presentation.\+Models.\+Add\+Zone\+Form.\+Validate\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Validates all properties of the form. Executes validation rules for the zone Name. 
+
+This method overrides the base Validate\+All method to provide form-\/specific validation logic. 
+
+Reimplemented from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a69a3f0a52a8c3099e85297a3295e5c0a}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}.
+
+
+
+Definition at line \mbox{\hyperlink{AddZoneForm_8cs_source_l00058}{58}} of file \mbox{\hyperlink{AddZoneForm_8cs_source}{Add\+Zone\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aca420726e2ba65c0c7315f6ad2b495c6}{Name}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aca420726e2ba65c0c7315f6ad2b495c6}{Name}});}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aca420726e2ba65c0c7315f6ad2b495c6}\index{BistroQ.Presentation.Models.AddZoneForm@{BistroQ.Presentation.Models.AddZoneForm}!Name@{Name}}
+\index{Name@{Name}!BistroQ.Presentation.Models.AddZoneForm@{BistroQ.Presentation.Models.AddZoneForm}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddZoneForm_aca420726e2ba65c0c7315f6ad2b495c6} 
+string Bistro\+Q.\+Presentation.\+Models.\+Add\+Zone\+Form.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the name of the zone. Validated for non-\/empty and minimum length (2 chars). 
+
+
+
+Definition at line \mbox{\hyperlink{AddZoneForm_8cs_source_l00016}{16}} of file \mbox{\hyperlink{AddZoneForm_8cs_source}{Add\+Zone\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Models/Add\+Zone\+Form.\+cs\end{DoxyCompactItemize}

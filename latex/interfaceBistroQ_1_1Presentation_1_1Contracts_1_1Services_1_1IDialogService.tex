@@ -1,0 +1,129 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+IDialog\+Service Interface Reference}
+\hypertarget{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{}\label{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}\index{BistroQ.Presentation.Contracts.Services.IDialogService@{BistroQ.Presentation.Contracts.Services.IDialogService}}
+
+
+Provides an interface for displaying various types of dialog boxes in the application.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+IDialog\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ Content\+Dialog\+Result $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_ad526c18c114070153ae56ee5e534f564}{Show\+Confirm\+Delete\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Displays a confirmation dialog for delete operations. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_ad4188d1948c0ce128c22d400605e0d4b}{Show\+Success\+Dialog}} (string message, string title)
+\begin{DoxyCompactList}\small\item\em Displays a success dialog with a custom message and title. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}{Show\+Error\+Dialog}} (string message, string title)
+\begin{DoxyCompactList}\small\item\em Displays an error dialog with a custom message and title. \end{DoxyCompactList}\item 
+Task$<$ Content\+Dialog\+Result $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a7a5e4698e6dde84a9380c09976683a74}{Show\+Dialog\+Async}} (Content\+Dialog dialog)
+\begin{DoxyCompactList}\small\item\em Displays a custom content dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides an interface for displaying various types of dialog boxes in the application. 
+
+Definition at line \mbox{\hyperlink{IDialogService_8cs_source_l00008}{8}} of file \mbox{\hyperlink{IDialogService_8cs_source}{IDialog\+Service.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_ad526c18c114070153ae56ee5e534f564}\index{BistroQ.Presentation.Contracts.Services.IDialogService@{BistroQ.Presentation.Contracts.Services.IDialogService}!ShowConfirmDeleteDialog@{ShowConfirmDeleteDialog}}
+\index{ShowConfirmDeleteDialog@{ShowConfirmDeleteDialog}!BistroQ.Presentation.Contracts.Services.IDialogService@{BistroQ.Presentation.Contracts.Services.IDialogService}}
+\doxysubsubsection{\texorpdfstring{ShowConfirmDeleteDialog()}{ShowConfirmDeleteDialog()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_ad526c18c114070153ae56ee5e534f564} 
+Task$<$ Content\+Dialog\+Result $>$ Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+IDialog\+Service.\+Show\+Confirm\+Delete\+Dialog (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Displays a confirmation dialog for delete operations. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation with the dialog result.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a76781bcaf453a0957edf0b0bad30f193}{Bistro\+Q.\+Presentation.\+Services.\+Dialog\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a7a5e4698e6dde84a9380c09976683a74}\index{BistroQ.Presentation.Contracts.Services.IDialogService@{BistroQ.Presentation.Contracts.Services.IDialogService}!ShowDialogAsync@{ShowDialogAsync}}
+\index{ShowDialogAsync@{ShowDialogAsync}!BistroQ.Presentation.Contracts.Services.IDialogService@{BistroQ.Presentation.Contracts.Services.IDialogService}}
+\doxysubsubsection{\texorpdfstring{ShowDialogAsync()}{ShowDialogAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a7a5e4698e6dde84a9380c09976683a74} 
+Task$<$ Content\+Dialog\+Result $>$ Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+IDialog\+Service.\+Show\+Dialog\+Async (\begin{DoxyParamCaption}\item[{Content\+Dialog}]{dialog}{}\end{DoxyParamCaption})}
+
+
+
+Displays a custom content dialog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dialog} & The content dialog to display.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation with the dialog result.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a70f9d29442b5294c909b20a4af3dcba8}{Bistro\+Q.\+Presentation.\+Services.\+Dialog\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3}\index{BistroQ.Presentation.Contracts.Services.IDialogService@{BistroQ.Presentation.Contracts.Services.IDialogService}!ShowErrorDialog@{ShowErrorDialog}}
+\index{ShowErrorDialog@{ShowErrorDialog}!BistroQ.Presentation.Contracts.Services.IDialogService@{BistroQ.Presentation.Contracts.Services.IDialogService}}
+\doxysubsubsection{\texorpdfstring{ShowErrorDialog()}{ShowErrorDialog()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a1c824b67f3e6dc27e22442462a5350c3} 
+Task Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+IDialog\+Service.\+Show\+Error\+Dialog (\begin{DoxyParamCaption}\item[{string}]{message}{, }\item[{string}]{title}{}\end{DoxyParamCaption})}
+
+
+
+Displays an error dialog with a custom message and title. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to display in the dialog.\\
+\hline
+{\em title} & The title of the dialog.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a92f9aaac4b5b32a276e4e5784d746d11}{Bistro\+Q.\+Presentation.\+Services.\+Dialog\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_ad4188d1948c0ce128c22d400605e0d4b}\index{BistroQ.Presentation.Contracts.Services.IDialogService@{BistroQ.Presentation.Contracts.Services.IDialogService}!ShowSuccessDialog@{ShowSuccessDialog}}
+\index{ShowSuccessDialog@{ShowSuccessDialog}!BistroQ.Presentation.Contracts.Services.IDialogService@{BistroQ.Presentation.Contracts.Services.IDialogService}}
+\doxysubsubsection{\texorpdfstring{ShowSuccessDialog()}{ShowSuccessDialog()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_ad4188d1948c0ce128c22d400605e0d4b} 
+Task Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+IDialog\+Service.\+Show\+Success\+Dialog (\begin{DoxyParamCaption}\item[{string}]{message}{, }\item[{string}]{title}{}\end{DoxyParamCaption})}
+
+
+
+Displays a success dialog with a custom message and title. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to display in the dialog.\\
+\hline
+{\em title} & The title of the dialog.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1DialogService_a80650c2b2be37c2976d08752f4928aeb}{Bistro\+Q.\+Presentation.\+Services.\+Dialog\+Service}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Contracts/\+Services/IDialog\+Service.\+cs\end{DoxyCompactItemize}

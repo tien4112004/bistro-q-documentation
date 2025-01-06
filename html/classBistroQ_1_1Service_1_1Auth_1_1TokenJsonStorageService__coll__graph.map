@@ -1,0 +1,5 @@
+<map id="BistroQ.Service.Auth.TokenJsonStorageService" name="BistroQ.Service.Auth.TokenJsonStorageService">
+<area shape="rect" id="Node000001" title="A JSON&#45;based storage service for authentication tokens, implementing the ITokenStorageService interfa..." alt="" coords="5,80,189,123"/>
+<area shape="rect" id="Node000002" href="$interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService.html" title="Provides methods for securely storing and retrieving authentication tokens, including access and refr..." alt="" coords="22,5,172,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,48,100,80,94,80,94,48"/>
+</map>

@@ -1,0 +1,113 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Models.\+Order\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}\index{BistroQ.Presentation.ViewModels.Models.OrderViewModel@{BistroQ.Presentation.ViewModels.Models.OrderViewModel}}
+
+
+View\+Model representing an order.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Models.\+Order\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Models.\+Order\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{Order\+View\+Model}} \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_ad1875260885210688e090b849b0b03de}{Clone}} ()
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of the order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Observable\+Collection$<$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}} $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_a5e6ab43970b8778d7d59ae2d4bf5764b}{Order\+Items}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Collection of items in this order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model representing an order. 
+
+Manages order details, status, timing, and nutritional totals. Provides functionality for creating copies of orders. 
+
+Definition at line \mbox{\hyperlink{OrderViewModel_8cs_source_l00014}{14}} of file \mbox{\hyperlink{OrderViewModel_8cs_source}{Order\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_ad1875260885210688e090b849b0b03de}\index{BistroQ.Presentation.ViewModels.Models.OrderViewModel@{BistroQ.Presentation.ViewModels.Models.OrderViewModel}!Clone@{Clone}}
+\index{Clone@{Clone}!BistroQ.Presentation.ViewModels.Models.OrderViewModel@{BistroQ.Presentation.ViewModels.Models.OrderViewModel}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_ad1875260885210688e090b849b0b03de} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{Order\+View\+Model}} Bistro\+Q.\+Presentation.\+View\+Models.\+Models.\+Order\+View\+Model.\+Clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a deep copy of the order. 
+
+\begin{DoxyReturn}{Returns}
+A new \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{Order\+View\+Model} instance with copied data
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{OrderViewModel_8cs_source_l00097}{97}} of file \mbox{\hyperlink{OrderViewModel_8cs_source}{Order\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ OrderViewModel}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ OrderId\ =\ OrderId,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ TotalAmount\ =\ TotalAmount,}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ StartTime\ =\ StartTime,}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ EndTime\ =\ EndTime,}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ Status\ =\ Status,}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ PeopleCount\ =\ PeopleCount,}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ TableId\ =\ TableId,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ TotalCalories\ =\ TotalCalories,}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ TotalProtein\ =\ TotalProtein,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ TotalFat\ =\ TotalFat,}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ TotalFiber\ =\ TotalFiber,}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ TotalCarbohydrates\ =\ TotalCarbohydrates,}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_a5e6ab43970b8778d7d59ae2d4bf5764b}{OrderItems}}\ =\ \textcolor{keyword}{new}\ ObservableCollection<OrderItemViewModel>(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_a5e6ab43970b8778d7d59ae2d4bf5764b}{OrderItems}})}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_a5e6ab43970b8778d7d59ae2d4bf5764b}\index{BistroQ.Presentation.ViewModels.Models.OrderViewModel@{BistroQ.Presentation.ViewModels.Models.OrderViewModel}!OrderItems@{OrderItems}}
+\index{OrderItems@{OrderItems}!BistroQ.Presentation.ViewModels.Models.OrderViewModel@{BistroQ.Presentation.ViewModels.Models.OrderViewModel}}
+\doxysubsubsection{\texorpdfstring{OrderItems}{OrderItems}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel_a5e6ab43970b8778d7d59ae2d4bf5764b} 
+Observable\+Collection$<$\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderItemViewModel}{Order\+Item\+View\+Model}}$>$ Bistro\+Q.\+Presentation.\+View\+Models.\+Models.\+Order\+View\+Model.\+Order\+Items = new()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Collection of items in this order. 
+
+
+
+Definition at line \mbox{\hyperlink{OrderViewModel_8cs_source_l00061}{61}} of file \mbox{\hyperlink{OrderViewModel_8cs_source}{Order\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}();}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Models/Order\+View\+Model.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="BistroQ.Service.Common.FileService" name="BistroQ.Service.Common.FileService">
+<area shape="rect" id="Node000001" title="Implementation of IFileService that handles file operations using JSON serialization." alt="" coords="5,80,201,123"/>
+<area shape="rect" id="Node000002" href="$interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService.html" title="Interface for handling file operations with JSON serialization. Provides methods for reading,..." alt="" coords="58,5,148,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,48,106,80,100,80,100,48"/>
+</map>

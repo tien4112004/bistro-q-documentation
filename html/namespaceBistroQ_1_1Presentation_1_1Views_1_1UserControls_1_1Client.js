@@ -1,0 +1,12 @@
+var namespaceBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client =
+[
+    [ "CartControl", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1CartControl.html", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1CartControl" ],
+    [ "ClientNutritionControl", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ClientNutritionControl.html", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ClientNutritionControl" ],
+    [ "OrderCartControl", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1OrderCartControl.html", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1OrderCartControl" ],
+    [ "OrderControl", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1OrderControl.html", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1OrderControl" ],
+    [ "PaymentQrCodeControl", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1PaymentQrCodeControl.html", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1PaymentQrCodeControl" ],
+    [ "ProductDetail", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductDetail.html", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductDetail" ],
+    [ "ProductDetailControl", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductDetailControl.html", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductDetailControl" ],
+    [ "ProductListControl", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductListControl.html", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1ProductListControl" ],
+    [ "SingleProductControl", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1SingleProductControl.html", "classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Client_1_1SingleProductControl" ]
+];

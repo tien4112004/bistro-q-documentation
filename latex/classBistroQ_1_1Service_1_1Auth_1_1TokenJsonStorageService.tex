@@ -1,0 +1,281 @@
+\doxysection{Bistro\+Q.\+Service.\+Auth.\+Token\+Json\+Storage\+Service Class Reference}
+\hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService}{}\label{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService}\index{BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}}
+
+
+A JSON-\/based storage service for authentication tokens, implementing the IToken\+Storage\+Service interface. This service stores access and refresh tokens in a JSON format, providing methods to save, retrieve, and clear tokens. This approach may be useful for scenarios where tokens need to be persisted in a lightweight, human-\/readable format.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Service.\+Auth.\+Token\+Json\+Storage\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Service.\+Auth.\+Token\+Json\+Storage\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_ad2ba18f58996533bd204a1decec6f091}{Token\+Json\+Storage\+Service}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}{IFile\+Service}} file\+Service)
+\item 
+Task \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a62ea0abcb75321af1ef8462b2afd364e}{Save\+Tokens\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1LoginResponseDto}{Login\+Response\+Dto}} auth\+Response\+Dto)
+\begin{DoxyCompactList}\small\item\em Stores the access and refresh tokens, along with additional information, from a login result. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a04d8c2cf0091fabb8fc485b43d2a94f5}{Save\+Access\+Token}} (string access\+Token)
+\begin{DoxyCompactList}\small\item\em Stores the access token. \end{DoxyCompactList}\item 
+Task$<$ string $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a3f1c94685952876858a9d0806b0b5208}{Get\+Access\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the stored access token. \end{DoxyCompactList}\item 
+Task$<$(string, string)$>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a6c6647b788fdf2675e6a4a9ec06e6942}{Get\+Refresh\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the stored refresh token along with the associated user ID. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a65820c88de2648808452d56a4db8b0a4}{Clear\+Tokens\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Clears all stored tokens, including access and refresh tokens, to effectively log out the user. \end{DoxyCompactList}\item 
+Task$<$ string $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a3e070ec66ce7350cb195afb8d6a30d58}{Get\+Role\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Get the current user\textquotesingle{}s role. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}}
+
+
+\doxysubsection{Detailed Description}
+A JSON-\/based storage service for authentication tokens, implementing the IToken\+Storage\+Service interface. This service stores access and refresh tokens in a JSON format, providing methods to save, retrieve, and clear tokens. This approach may be useful for scenarios where tokens need to be persisted in a lightweight, human-\/readable format. 
+
+Definition at line \mbox{\hyperlink{TokenJsonStorageService_8cs_source_l00012}{12}} of file \mbox{\hyperlink{TokenJsonStorageService_8cs_source}{Token\+Json\+Storage\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_ad2ba18f58996533bd204a1decec6f091}\index{BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}!TokenJsonStorageService@{TokenJsonStorageService}}
+\index{TokenJsonStorageService@{TokenJsonStorageService}!BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}}
+\doxysubsubsection{\texorpdfstring{TokenJsonStorageService()}{TokenJsonStorageService()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_ad2ba18f58996533bd204a1decec6f091} 
+Bistro\+Q.\+Service.\+Auth.\+Token\+Json\+Storage\+Service.\+Token\+Json\+Storage\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService}{IFile\+Service}}}]{file\+Service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{TokenJsonStorageService_8cs_source_l00018}{18}} of file \mbox{\hyperlink{TokenJsonStorageService_8cs_source}{Token\+Json\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ File\ path\ will\ be:\ ./bin/x64/Debug/net7.0-\/windows10.0.19041.0\(\backslash\)AppX\(\backslash\)Data}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \_fileService\ =\ fileService;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \_folderPath\ =\ Path.Combine(AppContext.BaseDirectory,\ \textcolor{stringliteral}{"{}Data"{}});}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \_fileName\ =\ \textcolor{stringliteral}{"{}tokens.json"{}};}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a65820c88de2648808452d56a4db8b0a4}\index{BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}!ClearTokensAsync@{ClearTokensAsync}}
+\index{ClearTokensAsync@{ClearTokensAsync}!BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}}
+\doxysubsubsection{\texorpdfstring{ClearTokensAsync()}{ClearTokensAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a65820c88de2648808452d56a4db8b0a4} 
+Task Bistro\+Q.\+Service.\+Auth.\+Token\+Json\+Storage\+Service.\+Clear\+Tokens\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears all stored tokens, including access and refresh tokens, to effectively log out the user. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous clear operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a2120592f856362982de1b371553efef8}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{TokenJsonStorageService_8cs_source_l00067}{67}} of file \mbox{\hyperlink{TokenJsonStorageService_8cs_source}{Token\+Json\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \_fileService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IFileService_a28399ab6ce0afd9dd8158848548757a5}{Delete}}(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.CompletedTask;}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a3f1c94685952876858a9d0806b0b5208}\index{BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}!GetAccessToken@{GetAccessToken}}
+\index{GetAccessToken@{GetAccessToken}!BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}}
+\doxysubsubsection{\texorpdfstring{GetAccessToken()}{GetAccessToken()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a3f1c94685952876858a9d0806b0b5208} 
+Task$<$ string $>$ Bistro\+Q.\+Service.\+Auth.\+Token\+Json\+Storage\+Service.\+Get\+Access\+Token (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the stored access token. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous retrieval operation. The task result contains the stored access token as a string.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a0f236032749b9b86ab13cf14cdb723da}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{TokenJsonStorageService_8cs_source_l00052}{52}} of file \mbox{\hyperlink{TokenJsonStorageService_8cs_source}{Token\+Json\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ var\ tokens\ =\ \_fileService.Read<Dictionary<string,\ string>>(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.FromResult(tokens?[\textcolor{stringliteral}{"{}AccessToken"{}}]);}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a6c6647b788fdf2675e6a4a9ec06e6942}\index{BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}!GetRefreshToken@{GetRefreshToken}}
+\index{GetRefreshToken@{GetRefreshToken}!BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}}
+\doxysubsubsection{\texorpdfstring{GetRefreshToken()}{GetRefreshToken()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a6c6647b788fdf2675e6a4a9ec06e6942} 
+Task$<$(string, string)$>$ Bistro\+Q.\+Service.\+Auth.\+Token\+Json\+Storage\+Service.\+Get\+Refresh\+Token (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the stored refresh token along with the associated user ID. 
+
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous retrieval operation. The task result contains a tuple with the refresh token and user ID.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_ac358938628059b1eda1e5afc9c1916bd}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{TokenJsonStorageService_8cs_source_l00059}{59}} of file \mbox{\hyperlink{TokenJsonStorageService_8cs_source}{Token\+Json\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ var\ tokens\ =\ \_fileService.Read<Dictionary<string,\ string>>(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.FromResult((tokens?[\textcolor{stringliteral}{"{}RefreshToken"{}}],\ tokens?[\textcolor{stringliteral}{"{}UserId"{}}]));}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a3e070ec66ce7350cb195afb8d6a30d58}\index{BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}!GetRoleAsync@{GetRoleAsync}}
+\index{GetRoleAsync@{GetRoleAsync}!BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}}
+\doxysubsubsection{\texorpdfstring{GetRoleAsync()}{GetRoleAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a3e070ec66ce7350cb195afb8d6a30d58} 
+Task$<$ string $>$ Bistro\+Q.\+Service.\+Auth.\+Token\+Json\+Storage\+Service.\+Get\+Role\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current user\textquotesingle{}s role. 
+
+\begin{DoxyReturn}{Returns}
+User\textquotesingle{}s role
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a52dbbf2df193952e1f3a77fa153b201c}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{TokenJsonStorageService_8cs_source_l00074}{74}} of file \mbox{\hyperlink{TokenJsonStorageService_8cs_source}{Token\+Json\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ NotImplementedException();}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a04d8c2cf0091fabb8fc485b43d2a94f5}\index{BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}!SaveAccessToken@{SaveAccessToken}}
+\index{SaveAccessToken@{SaveAccessToken}!BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}}
+\doxysubsubsection{\texorpdfstring{SaveAccessToken()}{SaveAccessToken()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a04d8c2cf0091fabb8fc485b43d2a94f5} 
+Task Bistro\+Q.\+Service.\+Auth.\+Token\+Json\+Storage\+Service.\+Save\+Access\+Token (\begin{DoxyParamCaption}\item[{string}]{access\+Token}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stores the access token. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em access\+Token} & The access token to store.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous save operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a6031bec524c9bfadd16684db2aa1df9e}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{TokenJsonStorageService_8cs_source_l00041}{41}} of file \mbox{\hyperlink{TokenJsonStorageService_8cs_source}{Token\+Json\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ var\ result\ =\ \_fileService.Read<Dictionary<string,\ string>>(\_folderPath,\ \_fileName);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ result[\textcolor{stringliteral}{"{}AccessToken"{}}]\ =\ accessToken;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \_fileService.Save(\_folderPath,\ \_fileName,\ result);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.CompletedTask;}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a62ea0abcb75321af1ef8462b2afd364e}\index{BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}!SaveTokensAsync@{SaveTokensAsync}}
+\index{SaveTokensAsync@{SaveTokensAsync}!BistroQ.Service.Auth.TokenJsonStorageService@{BistroQ.Service.Auth.TokenJsonStorageService}}
+\doxysubsubsection{\texorpdfstring{SaveTokensAsync()}{SaveTokensAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Auth_1_1TokenJsonStorageService_a62ea0abcb75321af1ef8462b2afd364e} 
+Task Bistro\+Q.\+Service.\+Auth.\+Token\+Json\+Storage\+Service.\+Save\+Tokens\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1LoginResponseDto}{Login\+Response\+Dto}}}]{response\+Dto}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stores the access and refresh tokens, along with additional information, from a login result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response\+Dto} & The login result containing tokens and other authentication details.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous save operation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService_a914d4a780bf5b08ec6d726e800fc3b70}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IToken\+Storage\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{TokenJsonStorageService_8cs_source_l00026}{26}} of file \mbox{\hyperlink{TokenJsonStorageService_8cs_source}{Token\+Json\+Storage\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ var\ tokens\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ string>}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}AccessToken"{}},\ authResponseDto.AccessToken\ \},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}RefreshToken"{}},\ authResponseDto.RefreshToken\ \},}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}UserId"{}},\ authResponseDto.UserId\ \},}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Role"{}},\ authResponseDto.Role\ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \_fileService.Save(\_folderPath,\ \_fileName,\ tokens);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.CompletedTask;}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Service/\+Auth/Token\+Json\+Storage\+Service.\+cs\end{DoxyCompactItemize}

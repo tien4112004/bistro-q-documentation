@@ -1,0 +1,212 @@
+\doxysection{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+ITable\+Data\+Service Interface Reference}
+\hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService}{}\label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService}\index{BistroQ.Domain.Contracts.Services.ITableDataService@{BistroQ.Domain.Contracts.Services.ITableDataService}}
+
+
+Interface for managing table-\/related data operations through API endpoints. Provides methods for CRUD operations on restaurant tables, including admin and cashier-\/specific endpoints.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Domain.\+Contracts.\+Services.\+ITable\+Data\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classTable}{Table}} $>$ $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a1b48417687e40debd67779094e764545}{Get\+Grid\+Data\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1TableCollectionQueryParams}{Table\+Collection\+Query\+Params}} query)
+\begin{DoxyCompactList}\small\item\em Retrieves a paginated collection of tables for admin grid view. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classTable}{Table}} $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a6c62639de69b0646cb7405b98dc4a86e}{Get\+Data\+Table\+Async}} (int table\+Id)
+\begin{DoxyCompactList}\small\item\em Retrieves details for a specific table. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classTable}{Table}} $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_aad86ee0a9928b99454a42febd75df741}{Create\+Table\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1CreateTableRequest}{Create\+Table\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Creates a new table in the system. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classTable}{Table}} $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a89df7a682f03047068bf55d8a54001c0}{Update\+Table\+Async}} (int zone\+Id, \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1UpdateTableRequest}{Update\+Table\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Updates an existing table\textquotesingle{}s details. \end{DoxyCompactList}\item 
+Task$<$ bool $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a649a1365b11b5fff3c1eb0348c49e842}{Delete\+Table\+Async}} (int zone\+Id)
+\begin{DoxyCompactList}\small\item\em Deletes a table from the system. \end{DoxyCompactList}\item 
+Task$<$ IEnumerable$<$ \mbox{\hyperlink{classTable}{Table}} $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_ac69d71960c7941666e077d3a3de2f95f}{Get\+Tables\+By\+Cashier\+Async}} (int zone\+Id, string type)
+\begin{DoxyCompactList}\small\item\em Retrieves tables in a specific zone based on occupancy status (Cashier endpoint). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for managing table-\/related data operations through API endpoints. Provides methods for CRUD operations on restaurant tables, including admin and cashier-\/specific endpoints. 
+
+Definition at line \mbox{\hyperlink{ITableDataService_8cs_source_l00010}{10}} of file \mbox{\hyperlink{ITableDataService_8cs_source}{ITable\+Data\+Service.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_aad86ee0a9928b99454a42febd75df741}\index{BistroQ.Domain.Contracts.Services.ITableDataService@{BistroQ.Domain.Contracts.Services.ITableDataService}!CreateTableAsync@{CreateTableAsync}}
+\index{CreateTableAsync@{CreateTableAsync}!BistroQ.Domain.Contracts.Services.ITableDataService@{BistroQ.Domain.Contracts.Services.ITableDataService}}
+\doxysubsubsection{\texorpdfstring{CreateTableAsync()}{CreateTableAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_aad86ee0a9928b99454a42febd75df741} 
+Task$<$ \mbox{\hyperlink{classTable}{Table}} $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+ITable\+Data\+Service.\+Create\+Table\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1CreateTableRequest}{Create\+Table\+Request}}}]{request}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new table in the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The table creation details\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly created table
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown with message "{}\+Failed to create table"{} when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_ad896b7d7af459de381e0bca5ff82e89b}{Bistro\+Q.\+Service.\+Data.\+Table\+Data\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a649a1365b11b5fff3c1eb0348c49e842}\index{BistroQ.Domain.Contracts.Services.ITableDataService@{BistroQ.Domain.Contracts.Services.ITableDataService}!DeleteTableAsync@{DeleteTableAsync}}
+\index{DeleteTableAsync@{DeleteTableAsync}!BistroQ.Domain.Contracts.Services.ITableDataService@{BistroQ.Domain.Contracts.Services.ITableDataService}}
+\doxysubsubsection{\texorpdfstring{DeleteTableAsync()}{DeleteTableAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a649a1365b11b5fff3c1eb0348c49e842} 
+Task$<$ bool $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+ITable\+Data\+Service.\+Delete\+Table\+Async (\begin{DoxyParamCaption}\item[{int}]{zone\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Deletes a table from the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Id} & The unique identifier of the zone containing the table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the deletion was successful
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown with the API error message when the request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_a95d2fd59b0fc818d90b3aa2728b33cb8}{Bistro\+Q.\+Service.\+Data.\+Table\+Data\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a6c62639de69b0646cb7405b98dc4a86e}\index{BistroQ.Domain.Contracts.Services.ITableDataService@{BistroQ.Domain.Contracts.Services.ITableDataService}!GetDataTableAsync@{GetDataTableAsync}}
+\index{GetDataTableAsync@{GetDataTableAsync}!BistroQ.Domain.Contracts.Services.ITableDataService@{BistroQ.Domain.Contracts.Services.ITableDataService}}
+\doxysubsubsection{\texorpdfstring{GetDataTableAsync()}{GetDataTableAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a6c62639de69b0646cb7405b98dc4a86e} 
+Task$<$ \mbox{\hyperlink{classTable}{Table}} $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+ITable\+Data\+Service.\+Get\+Data\+Table\+Async (\begin{DoxyParamCaption}\item[{int}]{table\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves details for a specific table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Id} & The unique identifier of the table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The table details
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown with message "{}\+Failed to get table"{} when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_a651af4610642bd88faf859abab037528}{Bistro\+Q.\+Service.\+Data.\+Table\+Data\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a1b48417687e40debd67779094e764545}\index{BistroQ.Domain.Contracts.Services.ITableDataService@{BistroQ.Domain.Contracts.Services.ITableDataService}!GetGridDataAsync@{GetGridDataAsync}}
+\index{GetGridDataAsync@{GetGridDataAsync}!BistroQ.Domain.Contracts.Services.ITableDataService@{BistroQ.Domain.Contracts.Services.ITableDataService}}
+\doxysubsubsection{\texorpdfstring{GetGridDataAsync()}{GetGridDataAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a1b48417687e40debd67779094e764545} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classTable}{Table}} $>$ $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+ITable\+Data\+Service.\+Get\+Grid\+Data\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1TableCollectionQueryParams}{Table\+Collection\+Query\+Params}}}]{query}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a paginated collection of tables for admin grid view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & Query parameters for filtering, sorting, and pagination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A collection response containing tables and pagination information
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown with message "{}\+Failed to get tables"{} when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_a4bc021c0b390ccced70137c32d65c996}{Bistro\+Q.\+Service.\+Data.\+Table\+Data\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_ac69d71960c7941666e077d3a3de2f95f}\index{BistroQ.Domain.Contracts.Services.ITableDataService@{BistroQ.Domain.Contracts.Services.ITableDataService}!GetTablesByCashierAsync@{GetTablesByCashierAsync}}
+\index{GetTablesByCashierAsync@{GetTablesByCashierAsync}!BistroQ.Domain.Contracts.Services.ITableDataService@{BistroQ.Domain.Contracts.Services.ITableDataService}}
+\doxysubsubsection{\texorpdfstring{GetTablesByCashierAsync()}{GetTablesByCashierAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_ac69d71960c7941666e077d3a3de2f95f} 
+Task$<$ IEnumerable$<$ \mbox{\hyperlink{classTable}{Table}} $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+ITable\+Data\+Service.\+Get\+Tables\+By\+Cashier\+Async (\begin{DoxyParamCaption}\item[{int}]{zone\+Id}{, }\item[{string}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves tables in a specific zone based on occupancy status (Cashier endpoint). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Id} & The unique identifier of the zone\\
+\hline
+{\em type} & Filter type\+: "{}\+All"{} for all tables, any other value for occupied tables only\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Collection of tables matching the criteria
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown with message "{}\+Failed to get tables"{} when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_aac3840a5f09c647920ad01d3f2bd9920}{Bistro\+Q.\+Service.\+Data.\+Table\+Data\+Service}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a89df7a682f03047068bf55d8a54001c0}\index{BistroQ.Domain.Contracts.Services.ITableDataService@{BistroQ.Domain.Contracts.Services.ITableDataService}!UpdateTableAsync@{UpdateTableAsync}}
+\index{UpdateTableAsync@{UpdateTableAsync}!BistroQ.Domain.Contracts.Services.ITableDataService@{BistroQ.Domain.Contracts.Services.ITableDataService}}
+\doxysubsubsection{\texorpdfstring{UpdateTableAsync()}{UpdateTableAsync()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a89df7a682f03047068bf55d8a54001c0} 
+Task$<$ \mbox{\hyperlink{classTable}{Table}} $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+ITable\+Data\+Service.\+Update\+Table\+Async (\begin{DoxyParamCaption}\item[{int}]{zone\+Id}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1UpdateTableRequest}{Update\+Table\+Request}}}]{request}{}\end{DoxyParamCaption})}
+
+
+
+Updates an existing table\textquotesingle{}s details. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Id} & The unique identifier of the zone containing the table\\
+\hline
+{\em request} & The table update details\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated table
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown with message "{}\+Failed to update table"{} when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1TableDataService_aaa5e9ad72d17d046a106497ed1675e73}{Bistro\+Q.\+Service.\+Data.\+Table\+Data\+Service}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Domain/\+Contracts/\+Services/\+Data/ITable\+Data\+Service.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService.html" title="Interface for managing table&#45;related data operations through API endpoints. Provides methods for CRUD..." alt="" coords="5,5,189,48"/>
+<area shape="rect" id="Node000001" href="$classBistroQ_1_1Service_1_1Data_1_1TableDataService.html" title="Implementation of table data service that communicates with the API endpoints. Handles both admin and..." alt="" coords="237,5,417,48"/>
+<area shape="poly" id="edge20_Node000000_Node000001" title=" " alt="" coords="204,24,236,24,236,29,204,29"/>
+</map>

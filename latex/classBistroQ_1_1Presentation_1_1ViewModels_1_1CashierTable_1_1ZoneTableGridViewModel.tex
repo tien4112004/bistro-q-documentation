@@ -1,0 +1,251 @@
+\doxysection{Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Table\+Grid\+View\+Model Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel}{}\label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel}\index{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel}}
+
+
+View\+Model for managing the grid display of tables within a zone. Handles table selection, filtering, and zone state updates.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Table\+Grid\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Table\+Grid\+View\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a939ca5f35ff92e5eef5279cde4bf7333}{Zone\+Table\+Grid\+View\+Model}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService}{ITable\+Data\+Service}} table\+Data\+Service, IMapper mapper, IMessenger messenger)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel}{Zone\+Table\+Grid\+View\+Model} class. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_ab85420ceb899d03ed39dd3ea6e18398f}{On\+Zone\+Changed\+Async}} (int? zone\+Id, string type)
+\begin{DoxyCompactList}\small\item\em Updates the tables displayed when the selected zone changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a9a93bf8dfccb29a9b278665214ac233e}{Update\+Zone\+State}} ()
+\begin{DoxyCompactList}\small\item\em Updates the zone\textquotesingle{}s state based on the checkout status of its tables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a087889168df1fe29e2ef499528a61b9e}{Receive}} (Zone\+Selected\+Message message)
+\begin{DoxyCompactList}\small\item\em Handles zone selection messages by updating the displayed tables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a520e90a959f70c96d7838b9ede02f12a}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Performs cleanup of resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a1fbda02a82bd77a52a0e727ec5d997b4}{Has\+Tables}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets whether there are any tables in the current zone. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model for managing the grid display of tables within a zone. Handles table selection, filtering, and zone state updates. 
+
+Implements multiple interfaces for functionality\+:
+\begin{DoxyItemize}
+\item Observable\+Object for MVVM pattern
+\item IRecipient for handling zone selection messages
+\item IDisposable for resource cleanup 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source_l00023}{23}} of file \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source}{Zone\+Table\+Grid\+View\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a939ca5f35ff92e5eef5279cde4bf7333}\index{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel}!ZoneTableGridViewModel@{ZoneTableGridViewModel}}
+\index{ZoneTableGridViewModel@{ZoneTableGridViewModel}!BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel}}
+\doxysubsubsection{\texorpdfstring{ZoneTableGridViewModel()}{ZoneTableGridViewModel()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a939ca5f35ff92e5eef5279cde4bf7333} 
+Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Table\+Grid\+View\+Model.\+Zone\+Table\+Grid\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService}{ITable\+Data\+Service}}}]{table\+Data\+Service}{, }\item[{IMapper}]{mapper}{, }\item[{IMessenger}]{messenger}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel}{Zone\+Table\+Grid\+View\+Model} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Data\+Service} & \doxylink{namespaceBistroQ_1_1Service}{Service} for table data operations.\\
+\hline
+{\em mapper} & \doxylink{namespaceBistroQ_1_1Service}{Service} for object mapping.\\
+\hline
+{\em messenger} & \doxylink{namespaceBistroQ_1_1Service}{Service} for messaging between components.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source_l00077}{77}} of file \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source}{Zone\+Table\+Grid\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \_tableDataService\ =\ tableDataService;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \_messenger\ =\ messenger;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a520e90a959f70c96d7838b9ede02f12a}\index{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a520e90a959f70c96d7838b9ede02f12a} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Table\+Grid\+View\+Model.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs cleanup of resources. 
+
+
+
+Definition at line \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source_l00152}{152}} of file \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source}{Zone\+Table\+Grid\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00153\ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{00155\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_ab85420ceb899d03ed39dd3ea6e18398f}\index{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel}!OnZoneChangedAsync@{OnZoneChangedAsync}}
+\index{OnZoneChangedAsync@{OnZoneChangedAsync}!BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel}}
+\doxysubsubsection{\texorpdfstring{OnZoneChangedAsync()}{OnZoneChangedAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_ab85420ceb899d03ed39dd3ea6e18398f} 
+async Task Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Table\+Grid\+View\+Model.\+On\+Zone\+Changed\+Async (\begin{DoxyParamCaption}\item[{int?}]{zone\+Id}{, }\item[{string}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the tables displayed when the selected zone changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone\+Id} & ID of the selected zone.\\
+\hline
+{\em type} & Type of tables to display.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source_l00093}{93}} of file \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source}{Zone\+Table\+Grid\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (zoneId\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.Delay(200);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tablesData\ =\ await\ TaskHelper.WithMinimumDelay(}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_tableDataService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_ac69d71960c7941666e077d3a3de2f95f}{GetTablesByCashierAsync}}(zoneId.Value,\ type),}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 200);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tables\ =\ \_mapper.Map<IEnumerable<TableViewModel>>(tablesData);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ Tables\ =\ \textcolor{keyword}{new}\ ObservableCollection<TableViewModel>(tables);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Tables.Any())}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SelectedTable\ =\ Tables.First();}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(ex.Message);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ Tables\ =\ \textcolor{keyword}{new}\ ObservableCollection<TableViewModel>();}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ SelectedTable\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ IsLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a087889168df1fe29e2ef499528a61b9e}\index{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel}!Receive@{Receive}}
+\index{Receive@{Receive}!BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel}}
+\doxysubsubsection{\texorpdfstring{Receive()}{Receive()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a087889168df1fe29e2ef499528a61b9e} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Table\+Grid\+View\+Model.\+Receive (\begin{DoxyParamCaption}\item[{Zone\+Selected\+Message}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles zone selection messages by updating the displayed tables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message containing the zone selection information.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source_l00141}{141}} of file \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source}{Zone\+Table\+Grid\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00142\ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (message\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_ab85420ceb899d03ed39dd3ea6e18398f}{OnZoneChangedAsync}}(message.ZoneId,\ message.Type);}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a9a93bf8dfccb29a9b278665214ac233e}\index{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel}!UpdateZoneState@{UpdateZoneState}}
+\index{UpdateZoneState@{UpdateZoneState}!BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel}}
+\doxysubsubsection{\texorpdfstring{UpdateZoneState()}{UpdateZoneState()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a9a93bf8dfccb29a9b278665214ac233e} 
+void Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Table\+Grid\+View\+Model.\+Update\+Zone\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the zone\textquotesingle{}s state based on the checkout status of its tables. 
+
+
+
+Definition at line \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source_l00131}{131}} of file \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source}{Zone\+Table\+Grid\+View\+Model.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132\ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ var\ hasCheckingOutTables\ =\ Tables.Any(t\ =>\ t.IsCheckingOut);}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \_messenger.Send(\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_aa15dd7a13aa826fcb225bba2e3560b0f}{ZoneStateChangedMessage}}(SelectedTable.ZoneName,\ hasCheckingOutTables));}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a1fbda02a82bd77a52a0e727ec5d997b4}\index{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel}!HasTables@{HasTables}}
+\index{HasTables@{HasTables}!BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel@{BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel}}
+\doxysubsubsection{\texorpdfstring{HasTables}{HasTables}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1ZoneTableGridViewModel_a1fbda02a82bd77a52a0e727ec5d997b4} 
+bool Bistro\+Q.\+Presentation.\+View\+Models.\+Cashier\+Table.\+Zone\+Table\+Grid\+View\+Model.\+Has\+Tables\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets whether there are any tables in the current zone. 
+
+
+
+Definition at line \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source_l00067}{67}} of file \mbox{\hyperlink{ZoneTableGridViewModel_8cs_source}{Zone\+Table\+Grid\+View\+Model.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+View\+Models/\+Cashier\+Table/Zone\+Table\+Grid\+View\+Model.\+cs\end{DoxyCompactItemize}

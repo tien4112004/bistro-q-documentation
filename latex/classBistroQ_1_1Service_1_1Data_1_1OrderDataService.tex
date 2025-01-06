@@ -1,0 +1,388 @@
+\doxysection{Bistro\+Q.\+Service.\+Data.\+Order\+Data\+Service Class Reference}
+\hypertarget{classBistroQ_1_1Service_1_1Data_1_1OrderDataService}{}\label{classBistroQ_1_1Service_1_1Data_1_1OrderDataService}\index{BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}}
+
+
+Implementation of order data service that communicates with the API endpoints. Handles both client and cashier order operations with Auto\+Mapper for data transformation.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Service.\+Data.\+Order\+Data\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classBistroQ_1_1Service_1_1Data_1_1OrderDataService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Service.\+Data.\+Order\+Data\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classBistroQ_1_1Service_1_1Data_1_1OrderDataService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_a40e05c415688ba359e0d9cc537c215ca}{Order\+Data\+Service}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApi\+Client}} api\+Client, IMapper mapper)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Service_1_1Data_1_1OrderDataService}{Order\+Data\+Service}. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}} $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_ae5d90407b6ec6e83b107ef75734f4848}{Create\+Order\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new order for the current client session. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}}?$>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_aeed83808f0c39850320041d65be4aad4}{Get\+Order\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current active order for the client session. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_ab70b1f3c4448d5e8942b9ab412a5ceeb}{Delete\+Order\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the current order for the client session. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}} $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_a04a3a3604356ab6733ea2c934c73c6d6}{Get\+Order\+By\+Cashier\+Async}} (int table\+Id)
+\begin{DoxyCompactList}\small\item\em Retrieves order details for a specific table (Cashier endpoint). \end{DoxyCompactList}\item 
+async Task$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}} $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_adaa724647cc600b30644c8873757192c}{Get\+Current\+Orders\+By\+Cashier\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all current active orders (Cashier endpoint). \end{DoxyCompactList}\item 
+async Task$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1OrderItem}{Order\+Item}} $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_a45beace417118cbdfa5043a6dc997547}{Create\+Order\+Items}} (IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1OrderItem}{Order\+Item}} $>$ cart)
+\begin{DoxyCompactList}\small\item\em Creates multiple order items from the provided cart. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_abf47f2c419f861d8683714cd44651866}{Change\+People\+Count\+Async}} (int people\+Count)
+\begin{DoxyCompactList}\small\item\em Updates the number of people for the current order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IOrder\+Data\+Service}}}
+
+
+\doxysubsection{Detailed Description}
+Implementation of order data service that communicates with the API endpoints. Handles both client and cashier order operations with Auto\+Mapper for data transformation. 
+
+Definition at line \mbox{\hyperlink{OrderDataService_8cs_source_l00012}{12}} of file \mbox{\hyperlink{OrderDataService_8cs_source}{Order\+Data\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_a40e05c415688ba359e0d9cc537c215ca}\index{BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}!OrderDataService@{OrderDataService}}
+\index{OrderDataService@{OrderDataService}!BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}}
+\doxysubsubsection{\texorpdfstring{OrderDataService()}{OrderDataService()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_a40e05c415688ba359e0d9cc537c215ca} 
+Bistro\+Q.\+Service.\+Data.\+Order\+Data\+Service.\+Order\+Data\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApi\+Client}}}]{api\+Client}{, }\item[{IMapper}]{mapper}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Service_1_1Data_1_1OrderDataService}{Order\+Data\+Service}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em api\+Client} & Client for making API requests\\
+\hline
+{\em mapper} & Mapper for data transformation\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{OrderDataService_8cs_source_l00032}{32}} of file \mbox{\hyperlink{OrderDataService_8cs_source}{Order\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \_apiClient\ =\ apiClient;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_abf47f2c419f861d8683714cd44651866}\index{BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}!ChangePeopleCountAsync@{ChangePeopleCountAsync}}
+\index{ChangePeopleCountAsync@{ChangePeopleCountAsync}!BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}}
+\doxysubsubsection{\texorpdfstring{ChangePeopleCountAsync()}{ChangePeopleCountAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_abf47f2c419f861d8683714cd44651866} 
+async Task Bistro\+Q.\+Service.\+Data.\+Order\+Data\+Service.\+Change\+People\+Count\+Async (\begin{DoxyParamCaption}\item[{int}]{people\+Count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the number of people for the current order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em people\+Count} & The new count of people for the order\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService_ac7815dc9a8194f5f910bfc8be562e3aa}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IOrder\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{OrderDataService_8cs_source_l00109}{109}} of file \mbox{\hyperlink{OrderDataService_8cs_source}{Order\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110\ \ \ \ \ \{}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ var\ request\ =\ \textcolor{keyword}{new}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ PeopleCount\ =\ peopleCount,}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PatchAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}}>(\$\textcolor{stringliteral}{"{}api/Client/Order/PeopleCount"{}},\ request);}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_ae5d90407b6ec6e83b107ef75734f4848}\index{BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}!CreateOrderAsync@{CreateOrderAsync}}
+\index{CreateOrderAsync@{CreateOrderAsync}!BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}}
+\doxysubsubsection{\texorpdfstring{CreateOrderAsync()}{CreateOrderAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_ae5d90407b6ec6e83b107ef75734f4848} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}} $>$ Bistro\+Q.\+Service.\+Data.\+Order\+Data\+Service.\+Create\+Order\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new order for the current client session. 
+
+\begin{DoxyReturn}{Returns}
+The newly created order
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService_a23a1bdb848b01ee6cf7bb35043ecac43}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IOrder\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{OrderDataService_8cs_source_l00040}{40}} of file \mbox{\hyperlink{OrderDataService_8cs_source}{Order\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PostAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Order_1_1DetailOrderResponse}{DetailOrderResponse}}>(\textcolor{stringliteral}{"{}api/Client/Order"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ var\ order\ =\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}}>(response.Data);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ order;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_a45beace417118cbdfa5043a6dc997547}\index{BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}!CreateOrderItems@{CreateOrderItems}}
+\index{CreateOrderItems@{CreateOrderItems}!BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}}
+\doxysubsubsection{\texorpdfstring{CreateOrderItems()}{CreateOrderItems()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_a45beace417118cbdfa5043a6dc997547} 
+async Task$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1OrderItem}{Order\+Item}} $>$ $>$ Bistro\+Q.\+Service.\+Data.\+Order\+Data\+Service.\+Create\+Order\+Items (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1OrderItem}{Order\+Item}} $>$}]{cart}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates multiple order items from the provided cart. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cart} & Collection of order items to be added\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Collection of successfully added order items
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService_a192d2a0d971aa71463410f377936837c}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IOrder\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{OrderDataService_8cs_source_l00097}{97}} of file \mbox{\hyperlink{OrderDataService_8cs_source}{Order\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PostAsync<IEnumerable<OrderItem>>(\$\textcolor{stringliteral}{"{}api/Client/Order/Items"{}},\ cart);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ var\ addedItems\ =\ response.Data;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ addedItems;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_ab70b1f3c4448d5e8942b9ab412a5ceeb}\index{BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}!DeleteOrderAsync@{DeleteOrderAsync}}
+\index{DeleteOrderAsync@{DeleteOrderAsync}!BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}}
+\doxysubsubsection{\texorpdfstring{DeleteOrderAsync()}{DeleteOrderAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_ab70b1f3c4448d5e8942b9ab412a5ceeb} 
+async Task Bistro\+Q.\+Service.\+Data.\+Order\+Data\+Service.\+Delete\+Order\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes the current order for the client session. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService_acf7c8e093d983045fbe03b5c09457c31}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IOrder\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{OrderDataService_8cs_source_l00064}{64}} of file \mbox{\hyperlink{OrderDataService_8cs_source}{Order\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.DeleteAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Order_1_1DetailOrderResponse}{DetailOrderResponse}}>(\textcolor{stringliteral}{"{}api/Client/Order"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!response.Success)}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_adaa724647cc600b30644c8873757192c}\index{BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}!GetCurrentOrdersByCashierAsync@{GetCurrentOrdersByCashierAsync}}
+\index{GetCurrentOrdersByCashierAsync@{GetCurrentOrdersByCashierAsync}!BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}}
+\doxysubsubsection{\texorpdfstring{GetCurrentOrdersByCashierAsync()}{GetCurrentOrdersByCashierAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_adaa724647cc600b30644c8873757192c} 
+async Task$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}} $>$ $>$ Bistro\+Q.\+Service.\+Data.\+Order\+Data\+Service.\+Get\+Current\+Orders\+By\+Cashier\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves all current active orders (Cashier endpoint). 
+
+\begin{DoxyReturn}{Returns}
+Collection of currently active orders
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService_a4b2acb8ade4d32f0d6a6da256bb7b3c4}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IOrder\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{OrderDataService_8cs_source_l00085}{85}} of file \mbox{\hyperlink{OrderDataService_8cs_source}{Order\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetAsync<IEnumerable<DetailOrderResponse>>(\$\textcolor{stringliteral}{"{}api/Cashier/Order"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ var\ orders\ =\ \_mapper.Map<IEnumerable<Order>>(response.Data);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ orders;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_aeed83808f0c39850320041d65be4aad4}\index{BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}!GetOrderAsync@{GetOrderAsync}}
+\index{GetOrderAsync@{GetOrderAsync}!BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}}
+\doxysubsubsection{\texorpdfstring{GetOrderAsync()}{GetOrderAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_aeed83808f0c39850320041d65be4aad4} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}}?$>$ Bistro\+Q.\+Service.\+Data.\+Order\+Data\+Service.\+Get\+Order\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the current active order for the client session. 
+
+\begin{DoxyReturn}{Returns}
+The current order if it exists, null otherwise
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService_ab914c07c82ec38c2bc1815742489b36d}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IOrder\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{OrderDataService_8cs_source_l00053}{53}} of file \mbox{\hyperlink{OrderDataService_8cs_source}{Order\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Order_1_1DetailOrderResponse}{DetailOrderResponse}}>(\textcolor{stringliteral}{"{}api/Client/Order"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ var\ order\ =\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}}>(response.Data);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ order;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_a04a3a3604356ab6733ea2c934c73c6d6}\index{BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}!GetOrderByCashierAsync@{GetOrderByCashierAsync}}
+\index{GetOrderByCashierAsync@{GetOrderByCashierAsync}!BistroQ.Service.Data.OrderDataService@{BistroQ.Service.Data.OrderDataService}}
+\doxysubsubsection{\texorpdfstring{GetOrderByCashierAsync()}{GetOrderByCashierAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1OrderDataService_a04a3a3604356ab6733ea2c934c73c6d6} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}} $>$ Bistro\+Q.\+Service.\+Data.\+Order\+Data\+Service.\+Get\+Order\+By\+Cashier\+Async (\begin{DoxyParamCaption}\item[{int}]{table\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves order details for a specific table (Cashier endpoint). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Id} & The unique identifier of the table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The order details for the specified table
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IOrderDataService_acbc5baec37cf968709248847864fe146}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IOrder\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{OrderDataService_8cs_source_l00073}{73}} of file \mbox{\hyperlink{OrderDataService_8cs_source}{Order\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Order_1_1DetailOrderResponse}{DetailOrderResponse}}>(\$\textcolor{stringliteral}{"{}api/Cashier/Order/\{tableId\}"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ var\ order\ =\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Order}{Order}}>(response.Data);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ order;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Service/\+Data/Order\+Data\+Service.\+cs\end{DoxyCompactItemize}

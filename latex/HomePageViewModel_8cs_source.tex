@@ -1,0 +1,195 @@
+\doxysection{Home\+Page\+View\+Model.\+cs}
+\hypertarget{HomePageViewModel_8cs_source}{}\label{HomePageViewModel_8cs_source}\index{BistroQ.Presentation/ViewModels/Client/HomePageViewModel.cs@{BistroQ.Presentation/ViewModels/Client/HomePageViewModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime}{BistroQ.Domain.Contracts.Services.Realtime}};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1Services}{BistroQ.Presentation.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels}{BistroQ.Presentation.Contracts.ViewModels}};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages}{BistroQ.Presentation.Messages}};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Models}{BistroQ.Presentation.ViewModels.Models}};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.ComponentModel;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Input;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }CommunityToolkit.Mvvm.Messaging;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }Microsoft.UI.Dispatching;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00011}00011\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00012}00012\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00013}00013\ \textcolor{keyword}{using\ }System.Windows.Input;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00015}\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Client}{00015}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1Client}{BistroQ.Presentation.ViewModels.Client}};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00027}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel}{00027}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel}{HomePageViewModel}}\ :\ ObservableRecipient,\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1ViewModels_1_1INavigationAware}{INavigationAware}},\ IRecipient<CheckoutRequestedMessage>}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00029}00029\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00033}00033\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_isShowingPayment;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00039}00039\ \ \ \ \ [ObservableProperty]}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00040}00040\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ \_paymentData;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00045}00045\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService}{ICheckoutRealTimeService}}\ \_checkoutService;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IMessenger\ \_messenger;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialogService}}\ \_dialogService;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ DispatcherQueue\ \_dispatcherQueue;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00061}00061\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00063}00063\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00067}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a3e06264c996d20bfa52c6282b0c457cc}{00067}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel}{ProductListViewModel}}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel}{ProductListViewModel}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00072}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a86ac0a41a502ea3fe6370bbd8cfbabe9}{00072}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel}{OrderCartViewModel}}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel}{OrderCartViewModel}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00073}00073\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00075}00075\ \textcolor{preprocessor}{\ \ \ \ \#region\ Commands}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00079}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a5a699eb1a8a17e9125129a0418a97eb0}{00079}}\ \ \ \ \ \textcolor{keyword}{public}\ ICommand\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a5a699eb1a8a17e9125129a0418a97eb0}{AddProductToCartCommand}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00084}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a1264cbe1967b491cf4c5ab8f496a72c5}{00084}}\ \ \ \ \ \textcolor{keyword}{public}\ ICommand\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a1264cbe1967b491cf4c5ab8f496a72c5}{CancelPaymentCommand}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00085}00085\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00087}00087\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00092}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aa6f86f7a6a01fdc2526985d3a4aa4ce6}{00092}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aa6f86f7a6a01fdc2526985d3a4aa4ce6}{HomePageViewModel}}()}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00093}00093\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel}{ProductListViewModel}}\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel}{ProductListViewModel}}>();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel}{OrderCartViewModel}}\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel}{OrderCartViewModel}}>();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \_checkoutService\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService}{ICheckoutRealTimeService}}>();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \_dialogService\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService}{IDialogService}}>();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \_messenger\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<IMessenger>();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \_dispatcherQueue\ =\ DispatcherQueue.GetForCurrentThread();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_a1264cbe1967b491cf4c5ab8f496a72c5}{CancelPaymentCommand}}\ =\ \textcolor{keyword}{new}\ AsyncRelayCommand(CancelPaymentAsync);}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \_checkoutService.OnCheckoutInitiated\ +=\ (paymentData)\ =>}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \_dispatcherQueue.TryEnqueue(()\ =>}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PaymentData\ =\ paymentData;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IsShowingPayment\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \_checkoutService.OnCheckoutCompleted\ +=\ ()\ =>}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \_dispatcherQueue.TryEnqueue(async\ ()\ =>}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ LOGOUT\_DELAY\_SECONDS\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ remainingSeconds\ =\ LOGOUT\_DELAY\_SECONDS;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ dialog\ =\ \textcolor{keyword}{new}\ ContentDialog}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Title\ =\ \textcolor{stringliteral}{"{}Session\ Ending"{}},}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ \$\textcolor{stringliteral}{"{}Thank\ you\ for\ dining\ with\ us!\ The\ application\ will\ log\ out\ in\ \{remainingSeconds\}\ seconds."{}},}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PrimaryButtonText\ =\ \textcolor{stringliteral}{"{}OK"{}},}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DefaultButton\ =\ ContentDialogButton.Primary}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ timer\ =\ \_dispatcherQueue.CreateTimer();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.Interval\ =\ TimeSpan.FromSeconds(1);}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.Tick\ +=\ (s,\ e)\ =>}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ remainingSeconds-\/-\/;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dialog.Content\ =\ \$\textcolor{stringliteral}{"{}Thank\ you\ for\ dining\ with\ us!\ The\ application\ will\ log\ out\ in\ \{remainingSeconds\}\ seconds."{}};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (remainingSeconds\ <=\ 0)}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.Stop();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dialog.Hide();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.Start();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\ =\ \_dialogService.ShowDialogAsync(dialog);}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.Delay(TimeSpan.FromSeconds(LOGOUT\_DELAY\_SECONDS));}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Logout}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.Hide();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.GetService<\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuthService}}>().LogoutAsync();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ size\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.AppWindow.Size;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ position\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.AppWindow.Position;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ loginWindow\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1LoginWindow}{LoginWindow}}();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ loginWindow.Activate();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ loginWindow.MoveAndResize(position.X,\ position.Y,\ size.Width,\ size.Height);}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.Delay(1000);}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1App}{App}}.MainWindow.Close();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ OrderCartViewModel.OrderStartedCommand\ =\ \textcolor{keyword}{new}\ RelayCommand<OrderViewModel>(OnOrderStarted);}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \_messenger.RegisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00164}00164\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00165}00165\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00167}00167\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Methods}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00172}00172\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnOrderStarted(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Models_1_1OrderViewModel}{OrderViewModel}}\ order)}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00173}00173\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00174}00174\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00181}00181\ \ \ \ \ \textcolor{keyword}{private}\ async\ Task\ CancelPaymentAsync()}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00182}00182\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ var\ dialog\ =\ \textcolor{keyword}{new}\ ContentDialog}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ Title\ =\ \textcolor{stringliteral}{"{}Cancel\ Payment"{}},}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ \textcolor{stringliteral}{"{}Are\ you\ sure\ you\ want\ to\ cancel\ this\ payment?"{}},}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ PrimaryButtonText\ =\ \textcolor{stringliteral}{"{}Yes"{}},}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ SecondaryButtonText\ =\ \textcolor{stringliteral}{"{}No"{}},}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ SecondaryButtonStyle\ =\ Application.Current.Resources[\textcolor{stringliteral}{"{}AccentButtonStyle"{}}]\ as\ Style}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ var\ result\ =\ await\ \_dialogService.\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IDialogService_a7a5e4698e6dde84a9380c09976683a74}{ShowDialogAsync}}(dialog);}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result\ ==\ ContentDialogResult.Primary)}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ IsShowingPayment\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ PaymentData\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00198}00198\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00199}00199\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00201}00201\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00208}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aada0e409d3e14bdd60a5e4226c4e1410}{00208}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aada0e409d3e14bdd60a5e4226c4e1410}{OnNavigatedTo}}(\textcolor{keywordtype}{object}\ parameter)}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00209}00209\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_checkoutService.StartAsync();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel}{OrderCartViewModel}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a0460211a60d4e7d73f9dd1bbaf734912}{LoadExistingOrderAsync}}();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ e)}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00216}00216\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e.Message\ !=\ \textcolor{stringliteral}{"{}Order\ not\ found"{}})}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_dialogService.ShowDialogAsync(\textcolor{keyword}{new}\ ContentDialog}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Title\ =\ \textcolor{stringliteral}{"{}Error\ starting\ order"{}},}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Content\ =\ e.Message,}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PrimaryButtonText\ =\ \textcolor{stringliteral}{"{}OK"{}},}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ OrderCartViewModel.IsLoading\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \_\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel}{ProductListViewModel}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a73912a214f8d9b48ca27062b9f7b61ae}{LoadCategoriesAsync}}();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \_\ =\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel}{ProductListViewModel}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1ProductListViewModel_a57f7e3b08f9d780d5eb26e81c79ee130}{LoadProductsAsync}}();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00233}00233\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00234}00234\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00240}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_ac40a7c756f706d7ef01b46ba36f61b71}{00240}}\ \ \ \ \ \textcolor{keyword}{public}\ Task\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_ac40a7c756f706d7ef01b46ba36f61b71}{OnNavigatedFrom}}()}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00241}00241\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel}{OrderCartViewModel}}.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1OrderCartViewModel_a8e4c2a1936f49d46f0e27e40bb8d2b4c}{Dispose}}();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00243}00243\ \ \ \ \ \ \ \ \ \_checkoutService.StopAsync();}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \_messenger.UnregisterAll(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Task.CompletedTask;}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00246}00246\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00253}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aba1ffc501183c1cc1e647fc81237a951}{00253}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1Client_1_1HomePageViewModel_aba1ffc501183c1cc1e647fc81237a951}{Receive}}(\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Messages_ae5aeb6008a8ab4fb8c6e26d3b5c2743f}{CheckoutRequestedMessage}}\ message)}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00254}00254\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00255}00255\ \ \ \ \ \ \ \ \ \_checkoutService.NotifyCheckoutRequestedAsync(message.TableId\ ??\ 0);}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00256}00256\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00257}00257\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{HomePageViewModel_8cs_source_l00258}00258\ \}}
+
+\end{DoxyCode}

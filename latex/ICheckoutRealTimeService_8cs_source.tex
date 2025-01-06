@@ -1,0 +1,24 @@
+\doxysection{ICheckout\+Real\+Time\+Service.\+cs}
+\hypertarget{ICheckoutRealTimeService_8cs_source}{}\label{ICheckoutRealTimeService_8cs_source}\index{BistroQ.Domain/Contracts/Services/Realtime/ICheckoutRealTimeService.cs@{BistroQ.Domain/Contracts/Services/Realtime/ICheckoutRealTimeService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00001}\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime}{00001}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime}{BistroQ.Domain.Contracts.Services.Realtime}};}
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00007}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService}{00007}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{interface\ }\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService}{ICheckoutRealTimeService}}}
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00013}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a131804f5a7e948bf9bb71a6f38a5349a}{00013}}\ \ \ \ \ \textcolor{keyword}{event}\ Action<string>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a131804f5a7e948bf9bb71a6f38a5349a}{OnCheckoutInitiated}};}
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00018}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_ae2ad9eac515e5237cca79bc6dc453252}{00018}}\ \ \ \ \ \textcolor{keyword}{event}\ Action\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_ae2ad9eac515e5237cca79bc6dc453252}{OnCheckoutCompleted}};}
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00026}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a3e14cb9db8d1809b913869ff0ad74b77}{00026}}\ \ \ \ \ \textcolor{keyword}{event}\ Action<int,\ int,\ string>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a3e14cb9db8d1809b913869ff0ad74b77}{OnNewCheckout}};}
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00032}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_ac5259b6211d8daabc9c29324e5fccf25}{00032}}\ \ \ \ \ Task\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_ac5259b6211d8daabc9c29324e5fccf25}{StartAsync}}();}
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00038}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a0bd95819b5bb30ce208e854a81c0ad08}{00038}}\ \ \ \ \ Task\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a0bd95819b5bb30ce208e854a81c0ad08}{StopAsync}}();}
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00045}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a89c4368b753fd77c92622e412bdf51af}{00045}}\ \ \ \ \ Task\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a89c4368b753fd77c92622e412bdf51af}{NotifyCheckoutRequestedAsync}}(\textcolor{keywordtype}{int}\ tableId);}
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00052}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a46706868600da392c0b486835058f902}{00052}}\ \ \ \ \ Task\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a46706868600da392c0b486835058f902}{NotifyCheckoutCompletedAsync}}(\textcolor{keywordtype}{int}\ tableId);}
+\DoxyCodeLine{\Hypertarget{ICheckoutRealTimeService_8cs_source_l00053}00053\ \}}
+
+\end{DoxyCode}

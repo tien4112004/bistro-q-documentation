@@ -1,0 +1,52 @@
+\doxysection{Table\+Order\+Details\+Control.\+xaml.\+cs}
+\hypertarget{TableOrderDetailsControl_8xaml_8cs_source}{}\label{TableOrderDetailsControl_8xaml_8cs_source}\index{BistroQ.Presentation/Views/UserControls/Orders/TableOrderDetailsControl.xaml.cs@{BistroQ.Presentation/Views/UserControls/Orders/TableOrderDetailsControl.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable}{BistroQ.Presentation.ViewModels.CashierTable}};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Controls;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Microsoft.UI.Xaml.Input;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Orders}{BistroQ.Presentation.Views.UserControls.Orders}};}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00010}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Orders_1_1TableOrderDetailsControl}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Orders_1_1TableOrderDetailsControl}{TableOrderDetailsControl}}\ :\ UserControl}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel}{TableOrderDetailViewModel}}\ ViewModel\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ readonly\ DependencyProperty\ ViewModelProperty\ =}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ DependencyProperty.Register(}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ nameof(ViewModel),}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1ViewModels_1_1CashierTable_1_1TableOrderDetailViewModel}{TableOrderDetailViewModel}}),}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ typeof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Orders_1_1TableBillSummaryControl}{TableBillSummaryControl}}),}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ PropertyMetadata(\textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Orders_1_1TableOrderDetailsControl}{TableOrderDetailsControl}}()}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00022}00022\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ this.\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1UserControls_1_1Orders_1_1TableOrderDetailsControl_a77573162d4e381a0f852e534f41a4397}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ VerticalScrollViewer\_ManipulationDelta(\textcolor{keywordtype}{object}\ sender,\ ManipulationDeltaRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ SCROLL\_SPEED\ =\ 1.25;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ var\ scrollViewer\ =\ (ScrollViewer)sender;}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ scrollViewer.ChangeView(}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ scrollViewer.VerticalOffset\ -\/\ e.Delta.Translation.Y\ *\ SCROLL\_SPEED,}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerEntered(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Hand);}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00042}00042\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Button\_PointerExited(\textcolor{keywordtype}{object}\ sender,\ PointerRoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00043}00043\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ (sender\ as\ UIElement)?.ChangeCursor(CursorType.Arrow);}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TableOrderDetailsControl_8xaml_8cs_source_l00046}00046\ \}}
+
+\end{DoxyCode}

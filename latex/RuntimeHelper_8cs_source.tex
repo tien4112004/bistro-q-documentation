@@ -1,0 +1,26 @@
+\doxysection{Runtime\+Helper.\+cs}
+\hypertarget{RuntimeHelper_8cs_source}{}\label{RuntimeHelper_8cs_source}\index{BistroQ.Presentation/Helpers/RuntimeHelper.cs@{BistroQ.Presentation/Helpers/RuntimeHelper.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Runtime.InteropServices;}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Helpers}{BistroQ.Presentation.Helpers}};}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00006}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Helpers_1_1RuntimeHelper}{00006}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Helpers_1_1RuntimeHelper}{RuntimeHelper}}}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00008}00008\ \ \ \ \ [DllImport(\textcolor{stringliteral}{"{}kernel32.dll"{}},\ CharSet\ =\ CharSet.Unicode,\ SetLastError\ =\ \textcolor{keyword}{true})]}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ GetCurrentPackageFullName(ref\ \textcolor{keywordtype}{int}\ packageFullNameLength,\ StringBuilder?\ packageFullName);}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ IsMSIX}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ var\ length\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetCurrentPackageFullName(ref\ length,\ \textcolor{keyword}{null})\ !=\ 15700L;}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RuntimeHelper_8cs_source_l00020}00020\ \}}
+
+\end{DoxyCode}

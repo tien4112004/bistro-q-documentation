@@ -1,0 +1,92 @@
+\doxysection{Auth\+Delegate\+Handler.\+cs}
+\hypertarget{AuthDelegateHandler_8cs_source}{}\label{AuthDelegateHandler_8cs_source}\index{BistroQ.Service/Http/AuthDelegateHandler.cs@{BistroQ.Service/Http/AuthDelegateHandler.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Net;}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Net.Http.Headers;}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Services_1_1Http}{BistroQ.Domain.Services.Http}};}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00018}\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler}{00018}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler}{AuthenticationDelegatingHandler}}\ :\ DelegatingHandler}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00020}00020\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Fields}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuthService}}\ \_authService;}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00025}00025\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00027}00027\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00032}\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler_a933c34d6b4965919049ba1e426cebc43}{00032}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler_a933c34d6b4965919049ba1e426cebc43}{AuthenticationDelegatingHandler}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuthService}}\ authService)}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \_authService\ =\ authService;}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00036}00036\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00038}00038\ \textcolor{preprocessor}{\ \ \ \ \#region\ Protected\ Methods}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00056}\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler_ac0d85ae5d69ffd37aba73a34de1b2949}{00056}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ async\ Task<HttpResponseMessage>\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1AuthenticationDelegatingHandler_ac0d85ae5d69ffd37aba73a34de1b2949}{SendAsync}}(}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ HttpRequestMessage\ request,}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ CancellationToken\ cancellationToken)}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00059}00059\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ token\ to\ initial\ request}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ await\ AddAuthenticationHeader(request);}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Send\ the\ request}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ base.SendAsync(request,\ cancellationToken);}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ unauthorized,\ try\ refresh\ and\ retry\ once}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.StatusCode\ ==\ HttpStatusCode.Unauthorized)}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Just\ refresh\ -\/\ no\ need\ for\ complex\ concurrency}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ newToken\ =\ await\ \_authService.RefreshTokenAsync();}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ newRequest\ =\ await\ CloneRequest(request);}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newRequest.Headers.Authorization\ =}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ AuthenticationHeaderValue(\textcolor{stringliteral}{"{}Bearer"{}},\ newToken);}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ base.SendAsync(newRequest,\ cancellationToken);}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception)}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_authService.LogoutAsync();}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ response;}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00089}00089\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00091}00091\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Methods}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00097}00097\ \ \ \ \ \textcolor{keyword}{private}\ async\ Task\ AddAuthenticationHeader(HttpRequestMessage\ request)}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00098}00098\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ var\ token\ =\ await\ \_authService.GetTokenAsync();}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ request.Headers.Authorization\ =\ \textcolor{keyword}{new}\ AuthenticationHeaderValue(\textcolor{stringliteral}{"{}Bearer"{}},\ token);}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00112}00112\ \ \ \ \ \textcolor{keyword}{private}\ async\ Task<HttpRequestMessage>\ CloneRequest(HttpRequestMessage\ request)}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00113}00113\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ var\ newRequest\ =\ \textcolor{keyword}{new}\ HttpRequestMessage(request.Method,\ request.RequestUri);}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ header\ \textcolor{keywordflow}{in}\ request.Headers)}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ newRequest.Headers.TryAddWithoutValidation(header.Key,\ header.Value);}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (request.Content\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ var\ contentBytes\ =\ await\ request.Content.ReadAsByteArrayAsync();}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ newRequest.Content\ =\ \textcolor{keyword}{new}\ ByteArrayContent(contentBytes);}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ header\ \textcolor{keywordflow}{in}\ request.Content.Headers)}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newRequest.Content.Headers.TryAddWithoutValidation(header.Key,\ header.Value);}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ newRequest;}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00133}00133\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00134}00134\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AuthDelegateHandler_8cs_source_l00135}00135\ \}}
+
+\end{DoxyCode}

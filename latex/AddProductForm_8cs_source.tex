@@ -1,0 +1,181 @@
+\doxysection{Add\+Product\+Form.\+cs}
+\hypertarget{AddProductForm_8cs_source}{}\label{AddProductForm_8cs_source}\index{BistroQ.Presentation/Models/AddProductForm.cs@{BistroQ.Presentation/Models/AddProductForm.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Validation}{BistroQ.Presentation.Validation}};}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Models}{BistroQ.Presentation.Models}};}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00009}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm}{AddProductForm}}\ :\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{ValidatorBase}}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00011}00011\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Properties}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00016}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a617690f3c1088f0ab00287f5f00f63d6}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}?\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a617690f3c1088f0ab00287f5f00f63d6}{ProductId}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00022}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a2b39d8ba338697d04f049149f6b0fe44}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a2b39d8ba338697d04f049149f6b0fe44}{Name}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00028}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_acc54823e516eb364a95762aeacce8e1f}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_acc54823e516eb364a95762aeacce8e1f}{CategoryId}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00034}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a834331e6f1b0a7d5dfd6fc74d5a99258}{00034}}\ \ \ \ \ \textcolor{keyword}{public}\ decimal\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a834331e6f1b0a7d5dfd6fc74d5a99258}{Price}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00040}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_af6b5acea1f08b2e28ffa06f96786d2e7}{00040}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_af6b5acea1f08b2e28ffa06f96786d2e7}{Unit}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00046}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a63856312da8c30ca2bf6447ebc29640f}{00046}}\ \ \ \ \ \textcolor{keyword}{public}\ decimal?\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a63856312da8c30ca2bf6447ebc29640f}{DiscountPrice}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00052}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a40bc870663686901f494627c19e7a2e3}{00052}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a40bc870663686901f494627c19e7a2e3}{ImageUrl}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00058}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ae4a6e770e0687e9d463d70733d3e8d75}{00058}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ae4a6e770e0687e9d463d70733d3e8d75}{Calories}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00064}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a1c7c6e7af000dca0eb2350f51cc4b863}{00064}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a1c7c6e7af000dca0eb2350f51cc4b863}{Fat}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00070}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_add9bab64f67c01d04207b4cc02f1b77f}{00070}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_add9bab64f67c01d04207b4cc02f1b77f}{Fiber}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00076}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a221c7a578dc76b0a367b5a679a42980b}{00076}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a221c7a578dc76b0a367b5a679a42980b}{Protein}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00082}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a730143cfa07385972f5a19adcaf4b891}{00082}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a730143cfa07385972f5a19adcaf4b891}{Carbohydrates}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00088}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ab35741965da680c3a02eceb6a882f515}{00088}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{FileWrapper}}?\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ab35741965da680c3a02eceb6a882f515}{ImageFile}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00089}00089\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00091}00091\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00096}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a0bf8dcdd4e0215e75e84b41055364c04}{00096}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a0bf8dcdd4e0215e75e84b41055364c04}{AddProductForm}}()}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00097}00097\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ AddProductNameValidator();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ AddProductUnitValidator();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ AddProductPriceValidator();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ AddProductCategoryValidator();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ AddProductDiscountPriceValidator();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ AddProductCaloriesValidator();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ AddProductFatValidator();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ AddProductFiberValidator();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ AddProductProteinValidator();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ AddProductCarbohydratesValidator();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00109}00109\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00111}00111\ \textcolor{preprocessor}{\ \ \ \ \#region\ Private\ Methods}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00116}00116\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddProductCategoryValidator()}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00117}00117\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_acc54823e516eb364a95762aeacce8e1f}{CategoryId}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.IntRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Category"{}})}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00124}00124\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00130}00130\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddProductNameValidator()}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00131}00131\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a2b39d8ba338697d04f049149f6b0fe44}{Name}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Product\ Name"{}}),}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.MinLength(v,\ 2,\ \textcolor{stringliteral}{"{}Product\ Name"{}})}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00139}00139\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00145}00145\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddProductUnitValidator()}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00146}00146\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_af6b5acea1f08b2e28ffa06f96786d2e7}{Unit}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Unit"{}}),}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.StringRules.MinLength(v,\ 1,\ \textcolor{stringliteral}{"{}Unit"{}})}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00154}00154\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00160}00160\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddProductPriceValidator()}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00161}00161\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a834331e6f1b0a7d5dfd6fc74d5a99258}{Price}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.DecimalRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Price"{}}),}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.DecimalRules.Min(v,\ 0,\ \textcolor{stringliteral}{"{}Price"{}})}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00169}00169\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00175}00175\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddProductDiscountPriceValidator()}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00176}00176\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a63856312da8c30ca2bf6447ebc29640f}{DiscountPrice}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.DecimalRules.Min(v,\ 0,\ \textcolor{stringliteral}{"{}Discount\ Price"{}})}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00183}00183\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00189}00189\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddProductCaloriesValidator()}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00190}00190\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ae4a6e770e0687e9d463d70733d3e8d75}{Calories}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.DecimalRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Calories"{}}),}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.DecimalRules.Min(v,\ 0,\ \textcolor{stringliteral}{"{}Calories"{}})}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00198}00198\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00204}00204\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddProductFatValidator()}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00205}00205\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a1c7c6e7af000dca0eb2350f51cc4b863}{Fat}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.DecimalRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Fat"{}}),}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.DecimalRules.Min(v,\ 0,\ \textcolor{stringliteral}{"{}Fat"{}})}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00213}00213\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00219}00219\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddProductFiberValidator()}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00220}00220\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_add9bab64f67c01d04207b4cc02f1b77f}{Fiber}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.DecimalRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Fiber"{}}),}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.DecimalRules.Min(v,\ 0,\ \textcolor{stringliteral}{"{}Fiber"{}})}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00228}00228\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00229}00229\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00234}00234\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddProductProteinValidator()}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00235}00235\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00236}00236\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a221c7a578dc76b0a367b5a679a42980b}{Protein}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.DecimalRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Protein"{}}),}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.DecimalRules.Min(v,\ 0,\ \textcolor{stringliteral}{"{}Protein"{}})}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00243}00243\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00244}00244\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00249}00249\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddProductCarbohydratesValidator()}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00250}00250\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{AddValidator}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a730143cfa07385972f5a19adcaf4b891}{Carbohydrates}}),\ (value)\ =>}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00252}00252\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.Validate(}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.DecimalRules.NotEmpty(v,\ \textcolor{stringliteral}{"{}Carbohydrates"{}}),}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =>\ ValidationRules.DecimalRules.Min(v,\ 0,\ \textcolor{stringliteral}{"{}Carbohydrates"{}})}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ ).Where(r\ =>\ !r.IsValid).ToList();}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00257}00257\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00258}00258\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00259}00259\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00260}00260\ }
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00261}00261\ \textcolor{preprocessor}{\ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00270}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a3f84050575861c41dabd1de221f5bc95}{00270}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a3f84050575861c41dabd1de221f5bc95}{ValidateAll}}()}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00271}00271\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00272}00272\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a2b39d8ba338697d04f049149f6b0fe44}{Name}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a2b39d8ba338697d04f049149f6b0fe44}{Name}});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00273}00273\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_af6b5acea1f08b2e28ffa06f96786d2e7}{Unit}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_af6b5acea1f08b2e28ffa06f96786d2e7}{Unit}});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00274}00274\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a834331e6f1b0a7d5dfd6fc74d5a99258}{Price}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a834331e6f1b0a7d5dfd6fc74d5a99258}{Price}});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00275}00275\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_acc54823e516eb364a95762aeacce8e1f}{CategoryId}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_acc54823e516eb364a95762aeacce8e1f}{CategoryId}});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00276}00276\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ae4a6e770e0687e9d463d70733d3e8d75}{Calories}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ae4a6e770e0687e9d463d70733d3e8d75}{Calories}});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00277}00277\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a1c7c6e7af000dca0eb2350f51cc4b863}{Fat}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a1c7c6e7af000dca0eb2350f51cc4b863}{Fat}});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00278}00278\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_add9bab64f67c01d04207b4cc02f1b77f}{Fiber}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_add9bab64f67c01d04207b4cc02f1b77f}{Fiber}});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00279}00279\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a221c7a578dc76b0a367b5a679a42980b}{Protein}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a221c7a578dc76b0a367b5a679a42980b}{Protein}});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00280}00280\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a730143cfa07385972f5a19adcaf4b891}{Carbohydrates}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a730143cfa07385972f5a19adcaf4b891}{Carbohydrates}});}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00281}00281\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00282}00282\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{AddProductForm_8cs_source_l00283}00283\ \}}
+
+\end{DoxyCode}

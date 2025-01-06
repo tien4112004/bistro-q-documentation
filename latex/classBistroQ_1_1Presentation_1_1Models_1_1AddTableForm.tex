@@ -1,0 +1,177 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Models.\+Add\+Table\+Form Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm}{}\label{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm}\index{BistroQ.Presentation.Models.AddTableForm@{BistroQ.Presentation.Models.AddTableForm}}
+
+
+Represents a form for adding new table with validation capabilities. Inherits from Validator\+Base to provide validation functionality.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Models.\+Add\+Table\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Models.\+Add\+Table\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm_af76ec61356b36201835642b92408aa25}{Add\+Table\+Form}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm}{Add\+Table\+Form} class. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm_a9260c6d4f622103b36c78ae7b9f3b19a}{Validate\+All}} ()
+\begin{DoxyCompactList}\small\item\em Validates all properties of the form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3220acd7add1426396f6c03a6d9707d0}{Get\+Errors}} (string? property\+Name)
+\begin{DoxyCompactList}\small\item\em Retrieves validation errors for a specific property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ab4cd9b5edd381d01f2f877caee969213}{Reset\+Error}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Clears all validation errors for a specific property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad1a34c3d3ea17bb558dd231471fe20fd}{Clear\+Errors}} ()
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{Validate\+Property}} (string property\+Name, object? value)
+\begin{DoxyCompactList}\small\item\em Validates a specific property value using registered validators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm_ae2d639ff00e288822398cfdfe568518d}{Seats\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the number of seats for the table. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm_a8a0d277350089eaa466cc47bb405432b}{Zone\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the zone identifier where the table is located. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ string, List$<$ string $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad671d3afa430919e586c1328e268d711}{Errors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac9110647ffbaec21cb835c2d417054f3}{Has\+Errors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a9a04545b2c20597513cd3190a83c3c9c}{Update\+Errors}} (string property\+Name, List$<$ string $>$ errors)
+\begin{DoxyCompactList}\small\item\em Updates the error collection for a property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{Add\+Validator}} (string property\+Name, Func$<$ object?, List$<$(bool Is\+Value, string Message)$>$ $>$ validators)
+\begin{DoxyCompactList}\small\item\em Registers a list of validator functions for a property. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3dad90961c53443f11ac2a7f258c1e60}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string? property\+Name=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler$<$ Data\+Errors\+Changed\+Event\+Args $>$? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a0f93a47246a401f521a75d14e01a27e1}{Errors\+Changed}}
+\item 
+Property\+Changed\+Event\+Handler? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_acd024f4924ef56609cfff07afda377e8}{Property\+Changed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a form for adding new table with validation capabilities. Inherits from Validator\+Base to provide validation functionality. 
+
+Definition at line \mbox{\hyperlink{AddTableForm_8cs_source_l00009}{9}} of file \mbox{\hyperlink{AddTableForm_8cs_source}{Add\+Table\+Form.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm_af76ec61356b36201835642b92408aa25}\index{BistroQ.Presentation.Models.AddTableForm@{BistroQ.Presentation.Models.AddTableForm}!AddTableForm@{AddTableForm}}
+\index{AddTableForm@{AddTableForm}!BistroQ.Presentation.Models.AddTableForm@{BistroQ.Presentation.Models.AddTableForm}}
+\doxysubsubsection{\texorpdfstring{AddTableForm()}{AddTableForm()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm_af76ec61356b36201835642b92408aa25} 
+Bistro\+Q.\+Presentation.\+Models.\+Add\+Table\+Form.\+Add\+Table\+Form (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm}{Add\+Table\+Form} class. 
+
+
+
+Definition at line \mbox{\hyperlink{AddTableForm_8cs_source_l00027}{27}} of file \mbox{\hyperlink{AddTableForm_8cs_source}{Add\+Table\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm_a9260c6d4f622103b36c78ae7b9f3b19a}\index{BistroQ.Presentation.Models.AddTableForm@{BistroQ.Presentation.Models.AddTableForm}!ValidateAll@{ValidateAll}}
+\index{ValidateAll@{ValidateAll}!BistroQ.Presentation.Models.AddTableForm@{BistroQ.Presentation.Models.AddTableForm}}
+\doxysubsubsection{\texorpdfstring{ValidateAll()}{ValidateAll()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm_a9260c6d4f622103b36c78ae7b9f3b19a} 
+override void Bistro\+Q.\+Presentation.\+Models.\+Add\+Table\+Form.\+Validate\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Validates all properties of the form. 
+
+This method overrides the base Validate\+All method. Currently implements no validation rules. 
+
+Reimplemented from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a69a3f0a52a8c3099e85297a3295e5c0a}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}.
+
+
+
+Definition at line \mbox{\hyperlink{AddTableForm_8cs_source_l00040}{40}} of file \mbox{\hyperlink{AddTableForm_8cs_source}{Add\+Table\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm_ae2d639ff00e288822398cfdfe568518d}\index{BistroQ.Presentation.Models.AddTableForm@{BistroQ.Presentation.Models.AddTableForm}!SeatsCount@{SeatsCount}}
+\index{SeatsCount@{SeatsCount}!BistroQ.Presentation.Models.AddTableForm@{BistroQ.Presentation.Models.AddTableForm}}
+\doxysubsubsection{\texorpdfstring{SeatsCount}{SeatsCount}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm_ae2d639ff00e288822398cfdfe568518d} 
+int Bistro\+Q.\+Presentation.\+Models.\+Add\+Table\+Form.\+Seats\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the number of seats for the table. 
+
+
+
+Definition at line \mbox{\hyperlink{AddTableForm_8cs_source_l00015}{15}} of file \mbox{\hyperlink{AddTableForm_8cs_source}{Add\+Table\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm_a8a0d277350089eaa466cc47bb405432b}\index{BistroQ.Presentation.Models.AddTableForm@{BistroQ.Presentation.Models.AddTableForm}!ZoneId@{ZoneId}}
+\index{ZoneId@{ZoneId}!BistroQ.Presentation.Models.AddTableForm@{BistroQ.Presentation.Models.AddTableForm}}
+\doxysubsubsection{\texorpdfstring{ZoneId}{ZoneId}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddTableForm_a8a0d277350089eaa466cc47bb405432b} 
+int Bistro\+Q.\+Presentation.\+Models.\+Add\+Table\+Form.\+Zone\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the zone identifier where the table is located. 
+
+
+
+Definition at line \mbox{\hyperlink{AddTableForm_8cs_source_l00020}{20}} of file \mbox{\hyperlink{AddTableForm_8cs_source}{Add\+Table\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Models/Add\+Table\+Form.\+cs\end{DoxyCompactItemize}

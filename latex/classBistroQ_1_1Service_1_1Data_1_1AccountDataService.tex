@@ -1,0 +1,301 @@
+\doxysection{Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service Class Reference}
+\hypertarget{classBistroQ_1_1Service_1_1Data_1_1AccountDataService}{}\label{classBistroQ_1_1Service_1_1Data_1_1AccountDataService}\index{BistroQ.Service.Data.AccountDataService@{BistroQ.Service.Data.AccountDataService}}
+
+
+Implementation of account data service that communicates with the API endpoints. Uses Auto\+Mapper for data mapping between DTOs and domain models.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classBistroQ_1_1Service_1_1Data_1_1AccountDataService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classBistroQ_1_1Service_1_1Data_1_1AccountDataService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_ab2c22311e2e591d9adb420891a24b0c2}{Account\+Data\+Service}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApi\+Client}} api\+Client, IMapper mapper)
+\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_ad7c36b75fa708c25f0d6c07c73c120a0}{Get\+Accounts\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1AccountCollectionQueryParams}{Account\+Collection\+Query\+Params}} query=null)
+\begin{DoxyCompactList}\small\item\em Retrieves a paginated collection of accounts based on query parameters. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_a61b204d28c7635958396eeb1cd232a7f}{Get\+Account\+By\+Id\+Async}} (string user\+Id)
+\begin{DoxyCompactList}\small\item\em Retrieves a specific account by its user ID. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_aa557fdcc70a2afa8fbd630b1688a7208}{Create\+Account\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1CreateAccountRequest}{Create\+Account\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Creates a new account with the provided information. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_a8310dc524e3cc408583c526467fe2e50}{Update\+Account\+Async}} (string user\+Id, \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1UpdateAccountRequest}{Update\+Account\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Updates an existing account with the provided information. \end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_a7640d2df9f68ff0d13f3a99da3bbbb99}{Delete\+Account\+Async}} (string user\+Id)
+\begin{DoxyCompactList}\small\item\em Deletes an account with the specified user ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceIAccountDataService}{IAccount\+Data\+Service}}}
+
+
+\doxysubsection{Detailed Description}
+Implementation of account data service that communicates with the API endpoints. Uses Auto\+Mapper for data mapping between DTOs and domain models. 
+
+Definition at line \mbox{\hyperlink{AccountDataService_8cs_source_l00013}{13}} of file \mbox{\hyperlink{AccountDataService_8cs_source}{Account\+Data\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_ab2c22311e2e591d9adb420891a24b0c2}\index{BistroQ.Service.Data.AccountDataService@{BistroQ.Service.Data.AccountDataService}!AccountDataService@{AccountDataService}}
+\index{AccountDataService@{AccountDataService}!BistroQ.Service.Data.AccountDataService@{BistroQ.Service.Data.AccountDataService}}
+\doxysubsubsection{\texorpdfstring{AccountDataService()}{AccountDataService()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_ab2c22311e2e591d9adb420891a24b0c2} 
+Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service.\+Account\+Data\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApi\+Client}}}]{api\+Client}{, }\item[{IMapper}]{mapper}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{AccountDataService_8cs_source_l00028}{28}} of file \mbox{\hyperlink{AccountDataService_8cs_source}{Account\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \_apiClient\ =\ apiClient;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_aa557fdcc70a2afa8fbd630b1688a7208}\index{BistroQ.Service.Data.AccountDataService@{BistroQ.Service.Data.AccountDataService}!CreateAccountAsync@{CreateAccountAsync}}
+\index{CreateAccountAsync@{CreateAccountAsync}!BistroQ.Service.Data.AccountDataService@{BistroQ.Service.Data.AccountDataService}}
+\doxysubsubsection{\texorpdfstring{CreateAccountAsync()}{CreateAccountAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_aa557fdcc70a2afa8fbd630b1688a7208} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service.\+Create\+Account\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1CreateAccountRequest}{Create\+Account\+Request}}}]{request}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new account with the provided information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The account creation details\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly created account
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceIAccountDataService_a8512abb1cc7424653e889e30842ffc73}{IAccount\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{AccountDataService_8cs_source_l00060}{60}} of file \mbox{\hyperlink{AccountDataService_8cs_source}{Account\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PostAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1AccountResponse}{AccountResponse}}>(\textcolor{stringliteral}{"{}api/admin/account"{}},\ request);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}}>(response.Data);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ create\ account"{}});}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_a7640d2df9f68ff0d13f3a99da3bbbb99}\index{BistroQ.Service.Data.AccountDataService@{BistroQ.Service.Data.AccountDataService}!DeleteAccountAsync@{DeleteAccountAsync}}
+\index{DeleteAccountAsync@{DeleteAccountAsync}!BistroQ.Service.Data.AccountDataService@{BistroQ.Service.Data.AccountDataService}}
+\doxysubsubsection{\texorpdfstring{DeleteAccountAsync()}{DeleteAccountAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_a7640d2df9f68ff0d13f3a99da3bbbb99} 
+async Task$<$ bool $>$ Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service.\+Delete\+Account\+Async (\begin{DoxyParamCaption}\item[{string}]{user\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes an account with the specified user ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The unique identifier of the user to delete\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the deletion was successful
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceIAccountDataService_a33b9579e582a85020e98236cfd39cbdb}{IAccount\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{AccountDataService_8cs_source_l00082}{82}} of file \mbox{\hyperlink{AccountDataService_8cs_source}{Account\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00083\ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.DeleteAsync<\textcolor{keywordtype}{object}>(\$\textcolor{stringliteral}{"{}api/admin/account/\{userId\}"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!response.Success)}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_a61b204d28c7635958396eeb1cd232a7f}\index{BistroQ.Service.Data.AccountDataService@{BistroQ.Service.Data.AccountDataService}!GetAccountByIdAsync@{GetAccountByIdAsync}}
+\index{GetAccountByIdAsync@{GetAccountByIdAsync}!BistroQ.Service.Data.AccountDataService@{BistroQ.Service.Data.AccountDataService}}
+\doxysubsubsection{\texorpdfstring{GetAccountByIdAsync()}{GetAccountByIdAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_a61b204d28c7635958396eeb1cd232a7f} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service.\+Get\+Account\+By\+Id\+Async (\begin{DoxyParamCaption}\item[{string}]{user\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a specific account by its user ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The unique identifier of the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The account details for the specified user
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceIAccountDataService_a1bc4362533212697cddd0d0bca913549}{IAccount\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{AccountDataService_8cs_source_l00049}{49}} of file \mbox{\hyperlink{AccountDataService_8cs_source}{Account\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1AccountResponse}{AccountResponse}}>(\$\textcolor{stringliteral}{"{}api/admin/account/\{userId\}"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}}>(response.Data);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ get\ account"{}});}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_ad7c36b75fa708c25f0d6c07c73c120a0}\index{BistroQ.Service.Data.AccountDataService@{BistroQ.Service.Data.AccountDataService}!GetAccountsAsync@{GetAccountsAsync}}
+\index{GetAccountsAsync@{GetAccountsAsync}!BistroQ.Service.Data.AccountDataService@{BistroQ.Service.Data.AccountDataService}}
+\doxysubsubsection{\texorpdfstring{GetAccountsAsync()}{GetAccountsAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_ad7c36b75fa708c25f0d6c07c73c120a0} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ $>$ $>$ Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service.\+Get\+Accounts\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1AccountCollectionQueryParams}{Account\+Collection\+Query\+Params}}}]{query}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a paginated collection of accounts based on query parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & Query parameters for filtering, sorting, and pagination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A collection response containing accounts and pagination information
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceIAccountDataService_ac32b1a4d9e75bdfcaf72e9ba7702f061}{IAccount\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{AccountDataService_8cs_source_l00036}{36}} of file \mbox{\hyperlink{AccountDataService_8cs_source}{Account\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetCollectionAsync<IEnumerable<AccountResponse>>(\textcolor{stringliteral}{"{}/api/admin/account"{}},\ query);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ var\ accounts\ =\ \_mapper.Map<IEnumerable<Account>>(response.Data);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{ApiCollectionResponse<IEnumerable<Account>}}>}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (accounts,\ response.TotalItems,\ response.CurrentPage,\ response.TotalPages);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ get\ accounts"{}});}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_a8310dc524e3cc408583c526467fe2e50}\index{BistroQ.Service.Data.AccountDataService@{BistroQ.Service.Data.AccountDataService}!UpdateAccountAsync@{UpdateAccountAsync}}
+\index{UpdateAccountAsync@{UpdateAccountAsync}!BistroQ.Service.Data.AccountDataService@{BistroQ.Service.Data.AccountDataService}}
+\doxysubsubsection{\texorpdfstring{UpdateAccountAsync()}{UpdateAccountAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1AccountDataService_a8310dc524e3cc408583c526467fe2e50} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}} $>$ Bistro\+Q.\+Service.\+Data.\+Account\+Data\+Service.\+Update\+Account\+Async (\begin{DoxyParamCaption}\item[{string}]{user\+Id}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1UpdateAccountRequest}{Update\+Account\+Request}}}]{request}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates an existing account with the provided information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The unique identifier of the user to update\\
+\hline
+{\em request} & The account update details\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated account
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceIAccountDataService_ac5ce3df95f1233ba0300fdb6e67c3d99}{IAccount\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{AccountDataService_8cs_source_l00071}{71}} of file \mbox{\hyperlink{AccountDataService_8cs_source}{Account\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PatchAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Account_1_1AccountResponse}{AccountResponse}}>(\$\textcolor{stringliteral}{"{}api/admin/account/\{userId\}"{}},\ request);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Account}{Account}}>(response.Data);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ update\ account"{}});}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Service/\+Data/Account\+Data\+Service.\+cs\end{DoxyCompactItemize}

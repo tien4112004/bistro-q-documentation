@@ -1,0 +1,5 @@
+<map id="BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel" name="BistroQ.Presentation.ViewModels.AdminZone.AdminZoneAddPageViewModel">
+<area shape="rect" id="Node000001" title="ViewModel for adding new zones in the admin interface. Handles form validation, zone creation,..." alt="" coords="5,80,262,139"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="62,5,205,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,48,136,79,131,79,131,48"/>
+</map>

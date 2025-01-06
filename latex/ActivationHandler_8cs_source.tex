@@ -1,0 +1,23 @@
+\doxysection{Activation\+Handler.\+cs}
+\hypertarget{ActivationHandler_8cs_source}{}\label{ActivationHandler_8cs_source}\index{BistroQ.Presentation/Activation/ActivationHandler.cs@{BistroQ.Presentation/Activation/ActivationHandler.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00001}\mbox{\hyperlink{namespaceBistroQ_1_1Presentation}{00001}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Presentation_1_1Activation}{BistroQ.Presentation.Activation}};}
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00003}00003\ \textcolor{comment}{//\ Extend\ this\ class\ to\ implement\ new\ ActivationHandlers.\ See\ DefaultActivationHandler\ for\ an\ example.}}
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00004}00004\ \textcolor{comment}{//\ https://github.com/microsoft/TemplateStudio/blob/main/docs/WinUI/activation.md}}
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00005}\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Activation_1_1ActivationHandler}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Activation_1_1ActivationHandler}{ActivationHandler}}<T>\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Activation_1_1IActivationHandler}{IActivationHandler}}}
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00006}00006\ \ \ \ \ where\ T\ :\ class}
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00008}00008\ \ \ \ \ \textcolor{comment}{//\ Override\ this\ method\ to\ add\ the\ logic\ for\ whether\ to\ handle\ the\ activation.}}
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ CanHandleInternal(T\ args)\ =>\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00011}00011\ \ \ \ \ \textcolor{comment}{//\ Override\ this\ method\ to\ add\ the\ logic\ for\ your\ activation\ handler.}}
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{abstract}\ Task\ HandleInternalAsync(T\ args);}
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ CanHandle(\textcolor{keywordtype}{object}\ args)\ =>\ args\ is\ T\ \&\&\ CanHandleInternal((args\ as\ T)!);}
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ HandleAsync(\textcolor{keywordtype}{object}\ args)\ =>\ await\ HandleInternalAsync((args\ as\ T)!);}
+\DoxyCodeLine{\Hypertarget{ActivationHandler_8cs_source_l00017}00017\ \}}
+
+\end{DoxyCode}

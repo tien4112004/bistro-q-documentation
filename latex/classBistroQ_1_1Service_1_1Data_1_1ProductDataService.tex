@@ -1,0 +1,444 @@
+\doxysection{Bistro\+Q.\+Service.\+Data.\+Product\+Data\+Service Class Reference}
+\hypertarget{classBistroQ_1_1Service_1_1Data_1_1ProductDataService}{}\label{classBistroQ_1_1Service_1_1Data_1_1ProductDataService}\index{BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}}
+
+
+Implementation of product data service that communicates with the API endpoints. Handles both regular API calls and multipart form data for image uploads.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Service.\+Data.\+Product\+Data\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classBistroQ_1_1Service_1_1Data_1_1ProductDataService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Service.\+Data.\+Product\+Data\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classBistroQ_1_1Service_1_1Data_1_1ProductDataService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_ab041577f6abbebb512e657e95eda429f}{Product\+Data\+Service}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApi\+Client}} api\+Client, IMapper mapper, \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient}{IMultipart\+Api\+Client}} multipart\+Api\+Client)
+\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a7e81fe737915d702e4d4661ad5ac62b9}{Get\+Grid\+Data\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductCollectionQueryParams}{Product\+Collection\+Query\+Params}} query=null)
+\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a730e30baddff942572c5c4544ddb23b8}{Create\+Product\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1CreateProductRequest}{Create\+Product\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Creates a new product without an image. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a364e6273abd3711f68af2e7b690bc9c6}{Update\+Product\+Async}} (int product\+Id, \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1UpdateProductRequest}{Update\+Product\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Updates an existing product\textquotesingle{}s details. \end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a942b306f57f5a4a0edcf16ef7c38f766}{Delete\+Product\+Async}} (int product\+Id)
+\begin{DoxyCompactList}\small\item\em Deletes a product with the specified ID. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a4f5d99029984bc16d3da52a454936d86}{Get\+Products\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductCollectionQueryParams}{Product\+Collection\+Query\+Params}} query=null)
+\begin{DoxyCompactList}\small\item\em Retrieves a paginated collection of products based on query parameters. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a8bcfb91a9d9a6151732f502abba8e463}{Get\+Recommendation\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves a collection of recommended products. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a3efd559e7419f24ee5fe913a7b562cea}{Create\+Product\+Async}} (\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1CreateProductRequest}{Create\+Product\+Request}} request, Stream stream, string file\+Name, string content\+Type)
+\begin{DoxyCompactList}\small\item\em Creates a new product with an optional image file. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_aed73dfcecf27c29a2f195384bc099bdf}{Update\+Product\+Image\+Async}} (int product\+Id, Stream stream, string file\+Name, string content\+Type)
+\begin{DoxyCompactList}\small\item\em Updates a product\textquotesingle{}s image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+IProduct\+Data\+Service}}}
+
+
+\doxysubsection{Detailed Description}
+Implementation of product data service that communicates with the API endpoints. Handles both regular API calls and multipart form data for image uploads. 
+
+Definition at line \mbox{\hyperlink{ProductDataService_8cs_source_l00015}{15}} of file \mbox{\hyperlink{ProductDataService_8cs_source}{Product\+Data\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_ab041577f6abbebb512e657e95eda429f}\index{BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}!ProductDataService@{ProductDataService}}
+\index{ProductDataService@{ProductDataService}!BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}}
+\doxysubsubsection{\texorpdfstring{ProductDataService()}{ProductDataService()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_ab041577f6abbebb512e657e95eda429f} 
+Bistro\+Q.\+Service.\+Data.\+Product\+Data\+Service.\+Product\+Data\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IApiClient}{IApi\+Client}}}]{api\+Client}{, }\item[{IMapper}]{mapper}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Http_1_1IMultipartApiClient}{IMultipart\+Api\+Client}}}]{multipart\+Api\+Client}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{ProductDataService_8cs_source_l00035}{35}} of file \mbox{\hyperlink{ProductDataService_8cs_source}{Product\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \_apiClient\ =\ apiClient;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \_mapper\ =\ mapper;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \_multipartApiClient\ =\ multipartApiClient;}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a730e30baddff942572c5c4544ddb23b8}\index{BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}!CreateProductAsync@{CreateProductAsync}}
+\index{CreateProductAsync@{CreateProductAsync}!BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}}
+\doxysubsubsection{\texorpdfstring{CreateProductAsync()}{CreateProductAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a730e30baddff942572c5c4544ddb23b8} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ Bistro\+Q.\+Service.\+Data.\+Product\+Data\+Service.\+Create\+Product\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1CreateProductRequest}{Create\+Product\+Request}}}]{request}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new product without an image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The product creation details\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly created product
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService_aabe712252f1f9a2360f323d21d261de3}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+IProduct\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{ProductDataService_8cs_source_l00056}{56}} of file \mbox{\hyperlink{ProductDataService_8cs_source}{Product\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PostAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductResponse}{ProductResponse}}>(\textcolor{stringliteral}{"{}api/admin/product"{}},\ request);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}}>(response.Data);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a3efd559e7419f24ee5fe913a7b562cea}\index{BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}!CreateProductAsync@{CreateProductAsync}}
+\index{CreateProductAsync@{CreateProductAsync}!BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}}
+\doxysubsubsection{\texorpdfstring{CreateProductAsync()}{CreateProductAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a3efd559e7419f24ee5fe913a7b562cea} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ Bistro\+Q.\+Service.\+Data.\+Product\+Data\+Service.\+Create\+Product\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1CreateProductRequest}{Create\+Product\+Request}}}]{request}{, }\item[{Stream}]{Stream}{, }\item[{string}]{File\+Name}{, }\item[{string}]{Content\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new product with an optional image file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The product creation details\\
+\hline
+{\em Stream} & The image file stream\\
+\hline
+{\em File\+Name} & The name of the image file\\
+\hline
+{\em Content\+Type} & The MIME type of the image file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly created product
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService_abde64fac9f8fd14fdc359e6f61a76812}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+IProduct\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{ProductDataService_8cs_source_l00118}{118}} of file \mbox{\hyperlink{ProductDataService_8cs_source}{Product\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ var\ files\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ (Stream\ Stream,\ string\ FileName,\ string\ ContentType)>();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (stream\ !=\ \textcolor{keyword}{null}\ \&\&\ !\textcolor{keywordtype}{string}.IsNullOrEmpty(fileName))}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ files.Add(\textcolor{stringliteral}{"{}Image"{}},\ (stream,\ fileName,\ contentType));}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_multipartApiClient.PostMultipartAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductResponse}{ProductResponse}}>(\textcolor{stringliteral}{"{}/api/admin/product"{}},}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ request,\ \textcolor{stringliteral}{"{}Product"{}},\ files);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}}>(response.Data);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a942b306f57f5a4a0edcf16ef7c38f766}\index{BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}!DeleteProductAsync@{DeleteProductAsync}}
+\index{DeleteProductAsync@{DeleteProductAsync}!BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}}
+\doxysubsubsection{\texorpdfstring{DeleteProductAsync()}{DeleteProductAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a942b306f57f5a4a0edcf16ef7c38f766} 
+async Task$<$ bool $>$ Bistro\+Q.\+Service.\+Data.\+Product\+Data\+Service.\+Delete\+Product\+Async (\begin{DoxyParamCaption}\item[{int}]{product\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a product with the specified ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & The unique identifier of the product to delete\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the deletion was successful
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService_a94e67baf78a6ac5d78e7857fc183f5bc}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+IProduct\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{ProductDataService_8cs_source_l00079}{79}} of file \mbox{\hyperlink{ProductDataService_8cs_source}{Product\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.DeleteAsync<\textcolor{keywordtype}{object}>(\$\textcolor{stringliteral}{"{}api/admin/product/\{productId\}"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!response.Success)}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a7e81fe737915d702e4d4661ad5ac62b9}\index{BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}!GetGridDataAsync@{GetGridDataAsync}}
+\index{GetGridDataAsync@{GetGridDataAsync}!BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}}
+\doxysubsubsection{\texorpdfstring{GetGridDataAsync()}{GetGridDataAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a7e81fe737915d702e4d4661ad5ac62b9} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ $>$ $>$ Bistro\+Q.\+Service.\+Data.\+Product\+Data\+Service.\+Get\+Grid\+Data\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductCollectionQueryParams}{Product\+Collection\+Query\+Params}}}]{query}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{ProductDataService_8cs_source_l00044}{44}} of file \mbox{\hyperlink{ProductDataService_8cs_source}{Product\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetCollectionAsync<IEnumerable<ProductResponse>>(\textcolor{stringliteral}{"{}/api/admin/product"{}},\ query);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ var\ products\ =\ \_mapper.Map<IEnumerable<Product>>(response.Data);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{ApiCollectionResponse<IEnumerable<Product>}}>}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (products,\ response.TotalItems,\ response.CurrentPage,\ response.TotalPages);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ get\ products"{}});}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a4f5d99029984bc16d3da52a454936d86}\index{BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}!GetProductsAsync@{GetProductsAsync}}
+\index{GetProductsAsync@{GetProductsAsync}!BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}}
+\doxysubsubsection{\texorpdfstring{GetProductsAsync()}{GetProductsAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a4f5d99029984bc16d3da52a454936d86} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ $>$ $>$ Bistro\+Q.\+Service.\+Data.\+Product\+Data\+Service.\+Get\+Products\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductCollectionQueryParams}{Product\+Collection\+Query\+Params}}}]{query}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a paginated collection of products based on query parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & Query parameters for filtering, sorting, and pagination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A collection response containing products and pagination information
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the message "{}\+Failed to get products"{}\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService_aabccca3b28894e901fba97bf2129d7a7}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+IProduct\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{ProductDataService_8cs_source_l00090}{90}} of file \mbox{\hyperlink{ProductDataService_8cs_source}{Product\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetCollectionAsync<IEnumerable<ProductResponse>>(\textcolor{stringliteral}{"{}/api/product"{}},\ query);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ var\ products\ =\ \_mapper.Map<IEnumerable<Product>>(response.Data);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{ApiCollectionResponse<IEnumerable<Product>}}>}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (products,\ response.TotalItems,\ response.CurrentPage,\ response.TotalPages);}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ get\ products"{}});}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a8bcfb91a9d9a6151732f502abba8e463}\index{BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}!GetRecommendationAsync@{GetRecommendationAsync}}
+\index{GetRecommendationAsync@{GetRecommendationAsync}!BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}}
+\doxysubsubsection{\texorpdfstring{GetRecommendationAsync()}{GetRecommendationAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a8bcfb91a9d9a6151732f502abba8e463} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ IEnumerable$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ $>$ $>$ Bistro\+Q.\+Service.\+Data.\+Product\+Data\+Service.\+Get\+Recommendation\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a collection of recommended products. 
+
+\begin{DoxyReturn}{Returns}
+A collection response containing recommended products and pagination information
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the message "{}\+Failed to get products"{}\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService_ae546383f76373b30f76de8204f81f51b}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+IProduct\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{ProductDataService_8cs_source_l00104}{104}} of file \mbox{\hyperlink{ProductDataService_8cs_source}{Product\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105\ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.GetCollectionAsync<IEnumerable<ProductResponse>>(\textcolor{stringliteral}{"{}/api/product/recommendations"{}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ var\ products\ =\ \_mapper.Map<IEnumerable<Product>>(response.Data);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{ApiCollectionResponse<IEnumerable<Product>}}>}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (products,\ response.TotalItems,\ response.CurrentPage,\ response.TotalPages);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Failed\ to\ get\ products"{}});}
+\DoxyCodeLine{00116\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a364e6273abd3711f68af2e7b690bc9c6}\index{BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}!UpdateProductAsync@{UpdateProductAsync}}
+\index{UpdateProductAsync@{UpdateProductAsync}!BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}}
+\doxysubsubsection{\texorpdfstring{UpdateProductAsync()}{UpdateProductAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_a364e6273abd3711f68af2e7b690bc9c6} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ Bistro\+Q.\+Service.\+Data.\+Product\+Data\+Service.\+Update\+Product\+Async (\begin{DoxyParamCaption}\item[{int}]{product\+Id}{, }\item[{\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1UpdateProductRequest}{Update\+Product\+Request}}}]{request}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates an existing product\textquotesingle{}s details. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & The unique identifier of the product to update\\
+\hline
+{\em request} & The product update details\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated product
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService_aa824e6062e512e1b1fa3ba63734f8770}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+IProduct\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{ProductDataService_8cs_source_l00067}{67}} of file \mbox{\hyperlink{ProductDataService_8cs_source}{Product\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PutAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductResponse}{ProductResponse}}>(\$\textcolor{stringliteral}{"{}api/admin/product/\{productId\}"{}},\ request);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}}>(response.Data);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_aed73dfcecf27c29a2f195384bc099bdf}\index{BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}!UpdateProductImageAsync@{UpdateProductImageAsync}}
+\index{UpdateProductImageAsync@{UpdateProductImageAsync}!BistroQ.Service.Data.ProductDataService@{BistroQ.Service.Data.ProductDataService}}
+\doxysubsubsection{\texorpdfstring{UpdateProductImageAsync()}{UpdateProductImageAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Data_1_1ProductDataService_aed73dfcecf27c29a2f195384bc099bdf} 
+async Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}} $>$ Bistro\+Q.\+Service.\+Data.\+Product\+Data\+Service.\+Update\+Product\+Image\+Async (\begin{DoxyParamCaption}\item[{int}]{product\+Id}{, }\item[{Stream}]{Stream}{, }\item[{string}]{File\+Name}{, }\item[{string}]{Content\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates a product\textquotesingle{}s image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & The unique identifier of the product\\
+\hline
+{\em Stream} & The new image file stream\\
+\hline
+{\em File\+Name} & The name of the new image file\\
+\hline
+{\em Content\+Type} & The MIME type of the new image file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated product
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the API request fails with the error message\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Data_1_1IProductDataService_a68a1da604606df5d80fa32c84423d5e9}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Data.\+IProduct\+Data\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{ProductDataService_8cs_source_l00137}{137}} of file \mbox{\hyperlink{ProductDataService_8cs_source}{Product\+Data\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138\ \ \ \ \ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_multipartApiClient.PatchMultipartAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Products_1_1ProductResponse}{ProductResponse}}>(\$\textcolor{stringliteral}{"{}api/admin/product/\{productId\}"{}},}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Dictionary<string,\ (Stream\ Stream,\ \textcolor{keywordtype}{string}\ FileName,\ \textcolor{keywordtype}{string}\ ContentType)>}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}image"{}},\ (stream,\ fileName,\ contentType)\ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_mapper.Map<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Entities_1_1Product}{Product}}>(response.Data);}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(response.Message);}
+\DoxyCodeLine{00150\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Service/\+Data/Product\+Data\+Service.\+cs\end{DoxyCompactItemize}

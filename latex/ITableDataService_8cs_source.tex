@@ -1,0 +1,25 @@
+\doxysection{ITable\+Data\+Service.\+cs}
+\hypertarget{ITableDataService_8cs_source}{}\label{ITableDataService_8cs_source}\index{BistroQ.Domain/Contracts/Services/Data/ITableDataService.cs@{BistroQ.Domain/Contracts/Services/Data/ITableDataService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos}{BistroQ.Domain.Dtos}};}
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos_1_1Tables}{BistroQ.Domain.Dtos.Tables}};}
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00010}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{interface\ }\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService}{ITableDataService}}}
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00018}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a1b48417687e40debd67779094e764545}{00018}}\ \ \ \ \ Task<ApiCollectionResponse<IEnumerable<Table>>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a1b48417687e40debd67779094e764545}{GetGridDataAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1TableCollectionQueryParams}{TableCollectionQueryParams}}\ query);}
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00026}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a6c62639de69b0646cb7405b98dc4a86e}{00026}}\ \ \ \ \ Task<Table>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a6c62639de69b0646cb7405b98dc4a86e}{GetDataTableAsync}}(\textcolor{keywordtype}{int}\ tableId);}
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00034}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_aad86ee0a9928b99454a42febd75df741}{00034}}\ \ \ \ \ Task<Table>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_aad86ee0a9928b99454a42febd75df741}{CreateTableAsync}}(\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1CreateTableRequest}{CreateTableRequest}}\ request);}
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00043}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a89df7a682f03047068bf55d8a54001c0}{00043}}\ \ \ \ \ Task<Table>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a89df7a682f03047068bf55d8a54001c0}{UpdateTableAsync}}(\textcolor{keywordtype}{int}\ zoneId,\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1Tables_1_1UpdateTableRequest}{UpdateTableRequest}}\ request);}
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00051}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a649a1365b11b5fff3c1eb0348c49e842}{00051}}\ \ \ \ \ Task<bool>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_a649a1365b11b5fff3c1eb0348c49e842}{DeleteTableAsync}}(\textcolor{keywordtype}{int}\ zoneId);}
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00060}\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_ac69d71960c7941666e077d3a3de2f95f}{00060}}\ \ \ \ \ Task<IEnumerable<Table>>\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITableDataService_ac69d71960c7941666e077d3a3de2f95f}{GetTablesByCashierAsync}}(\textcolor{keywordtype}{int}\ zoneId,\ \textcolor{keywordtype}{string}\ type);}
+\DoxyCodeLine{\Hypertarget{ITableDataService_8cs_source_l00061}00061\ \}}
+
+\end{DoxyCode}

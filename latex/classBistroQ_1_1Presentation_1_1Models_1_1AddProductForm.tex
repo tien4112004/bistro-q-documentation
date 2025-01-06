@@ -1,0 +1,427 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm}{}\label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+
+
+Represents a form for adding new product with comprehensive validation rules. Inherits from Validator\+Base to provide validation functionality.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a0bf8dcdd4e0215e75e84b41055364c04}{Add\+Product\+Form}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm}{Add\+Product\+Form} class. Sets up all required validators for product properties. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a3f84050575861c41dabd1de221f5bc95}{Validate\+All}} ()
+\begin{DoxyCompactList}\small\item\em Validates all properties of the form. Executes validation rules for all required product properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3220acd7add1426396f6c03a6d9707d0}{Get\+Errors}} (string? property\+Name)
+\begin{DoxyCompactList}\small\item\em Retrieves validation errors for a specific property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ab4cd9b5edd381d01f2f877caee969213}{Reset\+Error}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Clears all validation errors for a specific property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad1a34c3d3ea17bb558dd231471fe20fd}{Clear\+Errors}} ()
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{Validate\+Property}} (string property\+Name, object? value)
+\begin{DoxyCompactList}\small\item\em Validates a specific property value using registered validators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a617690f3c1088f0ab00287f5f00f63d6}{Product\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the unique identifier of the product. Optional property that can be null. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a2b39d8ba338697d04f049149f6b0fe44}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the name of the product. Validated for non-\/empty and minimum length (2 chars). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_acc54823e516eb364a95762aeacce8e1f}{Category\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the category ID of the product. Validated for non-\/empty value. \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a834331e6f1b0a7d5dfd6fc74d5a99258}{Price}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the price of the product. Validated for non-\/empty and minimum value (0). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_af6b5acea1f08b2e28ffa06f96786d2e7}{Unit}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the unit of measurement for the product. Validated for non-\/empty and minimum length (1 char). \end{DoxyCompactList}\item 
+decimal? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a63856312da8c30ca2bf6447ebc29640f}{Discount\+Price}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the discounted price of the product. Optional property validated for minimum value (0). \end{DoxyCompactList}\item 
+string? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a40bc870663686901f494627c19e7a2e3}{Image\+Url}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the URL of the product image. Optional property that can be null. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ae4a6e770e0687e9d463d70733d3e8d75}{Calories}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the caloric content of the product. Validated for non-\/empty and minimum value (0). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a1c7c6e7af000dca0eb2350f51cc4b863}{Fat}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the fat content of the product. Validated for non-\/empty and minimum value (0). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_add9bab64f67c01d04207b4cc02f1b77f}{Fiber}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the fiber content of the product. Validated for non-\/empty and minimum value (0). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a221c7a578dc76b0a367b5a679a42980b}{Protein}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the protein content of the product. Validated for non-\/empty and minimum value (0). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a730143cfa07385972f5a19adcaf4b891}{Carbohydrates}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the carbohydrate content of the product. Validated for non-\/empty and minimum value (0). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper}}? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ab35741965da680c3a02eceb6a882f515}{Image\+File}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the file wrapper for the product image. Optional property that can be null. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ string, List$<$ string $>$ $>$ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ad671d3afa430919e586c1328e268d711}{Errors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac9110647ffbaec21cb835c2d417054f3}{Has\+Errors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a9a04545b2c20597513cd3190a83c3c9c}{Update\+Errors}} (string property\+Name, List$<$ string $>$ errors)
+\begin{DoxyCompactList}\small\item\em Updates the error collection for a property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a428c4f6936b8f21b2c6fd3df2e4f996f}{Add\+Validator}} (string property\+Name, Func$<$ object?, List$<$(bool Is\+Value, string Message)$>$ $>$ validators)
+\begin{DoxyCompactList}\small\item\em Registers a list of validator functions for a property. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a3dad90961c53443f11ac2a7f258c1e60}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string? property\+Name=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler$<$ Data\+Errors\+Changed\+Event\+Args $>$? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a0f93a47246a401f521a75d14e01a27e1}{Errors\+Changed}}
+\item 
+Property\+Changed\+Event\+Handler? \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_acd024f4924ef56609cfff07afda377e8}{Property\+Changed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a form for adding new product with comprehensive validation rules. Inherits from Validator\+Base to provide validation functionality. 
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00009}{9}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a0bf8dcdd4e0215e75e84b41055364c04}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!AddProductForm@{AddProductForm}}
+\index{AddProductForm@{AddProductForm}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{AddProductForm()}{AddProductForm()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a0bf8dcdd4e0215e75e84b41055364c04} 
+Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Add\+Product\+Form (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm}{Add\+Product\+Form} class. Sets up all required validators for product properties. 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00096}{96}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00097\ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ AddProductNameValidator();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ AddProductUnitValidator();}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ AddProductPriceValidator();}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ AddProductCategoryValidator();}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ AddProductDiscountPriceValidator();}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ AddProductCaloriesValidator();}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ AddProductFatValidator();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ AddProductFiberValidator();}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ AddProductProteinValidator();}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ AddProductCarbohydratesValidator();}
+\DoxyCodeLine{00108\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a3f84050575861c41dabd1de221f5bc95}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!ValidateAll@{ValidateAll}}
+\index{ValidateAll@{ValidateAll}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{ValidateAll()}{ValidateAll()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a3f84050575861c41dabd1de221f5bc95} 
+override void Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Validate\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Validates all properties of the form. Executes validation rules for all required product properties. 
+
+This method overrides the base Validate\+All method to provide form-\/specific validation logic for product data. 
+
+Reimplemented from \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_a69a3f0a52a8c3099e85297a3295e5c0a}{Bistro\+Q.\+Presentation.\+Validation.\+Validator\+Base}}.
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00270}{270}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00271\ \ \ \ \ \{}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a2b39d8ba338697d04f049149f6b0fe44}{Name}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a2b39d8ba338697d04f049149f6b0fe44}{Name}});}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_af6b5acea1f08b2e28ffa06f96786d2e7}{Unit}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_af6b5acea1f08b2e28ffa06f96786d2e7}{Unit}});}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a834331e6f1b0a7d5dfd6fc74d5a99258}{Price}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a834331e6f1b0a7d5dfd6fc74d5a99258}{Price}});}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_acc54823e516eb364a95762aeacce8e1f}{CategoryId}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_acc54823e516eb364a95762aeacce8e1f}{CategoryId}});}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ae4a6e770e0687e9d463d70733d3e8d75}{Calories}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ae4a6e770e0687e9d463d70733d3e8d75}{Calories}});}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a1c7c6e7af000dca0eb2350f51cc4b863}{Fat}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a1c7c6e7af000dca0eb2350f51cc4b863}{Fat}});}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_add9bab64f67c01d04207b4cc02f1b77f}{Fiber}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_add9bab64f67c01d04207b4cc02f1b77f}{Fiber}});}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a221c7a578dc76b0a367b5a679a42980b}{Protein}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a221c7a578dc76b0a367b5a679a42980b}{Protein}});}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Validation_1_1ValidatorBase_ac75d1c0697b48367674aef1f5da9a214}{ValidateProperty}}(nameof(\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a730143cfa07385972f5a19adcaf4b891}{Carbohydrates}}),\ \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a730143cfa07385972f5a19adcaf4b891}{Carbohydrates}});}
+\DoxyCodeLine{00281\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ae4a6e770e0687e9d463d70733d3e8d75}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!Calories@{Calories}}
+\index{Calories@{Calories}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{Calories}{Calories}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ae4a6e770e0687e9d463d70733d3e8d75} 
+double Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Calories\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the caloric content of the product. Validated for non-\/empty and minimum value (0). 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00058}{58}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a730143cfa07385972f5a19adcaf4b891}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!Carbohydrates@{Carbohydrates}}
+\index{Carbohydrates@{Carbohydrates}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{Carbohydrates}{Carbohydrates}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a730143cfa07385972f5a19adcaf4b891} 
+double Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Carbohydrates\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the carbohydrate content of the product. Validated for non-\/empty and minimum value (0). 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00082}{82}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_acc54823e516eb364a95762aeacce8e1f}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!CategoryId@{CategoryId}}
+\index{CategoryId@{CategoryId}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{CategoryId}{CategoryId}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_acc54823e516eb364a95762aeacce8e1f} 
+int Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Category\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the category ID of the product. Validated for non-\/empty value. 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00028}{28}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a63856312da8c30ca2bf6447ebc29640f}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!DiscountPrice@{DiscountPrice}}
+\index{DiscountPrice@{DiscountPrice}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{DiscountPrice}{DiscountPrice}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a63856312da8c30ca2bf6447ebc29640f} 
+decimal? Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Discount\+Price\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the discounted price of the product. Optional property validated for minimum value (0). 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00046}{46}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a1c7c6e7af000dca0eb2350f51cc4b863}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!Fat@{Fat}}
+\index{Fat@{Fat}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{Fat}{Fat}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a1c7c6e7af000dca0eb2350f51cc4b863} 
+double Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Fat\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the fat content of the product. Validated for non-\/empty and minimum value (0). 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00064}{64}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_add9bab64f67c01d04207b4cc02f1b77f}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!Fiber@{Fiber}}
+\index{Fiber@{Fiber}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{Fiber}{Fiber}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_add9bab64f67c01d04207b4cc02f1b77f} 
+double Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Fiber\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the fiber content of the product. Validated for non-\/empty and minimum value (0). 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00070}{70}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ab35741965da680c3a02eceb6a882f515}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!ImageFile@{ImageFile}}
+\index{ImageFile@{ImageFile}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{ImageFile}{ImageFile}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_ab35741965da680c3a02eceb6a882f515} 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Models_1_1FileWrapper}{File\+Wrapper}}? Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Image\+File\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the file wrapper for the product image. Optional property that can be null. 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00088}{88}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a40bc870663686901f494627c19e7a2e3}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!ImageUrl@{ImageUrl}}
+\index{ImageUrl@{ImageUrl}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{ImageUrl}{ImageUrl}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a40bc870663686901f494627c19e7a2e3} 
+string? Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Image\+Url\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the URL of the product image. Optional property that can be null. 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00052}{52}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a2b39d8ba338697d04f049149f6b0fe44}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!Name@{Name}}
+\index{Name@{Name}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a2b39d8ba338697d04f049149f6b0fe44} 
+string Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the name of the product. Validated for non-\/empty and minimum length (2 chars). 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00022}{22}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a834331e6f1b0a7d5dfd6fc74d5a99258}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!Price@{Price}}
+\index{Price@{Price}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{Price}{Price}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a834331e6f1b0a7d5dfd6fc74d5a99258} 
+decimal Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Price\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the price of the product. Validated for non-\/empty and minimum value (0). 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00034}{34}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a617690f3c1088f0ab00287f5f00f63d6}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!ProductId@{ProductId}}
+\index{ProductId@{ProductId}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{ProductId}{ProductId}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a617690f3c1088f0ab00287f5f00f63d6} 
+int? Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Product\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the unique identifier of the product. Optional property that can be null. 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00016}{16}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a221c7a578dc76b0a367b5a679a42980b}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!Protein@{Protein}}
+\index{Protein@{Protein}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{Protein}{Protein}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_a221c7a578dc76b0a367b5a679a42980b} 
+double Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Protein\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the protein content of the product. Validated for non-\/empty and minimum value (0). 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00076}{76}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_af6b5acea1f08b2e28ffa06f96786d2e7}\index{BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}!Unit@{Unit}}
+\index{Unit@{Unit}!BistroQ.Presentation.Models.AddProductForm@{BistroQ.Presentation.Models.AddProductForm}}
+\doxysubsubsection{\texorpdfstring{Unit}{Unit}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Models_1_1AddProductForm_af6b5acea1f08b2e28ffa06f96786d2e7} 
+string Bistro\+Q.\+Presentation.\+Models.\+Add\+Product\+Form.\+Unit\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the unit of measurement for the product. Validated for non-\/empty and minimum length (1 char). 
+
+
+
+Definition at line \mbox{\hyperlink{AddProductForm_8cs_source_l00040}{40}} of file \mbox{\hyperlink{AddProductForm_8cs_source}{Add\+Product\+Form.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Models/Add\+Product\+Form.\+cs\end{DoxyCompactItemize}

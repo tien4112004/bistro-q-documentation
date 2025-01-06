@@ -1,0 +1,310 @@
+\doxysection{Bistro\+Q.\+Service.\+Realtime.\+Checkout\+Real\+Time\+Service Class Reference}
+\hypertarget{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService}{}\label{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService}\index{BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}}
+
+
+Implementation of real-\/time checkout service using SignalR. Handles bidirectional communication between clients and server for payment processing.  
+
+
+
+
+Inheritance diagram for Bistro\+Q.\+Service.\+Realtime.\+Checkout\+Real\+Time\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Service.\+Realtime.\+Checkout\+Real\+Time\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a03e2ce4fe443ac06ca9d3ea4e6e5e503}{Checkout\+Real\+Time\+Service}} (\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuth\+Service}} auth\+Service)
+\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_aa7c2c8ff6641abe5e317342e103b077c}{Start\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Initiates the SignalR connection to the server. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a946b83b374872537e2d25f5bdc291b1a}{Stop\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Terminates the SignalR connection and cleans up event handlers. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a05d5c8acc13baf597a9a8372cb4b9df1}{Notify\+Checkout\+Requested\+Async}} (int table\+Id)
+\begin{DoxyCompactList}\small\item\em Notifies the server that a client has requested to begin the checkout process. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_aa07a55ea52232738b42b4a702e08871d}{Notify\+Checkout\+Completed\+Async}} (int table\+Id)
+\begin{DoxyCompactList}\small\item\em Notifies the server that a cashier has completed the checkout process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Realtime.\+ICheckout\+Real\+Time\+Service}}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a8206625c78815720321d2b440536de82}{Is\+Connected}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets whether the hub connection is currently established. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ string $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a4cee3e36967e94a9ec7900974fd8d879}{On\+Checkout\+Initiated}}
+\item 
+Action \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_aed714768a5faffa0d898be866f9cd1fc}{On\+Checkout\+Completed}}
+\item 
+Action$<$ int, int, string $>$ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a937a966eb97727233af29a8e7c58c2e0}{On\+New\+Checkout}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Realtime.\+ICheckout\+Real\+Time\+Service}}}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ string $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a131804f5a7e948bf9bb71a6f38a5349a}{On\+Checkout\+Initiated}}
+\begin{DoxyCompactList}\small\item\em Event triggered when a checkout process is initiated, providing the payment URL. \end{DoxyCompactList}\item 
+Action \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_ae2ad9eac515e5237cca79bc6dc453252}{On\+Checkout\+Completed}}
+\begin{DoxyCompactList}\small\item\em Event triggered when a checkout process is successfully completed. \end{DoxyCompactList}\item 
+Action$<$ int, int, string $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a3e14cb9db8d1809b913869ff0ad74b77}{On\+New\+Checkout}}
+\begin{DoxyCompactList}\small\item\em Event triggered when a new checkout is requested by a client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of real-\/time checkout service using SignalR. Handles bidirectional communication between clients and server for payment processing. 
+
+Definition at line \mbox{\hyperlink{CheckoutRealTimeService_8cs_source_l00013}{13}} of file \mbox{\hyperlink{CheckoutRealTimeService_8cs_source}{Checkout\+Real\+Time\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a03e2ce4fe443ac06ca9d3ea4e6e5e503}\index{BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}!CheckoutRealTimeService@{CheckoutRealTimeService}}
+\index{CheckoutRealTimeService@{CheckoutRealTimeService}!BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}}
+\doxysubsubsection{\texorpdfstring{CheckoutRealTimeService()}{CheckoutRealTimeService()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a03e2ce4fe443ac06ca9d3ea4e6e5e503} 
+Bistro\+Q.\+Service.\+Realtime.\+Checkout\+Real\+Time\+Service.\+Checkout\+Real\+Time\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuth\+Service}}}]{auth\+Service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{CheckoutRealTimeService_8cs_source_l00041}{41}} of file \mbox{\hyperlink{CheckoutRealTimeService_8cs_source}{Checkout\+Real\+Time\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \_authService\ =\ authService;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \_hubConnection\ =\ \textcolor{keyword}{new}\ HubConnectionBuilder()}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ .WithUrl(\textcolor{stringliteral}{"{}http://localhost:5256/hubs/checkout"{}},\ options\ =>}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ options.AccessTokenProvider\ =\ async\ ()\ =>\ await\ authService.\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService_a376cbb67857666ec660a3ab67762ad22}{GetTokenAsync}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \})}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ .WithAutomaticReconnect()}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ .Build();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Shows\ the\ payment\ URL\ to\ the\ client}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \_hubConnection.On<\textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}CheckoutInitiated"{}},\ (paymentData)\ =>}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnCheckoutInitiated?.Invoke(paymentData));}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Notifies\ the\ client\ that\ the\ payment\ has\ been\ completed}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \_hubConnection.On(\textcolor{stringliteral}{"{}CheckoutCompleted"{}},\ ()\ =>}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnCheckoutCompleted?.Invoke());}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Notifies\ the\ cashier\ that\ a\ new\ checkout\ has\ been\ requested}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \_hubConnection.On<int,\ int,\ \textcolor{keywordtype}{string}>(\textcolor{stringliteral}{"{}NewCheckout"{}},\ (tableId,\ tableNumber,\ zoneName)\ =>}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ OnNewCheckout?.Invoke(tableId,\ tableNumber,\ zoneName));}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_aa07a55ea52232738b42b4a702e08871d}\index{BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}!NotifyCheckoutCompletedAsync@{NotifyCheckoutCompletedAsync}}
+\index{NotifyCheckoutCompletedAsync@{NotifyCheckoutCompletedAsync}!BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}}
+\doxysubsubsection{\texorpdfstring{NotifyCheckoutCompletedAsync()}{NotifyCheckoutCompletedAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_aa07a55ea52232738b42b4a702e08871d} 
+async Task Bistro\+Q.\+Service.\+Realtime.\+Checkout\+Real\+Time\+Service.\+Notify\+Checkout\+Completed\+Async (\begin{DoxyParamCaption}\item[{int}]{table\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Notifies the server that a cashier has completed the checkout process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Id} & ID of the table completing checkout\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a46706868600da392c0b486835058f902}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Realtime.\+ICheckout\+Real\+Time\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{CheckoutRealTimeService_8cs_source_l00097}{97}} of file \mbox{\hyperlink{CheckoutRealTimeService_8cs_source}{Checkout\+Real\+Time\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_hubConnection.InvokeAsync(\textcolor{stringliteral}{"{}CompleteCheckout"{}},\ tableId);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ e)}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(e);}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a05d5c8acc13baf597a9a8372cb4b9df1}\index{BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}!NotifyCheckoutRequestedAsync@{NotifyCheckoutRequestedAsync}}
+\index{NotifyCheckoutRequestedAsync@{NotifyCheckoutRequestedAsync}!BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}}
+\doxysubsubsection{\texorpdfstring{NotifyCheckoutRequestedAsync()}{NotifyCheckoutRequestedAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a05d5c8acc13baf597a9a8372cb4b9df1} 
+async Task Bistro\+Q.\+Service.\+Realtime.\+Checkout\+Real\+Time\+Service.\+Notify\+Checkout\+Requested\+Async (\begin{DoxyParamCaption}\item[{int}]{table\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Notifies the server that a client has requested to begin the checkout process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Id} & ID of the table requesting checkout\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a89c4368b753fd77c92622e412bdf51af}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Realtime.\+ICheckout\+Real\+Time\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{CheckoutRealTimeService_8cs_source_l00085}{85}} of file \mbox{\hyperlink{CheckoutRealTimeService_8cs_source}{Checkout\+Real\+Time\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_hubConnection.InvokeAsync(\textcolor{stringliteral}{"{}InitiateCheckout"{}},\ tableId);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ e)}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.WriteLine(e);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_aa7c2c8ff6641abe5e317342e103b077c}\index{BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}!StartAsync@{StartAsync}}
+\index{StartAsync@{StartAsync}!BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}}
+\doxysubsubsection{\texorpdfstring{StartAsync()}{StartAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_aa7c2c8ff6641abe5e317342e103b077c} 
+async Task Bistro\+Q.\+Service.\+Realtime.\+Checkout\+Real\+Time\+Service.\+Start\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initiates the SignalR connection to the server. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_ac5259b6211d8daabc9c29324e5fccf25}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Realtime.\+ICheckout\+Real\+Time\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{CheckoutRealTimeService_8cs_source_l00067}{67}} of file \mbox{\hyperlink{CheckoutRealTimeService_8cs_source}{Checkout\+Real\+Time\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a8206625c78815720321d2b440536de82}{IsConnected}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ await\ \_hubConnection.StartAsync();}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a946b83b374872537e2d25f5bdc291b1a}\index{BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}!StopAsync@{StopAsync}}
+\index{StopAsync@{StopAsync}!BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}}
+\doxysubsubsection{\texorpdfstring{StopAsync()}{StopAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a946b83b374872537e2d25f5bdc291b1a} 
+async Task Bistro\+Q.\+Service.\+Realtime.\+Checkout\+Real\+Time\+Service.\+Stop\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Terminates the SignalR connection and cleans up event handlers. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1Realtime_1_1ICheckoutRealTimeService_a0bd95819b5bb30ce208e854a81c0ad08}{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+Realtime.\+ICheckout\+Real\+Time\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{CheckoutRealTimeService_8cs_source_l00074}{74}} of file \mbox{\hyperlink{CheckoutRealTimeService_8cs_source}{Checkout\+Real\+Time\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_hubConnection.State\ !=\ HubConnectionState.Disconnected)}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_hubConnection.StopAsync();}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ OnCheckoutInitiated\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ OnCheckoutCompleted\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ OnNewCheckout\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a8206625c78815720321d2b440536de82}\index{BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}!IsConnected@{IsConnected}}
+\index{IsConnected@{IsConnected}!BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}}
+\doxysubsubsection{\texorpdfstring{IsConnected}{IsConnected}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a8206625c78815720321d2b440536de82} 
+bool Bistro\+Q.\+Service.\+Realtime.\+Checkout\+Real\+Time\+Service.\+Is\+Connected\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets whether the hub connection is currently established. 
+
+
+
+Definition at line \mbox{\hyperlink{CheckoutRealTimeService_8cs_source_l00037}{37}} of file \mbox{\hyperlink{CheckoutRealTimeService_8cs_source}{Checkout\+Real\+Time\+Service.\+cs}}.
+
+
+
+\doxysubsection{Event Documentation}
+\Hypertarget{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_aed714768a5faffa0d898be866f9cd1fc}\index{BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}!OnCheckoutCompleted@{OnCheckoutCompleted}}
+\index{OnCheckoutCompleted@{OnCheckoutCompleted}!BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}}
+\doxysubsubsection{\texorpdfstring{OnCheckoutCompleted}{OnCheckoutCompleted}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_aed714768a5faffa0d898be866f9cd1fc} 
+Action Bistro\+Q.\+Service.\+Realtime.\+Checkout\+Real\+Time\+Service.\+On\+Checkout\+Completed}
+
+
+
+Definition at line \mbox{\hyperlink{CheckoutRealTimeService_8cs_source_l00029}{29}} of file \mbox{\hyperlink{CheckoutRealTimeService_8cs_source}{Checkout\+Real\+Time\+Service.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a4cee3e36967e94a9ec7900974fd8d879}\index{BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}!OnCheckoutInitiated@{OnCheckoutInitiated}}
+\index{OnCheckoutInitiated@{OnCheckoutInitiated}!BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}}
+\doxysubsubsection{\texorpdfstring{OnCheckoutInitiated}{OnCheckoutInitiated}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a4cee3e36967e94a9ec7900974fd8d879} 
+Action$<$string$>$ Bistro\+Q.\+Service.\+Realtime.\+Checkout\+Real\+Time\+Service.\+On\+Checkout\+Initiated}
+
+
+
+Definition at line \mbox{\hyperlink{CheckoutRealTimeService_8cs_source_l00028}{28}} of file \mbox{\hyperlink{CheckoutRealTimeService_8cs_source}{Checkout\+Real\+Time\+Service.\+cs}}.
+
+\Hypertarget{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a937a966eb97727233af29a8e7c58c2e0}\index{BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}!OnNewCheckout@{OnNewCheckout}}
+\index{OnNewCheckout@{OnNewCheckout}!BistroQ.Service.Realtime.CheckoutRealTimeService@{BistroQ.Service.Realtime.CheckoutRealTimeService}}
+\doxysubsubsection{\texorpdfstring{OnNewCheckout}{OnNewCheckout}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Service_1_1Realtime_1_1CheckoutRealTimeService_a937a966eb97727233af29a8e7c58c2e0} 
+Action$<$int, int, string$>$ Bistro\+Q.\+Service.\+Realtime.\+Checkout\+Real\+Time\+Service.\+On\+New\+Checkout}
+
+
+
+Definition at line \mbox{\hyperlink{CheckoutRealTimeService_8cs_source_l00030}{30}} of file \mbox{\hyperlink{CheckoutRealTimeService_8cs_source}{Checkout\+Real\+Time\+Service.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Service/\+Realtime/Checkout\+Real\+Time\+Service.\+cs\end{DoxyCompactItemize}

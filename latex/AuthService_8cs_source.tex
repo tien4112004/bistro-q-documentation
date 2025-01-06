@@ -1,0 +1,99 @@
+\doxysection{Auth\+Service.\+cs}
+\hypertarget{AuthService_8cs_source}{}\label{AuthService_8cs_source}\index{BistroQ.Service/Auth/AuthService.cs@{BistroQ.Service/Auth/AuthService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Contracts_1_1Services}{BistroQ.Domain.Contracts.Services}};}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Dtos}{BistroQ.Domain.Dtos}};}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceBistroQ_1_1Domain_1_1Models_1_1Exceptions}{BistroQ.Domain.Models.Exceptions}};}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00005}\mbox{\hyperlink{namespaceBistroQ_1_1Service}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceBistroQ_1_1Service_1_1Auth}{BistroQ.Service.Auth}};}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00019}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService}{00019}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService}{AuthService}}\ :\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IAuthService}{IAuthService}}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00020}00020\ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IPublicApiClient}{IPublicApiClient}}\ \_apiClient;}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService}{ITokenStorageService}}\ \_tokenStorageService;}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService}{AuthService}}(\mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IPublicApiClient}{IPublicApiClient}}\ apiClient,\ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1ITokenStorageService}{ITokenStorageService}}\ tokenStorageService)}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00025}00025\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \_apiClient\ =\ apiClient;}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \_tokenStorageService\ =\ tokenStorageService;}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00030}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a7e9ac19d265b3f17a1295b0bd88ce8b1}{00030}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<(\textcolor{keywordtype}{bool}\ Success,\ \textcolor{keywordtype}{string}\ Message)>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a7e9ac19d265b3f17a1295b0bd88ce8b1}{LoginAsync}}(\textcolor{keywordtype}{string}\ username,\ \textcolor{keywordtype}{string}\ password)}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00031}00031\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PostAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1LoginResponseDto}{LoginResponseDto}}>(\textcolor{stringliteral}{"{}api/auth/login"{}},\ \textcolor{keyword}{new}\ \{\ username,\ password\ \});}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_tokenStorageService.SaveTokensAsync(response.Data);}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keyword}{true},\ response.Message\ ??\ \textcolor{stringliteral}{"{}Login\ successful"{}});}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keyword}{false},\ response.Message\ ??\ \textcolor{stringliteral}{"{}Login\ failed"{}});}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00043}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a674f28712f5ee96cf42473cd17c698c7}{00043}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<bool>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a674f28712f5ee96cf42473cd17c698c7}{IsAuthenticatedAsync}}()}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00044}00044\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a35b0d5796e217c0952d1205e9c05a81e}{RefreshTokenAsync}}();}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception)}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00056}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a700734fa4eb10af62f95925a9a45b885}{00056}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<string?>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a700734fa4eb10af62f95925a9a45b885}{GetTokenAsync}}()}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00057}00057\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ var\ token\ =\ await\ \_tokenStorageService.GetAccessToken();}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(token))}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Exceptions_1_1UnauthorizedException}{UnauthorizedException}}(\textcolor{stringliteral}{"{}Unauthorized"{}});}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ token;}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception)}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00075}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a63355cd4efe22db4a654042b85b91281}{00075}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a63355cd4efe22db4a654042b85b91281}{LogoutAsync}}()}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00076}00076\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ await\ \_tokenStorageService.ClearTokensAsync();}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00080}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a35b0d5796e217c0952d1205e9c05a81e}{00080}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<string>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a35b0d5796e217c0952d1205e9c05a81e}{RefreshTokenAsync}}()}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00081}00081\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ var\ (refreshToken,\ userId)\ =\ await\ \_tokenStorageService.GetRefreshToken();}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ var\ response\ =\ await\ \_apiClient.PostAsync<\mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1RefreshTokenResponse}{RefreshTokenResponse}}>(\textcolor{stringliteral}{"{}api/Auth/refresh"{}},\ \textcolor{keyword}{new}\ \{\ RefreshToken\ =\ refreshToken,\ UserId\ =\ userId\ \});}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (response.Success)}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_tokenStorageService.SaveAccessToken(response.Data.AccessToken);}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ response.Data.AccessToken;}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (response.Error.Contains(\textcolor{stringliteral}{"{}TokenExpired"{}}))}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Exceptions_1_1TokenExpiredException}{TokenExpiredException}}(\textcolor{stringliteral}{"{}Token\ expired"{}});}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Models_1_1Exceptions_1_1UnauthorizedException}{UnauthorizedException}}(\textcolor{stringliteral}{"{}Unauthorized"{}});}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00099}00099\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00101}\mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a08890088cdf325c9f62d36696a06f2d8}{00101}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task<string>\ \mbox{\hyperlink{classBistroQ_1_1Service_1_1Auth_1_1AuthService_a08890088cdf325c9f62d36696a06f2d8}{GetRoleAsync}}()}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00102}00102\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ await\ \_tokenStorageService.GetRoleAsync();}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00104}00104\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AuthService_8cs_source_l00105}00105\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,114 @@
+\doxysection{Bistro\+Q.\+Presentation.\+Services.\+Activation\+Service Class Reference}
+\hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1ActivationService}{}\label{classBistroQ_1_1Presentation_1_1Services_1_1ActivationService}\index{BistroQ.Presentation.Services.ActivationService@{BistroQ.Presentation.Services.ActivationService}}
+
+
+Inheritance diagram for Bistro\+Q.\+Presentation.\+Services.\+Activation\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classBistroQ_1_1Presentation_1_1Services_1_1ActivationService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bistro\+Q.\+Presentation.\+Services.\+Activation\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classBistroQ_1_1Presentation_1_1Services_1_1ActivationService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1ActivationService_a4b4ecbd16d661ec8b2466ccaafb86cc1}{Activation\+Service}} (\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Activation_1_1ActivationHandler}{Activation\+Handler}}$<$ Launch\+Activated\+Event\+Args $>$ default\+Handler, IEnumerable$<$ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Activation_1_1IActivationHandler}{IActivation\+Handler}} $>$ activation\+Handlers, \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IThemeSelectorService}{ITheme\+Selector\+Service}} theme\+Selector\+Service)
+\item 
+async Task \mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Services_1_1ActivationService_ace7617ca90d0b2fb72bcf801089cc6b6}{Activate\+Async}} (object activation\+Args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IActivationService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+IActivation\+Service}}}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{ActivationService_8cs_source_l00010}{10}} of file \mbox{\hyperlink{ActivationService_8cs_source}{Activation\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1ActivationService_a4b4ecbd16d661ec8b2466ccaafb86cc1}\index{BistroQ.Presentation.Services.ActivationService@{BistroQ.Presentation.Services.ActivationService}!ActivationService@{ActivationService}}
+\index{ActivationService@{ActivationService}!BistroQ.Presentation.Services.ActivationService@{BistroQ.Presentation.Services.ActivationService}}
+\doxysubsubsection{\texorpdfstring{ActivationService()}{ActivationService()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1ActivationService_a4b4ecbd16d661ec8b2466ccaafb86cc1} 
+Bistro\+Q.\+Presentation.\+Services.\+Activation\+Service.\+Activation\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Activation_1_1ActivationHandler}{Activation\+Handler}}$<$ Launch\+Activated\+Event\+Args $>$}]{default\+Handler}{, }\item[{IEnumerable$<$ \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Activation_1_1IActivationHandler}{IActivation\+Handler}} $>$}]{activation\+Handlers}{, }\item[{\mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IThemeSelectorService}{ITheme\+Selector\+Service}}}]{theme\+Selector\+Service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{ActivationService_8cs_source_l00017}{17}} of file \mbox{\hyperlink{ActivationService_8cs_source}{Activation\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \_defaultHandler\ =\ defaultHandler;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \_activationHandlers\ =\ activationHandlers;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \_themeSelectorService\ =\ themeSelectorService;}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBistroQ_1_1Presentation_1_1Services_1_1ActivationService_ace7617ca90d0b2fb72bcf801089cc6b6}\index{BistroQ.Presentation.Services.ActivationService@{BistroQ.Presentation.Services.ActivationService}!ActivateAsync@{ActivateAsync}}
+\index{ActivateAsync@{ActivateAsync}!BistroQ.Presentation.Services.ActivationService@{BistroQ.Presentation.Services.ActivationService}}
+\doxysubsubsection{\texorpdfstring{ActivateAsync()}{ActivateAsync()}}
+{\footnotesize\ttfamily \label{classBistroQ_1_1Presentation_1_1Services_1_1ActivationService_ace7617ca90d0b2fb72bcf801089cc6b6} 
+async Task Bistro\+Q.\+Presentation.\+Services.\+Activation\+Service.\+Activate\+Async (\begin{DoxyParamCaption}\item[{object}]{activation\+Args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceBistroQ_1_1Presentation_1_1Contracts_1_1Services_1_1IActivationService}{Bistro\+Q.\+Presentation.\+Contracts.\+Services.\+IActivation\+Service}}.
+
+
+
+Definition at line \mbox{\hyperlink{ActivationService_8cs_source_l00024}{24}} of file \mbox{\hyperlink{ActivationService_8cs_source}{Activation\+Service.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_shell\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cleanup\ shell}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \_shell\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Execute\ tasks\ before\ activation.}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ await\ InitializeAsync();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (App.MainWindow\ is\ MainWindow\ mainWindow\ \&\&\ mainWindow.IsClosed)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ App.MainWindow\ =\ \textcolor{keyword}{new}\ MainWindow();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ the\ MainWindow\ Content.}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (App.MainWindow.Content\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \_shell\ =\ App.GetService<\mbox{\hyperlink{classBistroQ_1_1Presentation_1_1Views_1_1ShellPage}{ShellPage}}>();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ App.MainWindow.Content\ =\ \_shell\ ??\ \textcolor{keyword}{new}\ Frame();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ activation\ via\ ActivationHandlers.}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ await\ HandleActivationAsync(activationArgs);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Activate\ the\ MainWindow.}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ App.MainWindow.Activate();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Execute\ tasks\ after\ activation.}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ await\ StartupAsync();}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Presentation/\+Services/Activation\+Service.\+cs\end{DoxyCompactItemize}

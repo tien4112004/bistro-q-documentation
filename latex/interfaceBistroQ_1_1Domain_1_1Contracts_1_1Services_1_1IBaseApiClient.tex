@@ -1,0 +1,214 @@
+\doxysection{Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IBase\+Api\+Client Interface Reference}
+\hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient}{}\label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient}\index{BistroQ.Domain.Contracts.Services.IBaseApiClient@{BistroQ.Domain.Contracts.Services.IBaseApiClient}}
+
+
+Inheritance diagram for Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IBase\+Api\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_adb5659970dacaafad2829a162127e047}{Post\+Async$<$ T $>$}} (string url, object content\+Value)
+\begin{DoxyCompactList}\small\item\em Sends a POST request to the specified URL with the given content. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_af4adb49013823d086c4633b53897867a}{Put\+Async$<$ T $>$}} (string url, object content\+Value)
+\begin{DoxyCompactList}\small\item\em Sends a PUT request to the specified URL with the given content. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_a88dd2c4dc5defd8780282bb8c46c57e5}{Patch\+Async$<$ T $>$}} (string url, object content\+Value)
+\begin{DoxyCompactList}\small\item\em Sends a PATCH request to the specified URL with the given content. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_ad23de20341ee05101495cb03fc2eafbc}{Get\+Async$<$ T $>$}} (string url, object content\+Value)
+\begin{DoxyCompactList}\small\item\em Sends a GET request to the specified URL and returns the response. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_a6e184566a7abe6f5a0611d05ab1a725d}{Delete\+Async$<$ T $>$}} (string url, object content\+Value)
+\begin{DoxyCompactList}\small\item\em Sends a DELETE request to the specified URL. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ T $>$ $>$ \mbox{\hyperlink{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_abeaf5c29d53be01c8986d000fd11a4d0}{Get\+Collection\+Async$<$ T $>$}} (string url, object content\+Value)
+\begin{DoxyCompactList}\small\item\em Sends a GET request to the specified URL and returns a collection response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base API client interface that defines the methods to interact with the REST API. 
+
+Definition at line \mbox{\hyperlink{IBaseApiClient_8cs_source_l00008}{8}} of file \mbox{\hyperlink{IBaseApiClient_8cs_source}{IBase\+Api\+Client.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_a6e184566a7abe6f5a0611d05ab1a725d}\index{BistroQ.Domain.Contracts.Services.IBaseApiClient@{BistroQ.Domain.Contracts.Services.IBaseApiClient}!DeleteAsync$<$ T $>$@{DeleteAsync$<$ T $>$}}
+\index{DeleteAsync$<$ T $>$@{DeleteAsync$<$ T $>$}!BistroQ.Domain.Contracts.Services.IBaseApiClient@{BistroQ.Domain.Contracts.Services.IBaseApiClient}}
+\doxysubsubsection{\texorpdfstring{DeleteAsync$<$ T $>$()}{DeleteAsync< T >()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_a6e184566a7abe6f5a0611d05ab1a725d} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IBase\+Api\+Client.\+Delete\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{url}{, }\item[{object}]{content\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Sends a DELETE request to the specified URL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The URL to send the DELETE request to.\\
+\hline
+{\em content\+Value} & The content to include in the DELETE request.\texorpdfstring{$<$}{<}/param \begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation, containing the response of type {\itshape T} .
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_af8e759dfe05332eda20539a8d5a4f161}{Bistro\+Q.\+Domain.\+Services.\+Http.\+Base\+Api\+Client}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_ad23de20341ee05101495cb03fc2eafbc}\index{BistroQ.Domain.Contracts.Services.IBaseApiClient@{BistroQ.Domain.Contracts.Services.IBaseApiClient}!GetAsync$<$ T $>$@{GetAsync$<$ T $>$}}
+\index{GetAsync$<$ T $>$@{GetAsync$<$ T $>$}!BistroQ.Domain.Contracts.Services.IBaseApiClient@{BistroQ.Domain.Contracts.Services.IBaseApiClient}}
+\doxysubsubsection{\texorpdfstring{GetAsync$<$ T $>$()}{GetAsync< T >()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_ad23de20341ee05101495cb03fc2eafbc} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IBase\+Api\+Client.\+Get\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{url}{, }\item[{object}]{content\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Sends a GET request to the specified URL and returns the response. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The return type of the request to the REST API.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The URL to send the GET request to.\\
+\hline
+{\em content\+Value} & The content to include in the POST request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation, containing the response of type {\itshape T} .
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_ac917357a81be1443a1c7355e4511994f}{Bistro\+Q.\+Domain.\+Services.\+Http.\+Base\+Api\+Client}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_abeaf5c29d53be01c8986d000fd11a4d0}\index{BistroQ.Domain.Contracts.Services.IBaseApiClient@{BistroQ.Domain.Contracts.Services.IBaseApiClient}!GetCollectionAsync$<$ T $>$@{GetCollectionAsync$<$ T $>$}}
+\index{GetCollectionAsync$<$ T $>$@{GetCollectionAsync$<$ T $>$}!BistroQ.Domain.Contracts.Services.IBaseApiClient@{BistroQ.Domain.Contracts.Services.IBaseApiClient}}
+\doxysubsubsection{\texorpdfstring{GetCollectionAsync$<$ T $>$()}{GetCollectionAsync< T >()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_abeaf5c29d53be01c8986d000fd11a4d0} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiCollectionResponse}{Api\+Collection\+Response}}$<$ T $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IBase\+Api\+Client.\+Get\+Collection\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{url}{, }\item[{object}]{content\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Sends a GET request to the specified URL and returns a collection response. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The return type of the request to the REST API.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The URL to send the GET request to.\\
+\hline
+{\em content\+Value} & The content to include in the GET request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation, containing the collection response of type {\itshape T} .
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_ae01efc9c9e6235b431f88f1252dd8c1b}{Bistro\+Q.\+Domain.\+Services.\+Http.\+Base\+Api\+Client}}.
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_a88dd2c4dc5defd8780282bb8c46c57e5}\index{BistroQ.Domain.Contracts.Services.IBaseApiClient@{BistroQ.Domain.Contracts.Services.IBaseApiClient}!PatchAsync$<$ T $>$@{PatchAsync$<$ T $>$}}
+\index{PatchAsync$<$ T $>$@{PatchAsync$<$ T $>$}!BistroQ.Domain.Contracts.Services.IBaseApiClient@{BistroQ.Domain.Contracts.Services.IBaseApiClient}}
+\doxysubsubsection{\texorpdfstring{PatchAsync$<$ T $>$()}{PatchAsync< T >()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_a88dd2c4dc5defd8780282bb8c46c57e5} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IBase\+Api\+Client.\+Patch\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{url}{, }\item[{object}]{content\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Sends a PATCH request to the specified URL with the given content. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The return type of the request to the REST API.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The URL to send the PATCH request to.\\
+\hline
+{\em content\+Value} & The content to include in the PATCH request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation, containing the response of type {\itshape T} .
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_a87f1cbf7688d72b60bcf8c4ffad2c050}{Bistro\+Q.\+Domain.\+Services.\+Http.\+Base\+Api\+Client}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_adb5659970dacaafad2829a162127e047}\index{BistroQ.Domain.Contracts.Services.IBaseApiClient@{BistroQ.Domain.Contracts.Services.IBaseApiClient}!PostAsync$<$ T $>$@{PostAsync$<$ T $>$}}
+\index{PostAsync$<$ T $>$@{PostAsync$<$ T $>$}!BistroQ.Domain.Contracts.Services.IBaseApiClient@{BistroQ.Domain.Contracts.Services.IBaseApiClient}}
+\doxysubsubsection{\texorpdfstring{PostAsync$<$ T $>$()}{PostAsync< T >()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_adb5659970dacaafad2829a162127e047} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IBase\+Api\+Client.\+Post\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{url}{, }\item[{object}]{content\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Sends a POST request to the specified URL with the given content. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The return type of the request to the REST API.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The URL to send the POST request to.\\
+\hline
+{\em content\+Value} & The content to include in the POST request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation, containing the response of type {\itshape T} .
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_a046b5646668d17d19e5273d6ebdaad9e}{Bistro\+Q.\+Domain.\+Services.\+Http.\+Base\+Api\+Client}}.
+
+\Hypertarget{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_af4adb49013823d086c4633b53897867a}\index{BistroQ.Domain.Contracts.Services.IBaseApiClient@{BistroQ.Domain.Contracts.Services.IBaseApiClient}!PutAsync$<$ T $>$@{PutAsync$<$ T $>$}}
+\index{PutAsync$<$ T $>$@{PutAsync$<$ T $>$}!BistroQ.Domain.Contracts.Services.IBaseApiClient@{BistroQ.Domain.Contracts.Services.IBaseApiClient}}
+\doxysubsubsection{\texorpdfstring{PutAsync$<$ T $>$()}{PutAsync< T >()}}
+{\footnotesize\ttfamily \label{interfaceBistroQ_1_1Domain_1_1Contracts_1_1Services_1_1IBaseApiClient_af4adb49013823d086c4633b53897867a} 
+Task$<$ \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Dtos_1_1ApiResponse}{Api\+Response}}$<$ T $>$ $>$ Bistro\+Q.\+Domain.\+Contracts.\+Services.\+IBase\+Api\+Client.\+Put\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{url}{, }\item[{object}]{content\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Sends a PUT request to the specified URL with the given content. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The return type of the request to the REST API.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The URL to send the PUT request to.\\
+\hline
+{\em content\+Value} & The content to include in the PUT request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task that represents the asynchronous operation, containing the response of type {\itshape T} .
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBistroQ_1_1Domain_1_1Services_1_1Http_1_1BaseApiClient_ada3a58509c3c8cb80bc8743f0cc1f65b}{Bistro\+Q.\+Domain.\+Services.\+Http.\+Base\+Api\+Client}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bistro\+Q.\+Domain/\+Contracts/\+Http/IBase\+Api\+Client.\+cs\end{DoxyCompactItemize}

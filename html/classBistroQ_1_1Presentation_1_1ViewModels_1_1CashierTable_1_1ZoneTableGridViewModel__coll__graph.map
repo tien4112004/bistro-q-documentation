@@ -1,0 +1,9 @@
+<map id="BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel" name="BistroQ.Presentation.ViewModels.CashierTable.ZoneTableGridViewModel">
+<area shape="rect" id="Node000001" title="ViewModel for managing the grid display of tables within a zone. Handles table selection,..." alt="" coords="126,96,357,155"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,131,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,46,191,93,189,98,103,50"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="155,5,328,48"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="244,63,244,96,239,96,239,63"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="352,13,442,40"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="365,51,289,98,286,93,363,46"/>
+</map>
